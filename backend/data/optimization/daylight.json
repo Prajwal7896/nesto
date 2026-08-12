@@ -1,0 +1,229 @@
+{
+  "category":"building_optimization",
+  "module":"daylight",
+  "version":"2.0",
+  "description":"Comprehensive daylight optimization rules for AI-driven residential and commercial floor planning. Used for natural lighting, window optimization, glare control, visual comfort, energy efficiency and occupant well-being.",
+
+  "objectives":{
+    "maximize_natural_daylight":true,
+    "reduce_artificial_lighting":true,
+    "minimize_glare":true,
+    "improve_visual_comfort":true,
+    "reduce_energy_consumption":true,
+    "maintain_uniform_light_distribution":true
+  },
+
+  "daylight_factor":{
+    "living_room":{
+      "minimum_percent":2.0,
+      "recommended_percent":4.0
+    },
+    "bedroom":{
+      "minimum_percent":1.5,
+      "recommended_percent":3.0
+    },
+    "kitchen":{
+      "minimum_percent":2.5,
+      "recommended_percent":5.0
+    },
+    "bathroom":{
+      "minimum_percent":1.0,
+      "recommended_percent":2.0
+    },
+    "office":{
+      "minimum_percent":3.0,
+      "recommended_percent":5.0
+    },
+    "study_room":{
+      "minimum_percent":3.5,
+      "recommended_percent":5.5
+    },
+    "corridor":{
+      "minimum_percent":1.0
+    }
+  },
+
+  "window_rules":{
+    "minimum_window_to_floor_area_percent":15,
+    "recommended_window_to_floor_area_percent":20,
+    "maximum_window_to_floor_area_percent":35,
+    "minimum_window_head_height_mm":2100,
+    "recommended_sill_height_mm":900,
+    "maximum_room_depth_multiplier":2.5
+  },
+
+  "orientation_guidelines":{
+    "north":{
+      "daylight_quality":"Excellent",
+      "heat_gain":"Low",
+      "recommended_for":[
+        "Living Room",
+        "Office",
+        "Study Room"
+      ]
+    },
+    "east":{
+      "daylight_quality":"Very Good",
+      "heat_gain":"Moderate",
+      "recommended_for":[
+        "Bedroom",
+        "Kitchen"
+      ]
+    },
+    "south":{
+      "daylight_quality":"Good",
+      "heat_gain":"Moderate",
+      "recommended_for":[
+        "Living Room"
+      ],
+      "shading_required":true
+    },
+    "west":{
+      "daylight_quality":"Moderate",
+      "heat_gain":"High",
+      "recommended_for":[
+        "Utility",
+        "Staircase"
+      ],
+      "sun_control_required":true
+    }
+  },
+
+  "room_recommendations":{
+    "living_room":{
+      "preferred_windows":2,
+      "preferred_orientation":"North/East",
+      "skylight_supported":true
+    },
+    "bedroom":{
+      "preferred_windows":2,
+      "preferred_orientation":"East"
+    },
+    "kitchen":{
+      "preferred_windows":2,
+      "preferred_orientation":"East",
+      "clerestory_supported":true
+    },
+    "bathroom":{
+      "high_level_window":true,
+      "frosted_glass":true
+    },
+    "office":{
+      "avoid_direct_glare":true,
+      "uniform_daylight":true
+    }
+  },
+
+  "skylight_rules":{
+    "supported":true,
+    "recommended_for":[
+      "Staircase",
+      "Bathroom",
+      "Corridor",
+      "Courtyard",
+      "Living Room"
+    ],
+    "maximum_roof_area_percent":8
+  },
+
+  "light_shelves":{
+    "supported":true,
+    "recommended_for_large_windows":true,
+    "improves_daylight_penetration":true
+  },
+
+  "glare_control":{
+    "external_shading":true,
+    "louvers_supported":true,
+    "vertical_fins_supported":true,
+    "horizontal_overhangs_supported":true,
+    "low_e_glass_supported":true,
+    "recommended_visible_light_transmittance_percent":[50,70]
+  },
+
+  "energy_optimization":{
+    "daylight_sensor_supported":true,
+    "automatic_dimming_supported":true,
+    "lighting_control_zones":true,
+    "expected_energy_saving_percent":30
+  },
+
+  "optimization_weights":{
+    "daylight_distribution":0.30,
+    "visual_comfort":0.20,
+    "energy_efficiency":0.20,
+    "glare_control":0.15,
+    "thermal_performance":0.10,
+    "occupant_health":0.05
+  },
+
+  "design_patterns":[
+    {
+      "name":"Opposite Window Daylighting",
+      "score":1.00
+    },
+    {
+      "name":"Central Courtyard",
+      "score":0.99
+    },
+    {
+      "name":"Double Height Living",
+      "score":0.97
+    },
+    {
+      "name":"Skylight Corridor",
+      "score":0.96
+    },
+    {
+      "name":"Light Shelf Facade",
+      "score":0.95
+    }
+  ],
+
+  "constraints":[
+    "Avoid deep rooms without windows.",
+    "Avoid west-facing large glazing without shading.",
+    "Provide daylight to all habitable rooms.",
+    "Prevent direct glare on work surfaces.",
+    "Maintain balanced daylight distribution."
+  ],
+
+  "validation_rules":[
+    {
+      "rule":"Every habitable room shall have natural daylight.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Window area shall be at least 15% of floor area.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Deep rooms should include skylights or additional windows.",
+      "severity":"high"
+    },
+    {
+      "rule":"West-facing glazing shall include shading devices.",
+      "severity":"high"
+    },
+    {
+      "rule":"Study and office rooms should avoid direct glare.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_daylight_autonomy_percent":60,
+    "target_spatial_daylight_autonomy_percent":55,
+    "target_annual_sunlight_exposure_percent":10,
+    "target_energy_saving_percent":30
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "LEED v4 Daylight Credit",
+    "ASHRAE 90.1",
+    "EN 17037 Daylight in Buildings",
+    "ECBC India",
+    "CPWD Specifications"
+  ]
+}

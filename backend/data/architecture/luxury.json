@@ -1,0 +1,124 @@
+{
+  "style": "luxury",
+
+  "definition": "Luxury architecture focuses on spacious layouts, premium materials, high privacy, strong zoning, and visually impressive design with comfort-first planning.",
+
+  "core_principles": [
+    "High space-to-person ratio (large rooms)",
+    "Strong separation of public and private zones",
+    "Double-height living areas",
+    "Premium circulation spaces with wide passages",
+    "Emphasis on symmetry and visual balance",
+    "Minimal clutter, maximum elegance",
+    "High privacy for bedrooms and master suites"
+  ],
+
+  "spatial_design_rules": {
+    "living_room": {
+      "preferred_position": "central_front_or_double_height_zone",
+      "min_area_sqft": 300,
+      "features": ["double_height", "grand_entrance_view", "luxury_seating_zone"],
+      "connections": ["dining_room", "lobby", "balcony"]
+    },
+
+    "kitchen": {
+      "type": "closed_or_show_kitchen_option",
+      "min_area_sqft": 150,
+      "preferred_position": "separate_service_zone_near_dining",
+      "features": ["island_counter", "pantry_room", "service_entry"]
+    },
+
+    "master_bedroom": {
+      "min_area_sqft": 250,
+      "preferred_position": "private_quiet_corner",
+      "features": ["walk_in_closet", "ensuite_luxury_bathroom", "balcony_access"]
+    },
+
+    "bedroom": {
+      "min_area_sqft": 180,
+      "attached_bathroom_preferred": true,
+      "privacy_priority": "high"
+    },
+
+    "bathroom": {
+      "type": "premium",
+      "features": ["bathtub_optional", "ventilation_window", "dry_wet_separation"]
+    }
+  },
+
+  "zoning_rules": {
+    "public_zone": ["living_room", "lobby", "guest_bathroom"],
+    "semi_private_zone": ["dining_room", "kitchen", "family_lounge"],
+    "private_zone": ["bedrooms", "study", "walk_in_closet"],
+    "service_zone": ["kitchen_service_area", "utility_room", "parking"]
+  },
+
+  "circulation_rules": {
+    "corridor_width": "wide (5-8 ft)",
+    "flow": "grand_central_axis_design",
+    "staircase": "statement_feature_staircase",
+    "entry_experience": "luxury_lobby_with_visual_depth"
+  },
+
+  "material_palette": [
+    "marble",
+    "granite",
+    "premium hardwood",
+    "brass finishes",
+    "glass walls",
+    "designer tiles",
+    "textured stone"
+  ],
+
+  "structural_preferences": {
+    "frame": "RCC heavy-duty or steel hybrid",
+    "roof": "flat slab with terrace garden option",
+    "ceiling_height": "10-14 ft",
+    "column_grid": "wide-span luxury grid system"
+  },
+
+  "lighting_and_ambience": {
+    "natural_light_priority": "very_high",
+    "artificial_lighting": "layered_lighting_design",
+    "features": ["chandeliers", "cove_lighting", "accent_spotlights"],
+    "glass_usage": "large_floor_to_ceiling_windows"
+  },
+
+  "amenities": {
+    "home_theatre": true,
+    "gym": true,
+    "study_room": true,
+    "bar_area_optional": true,
+    "terrace_lounge": true
+  },
+
+  "privacy_system": {
+    "guest_vs_private_separation": "strict",
+    "sound_insulation": "high",
+    "master_zone_isolation": true
+  },
+
+  "vastu_flexibility": {
+    "compatible": true,
+    "preferred_entrance": ["north", "east"],
+    "kitchen_direction": "southeast",
+    "bedroom_flexibility": "medium"
+  },
+
+  "optimization_hints": {
+    "space_efficiency": "medium",
+    "comfort_priority": "very_high",
+    "aesthetic_priority": "very_high",
+    "cost_efficiency": "low",
+    "center_of_mass_balance": true
+  },
+
+  "planning_tags": [
+    "villa_design",
+    "premium_living",
+    "high_privacy",
+    "double_height_spaces",
+    "luxury_materials",
+    "architectural_statement"
+  ]
+}

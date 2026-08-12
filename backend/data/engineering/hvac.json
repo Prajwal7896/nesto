@@ -1,0 +1,192 @@
+{
+  "category":"hvac_engineering",
+  "version":"2.0",
+  "description":"Heating, Ventilation and Air Conditioning (HVAC) engineering standards for residential, commercial and mixed-use buildings. Used by the AI planner for ventilation, cooling, heating, indoor air quality and energy optimization.",
+
+  "design_conditions":{
+    "indoor_temperature_c":{
+      "summer":24,
+      "winter":22
+    },
+    "relative_humidity_percent":{
+      "minimum":40,
+      "maximum":60
+    },
+    "fresh_air_requirement":"As per NBC India"
+  },
+
+  "room_requirements":[
+    {
+      "room":"Living Room",
+      "air_changes_per_hour":6,
+      "minimum_airflow_cfm":250,
+      "split_ac":true,
+      "ceiling_fan":true,
+      "cross_ventilation":true
+    },
+    {
+      "room":"Master Bedroom",
+      "air_changes_per_hour":5,
+      "minimum_airflow_cfm":180,
+      "split_ac":true,
+      "ceiling_fan":true,
+      "cross_ventilation":true
+    },
+    {
+      "room":"Bedroom",
+      "air_changes_per_hour":5,
+      "minimum_airflow_cfm":150,
+      "split_ac":true,
+      "ceiling_fan":true
+    },
+    {
+      "room":"Kitchen",
+      "air_changes_per_hour":15,
+      "minimum_airflow_cfm":300,
+      "chimney_required":true,
+      "exhaust_fan":true,
+      "cross_ventilation":true
+    },
+    {
+      "room":"Bathroom",
+      "air_changes_per_hour":10,
+      "minimum_airflow_cfm":80,
+      "exhaust_fan":true,
+      "natural_ventilation_preferred":true
+    },
+    {
+      "room":"Dining Room",
+      "air_changes_per_hour":6,
+      "minimum_airflow_cfm":180,
+      "ceiling_fan":true
+    },
+    {
+      "room":"Study Room",
+      "air_changes_per_hour":6,
+      "minimum_airflow_cfm":150,
+      "split_ac":true
+    },
+    {
+      "room":"Home Office",
+      "air_changes_per_hour":6,
+      "minimum_airflow_cfm":180,
+      "split_ac":true
+    },
+    {
+      "room":"Gym",
+      "air_changes_per_hour":10,
+      "minimum_airflow_cfm":400
+    },
+    {
+      "room":"Parking",
+      "air_changes_per_hour":8,
+      "mechanical_ventilation":true
+    }
+  ],
+
+  "equipment":{
+    "split_ac":{
+      "capacity_range_ton":[1.0,2.5],
+      "preferred":"Inverter"
+    },
+    "cassette_ac":{
+      "recommended_for":["Large Living Room","Office"]
+    },
+    "vrf_system":{
+      "recommended_for":["Villa","Commercial","Apartment"]
+    },
+    "ceiling_fan":{
+      "diameter_mm":[1200,1400]
+    },
+    "exhaust_fan":{
+      "bathroom_mm":200,
+      "kitchen_mm":300
+    }
+  },
+
+  "ducting":{
+    "minimum_height_mm":250,
+    "insulation_required":true,
+    "fire_damper_required":true,
+    "service_access_required":true
+  },
+
+  "ventilation_rules":[
+    "Every habitable room must have natural ventilation or mechanical ventilation.",
+    "Bathrooms require exhaust ventilation.",
+    "Kitchen requires chimney and exhaust.",
+    "Cross ventilation is preferred wherever possible.",
+    "Avoid placing AC outdoor units near bedroom windows."
+  ],
+
+  "energy_efficiency":{
+    "minimum_ac_star_rating":5,
+    "smart_thermostat":true,
+    "variable_speed_compressor":true,
+    "heat_recovery_supported":true,
+    "energy_recovery_ventilator_supported":true
+  },
+
+  "indoor_air_quality":{
+    "pm25_filter":true,
+    "carbon_filter":true,
+    "fresh_air_intake":true,
+    "co2_monitoring_optional":true,
+    "humidity_control":true
+  },
+
+  "noise_limits_db":{
+    "bedroom":35,
+    "living_room":40,
+    "study_room":35,
+    "office":40
+  },
+
+  "smart_features":{
+    "wifi_control":true,
+    "voice_control":true,
+    "occupancy_sensor":true,
+    "temperature_sensor":true,
+    "air_quality_sensor":true,
+    "smart_scheduling":true
+  },
+
+  "optimization":{
+    "maximize_cross_ventilation":true,
+    "reduce_energy_consumption":true,
+    "optimize_ac_placement":true,
+    "minimize_duct_length":true,
+    "solar_power_compatible":true
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Kitchen must have exhaust ventilation.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Bathrooms require exhaust fan.",
+      "severity":"high"
+    },
+    {
+      "rule":"Habitable rooms require fresh air.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Outdoor AC units must have adequate clearance.",
+      "severity":"medium"
+    },
+    {
+      "rule":"Parking requires mechanical ventilation when enclosed.",
+      "severity":"high"
+    }
+  ],
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "ASHRAE Standard 62.1",
+    "ASHRAE Standard 55",
+    "ECBC India",
+    "ISHRAE Guidelines"
+  ]
+}

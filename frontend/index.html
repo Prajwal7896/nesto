@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesto | Construction Portal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        :root {
+            --primary: #10b981;
+            --surface: rgba(255, 255, 255, 0.8);
+        }
+        body { background: #F3F4F6; }
+        .glass-sidebar { background: var(--surface); backdrop-filter: blur(10px); border-right: 1px solid rgba(209, 213, 219, 0.5); }
+        .chat-input { border: 1px solid #D1D5DB; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05); }
+        .message-bubble { background: white; border: 1px solid #E5E7EB; }
+        canvas { border: 2px solid #10b981; border-radius: 8px; background: #fff; }
+    </style>
+</head>
+<body class="text-gray-800 h-screen flex">
+
+    <!-- Sidebar -->
+     <form action="/logout" method="post" class="mt-4">
+        <button
+            type="submit"
+            class="w-full bg-red-500 hover:bg-red-600 text-white rounded-xl py-2 transition">
+            Logout
+        </button>
+    </form>
+    <aside class="w-64 glass-sidebar p-4 hidden md:flex flex-col">
+        <div class="flex items-center gap-2 mb-8 px-2">
+            <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center font-bold text-white">N</div>
+            <span class="text-xl font-bold text-gray-900">Nesto</span>
+        </div>
+        
+        <button class="w-full border border-gray-300 rounded-xl py-3 px-4 text-left flex items-center gap-2 hover:bg-emerald-50 hover:border-emerald-200 transition">
+            <span>+</span> New Project Chat
+        </button>
+        
+        <div class="mt-6 flex-1 overflow-y-auto">
+            <p class="text-xs text-gray-500 font-bold px-2 mb-2 uppercase tracking-wider">Recent</p>
+            <div class="text-sm p-3 hover:bg-gray-100 rounded-lg cursor-pointer truncate transition">Modern 2-Floor Villa</div>
+            <div class="text-sm p-3 hover:bg-gray-100 rounded-lg cursor-pointer truncate transition">Material Supply Schedule</div>
+        </div>
+        
+        <div class="border-t border-gray-200 pt-4">
+
+            <a href="/profile" class="flex items-center gap-3 p-2 rounded-lg hover:bg-emerald-50">
+
+                {% if user.image_url %}
+                    <img src="{{ user.image_url }}"
+                        class="w-10 h-10 rounded-full object-cover">
+                {% else %}
+                    <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold">
+                        {{ user.name[0].upper() }}
+                    </div>
+                {% endif %}
+
+                <div>
+                    <p class="font-semibold">{{ user.name }}</p>
+                    <p class="text-xs text-gray-500">Profile</p>
+                </div>
+
+            </a>
+
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="flex-1 flex flex-col relative bg-white/50 backdrop-blur-sm">
+        <header class="h-16 flex items-center justify-between px-6 border-b border-gray-200 bg-white/80">
+            <span class="font-semibold text-gray-700">Project Workspace</span>
+            <button class="md:hidden p-2 text-gray-600">☰</button>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-6 space-y-6" id="chat-container">
+            <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold text-xs">N</div>
+                <div class="max-w-2xl p-4 rounded-2xl message-bubble shadow-sm text-gray-700">
+                    Hello
+                    {% if user %}
+                    <strong>{{ user.name }}</strong>,
+                    {% endif %}
+                    I'm Nesto. Describe your dream house (rooms, floors, budget), and I'll generate the blueprint for you.
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="p-6 bg-transparent">
+            <div class="max-w-3xl mx-auto">
+                <form id="chat-form" class="relative">
+
+                    <input
+                        type="text"
+                        id="user-input"
+                        name="prompt"
+                        placeholder="Describe your dream house..."
+                        class="w-full bg-white border chat-input rounded-2xl p-4 pr-16 focus:outline-none focus:ring-2 focus:ring-emerald-500/20 focus:border-emerald-500 transition"
+                        required>
+
+                    <button
+                        type="submit"
+                        class="absolute right-3 top-3 bg-emerald-500 text-white p-2 rounded-xl hover:bg-emerald-600 transition">
+                        ➤
+                    </button>
+
+                </form>
+                <p class="text-center text-xs text-gray-400 mt-3">Nesto provides AI-powered architectural insights.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const form = document.getElementById("chat-form");
+        const input = document.getElementById("user-input");
+        const container = document.getElementById("chat-container");
+
+        function escapeHtml(text) {
+            return text.replace(/</g, "&lt;").replace(/>/g, "&gt;");
+        }
+
+        function createCanvas() {
+            let canvas = document.getElementById("floor-canvas");
+
+            if (!canvas) {
+                canvas = document.createElement("canvas");
+                canvas.id = "floor-canvas";
+                canvas.width = 700;
+                canvas.height = 450;
+                canvas.className = "mt-4 w-full";
+
+                container.appendChild(canvas);
+            }
+
+            return canvas;
+        }
+        
+        form.addEventListener("submit", async (e) => {
+
+            e.preventDefault();
+
+            const prompt = input.value.trim();
+            if (!prompt) return;
+
+            // USER MESSAGE
+            container.innerHTML += `
+                <div class="flex justify-end mb-4">
+                    <div class="bg-emerald-500 text-white rounded-2xl p-4 max-w-xl">
+                        ${escapeHtml(prompt)}
+                    </div>
+                </div>
+            `;
+
+            input.value = "";
+
+            try {
+
+                const response = await fetch("/generate", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ prompt })
+                });
+
+                const data = await response.json();
+
+                // AI RESPONSE CARD
+                container.innerHTML += `
+                <div class="flex gap-4 mb-4">
+
+                    <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center">
+                        N
+                    </div>
+
+                    <div class="bg-white border rounded-2xl p-4 max-w-4xl w-full">
+
+                        <h3 class="font-bold mb-2">
+                            AI Generated Plan
+                        </h3>
+
+                        <p class="text-sm text-gray-600">
+                            Rooms:
+                            ${data.summary.rooms}
+                        </p>
+
+                        <p class="text-sm text-gray-600">
+                            Valid:
+                            ${data.summary.valid}
+                        </p>
+
+                        <p class="text-sm text-gray-600 mb-4">
+                            DXF:
+                            ${data.files.dxf}
+                        </p>
+
+                        <img
+                            src="/${data.files.png}?t=${Date.now()}"
+                            class="w-full rounded-xl border shadow-lg"
+                            alt="Generated Floor Plan"
+                        />
+
+                    </div>
+
+                </div>
+                `;
+
+                setTimeout(() => {
+                    container.scrollTop = container.scrollHeight;
+                }, 50);
+
+            } catch (err) {
+                console.error(err);
+                alert("Generation failed.");
+            }
+        });
+    </script>
+</body>
+</html>

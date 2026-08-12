@@ -1,0 +1,219 @@
+{
+  "category":"room_relationship_patterns",
+  "room":"living_room",
+  "version":"2.0",
+  "description":"AI planning patterns for living room placement, circulation, social interaction, lighting, ventilation, accessibility, furniture arrangement and optimization.",
+
+  "patterns":[
+    {
+      "id":"LR001",
+      "name":"Entrance Connection",
+      "priority":"critical",
+      "description":"Living room should be directly accessible from the main entrance.",
+      "preferred_adjacent":["foyer","main_entrance"],
+      "avoid_adjacent":["master_bedroom","toilet"],
+      "optimization":{"accessibility":1.0,"guest_flow":0.98}
+    },
+    {
+      "id":"LR002",
+      "name":"Dining Connection",
+      "priority":"critical",
+      "description":"Living room should connect seamlessly to the dining room.",
+      "preferred_adjacent":["dining_room"],
+      "optimization":{"circulation":0.97}
+    },
+    {
+      "id":"LR003",
+      "name":"Open Living Concept",
+      "priority":"high",
+      "description":"Integrate living, dining and kitchen into one open space.",
+      "recommended_styles":["modern","minimalist","contemporary"],
+      "optimization":{"space":0.98,"lighting":0.97,"ventilation":0.96}
+    },
+    {
+      "id":"LR004",
+      "name":"Balcony Connection",
+      "priority":"high",
+      "description":"Provide direct access to balcony or deck.",
+      "preferred_adjacent":["balcony","deck"],
+      "optimization":{"daylight":1.0,"ventilation":1.0}
+    },
+    {
+      "id":"LR005",
+      "name":"Cross Ventilation",
+      "priority":"critical",
+      "description":"Living room should have openings on multiple sides.",
+      "required":true,
+      "optimization":{"airflow":1.0}
+    },
+    {
+      "id":"LR006",
+      "name":"Natural Daylight",
+      "priority":"critical",
+      "description":"Large windows maximize daylight.",
+      "minimum_window_area_percent":15,
+      "preferred_orientation":["North","East"]
+    },
+    {
+      "id":"LR007",
+      "name":"Furniture Layout",
+      "priority":"high",
+      "description":"Arrange seating for conversation and TV viewing.",
+      "features":[
+        "sofa",
+        "coffee_table",
+        "tv_unit",
+        "accent_chairs"
+      ],
+      "minimum_clearance_mm":900
+    },
+    {
+      "id":"LR008",
+      "name":"Double Height Living",
+      "priority":"medium",
+      "description":"Luxury double-height living room.",
+      "minimum_ceiling_height_m":5.5,
+      "recommended_buildings":["villa","luxury_home"]
+    },
+    {
+      "id":"LR009",
+      "name":"Privacy Buffer",
+      "priority":"medium",
+      "description":"Separate private bedrooms from public living areas.",
+      "avoid_adjacent":["master_bedroom","children_room"]
+    },
+    {
+      "id":"LR010",
+      "name":"Entertainment Zone",
+      "priority":"medium",
+      "description":"Dedicated TV and media wall.",
+      "features":[
+        "tv_wall",
+        "sound_system",
+        "smart_display"
+      ]
+    },
+    {
+      "id":"LR011",
+      "name":"Fireplace Layout",
+      "priority":"optional",
+      "description":"Fireplace as visual focal point.",
+      "recommended_climates":["cold","temperate"]
+    },
+    {
+      "id":"LR012",
+      "name":"Smart Living Room",
+      "priority":"medium",
+      "features":[
+        "voice_assistant",
+        "smart_lighting",
+        "motorized_curtains",
+        "occupancy_sensor",
+        "climate_control"
+      ]
+    },
+    {
+      "id":"LR013",
+      "name":"Accessible Living Room",
+      "priority":"high",
+      "description":"Barrier-free circulation.",
+      "minimum_walkway_mm":1200,
+      "wheelchair_turning_radius_mm":1500
+    },
+    {
+      "id":"LR014",
+      "name":"Luxury Lounge",
+      "priority":"medium",
+      "features":[
+        "bar_counter",
+        "library_corner",
+        "grand_piano",
+        "designer_lighting"
+      ]
+    },
+    {
+      "id":"LR015",
+      "name":"Energy Efficient Design",
+      "priority":"high",
+      "features":[
+        "double_glazed_windows",
+        "low_e_glass",
+        "led_lighting",
+        "solar_shading"
+      ],
+      "optimization":{"energy":0.97}
+    },
+    {
+      "id":"LR016",
+      "name":"Noise Control",
+      "priority":"medium",
+      "description":"Reduce noise transfer to bedrooms.",
+      "features":[
+        "acoustic_panels",
+        "solid_doors",
+        "insulated_walls"
+      ]
+    },
+    {
+      "id":"LR017",
+      "name":"Vastu Living Room",
+      "priority":"optional",
+      "preferred_direction":["North","East","North-East"]
+    },
+    {
+      "id":"LR018",
+      "name":"Flexible Furniture",
+      "priority":"medium",
+      "description":"Allow multiple seating arrangements.",
+      "features":[
+        "modular_sofa",
+        "foldable_table",
+        "movable_chairs"
+      ]
+    },
+    {
+      "id":"LR019",
+      "name":"Indoor-Outdoor Connection",
+      "priority":"high",
+      "description":"Visual and physical connection with garden.",
+      "preferred_adjacent":["garden","patio","terrace"]
+    },
+    {
+      "id":"LR020",
+      "name":"Future Expansion",
+      "priority":"medium",
+      "description":"Living room layout supports future remodeling.",
+      "expandable":true
+    }
+  ],
+
+  "global_constraints":{
+    "minimum_area_sqm":12,
+    "recommended_area_sqm":20,
+    "luxury_area_sqm":35,
+    "minimum_width_m":3.5,
+    "minimum_length_m":4.0,
+    "minimum_ceiling_height_m":2.75,
+    "minimum_window_area_percent":15,
+    "cross_ventilation_required":true,
+    "natural_light_required":true,
+    "maximum_corridor_connection":2
+  },
+
+  "optimization_weights":{
+    "circulation":0.25,
+    "lighting":0.20,
+    "ventilation":0.20,
+    "comfort":0.15,
+    "accessibility":0.10,
+    "energy":0.05,
+    "future_expansion":0.05
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Residential Guidelines",
+    "Universal Design Standards",
+    "ISO 21542 Accessibility"
+  ]
+}

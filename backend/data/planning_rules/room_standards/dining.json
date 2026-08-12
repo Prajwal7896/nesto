@@ -1,0 +1,188 @@
+{
+  "category":"room_standards",
+  "room":"dining_room",
+  "version":"2.0",
+  "description":"Comprehensive dining room planning standards for AI-driven residential and commercial floor planning. Covers dimensions, seating layouts, circulation, lighting, ventilation, accessibility, furniture placement, acoustics, utilities, aesthetics and optimization.",
+
+  "dimensions":{
+    "minimum_area_sqft":80,
+    "recommended_area_sqft":120,
+    "luxury_area_sqft":220,
+    "minimum_width_ft":8,
+    "recommended_width_ft":10,
+    "minimum_length_ft":10,
+    "recommended_length_ft":12,
+    "minimum_height_ft":10
+  },
+
+  "capacity":{
+    "minimum_seating":4,
+    "recommended_seating":6,
+    "luxury_seating":10,
+    "expandable_table_supported":true
+  },
+
+  "location":{
+    "preferred_adjacent_rooms":[
+      "Kitchen",
+      "Living Room",
+      "Balcony",
+      "Family Lounge"
+    ],
+    "avoid_adjacent_rooms":[
+      "Bathroom",
+      "Utility Room",
+      "Parking"
+    ],
+    "preferred_orientation":[
+      "North",
+      "East",
+      "North-East"
+    ]
+  },
+
+  "furniture":{
+    "dining_table":{
+      "required":true,
+      "shapes":[
+        "Rectangle",
+        "Square",
+        "Round",
+        "Oval"
+      ]
+    },
+    "chairs":{
+      "minimum":4,
+      "recommended":6,
+      "luxury":8
+    },
+    "sideboard_optional":true,
+    "crockery_unit_optional":true,
+    "display_cabinet_optional":true
+  },
+
+  "clearances":{
+    "chair_pullback_mm":900,
+    "table_to_wall_mm":1200,
+    "minimum_walkway_mm":1000,
+    "wheelchair_clearance_mm":1500
+  },
+
+  "lighting":{
+    "recommended_lux":200,
+    "natural_daylight_required":true,
+    "pendant_light":true,
+    "ambient_led":true,
+    "accent_lighting":true,
+    "dimmable_lighting":true
+  },
+
+  "ventilation":{
+    "cross_ventilation":true,
+    "minimum_windows":1,
+    "air_changes_per_hour":6,
+    "balcony_connection_preferred":true
+  },
+
+  "flooring":{
+    "recommended_materials":[
+      "Vitrified Tile",
+      "Marble",
+      "Granite",
+      "Engineered Wood"
+    ],
+    "easy_to_clean":true,
+    "anti_skid":true
+  },
+
+  "acoustics":{
+    "noise_control":true,
+    "soft_furnishings_supported":true,
+    "minimum_wall_stc":45
+  },
+
+  "electrical":{
+    "power_outlets":3,
+    "display_unit_point":true,
+    "decorative_light_point":true,
+    "smart_switches_supported":true
+  },
+
+  "accessibility":{
+    "wheelchair_accessible":true,
+    "barrier_free":true,
+    "minimum_door_width_mm":900
+  },
+
+  "smart_features":{
+    "smart_lighting":true,
+    "voice_control_supported":true,
+    "occupancy_sensor":true,
+    "motorized_blinds_supported":true,
+    "air_quality_sensor":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.96,
+    "circulation":0.95,
+    "comfort":0.96,
+    "daylighting":0.95,
+    "ventilation":0.95
+  },
+
+  "bonuses":{
+    "adjacent_to_kitchen":5,
+    "open_plan_layout":4,
+    "balcony_connection":3,
+    "natural_daylight":5,
+    "cross_ventilation":4,
+    "smart_lighting":2
+  },
+
+  "penalties":{
+    "adjacent_to_bathroom":-10,
+    "poor_circulation":-8,
+    "insufficient_daylight":-8,
+    "distance_from_kitchen":-6,
+    "insufficient_seating":-5
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Dining room shall be directly connected to the kitchen.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Bathrooms shall not open directly into the dining room.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Minimum circulation around the dining table shall be maintained.",
+      "severity":"high"
+    },
+    {
+      "rule":"Natural lighting and ventilation shall be provided.",
+      "severity":"high"
+    },
+    {
+      "rule":"Dining space shall accommodate the intended seating capacity.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_functionality_score":98,
+    "target_circulation_score":95,
+    "target_daylight_score":95,
+    "target_comfort_score":96
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "Time Saver Standards for Building Types",
+    "ASHRAE Standard 62.1",
+    "Energy Conservation Building Code (ECBC)"
+  ]
+}

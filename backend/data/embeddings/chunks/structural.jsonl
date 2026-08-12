@@ -1,0 +1,10 @@
+{"id":"S001","text":"Slabs distribute loads from floors and transfer them to beams and columns in reinforced concrete structures.","source":"structural.json","metadata":{"element":"slab"}}
+{"id":"S002","text":"Beam reinforcement is designed to resist bending moments and shear forces caused by structural loads.","source":"structural.json","metadata":{"element":"beam"}}
+{"id":"S003","text":"Columns primarily carry axial loads from beams and slabs down to the foundation.","source":"structural.json","metadata":{"element":"column"}}
+{"id":"S004","text":"Footings spread structural loads from columns into a larger soil area to prevent settlement failure.","source":"structural.json","metadata":{"element":"footing"}}
+{"id":"S005","text":"Foundations transfer building loads safely into the ground based on soil bearing capacity.","source":"structural.json","metadata":{"element":"foundation"}}
+{"id":"S006","text":"Load distribution in RCC structures follows the path slab → beam → column → footing → soil.","source":"structural.json","metadata":{"element":"load_path"}}
+{"id":"S007","text":"Reinforcement bars in beams are placed at tension zones to resist bending stress effectively.","source":"structural.json","metadata":{"element":"reinforcement"}}
+{"id":"S008","text":"Shear stress in beams increases near supports and must be handled with stirrups.","source":"structural.json","metadata":{"element":"shear"}}
+{"id":"S009","text":"Differential settlement occurs when different parts of the foundation settle unevenly due to soil variation.","source":"structural.json","metadata":{"element":"settlement"}}
+{"id":"S010","text":"Proper column grid alignment ensures uniform load transfer and prevents structural imbalance.","source":"structural.json","metadata":{"element":"grid"}}

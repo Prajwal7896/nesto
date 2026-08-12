@@ -1,0 +1,100 @@
+{
+  "style": "contemporary",
+
+  "definition": "Contemporary architecture is a flexible, modern design style focused on open spaces, natural light, minimal partitions, and functional layouts that adapt to current lifestyle needs.",
+
+  "core_principles": [
+    "Open floor layouts with minimal internal walls",
+    "Strong emphasis on natural lighting and ventilation",
+    "Simple geometric forms with clean lines",
+    "Indoor-outdoor integration using balconies and large openings",
+    "Functional and flexible multi-purpose spaces",
+    "Balanced asymmetry rather than strict symmetry"
+  ],
+
+  "spatial_design_rules": {
+    "living_room": {
+      "preferred_position": "front_central",
+      "min_area_sqft": 180,
+      "connections": ["dining_room", "balcony", "foyer"],
+      "open_to_kitchen": true
+    },
+
+    "kitchen": {
+      "preferred_position": "south_east_or_adjacent_to_dining",
+      "type": "open_or_semi_open",
+      "min_area_sqft": 100,
+      "ventilation_required": true
+    },
+
+    "bedroom": {
+      "preferred_position": "quiet_zone_rear",
+      "min_area_sqft": 120,
+      "natural_light_required": true,
+      "attached_bathroom_preferred": true
+    },
+
+    "bathroom": {
+      "position_rule": "near_bedrooms_and_staircase_core",
+      "ventilation_required": true
+    }
+  },
+
+  "circulation_rules": {
+    "corridors": "minimal_usage",
+    "flow": "direct_room_to_room_access_preferred",
+    "staircase": "central_or_side_core_position",
+    "entry_flow": "clear_view_from_entrance_to_living"
+  },
+
+  "material_palette": [
+    "glass",
+    "steel",
+    "exposed concrete",
+    "engineered wood",
+    "stone cladding",
+    "matte finishes"
+  ],
+
+  "structural_preferences": {
+    "frame": "RCC or steel frame",
+    "roof": "flat slab preferred",
+    "wall_thickness": "6-9 inches standard",
+    "column_grid": "regular modular grid system"
+  },
+
+  "lighting_and_ventilation": {
+    "natural_light_priority": "high",
+    "cross_ventilation_required": true,
+    "window_size": "large_floor_to_ceiling_preferred",
+    "skylight_support": true
+  },
+
+  "energy_and_sustainability": {
+    "solar_ready": true,
+    "rainwater_harvesting_support": true,
+    "energy_efficiency_priority": "high"
+  },
+
+  "vastu_flexibility": {
+    "compatible": true,
+    "preferred_entrance": ["north", "east"],
+    "kitchen_preferred_direction": "southeast",
+    "bedroom_flexibility": "medium"
+  },
+
+  "optimization_hints": {
+    "space_efficiency": "high_priority",
+    "center_of_mass_balance": true,
+    "privacy_score_priority": "medium",
+    "cost_efficiency": "medium"
+  },
+
+  "planning_tags": [
+    "modern_living",
+    "open_plan",
+    "urban_design",
+    "minimal_partition",
+    "natural_light_focused"
+  ]
+}

@@ -1,0 +1,116 @@
+{
+  "style": "modern",
+
+  "definition": "Modern architecture focuses on functional design, clean geometry, open layouts, efficient use of space, and integration of natural light with contemporary materials.",
+
+  "core_principles": [
+    "Functional and practical layout design",
+    "Clean straight lines with simple geometry",
+    "Open floor plans with defined zoning",
+    "Efficient space utilization",
+    "Balance between aesthetics and usability",
+    "Integration of natural light and ventilation"
+  ],
+
+  "spatial_design_rules": {
+    "living_room": {
+      "preferred_position": "front_central",
+      "min_area_sqft": 160,
+      "connections": ["dining_room", "balcony"],
+      "open_concept": true
+    },
+
+    "kitchen": {
+      "type": "semi_open_or_open",
+      "preferred_position": "adjacent_to_dining",
+      "min_area_sqft": 100,
+      "ventilation_required": true
+    },
+
+    "bedroom": {
+      "min_area_sqft": 120,
+      "preferred_position": "quiet_zone",
+      "attached_bathroom_preferred": true,
+      "natural_light_required": true
+    },
+
+    "bathroom": {
+      "min_area_sqft": 40,
+      "ventilation_required": true,
+      "wet_dry_separation": true
+    }
+  },
+
+  "zoning_rules": {
+    "public_zone": ["living_room", "lobby", "guest_bathroom"],
+    "semi_private_zone": ["dining_room", "kitchen"],
+    "private_zone": ["bedrooms", "study"],
+    "service_zone": ["utility", "parking"]
+  },
+
+  "circulation_rules": {
+    "corridor_usage": "minimal",
+    "flow": "direct_and_short_paths",
+    "staircase": "central_or_side_core",
+    "entry_visibility": "clear_view_to_living_area"
+  },
+
+  "geometry_rules": {
+    "preferred_shapes": ["rectangle", "square"],
+    "avoid": ["wasted_corners", "irregular_layouts"],
+    "modular_grid": true
+  },
+
+  "material_palette": [
+    "glass",
+    "steel",
+    "concrete",
+    "engineered wood",
+    "ceramic tiles",
+    "stone accents"
+  ],
+
+  "structural_preferences": {
+    "frame": "RCC frame system",
+    "roof": "flat slab or terrace usable slab",
+    "wall_thickness": "standard 6-9 inch",
+    "grid_system": "modular column grid"
+  },
+
+  "lighting_and_ventilation": {
+    "natural_light_priority": "high",
+    "cross_ventilation_required": true,
+    "window_style": "large_standard_windows",
+    "artificial_lighting": "layered_basic_to_moderate"
+  },
+
+  "energy_and_sustainability": {
+    "solar_ready": true,
+    "rainwater_harvesting_support": true,
+    "energy_efficiency": "medium_to_high"
+  },
+
+  "vastu_flexibility": {
+    "compatible": true,
+    "strictness": "medium",
+    "preferred_entrance": ["north", "east"],
+    "kitchen_direction": "southeast_preferred"
+  },
+
+  "optimization_hints": {
+    "space_efficiency": "high",
+    "center_of_mass_balance": true,
+    "cost_efficiency": "medium",
+    "aesthetic_priority": "medium_to_high",
+    "functionality_priority": "high"
+  },
+
+  "planning_tags": [
+    "modern_home",
+    "balanced_design",
+    "functional_layout",
+    "open_spaces",
+    "urban_living",
+    "efficient_architecture"
+  ]
+}

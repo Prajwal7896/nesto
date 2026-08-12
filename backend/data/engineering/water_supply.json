@@ -1,0 +1,315 @@
+{
+  "category":"water_supply_engineering",
+  "version":"2.0",
+  "description":"Comprehensive residential and commercial water supply engineering standards for AI-driven building planning. Used for water source selection, storage, distribution, pressure management, plumbing design, sustainability and validation.",
+
+  "water_sources":[
+    {
+      "type":"Municipal Supply",
+      "priority":1,
+      "recommended":true,
+      "quality":"High",
+      "requires_filtration":false
+    },
+    {
+      "type":"Borewell",
+      "priority":2,
+      "recommended":true,
+      "quality":"Variable",
+      "requires_filtration":true
+    },
+    {
+      "type":"Rainwater Harvesting",
+      "priority":3,
+      "recommended":true,
+      "quality":"Non-potable",
+      "requires_treatment":true
+    },
+    {
+      "type":"Water Tanker",
+      "priority":4,
+      "recommended":"Emergency Only"
+    }
+  ],
+
+  "storage":{
+
+    "underground_tank":{
+      "required":true,
+      "minimum_capacity_liters":3000,
+      "recommended_capacity_liters":5000,
+      "location":"Front Yard",
+      "material":"RCC"
+    },
+
+    "overhead_tank":{
+      "required":true,
+      "minimum_capacity_liters":1000,
+      "recommended_capacity_liters":2000,
+      "location":"Terrace",
+      "material":"HDPE"
+    }
+
+  },
+
+  "pump_system":{
+
+    "required":true,
+
+    "types":[
+      "Centrifugal",
+      "Submersible",
+      "Pressure Booster"
+    ],
+
+    "automatic_controller":true,
+
+    "backup_pump_recommended":true
+
+  },
+
+  "pipe_materials":{
+
+    "main_supply":"HDPE",
+
+    "cold_water":"uPVC",
+
+    "hot_water":"CPVC",
+
+    "underground":"HDPE",
+
+    "external":"GI"
+
+  },
+
+  "pipe_sizes":{
+
+    "main_supply":"32 mm",
+
+    "branch":"25 mm",
+
+    "wash_basin":"15 mm",
+
+    "kitchen_sink":"20 mm",
+
+    "shower":"20 mm",
+
+    "geyser":"20 mm",
+
+    "washing_machine":"20 mm",
+
+    "garden":"25 mm",
+
+    "fire_hydrant":"100 mm"
+
+  },
+
+  "pressure":{
+
+    "minimum_bar":2,
+
+    "recommended_bar":3.5,
+
+    "maximum_bar":6,
+
+    "pressure_reducing_valve_required":true
+
+  },
+
+  "daily_water_demand":{
+
+    "residential_liters_per_person":135,
+
+    "luxury_home":180,
+
+    "apartment":150,
+
+    "office":45,
+
+    "hotel":250,
+
+    "hospital":450
+
+  },
+
+  "fixture_flow_rates":{
+
+    "wash_basin_lpm":6,
+
+    "kitchen_sink_lpm":8,
+
+    "shower_lpm":10,
+
+    "wc_flush_liters":6,
+
+    "garden_tap_lpm":12
+
+  },
+
+  "distribution_rules":[
+
+    "Every floor shall have isolation valve.",
+
+    "Kitchen and bathrooms should share plumbing shafts.",
+
+    "Provide shutoff valve for every wet area.",
+
+    "Minimize pipe length.",
+
+    "Avoid crossing structural beams.",
+
+    "Maintain easy maintenance access."
+
+  ],
+
+  "hot_water_system":{
+
+    "solar_water_heater_supported":true,
+
+    "electric_geyser_supported":true,
+
+    "heat_pump_supported":true,
+
+    "central_hot_water_optional":true,
+
+    "pipe_insulation_required":true
+
+  },
+
+  "rainwater_harvesting":{
+
+    "mandatory_for_large_plots":true,
+
+    "roof_collection":true,
+
+    "first_flush_system":true,
+
+    "sand_filter":true,
+
+    "recharge_pit":true,
+
+    "storage_tank_supported":true
+
+  },
+
+  "greywater_system":{
+
+    "supported":true,
+
+    "reuse_for":[
+      "Toilet Flushing",
+      "Garden Irrigation",
+      "Landscape",
+      "Cleaning"
+    ]
+
+  },
+
+  "water_quality":{
+
+    "uv_filter_supported":true,
+
+    "ro_system_supported":true,
+
+    "sediment_filter":true,
+
+    "activated_carbon_filter":true
+
+  },
+
+  "smart_water_management":{
+
+    "smart_meter":true,
+
+    "leak_detection":true,
+
+    "automatic_pump_control":true,
+
+    "tank_level_sensor":true,
+
+    "water_usage_monitoring":true,
+
+    "mobile_notifications":true
+
+  },
+
+  "optimization":{
+
+    "minimize_pipe_length":true,
+
+    "reuse_vertical_shafts":true,
+
+    "cluster_wet_areas":true,
+
+    "gravity_distribution_preferred":true,
+
+    "reduce_water_loss":true,
+
+    "future_expansion_supported":true
+
+  },
+
+  "validation_rules":[
+
+    {
+      "rule":"Every building must have overhead water storage.",
+      "severity":"critical"
+    },
+
+    {
+      "rule":"Minimum water pressure shall be maintained.",
+      "severity":"critical"
+    },
+
+    {
+      "rule":"Each bathroom requires independent water supply.",
+      "severity":"critical"
+    },
+
+    {
+      "rule":"Rainwater harvesting required for large plots.",
+      "severity":"high"
+    },
+
+    {
+      "rule":"Hot and cold water pipelines shall remain separate.",
+      "severity":"high"
+    },
+
+    {
+      "rule":"Water storage tanks shall be accessible for maintenance.",
+      "severity":"medium"
+    }
+
+  ],
+
+  "maintenance":{
+
+    "tank_cleaning_interval_months":6,
+
+    "pump_service_interval_months":12,
+
+    "pipe_inspection_interval_months":12,
+
+    "filter_replacement_interval_months":6,
+
+    "leak_audit_interval_months":6
+
+  },
+
+  "reference_codes":[
+
+    "National Building Code of India (NBC)",
+
+    "IS 1172",
+
+    "IS 2065",
+
+    "IS 4985",
+
+    "CPHEEO Manual",
+
+    "BIS Drinking Water Standards"
+
+  ]
+}

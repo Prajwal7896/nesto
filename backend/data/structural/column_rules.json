@@ -1,0 +1,150 @@
+{
+  "category":"structural",
+  "module":"column_rules",
+  "version":"2.0",
+  "description":"Comprehensive column design and placement rules for AI-driven structural planning in residential and commercial buildings. Covers load transfer, grid planning, dimensions, reinforcement, buckling control, seismic safety, material selection and optimization rules.",
+
+  "objectives":{
+    "safe_vertical_load_transfer":true,
+    "prevent_buckling":true,
+    "ensure_seismic_resistance":true,
+    "optimize_column_grid":true,
+    "minimize_material_usage":true
+  },
+
+  "column_types":{
+    "short_column":true,
+    "long_column":true,
+    "tied_column":true,
+    "spiral_column":true,
+    "composite_column":true
+  },
+
+  "material_options":{
+    "rcc":true,
+    "steel":true,
+    "composite":true
+  },
+
+  "dimensions":{
+    "minimum_size_mm":200,
+    "recommended_size_mm":230,
+    "heavy_load_size_mm":300,
+    "high_rise_size_mm":450,
+    "minimum_spacing_m":3,
+    "recommended_spacing_m":4.5,
+    "maximum_spacing_m":7
+  },
+
+  "placement_rules":{
+    "aligned_grid_required":true,
+    "avoid_random_offset_columns":true,
+    "continuous_load_path_required":true,
+    "column_beam_intersection_required":true,
+    "symmetry_preferred":true,
+    "avoid_large_span_without_support":true
+  },
+
+  "load_transfer":{
+    "path":"slab → beam → column → footing → soil",
+    "uniform_load_preferred":true,
+    "point_load_avoidance":true,
+    "eccentric_load_minimization":true
+  },
+
+  "reinforcement_rules":{
+    "minimum_steel_percentage":0.8,
+    "maximum_steel_percentage":6.0,
+    "minimum_vertical_bars":4,
+    "typical_bars":6,
+    "minimum_diameter_mm":12,
+    "maximum_diameter_mm":32,
+    "stirrup_spacing_mm":{
+      "end_zones":100,
+      "middle_zone":150
+    },
+    "cover_requirement_mm":40
+  },
+
+  "buckling_control":{
+    "slenderness_ratio_limit":12,
+    "lateral_bracing_required":true,
+    "effective_length_factor_control":true
+  },
+
+  "seismic_rules":{
+    "ductile_design_required":true,
+    "strong_column_weak_beam":true,
+    "confined_end_zones_required":true,
+    "seismic_zones_supported":[2,3,4,5],
+    "tie_spacing_reduction_in_joints":true
+  },
+
+  "fire_safety":{
+    "minimum_fire_resistance_hours":2,
+    "fire_cover_required":true,
+    "thermal_spalling_control":true
+  },
+
+  "optimization":{
+    "structural_efficiency":0.98,
+    "material_efficiency":0.94,
+    "cost_efficiency":0.93,
+    "safety_factor":0.99
+  },
+
+  "bonuses":{
+    "grid_alignment":5,
+    "symmetrical_layout":4,
+    "short_span_support":5,
+    "ductile_design":5,
+    "optimized_spacing":4
+  },
+
+  "penalties":{
+    "misaligned_columns":-10,
+    "irregular_grid":-9,
+    "excessive_spacing":-8,
+    "under_reinforcement":-10,
+    "buckling_risk":-10
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Columns must align with beam and slab load paths.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Slenderness ratio must remain within safe limits.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper seismic detailing must be provided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Minimum reinforcement must be maintained.",
+      "severity":"high"
+    },
+    {
+      "rule":"Column spacing must not exceed structural limits.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_structural_safety":99,
+    "target_grid_efficiency":96,
+    "target_material_efficiency":94,
+    "target_seismic_resilience":98
+  },
+
+  "reference_codes":[
+    "IS 456:2000",
+    "IS 13920 (Ductile Detailing)",
+    "IS 875 (Loads)",
+    "National Building Code of India (NBC)",
+    "CPWD Structural Guidelines",
+    "ACI 318"
+  ]
+}

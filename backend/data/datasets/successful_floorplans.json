@@ -1,0 +1,262 @@
+{
+  "category":"successful_floorplans",
+  "version":"2.0",
+  "description":"Validated residential floor plans used as reference examples for AI-based floor planning, optimization and layout generation.",
+
+  "plans":[
+
+    {
+      "id":"SF001",
+      "name":"Compact Modern 2BHK",
+
+      "input":{
+        "plot":{"length":40,"width":30,"unit":"ft"},
+        "floors":1,
+        "style":"modern",
+        "budget":3500000,
+        "bedrooms":2,
+        "bathrooms":2,
+        "parking":1
+      },
+
+      "rooms":[
+        "Living Room",
+        "Dining Room",
+        "Kitchen",
+        "Utility Room",
+        "Master Bedroom",
+        "Bedroom",
+        "Bathroom",
+        "Attached Bathroom",
+        "Parking"
+      ],
+
+      "patterns":[
+        "Open Living",
+        "Kitchen Triangle",
+        "Cross Ventilation"
+      ],
+
+      "scores":{
+        "space_efficiency":0.95,
+        "privacy":0.89,
+        "ventilation":0.98,
+        "lighting":0.97,
+        "cost_efficiency":0.93,
+        "overall":0.95
+      }
+    },
+
+    {
+      "id":"SF002",
+
+      "name":"Luxury Villa",
+
+      "input":{
+        "plot":{"length":80,"width":60,"unit":"ft"},
+        "floors":2,
+        "style":"luxury",
+        "budget":25000000,
+        "bedrooms":5,
+        "bathrooms":6,
+        "parking":3
+      },
+
+      "patterns":[
+        "Central Courtyard",
+        "Private Bedroom Cluster",
+        "Double Height Living",
+        "Terrace Garden"
+      ],
+
+      "scores":{
+        "luxury":0.99,
+        "privacy":0.98,
+        "ventilation":0.95,
+        "overall":0.97
+      }
+    },
+
+    {
+      "id":"SF003",
+
+      "name":"Minimal Budget House",
+
+      "input":{
+        "plot":{"length":30,"width":25,"unit":"ft"},
+        "floors":1,
+        "budget":1800000,
+        "style":"minimalist",
+        "bedrooms":1
+      },
+
+      "patterns":[
+        "Compact Planning",
+        "Minimum Corridor"
+      ],
+
+      "scores":{
+        "space_efficiency":0.99,
+        "cost_efficiency":0.99,
+        "overall":0.95
+      }
+    },
+
+    {
+      "id":"SF004",
+
+      "name":"Duplex Family Home",
+
+      "input":{
+        "plot":{"length":60,"width":40,"unit":"ft"},
+        "floors":2,
+        "style":"contemporary",
+        "bedrooms":4,
+        "bathrooms":4
+      },
+
+      "patterns":[
+        "Central Staircase",
+        "Family Lounge",
+        "Future Expansion"
+      ],
+
+      "scores":{
+        "privacy":0.94,
+        "space_efficiency":0.93,
+        "overall":0.94
+      }
+    },
+
+    {
+      "id":"SF005",
+
+      "name":"Vastu Home",
+
+      "patterns":[
+        "North East Entrance",
+        "South East Kitchen",
+        "South West Master Bedroom"
+      ],
+
+      "scores":{
+        "vastu":1.0,
+        "overall":0.93
+      }
+    },
+
+    {
+      "id":"SF006",
+
+      "name":"Urban Stilt Parking House",
+
+      "input":{
+        "floors":3,
+        "parking":2
+      },
+
+      "patterns":[
+        "Parking Under Stilt",
+        "Central Staircase"
+      ],
+
+      "scores":{
+        "parking_efficiency":0.98,
+        "overall":0.94
+      }
+    },
+
+    {
+      "id":"SF007",
+
+      "name":"Eco Friendly Residence",
+
+      "patterns":[
+        "Solar Ready Roof",
+        "Rainwater Harvesting",
+        "Cross Ventilation",
+        "Energy Efficient Orientation"
+      ],
+
+      "scores":{
+        "energy_efficiency":0.99,
+        "sustainability":0.98,
+        "overall":0.96
+      }
+    },
+
+    {
+      "id":"SF008",
+
+      "name":"Corner Plot Villa",
+
+      "patterns":[
+        "Corner Plot Planning",
+        "Dual Entry",
+        "Landscape Garden"
+      ],
+
+      "scores":{
+        "space_efficiency":0.96,
+        "overall":0.95
+      }
+    },
+
+    {
+      "id":"SF009",
+
+      "name":"Home Office Residence",
+
+      "patterns":[
+        "Home Office Isolation",
+        "Noise Separation"
+      ],
+
+      "scores":{
+        "productivity":0.94,
+        "privacy":0.92,
+        "overall":0.93
+      }
+    },
+
+    {
+      "id":"SF010",
+
+      "name":"Premium Family Villa",
+
+      "input":{
+        "floors":2,
+        "bedrooms":4,
+        "budget":18000000
+      },
+
+      "patterns":[
+        "Luxury Master Suite",
+        "Family Lounge",
+        "Guest Suite",
+        "Private Bedroom Cluster"
+      ],
+
+      "scores":{
+        "luxury":0.97,
+        "comfort":0.98,
+        "overall":0.97
+      }
+    }
+
+  ],
+
+  "ranking_weights":{
+
+    "space_efficiency":0.20,
+    "privacy":0.15,
+    "ventilation":0.15,
+    "lighting":0.10,
+    "cost_efficiency":0.10,
+    "structural_feasibility":0.10,
+    "fire_safety":0.10,
+    "accessibility":0.05,
+    "vastu":0.05
+
+  }
+}

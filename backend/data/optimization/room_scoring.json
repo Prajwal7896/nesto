@@ -1,0 +1,214 @@
+{
+  "category":"building_optimization",
+  "module":"room_scoring",
+  "version":"2.0",
+  "description":"AI scoring framework for evaluating residential and commercial room layouts. Used to rank generated floor plans based on functionality, comfort, safety, accessibility, sustainability and construction feasibility.",
+
+  "overall_score":{
+    "maximum":100,
+    "minimum":0,
+    "passing_score":70,
+    "excellent_score":90
+  },
+
+  "weights":{
+    "adjacency":0.18,
+    "space_efficiency":0.15,
+    "circulation":0.12,
+    "daylighting":0.10,
+    "ventilation":0.10,
+    "privacy":0.10,
+    "structural_feasibility":0.08,
+    "accessibility":0.05,
+    "energy_efficiency":0.05,
+    "vastu":0.03,
+    "cost_efficiency":0.02,
+    "future_expansion":0.02
+  },
+
+  "room_scores":{
+    "living_room":{
+      "minimum_area_sqft":150,
+      "ideal_area_sqft":220,
+      "daylight_required":true,
+      "cross_ventilation":true,
+      "adjacent_rooms":[
+        "Dining Room",
+        "Entrance",
+        "Balcony"
+      ],
+      "weight":9
+    },
+    "bedroom":{
+      "minimum_area_sqft":120,
+      "ideal_area_sqft":160,
+      "attached_bath_bonus":5,
+      "privacy_required":true,
+      "cross_ventilation":true,
+      "weight":10
+    },
+    "master_bedroom":{
+      "minimum_area_sqft":170,
+      "ideal_area_sqft":220,
+      "walk_in_closet_bonus":4,
+      "private_balcony_bonus":3,
+      "weight":12
+    },
+    "kitchen":{
+      "minimum_area_sqft":80,
+      "ideal_area_sqft":120,
+      "utility_connection_bonus":5,
+      "dining_connection_bonus":5,
+      "chimney_required":true,
+      "weight":10
+    },
+    "bathroom":{
+      "minimum_area_sqft":35,
+      "ideal_area_sqft":55,
+      "ventilation_required":true,
+      "anti_skid_flooring":true,
+      "weight":7
+    },
+    "dining_room":{
+      "minimum_area_sqft":80,
+      "ideal_area_sqft":120,
+      "near_kitchen_bonus":5,
+      "weight":6
+    },
+    "study_room":{
+      "minimum_area_sqft":80,
+      "daylight_required":true,
+      "noise_free":true,
+      "weight":5
+    },
+    "office":{
+      "minimum_area_sqft":100,
+      "internet_ready":true,
+      "natural_light":true,
+      "weight":6
+    },
+    "balcony":{
+      "minimum_area_sqft":35,
+      "living_connection_bonus":4,
+      "weight":3
+    },
+    "parking":{
+      "minimum_car_area_sqft":135,
+      "easy_access":true,
+      "weight":5
+    }
+  },
+
+  "adjacency_scoring":{
+    "Living Room-Dining":10,
+    "Kitchen-Dining":10,
+    "Kitchen-Utility":10,
+    "Bedroom-Bathroom":10,
+    "Living-Balcony":8,
+    "Office-Entrance":5,
+    "Parking-Entrance":7
+  },
+
+  "penalties":{
+    "bedroom_near_kitchen":-8,
+    "bathroom_opening_to_dining":-10,
+    "long_corridor":-5,
+    "no_cross_ventilation":-10,
+    "insufficient_daylight":-8,
+    "dead_space":-6,
+    "poor_circulation":-7,
+    "west_facing_large_glazing":-5
+  },
+
+  "bonus":{
+    "courtyard":6,
+    "solar_panels":4,
+    "rainwater_harvesting":3,
+    "smart_home":3,
+    "future_expansion":4,
+    "green_roof":4,
+    "double_height_living":3
+  },
+
+  "space_efficiency":{
+    "excellent":0.90,
+    "good":0.80,
+    "average":0.70,
+    "poor":0.60
+  },
+
+  "circulation":{
+    "maximum_corridor_area_percent":10,
+    "maximum_travel_distance_m":15,
+    "minimum_door_width_mm":900,
+    "minimum_passage_width_mm":1200
+  },
+
+  "privacy_levels":{
+    "public":[
+      "Living Room",
+      "Dining Room",
+      "Guest Room"
+    ],
+    "semi_private":[
+      "Kitchen",
+      "Family Room",
+      "Study Room"
+    ],
+    "private":[
+      "Bedrooms",
+      "Bathrooms",
+      "Walk-in Closet"
+    ]
+  },
+
+  "optimization_targets":{
+    "minimum_daylight_score":90,
+    "minimum_ventilation_score":90,
+    "minimum_adjacency_score":90,
+    "minimum_space_utilization_percent":85,
+    "minimum_energy_score":80
+  },
+
+  "grade_mapping":{
+    "A+":95,
+    "A":90,
+    "B+":85,
+    "B":80,
+    "C+":75,
+    "C":70,
+    "D":60,
+    "F":0
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Overall room score shall be at least 70.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Every habitable room shall receive daylight.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Cross ventilation shall be provided for living and bedrooms.",
+      "severity":"high"
+    },
+    {
+      "rule":"Kitchen shall be adjacent to dining room.",
+      "severity":"high"
+    },
+    {
+      "rule":"Dead space should not exceed 5% of built-up area.",
+      "severity":"medium"
+    }
+  ],
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Specifications",
+    "ECBC India",
+    "ASHRAE Standards",
+    "IGBC Green Homes"
+  ]
+}

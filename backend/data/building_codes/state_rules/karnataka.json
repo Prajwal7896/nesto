@@ -1,0 +1,123 @@
+{
+  "state": "Karnataka",
+
+  "authority": "Karnataka Urban & Rural Planning Regulations (Simplified RAG Version)",
+
+  "scope": "residential_and_mixed_use_buildings",
+
+  "core_objectives": [
+    "Ensure compliance with Karnataka town planning rules",
+    "Adapt building design to mixed climate zones (coastal + inland)",
+    "Support sustainable urban growth in high-density cities",
+    "Ensure seismic safety compliance in applicable zones"
+  ],
+
+  "climate_profile": {
+    "coastal_regions": ["Mangalore", "Udupi", "Karwar"],
+    "inland_regions": ["Bangalore", "Mysore", "Hubli"],
+    "rainfall_pattern": "moderate_to_heavy_monsoon",
+    "temperature_range": "moderate",
+    "humidity": "high_in_coastal_low_inland"
+  },
+
+  "plot_regulations": {
+    "minimum_open_space_percentage": 12,
+    "maximum_ground_coverage": 70,
+    "setback_rules": {
+      "front": 2.5,
+      "side": 1.2,
+      "rear": 2.0
+    },
+    "corner_plot_advantage": true
+  },
+
+  "floor_rules": {
+    "maximum_floors_without_special_permission": 5,
+    "stilt_parking_allowed": true,
+    "basement_allowed_in_urban_zones": true,
+    "terrace_usage_allowed": true
+  },
+
+  "staircase_rules": {
+    "mandatory_for_2_plus_floors": true,
+    "minimum_width_ft": 3.0,
+    "preferred_position": "side_core_or_central",
+    "fire_staircase_required_above": 3
+  },
+
+  "parking_rules": {
+    "car_parking_per_unit": 1,
+    "bike_parking_required": true,
+    "stilt_parking_preferred": true,
+    "basement_parking_allowed": true
+  },
+
+  "room_constraints": {
+    "minimum_room_height_ft": 9.0,
+    "ventilation_required": true,
+    "natural_light_required": true
+  },
+
+  "kitchen_rules": {
+    "preferred_direction": "southeast",
+    "ventilation_mandatory": true,
+    "separate_utility_space_required": true
+  },
+
+  "sanitation_rules": {
+    "toilet_not_adjacent_to_kitchen": true,
+    "rainwater_harvesting_required": true,
+    "sewer_connection_mandatory_in_cities": true
+  },
+
+  "fire_safety": {
+    "emergency_exit_required": true,
+    "fire_extinguisher_recommended": true,
+    "clear_escape_routes_mandatory": true
+  },
+
+  "structural_rules": {
+    "earthquake_zone_consideration": true,
+    "rcc_frame_required": true,
+    "soil_testing_recommended": true,
+    "load_distribution_standard": "IS_code_compliant"
+  },
+
+  "urban_planning": {
+    "fsi_applicable": true,
+    "fsi_flexibility": "high_in_bangalore",
+    "high_density_zones": ["Bangalore", "Mangalore"],
+    "medium_density_zones": ["Mysore", "Hubli", "Belgaum"],
+    "low_density_zones": ["Kodagu", "Chikkamagaluru"]
+  },
+
+  "water_and_drainage": {
+    "monsoon_management_priority": "high",
+    "roof_slope_recommended": true,
+    "drainage_capacity_high_required": true,
+    "flood_resistant_design_recommended": true
+  },
+
+  "energy_and_sustainability": {
+    "solar_panel_support": true,
+    "rainwater_harvesting_mandatory": true,
+    "energy_efficiency_priority": "medium_to_high"
+  },
+
+  "optimization_priority": {
+    "regulatory_compliance": 1.0,
+    "space_efficiency": 0.85,
+    "cost_efficiency": 0.8,
+    "ventilation": 0.9,
+    "aesthetics": 0.65
+  },
+
+  "planning_tags": [
+    "karnataka_building_rules",
+    "fsi_based_design",
+    "monsoon_resistant_architecture",
+    "urban_rural_balance",
+    "south_india_housing",
+    "regulatory_compliant_design"
+  ]
+}

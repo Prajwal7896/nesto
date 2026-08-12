@@ -1,0 +1,155 @@
+{
+  "category":"structural",
+  "module":"beam_rules",
+  "version":"2.0",
+  "description":"Comprehensive beam design and placement rules for AI-driven structural planning in residential and commercial buildings. Covers load transfer, dimensions, spacing, reinforcement guidelines, span limits, material selection, seismic safety and optimization rules.",
+
+  "objectives":{
+    "safe_load_transfer":true,
+    "optimize_span_efficiency":true,
+    "reduce_deflection":true,
+    "ensure_seismic_resistance":true,
+    "minimize_material_wastage":true
+  },
+
+  "beam_types":{
+    "simply_supported":true,
+    "cantilever":true,
+    "continuous":true,
+    "overhanging":true,
+    "fixed_end":true
+  },
+
+  "material_options":{
+    "rcc":true,
+    "steel":true,
+    "composite":true,
+    "timber":false
+  },
+
+  "span_rules":{
+    "maximum_span_to_depth_ratio":{
+      "rcc_beam":15,
+      "steel_beam":20
+    },
+    "minimum_span_support_ratio":0.1,
+    "recommended_span_range_m":[2,8],
+    "long_span_special_design_required":true
+  },
+
+  "dimensions":{
+    "minimum_width_mm":200,
+    "recommended_width_mm":230,
+    "heavy_load_width_mm":300,
+    "minimum_depth_mm":300,
+    "recommended_depth_mm":450,
+    "heavy_load_depth_mm":600
+  },
+
+  "placement_rules":{
+    "avoid_over_openings":true,
+    "align_with_columns":true,
+    "continuous_load_path_required":true,
+    "avoid_random_beam_discontinuity":true,
+    "support_under_slab_edges":true
+  },
+
+  "load_transfer":{
+    "primary_load_path":"slab → beam → column → footing → soil",
+    "uniform_load_preferred":true,
+    "point_load_avoidance":true,
+    "load_distribution_required":true
+  },
+
+  "reinforcement_rules":{
+    "minimum_steel_percentage":0.85,
+    "maximum_steel_percentage":2.5,
+    "stirrup_spacing_mm":{
+      "supports":100,
+      "midspan":200
+    },
+    "cover_requirement_mm":25,
+    "anchorage_required":true
+  },
+
+  "deflection_control":{
+    "maximum_allowable_deflection_span_ratio":250,
+    "pre_camber_recommended":true,
+    "stiffness_priority":"High"
+  },
+
+  "seismic_rules":{
+    "ductile_design_required":true,
+    "seismic_zones_supported":[2,3,4,5],
+    "strong_column_weak_beam_principle":true,
+    "confined_reinforcement_required":true
+  },
+
+  "fire_safety":{
+    "minimum_fire_resistance_hours":1,
+    "fire_proof_cover_required":true,
+    "thermal_expansion_considered":true
+  },
+
+  "optimization":{
+    "material_efficiency":0.96,
+    "structural_safety":0.99,
+    "cost_efficiency":0.92,
+    "span_efficiency":0.94
+  },
+
+  "bonuses":{
+    "aligned_columns":5,
+    "continuous_beams":4,
+    "optimal_span_ratio":5,
+    "seismic_ductility":5,
+    "uniform_loading":4
+  },
+
+  "penalties":{
+    "over_spanning":-10,
+    "under_reinforcement":-10,
+    "misaligned_beams":-8,
+    "excessive_deflection":-9,
+    "improper_load_path":-10
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Beams must follow a continuous load path from slab to foundation.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Span-to-depth ratio must not exceed structural limits.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper reinforcement and anchorage must be provided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Beams shall align with column grid wherever possible.",
+      "severity":"high"
+    },
+    {
+      "rule":"Deflection limits must be within permissible range.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_structural_safety":99,
+    "target_cost_efficiency":92,
+    "target_material_efficiency":96,
+    "target_deflection_control":95
+  },
+
+  "reference_codes":[
+    "IS 456:2000",
+    "IS 875 (Loadings)",
+    "IS 13920 (Ductile Design)",
+    "National Building Code of India (NBC)",
+    "CPWD Structural Guidelines",
+    "ACI 318"
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "BC001": {"type": "code", "priority": "high"},
+  "C001": {"type": "cost", "unit": "sqft"},
+  "E001": {"type": "engineering", "system": "RCC"},
+  "S001": {"type": "structural", "element": "slab"}
+}

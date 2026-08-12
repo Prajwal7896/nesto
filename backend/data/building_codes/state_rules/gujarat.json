@@ -1,0 +1,125 @@
+{
+  "state": "Gujarat",
+
+  "authority": "Gujarat Town Planning & Building Regulations (Simplified RAG Version)",
+
+  "scope": "residential_and_mixed_use_buildings",
+
+  "core_objectives": [
+    "Ensure seismic safety due to earthquake-prone zones",
+    "Adapt design for hot and dry climate conditions",
+    "Promote efficient water conservation systems",
+    "Support planned urban development in fast-growing cities"
+  ],
+
+  "climate_profile": {
+    "type": "hot_dry_monsoon_moderate",
+    "temperature_range": "high_summer_extremes",
+    "rainfall": "low_to_moderate",
+    "humidity": "low_inland_moderate_coastal"
+  },
+
+  "plot_regulations": {
+    "minimum_open_space_percentage": 15,
+    "maximum_ground_coverage": 65,
+    "setback_rules": {
+      "front": 3.0,
+      "side": 1.5,
+      "rear": 2.0
+    },
+    "corner_plot_advantage": true
+  },
+
+  "floor_rules": {
+    "maximum_floors_without_special_permission": 4,
+    "stilt_parking_allowed": true,
+    "basement_allowed_in_urban_zones": true,
+    "terrace_usage_allowed": true
+  },
+
+  "staircase_rules": {
+    "mandatory_for_2_plus_floors": true,
+    "minimum_width_ft": 3.0,
+    "preferred_position": "side_or_central_core",
+    "fire_staircase_required_above": 3
+  },
+
+  "parking_rules": {
+    "car_parking_per_unit": 1,
+    "bike_parking_required": true,
+    "stilt_parking_preferred": true,
+    "basement_parking_allowed": true
+  },
+
+  "room_constraints": {
+    "minimum_room_height_ft": 9.0,
+    "ventilation_required": true,
+    "natural_light_required": true
+  },
+
+  "kitchen_rules": {
+    "preferred_direction": "southeast",
+    "ventilation_mandatory": true,
+    "heat_control_priority": "very_high"
+  },
+
+  "sanitation_rules": {
+    "toilet_not_adjacent_to_kitchen": true,
+    "rainwater_harvesting_required": true,
+    "water_reuse_system_recommended": true
+  },
+
+  "fire_safety": {
+    "emergency_exit_required": true,
+    "fire_extinguisher_recommended": true,
+    "clear_escape_routes_mandatory": true
+  },
+
+  "structural_rules": {
+    "earthquake_zone_consideration": true,
+    "rcc_frame_required": true,
+    "soil_testing_recommended": true,
+    "load_distribution_standard": "IS_code_compliant",
+    "seismic_zone": "high_priority"
+  },
+
+  "urban_planning": {
+    "fsi_applicable": true,
+    "fsi_flexibility": "moderate_to_high",
+    "high_density_zones": ["Ahmedabad", "Surat", "Vadodara"],
+    "medium_density_zones": ["Rajkot", "Gandhinagar"],
+    "low_density_zones": ["Bhuj", "Jamnagar outskirts"]
+  },
+
+  "water_and_climate": {
+    "water_scarcity_management": true,
+    "rainwater_harvesting_mandatory": true,
+    "heat_resistance_design_priority": "very_high",
+    "roof_insulation_required": true,
+    "passive_cooling_strategies": true
+  },
+
+  "energy_and_sustainability": {
+    "solar_panel_support": true,
+    "energy_efficiency_priority": "high",
+    "thermal_control_importance": "very_high"
+  },
+
+  "optimization_priority": {
+    "regulatory_compliance": 1.0,
+    "heat_management": 0.95,
+    "water_efficiency": 0.9,
+    "space_efficiency": 0.85,
+    "cost_efficiency": 0.8,
+    "aesthetics": 0.6
+  },
+
+  "planning_tags": [
+    "gujarat_building_rules",
+    "seismic_zone_design",
+    "hot_dry_climate_architecture",
+    "water_conservation_priority",
+    "urban_planning_india",
+    "fsi_based_design"
+  ]
+}

@@ -1,0 +1,164 @@
+{
+  "category":"structural",
+  "module":"foundation_rules",
+  "version":"2.0",
+  "description":"Comprehensive foundation design rules for AI-driven building planning. Covers structural load transfer, soil interaction, foundation selection, depth control, reinforcement, settlement, seismic safety, waterproofing and optimization principles.",
+
+  "objectives":{
+    "safe_load_transfer_to_ground":true,
+    "prevent_structural_failure":true,
+    "control_settlement":true,
+    "ensure_long_term_stability":true,
+    "adapt_to_soil_conditions":true
+  },
+
+  "soil_assessment":{
+    "soil_test_mandatory":true,
+    "bearing_capacity_range_kN_m2":[100,500],
+    "soft_soil_design_required":true,
+    "expansive_soil_handling_required":true,
+    "water_table_consideration":true
+  },
+
+  "foundation_types":{
+    "shallow_foundation":{
+      "isolated_footing":true,
+      "strip_footing":true,
+      "combined_footing":true
+    },
+    "deep_foundation":{
+      "pile_foundation":true,
+      "pier_foundation":true,
+      "caisson_foundation":true
+    },
+    "raft_foundation":true
+  },
+
+  "load_transfer":{
+    "path":"superstructure → column → footing → foundation → soil",
+    "uniform_load_distribution_required":true,
+    "eccentric_load_minimization":true,
+    "moment_resistance_required":true
+  },
+
+  "depth_rules":{
+    "minimum_depth_ft":3,
+    "recommended_depth_ft":5,
+    "frost_depth_consideration":true,
+    "scour_depth_consideration":true,
+    "water_table_adjustment_required":true
+  },
+
+  "structural_requirements":{
+    "rigid_base_required":true,
+    "symmetry_preferred":true,
+    "continuous_load_path_required":true,
+    "column_alignment_required":true
+  },
+
+  "settlement_control":{
+    "maximum_total_settlement_mm":25,
+    "differential_settlement_mm":15,
+    "uniform_settlement_preferred":true,
+    "soil_compaction_required":true
+  },
+
+  "reinforcement":{
+    "minimum_steel_percentage":0.5,
+    "maximum_steel_percentage":2.0,
+    "mesh_reinforcement_required":true,
+    "bottom_steel_primary":true,
+    "top_steel_for_combined_and_raft":true,
+    "cover_requirement_mm":50,
+    "anchorage_required":true
+  },
+
+  "waterproofing":{
+    "damp_proofing_required":true,
+    "bituminous_coating_optional":true,
+    "drainage_layer_required":true,
+    "capillary_break_required":true
+  },
+
+  "drainage":{
+    "subsoil_drain_required":true,
+    "perimeter_drain_optional":true,
+    "water_accumulation_prevention":true
+  },
+
+  "seismic_rules":{
+    "soil_liquefaction_check_required":true,
+    "ductile_foundation_behavior":true,
+    "base_isolation_supported":true
+  },
+
+  "materials":{
+    "rcc":true,
+    "pcc_levelling_layer_required":true,
+    "high_strength_concrete_preferred":true
+  },
+
+  "optimization":{
+    "cost_efficiency":0.91,
+    "durability":0.99,
+    "load_distribution_efficiency":0.97,
+    "soil_utilization":0.96,
+    "structural_safety":0.99
+  },
+
+  "bonuses":{
+    "good_soil_conditions":5,
+    "uniform_loading":5,
+    "proper_compaction":5,
+    "raft_foundation_use":4,
+    "deep_foundation_for_soft_soil":4
+  },
+
+  "penalties":{
+    "poor_soil_conditions":-10,
+    "uneven_settlement":-10,
+    "eccentric_loading":-9,
+    "no_drainage":-8,
+    "insufficient_depth":-8
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Foundation must safely transfer all structural loads to soil.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Soil bearing capacity must be verified before construction.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Differential settlement must be controlled within limits.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper waterproofing and drainage must be provided.",
+      "severity":"high"
+    },
+    {
+      "rule":"Reinforcement detailing must ensure structural continuity.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_structural_safety":99,
+    "target_settlement_control":97,
+    "target_durability":99,
+    "target_soil_efficiency":96
+  },
+
+  "reference_codes":[
+    "IS 456:2000",
+    "IS 1904 (Foundation Design)",
+    "IS 6403 (Bearing Capacity of Soil)",
+    "IS 2950 (Raft Foundations)",
+    "IS 2911 (Pile Foundations)",
+    "National Building Code of India (NBC)",
+    "CPWD Foundation Guidelines"
+  ]
+}

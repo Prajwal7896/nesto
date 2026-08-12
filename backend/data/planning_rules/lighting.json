@@ -1,0 +1,208 @@
+{
+  "category":"planning_rules",
+  "module":"lighting",
+  "version":"2.0",
+  "description":"Comprehensive natural and artificial lighting standards for AI-driven residential and commercial building planning. Used for daylight optimization, occupant comfort, energy efficiency, visual performance, glare control and lighting design validation.",
+
+  "objectives":{
+    "maximize_natural_daylight":true,
+    "reduce_artificial_lighting":true,
+    "improve_visual_comfort":true,
+    "increase_energy_efficiency":true,
+    "eliminate_glare":true,
+    "support_circadian_lighting":true
+  },
+
+  "daylight_requirements":{
+    "minimum_window_to_floor_ratio_percent":15,
+    "recommended_window_to_floor_ratio_percent":20,
+    "maximum_window_to_wall_ratio_percent":40,
+    "cross_daylighting_supported":true,
+    "skylights_supported":true
+  },
+
+  "recommended_lux_levels":{
+    "living_room":200,
+    "bedroom":150,
+    "kitchen":350,
+    "dining_room":200,
+    "bathroom":250,
+    "office":500,
+    "study_room":500,
+    "corridor":100,
+    "staircase":150,
+    "parking":75,
+    "balcony":100,
+    "utility_room":150
+  },
+
+  "window_orientation":{
+    "north":"Excellent",
+    "east":"Very Good",
+    "south":"Good with shading",
+    "west":"Avoid large glazing"
+  },
+
+  "natural_lighting":{
+    "living_room":{
+      "daylight_required":true,
+      "minimum_windows":2,
+      "preferred_orientation":"North-East"
+    },
+    "bedroom":{
+      "daylight_required":true,
+      "minimum_windows":1,
+      "preferred_orientation":"East"
+    },
+    "kitchen":{
+      "daylight_required":true,
+      "minimum_windows":1,
+      "preferred_orientation":"East"
+    },
+    "office":{
+      "daylight_required":true,
+      "preferred_orientation":"North"
+    }
+  },
+
+  "artificial_lighting":{
+    "led_only":true,
+    "minimum_cri":80,
+    "recommended_cri":90,
+    "preferred_color_temperature_k":[
+      2700,
+      3000,
+      4000,
+      5000
+    ],
+    "dimmable_supported":true,
+    "smart_control_supported":true
+  },
+
+  "lighting_types":{
+    "ambient":true,
+    "task":true,
+    "accent":true,
+    "decorative":true,
+    "emergency":true
+  },
+
+  "smart_features":{
+    "motion_sensor":true,
+    "occupancy_sensor":true,
+    "daylight_sensor":true,
+    "automatic_dimming":true,
+    "mobile_control":true,
+    "voice_control":true
+  },
+
+  "glare_control":{
+    "external_shading":true,
+    "louvers_supported":true,
+    "blinds_supported":true,
+    "low_e_glass":true,
+    "light_shelves_supported":true
+  },
+
+  "energy_efficiency":{
+    "maximum_lighting_power_density_w_m2":8,
+    "daylight_harvesting":true,
+    "automatic_switch_off":true,
+    "led_efficiency_lm_w":120
+  },
+
+  "emergency_lighting":{
+    "required":true,
+    "battery_backup_hours":2,
+    "illuminated_exit_signs":true,
+    "escape_route_lighting":true
+  },
+
+  "optimization_weights":{
+    "natural_daylight":0.35,
+    "energy_efficiency":0.25,
+    "visual_comfort":0.15,
+    "glare_control":0.10,
+    "smart_controls":0.10,
+    "emergency_lighting":0.05
+  },
+
+  "design_patterns":[
+    {
+      "name":"North Light Planning",
+      "score":1.00
+    },
+    {
+      "name":"Cross Daylighting",
+      "score":0.98
+    },
+    {
+      "name":"Skylight Integration",
+      "score":0.96
+    },
+    {
+      "name":"Light Shelf Design",
+      "score":0.94
+    },
+    {
+      "name":"Smart LED Lighting",
+      "score":0.97
+    }
+  ],
+
+  "bonuses":{
+    "natural_daylight":5,
+    "smart_lighting":4,
+    "motion_sensors":3,
+    "daylight_harvesting":4,
+    "skylights":3,
+    "led_lighting":5
+  },
+
+  "penalties":{
+    "poor_daylight":-10,
+    "west_facing_large_glazing":-8,
+    "glare_issue":-6,
+    "high_energy_lighting":-5,
+    "insufficient_lux":-8
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Every habitable room shall receive natural daylight.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Only LED lighting shall be used for general illumination.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Kitchen and study rooms shall maintain recommended lux levels.",
+      "severity":"high"
+    },
+    {
+      "rule":"Emergency lighting shall be installed along escape routes.",
+      "severity":"high"
+    },
+    {
+      "rule":"Glare shall be minimized through shading devices where required.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_daylight_score":95,
+    "target_energy_saving_percent":35,
+    "target_visual_comfort_score":90,
+    "target_lighting_efficiency_lm_w":120
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "ECBC India",
+    "IS 3646 Code of Interior Illumination",
+    "Bureau of Energy Efficiency (BEE)",
+    "ASHRAE 90.1",
+    "CIBSE Lighting Guide"
+  ]
+}

@@ -1,0 +1,38 @@
+{
+  "index_type": "IndexFlatIP",
+
+  "dimension": 384,
+
+  "similarity": {
+    "metric": "cosine",
+    "normalize_vectors": true
+  },
+
+  "storage": {
+    "save_index": true,
+    "index_path": "data/embeddings/index/faiss.index",
+    "metadata_path": "data/embeddings/index/faiss_metadata.pkl"
+  },
+
+  "performance": {
+    "use_gpu": false,
+    "batch_add": true,
+    "batch_size": 64
+  },
+
+  "build_options": {
+    "rebuild_index": false,
+    "incremental_updates": true,
+    "optimize_on_build": true
+  },
+
+  "search": {
+    "ef_search": 64,
+    "nprobe": 10
+  },
+
+  "logging": {
+    "log_index_build": true,
+    "log_search_stats": true
+  }
+}

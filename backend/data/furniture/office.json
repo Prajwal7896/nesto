@@ -1,0 +1,240 @@
+{
+  "category":"room_relationship_patterns",
+  "room":"office",
+  "version":"2.0",
+  "description":"AI planning patterns for home office and professional office spaces including productivity, privacy, ergonomics, lighting, acoustics, HVAC, networking, accessibility, safety and future expansion.",
+
+  "patterns":[
+    {
+      "id":"OF001",
+      "name":"Quiet Zone Placement",
+      "priority":"critical",
+      "description":"Office should be located away from noisy family and service areas.",
+      "preferred_adjacent":["library","study_room"],
+      "avoid_adjacent":["living_room","kitchen","garage","home_theatre","play_room"],
+      "optimization":{"productivity":1.0,"noise":0.98}
+    },
+    {
+      "id":"OF002",
+      "name":"Natural Lighting",
+      "priority":"critical",
+      "description":"Provide sufficient daylight without glare.",
+      "preferred_orientation":["North","East"],
+      "minimum_window_area_percent":15,
+      "optimization":{"comfort":0.97,"energy":0.95}
+    },
+    {
+      "id":"OF003",
+      "name":"Cross Ventilation",
+      "priority":"critical",
+      "required":true,
+      "optimization":{"airflow":1.0}
+    },
+    {
+      "id":"OF004",
+      "name":"Ergonomic Workspace",
+      "priority":"critical",
+      "features":[
+        "adjustable_chair",
+        "ergonomic_desk",
+        "monitor_stand",
+        "footrest"
+      ]
+    },
+    {
+      "id":"OF005",
+      "name":"Video Conference Ready",
+      "priority":"high",
+      "features":[
+        "neutral_background",
+        "acoustic_panels",
+        "camera_position",
+        "professional_lighting"
+      ]
+    },
+    {
+      "id":"OF006",
+      "name":"Networking Infrastructure",
+      "priority":"critical",
+      "features":[
+        "ethernet_ports",
+        "wifi_access_point",
+        "ups_backup",
+        "server_rack_optional"
+      ]
+    },
+    {
+      "id":"OF007",
+      "name":"Electrical Planning",
+      "priority":"critical",
+      "features":[
+        "dedicated_circuits",
+        "multiple_power_outlets",
+        "usb_ports",
+        "surge_protection"
+      ]
+    },
+    {
+      "id":"OF008",
+      "name":"Storage Optimization",
+      "priority":"high",
+      "features":[
+        "bookshelves",
+        "filing_cabinets",
+        "storage_drawers",
+        "wall_storage"
+      ]
+    },
+    {
+      "id":"OF009",
+      "name":"Visitor Seating",
+      "priority":"medium",
+      "description":"Provide seating for meetings and consultations.",
+      "features":[
+        "guest_chairs",
+        "meeting_table_optional"
+      ]
+    },
+    {
+      "id":"OF010",
+      "name":"Executive Office",
+      "priority":"medium",
+      "recommended_buildings":["villa","luxury_home","commercial"],
+      "features":[
+        "executive_desk",
+        "private_lounge",
+        "conference_corner"
+      ]
+    },
+    {
+      "id":"OF011",
+      "name":"Home Office",
+      "priority":"high",
+      "recommended_buildings":["villa","apartment","duplex"],
+      "features":[
+        "compact_layout",
+        "bookshelf",
+        "printer_space"
+      ]
+    },
+    {
+      "id":"OF012",
+      "name":"Noise Isolation",
+      "priority":"high",
+      "features":[
+        "solid_door",
+        "soundproof_walls",
+        "acoustic_ceiling"
+      ]
+    },
+    {
+      "id":"OF013",
+      "name":"Smart Office",
+      "priority":"medium",
+      "features":[
+        "voice_assistant",
+        "smart_lighting",
+        "occupancy_sensor",
+        "climate_control",
+        "motorized_blinds"
+      ]
+    },
+    {
+      "id":"OF014",
+      "name":"Accessibility",
+      "priority":"high",
+      "features":[
+        "wheelchair_access",
+        "wide_door",
+        "step_free_entry",
+        "accessible_switches"
+      ]
+    },
+    {
+      "id":"OF015",
+      "name":"HVAC Comfort",
+      "priority":"high",
+      "features":[
+        "split_ac",
+        "fresh_air",
+        "temperature_control"
+      ]
+    },
+    {
+      "id":"OF016",
+      "name":"Fire Safety",
+      "priority":"critical",
+      "features":[
+        "smoke_detector",
+        "fire_extinguisher",
+        "emergency_lighting"
+      ]
+    },
+    {
+      "id":"OF017",
+      "name":"Library Integration",
+      "priority":"medium",
+      "preferred_adjacent":["library","study_room"]
+    },
+    {
+      "id":"OF018",
+      "name":"Green Office",
+      "priority":"medium",
+      "features":[
+        "indoor_plants",
+        "natural_materials",
+        "low_voc_finishes"
+      ],
+      "optimization":{"wellbeing":0.96}
+    },
+    {
+      "id":"OF019",
+      "name":"Future Expansion",
+      "priority":"medium",
+      "description":"Allow office to convert into bedroom or study.",
+      "expandable":true
+    },
+    {
+      "id":"OF020",
+      "name":"Security",
+      "priority":"high",
+      "features":[
+        "smart_lock",
+        "cctv",
+        "biometric_access",
+        "document_safe"
+      ]
+    }
+  ],
+
+  "global_constraints":{
+    "minimum_area_sqm":7.5,
+    "recommended_area_sqm":12,
+    "luxury_area_sqm":20,
+    "minimum_width_m":2.7,
+    "minimum_length_m":3.0,
+    "minimum_ceiling_height_m":2.75,
+    "minimum_window_area_percent":15,
+    "cross_ventilation_required":true,
+    "internet_required":true,
+    "minimum_power_outlets":8
+  },
+
+  "optimization_weights":{
+    "productivity":0.30,
+    "lighting":0.20,
+    "noise":0.15,
+    "ergonomics":0.15,
+    "ventilation":0.10,
+    "technology":0.05,
+    "energy":0.05
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Office Building Guidelines",
+    "ISO 9241 Ergonomics",
+    "ISO 21542 Accessibility",
+    "ASHRAE Indoor Environmental Standards"
+  ]
+}

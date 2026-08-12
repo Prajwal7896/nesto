@@ -1,0 +1,203 @@
+{
+  "category":"planning_rules",
+  "module":"circulation",
+  "version":"2.0",
+  "description":"Comprehensive circulation planning standards for AI-driven residential and commercial floor planning. Used to optimize movement, reduce travel distance, improve accessibility, eliminate dead ends, enhance safety and maximize usable space.",
+
+  "objectives":{
+    "minimize_travel_distance":true,
+    "maximize_space_efficiency":true,
+    "improve_accessibility":true,
+    "reduce_corridor_area":true,
+    "ensure_safe_movement":true,
+    "support_universal_design":true
+  },
+
+  "corridor":{
+    "minimum_width_mm":1200,
+    "recommended_width_mm":1500,
+    "luxury_width_mm":1800,
+    "maximum_length_m":12,
+    "maximum_area_percent":10,
+    "dead_end_not_allowed":true
+  },
+
+  "door_clearance":{
+    "minimum_width_mm":900,
+    "recommended_width_mm":1000,
+    "minimum_height_mm":2100,
+    "door_swing_clearance_mm":900
+  },
+
+  "walking_clearance":{
+    "living_room_mm":900,
+    "bedroom_mm":750,
+    "kitchen_mm":1200,
+    "dining_mm":900,
+    "office_mm":1000,
+    "bathroom_mm":800
+  },
+
+  "travel_distance":{
+    "main_entrance_to_living_m":5,
+    "living_to_kitchen_m":6,
+    "living_to_master_bedroom_m":10,
+    "living_to_common_bathroom_m":8,
+    "bedroom_to_bathroom_m":4,
+    "parking_to_entrance_m":8,
+    "maximum_internal_distance_m":18
+  },
+
+  "circulation_patterns":[
+    {
+      "name":"Central Core",
+      "score":1.00,
+      "recommended_for":[
+        "Apartment",
+        "Villa",
+        "Duplex"
+      ]
+    },
+    {
+      "name":"Linear Circulation",
+      "score":0.90,
+      "recommended_for":[
+        "Small House",
+        "Row House"
+      ]
+    },
+    {
+      "name":"Loop Circulation",
+      "score":0.96,
+      "recommended_for":[
+        "Luxury Villa",
+        "Large Residence"
+      ]
+    },
+    {
+      "name":"Courtyard Circulation",
+      "score":0.95,
+      "recommended_for":[
+        "Traditional House",
+        "Villa"
+      ]
+    }
+  ],
+
+  "room_connectivity":{
+    "Entrance":[
+      "Living Room",
+      "Parking",
+      "Staircase"
+    ],
+    "Living Room":[
+      "Dining Room",
+      "Kitchen",
+      "Balcony",
+      "Staircase"
+    ],
+    "Dining Room":[
+      "Kitchen",
+      "Living Room"
+    ],
+    "Kitchen":[
+      "Dining Room",
+      "Utility Room"
+    ],
+    "Master Bedroom":[
+      "Attached Bathroom",
+      "Walk-in Closet"
+    ],
+    "Bedroom":[
+      "Bathroom"
+    ],
+    "Parking":[
+      "Entrance"
+    ]
+  },
+
+  "accessibility":{
+    "wheelchair_turning_radius_mm":1500,
+    "minimum_passage_width_mm":1200,
+    "ramp_supported":true,
+    "lift_required_above_floors":2,
+    "barrier_free_design":true
+  },
+
+  "vertical_circulation":{
+    "staircase":{
+      "minimum_width_mm":1200,
+      "maximum_riser_mm":150,
+      "minimum_tread_mm":300,
+      "landing_required":true,
+      "handrails_required":true
+    },
+    "elevator":{
+      "recommended":true,
+      "minimum_door_width_mm":900,
+      "wheelchair_accessible":true
+    }
+  },
+
+  "optimization_weights":{
+    "travel_distance":0.25,
+    "corridor_efficiency":0.20,
+    "accessibility":0.20,
+    "room_connectivity":0.20,
+    "vertical_circulation":0.15
+  },
+
+  "bonuses":{
+    "central_staircase":5,
+    "loop_circulation":4,
+    "short_travel_distance":5,
+    "barrier_free_access":5,
+    "minimum_corridor_area":4
+  },
+
+  "penalties":{
+    "dead_end_corridor":-10,
+    "long_corridor":-8,
+    "poor_room_connectivity":-8,
+    "narrow_passage":-6,
+    "excessive_travel_distance":-5
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Corridor width shall not be less than 1200 mm.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Dead-end corridors are not permitted.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Travel distance shall remain within recommended limits.",
+      "severity":"high"
+    },
+    {
+      "rule":"All primary rooms shall be directly accessible.",
+      "severity":"high"
+    },
+    {
+      "rule":"Barrier-free circulation should be provided wherever possible.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_circulation_score":95,
+    "maximum_corridor_area_percent":10,
+    "target_average_travel_distance_m":6,
+    "target_accessibility_score":90
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "IS 4963",
+    "ADA Accessibility Standards",
+    "ISO 21542"
+  ]
+}

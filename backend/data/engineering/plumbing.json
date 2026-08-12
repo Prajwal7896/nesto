@@ -1,0 +1,185 @@
+{
+  "category":"plumbing_engineering",
+  "version":"2.0",
+  "description":"Residential plumbing engineering standards used by the AI planner for water supply, sanitary systems, hot water distribution, fixture placement, pipe sizing, pressure management and code compliance.",
+
+  "water_supply":{
+    "source_priority":[
+      "Municipal Supply",
+      "Borewell",
+      "Rainwater Harvesting",
+      "Water Tanker"
+    ],
+    "minimum_pressure_bar":2.0,
+    "recommended_pressure_bar":3.5,
+    "maximum_pressure_bar":6.0,
+    "overhead_tank_required":true,
+    "underground_tank_recommended":true,
+    "pump_required_if_pressure_low":true
+  },
+
+  "pipe_materials":{
+    "cold_water":"uPVC",
+    "hot_water":"CPVC",
+    "drainage":"PVC",
+    "underground_supply":"HDPE",
+    "fire_water":"GI"
+  },
+
+  "pipe_sizes":{
+    "main_supply":"32 mm",
+    "branch_supply":"25 mm",
+    "wash_basin":"15 mm",
+    "kitchen_sink":"20 mm",
+    "shower":"20 mm",
+    "toilet_flush":"20 mm",
+    "washing_machine":"20 mm",
+    "geyser":"20 mm",
+    "garden":"25 mm"
+  },
+
+  "fixture_requirements":[
+    {
+      "room":"Kitchen",
+      "fixtures":[
+        "Sink",
+        "Water Purifier",
+        "Dishwasher"
+      ],
+      "hot_water":false
+    },
+    {
+      "room":"Bathroom",
+      "fixtures":[
+        "Wash Basin",
+        "Shower",
+        "WC",
+        "Health Faucet",
+        "Floor Trap"
+      ],
+      "hot_water":true
+    },
+    {
+      "room":"Utility Room",
+      "fixtures":[
+        "Washing Machine",
+        "Utility Sink"
+      ]
+    },
+    {
+      "room":"Garden",
+      "fixtures":[
+        "Hose Bib Tap"
+      ]
+    }
+  ],
+
+  "hot_water_system":{
+    "geyser_supported":true,
+    "solar_water_heater_supported":true,
+    "central_hot_water_optional":true,
+    "pipe_insulation_required":true
+  },
+
+  "layout_rules":[
+    "Bathrooms should share plumbing walls whenever possible.",
+    "Kitchen should be close to wet areas.",
+    "Minimize pipe lengths.",
+    "Provide isolation valves for every bathroom.",
+    "Avoid routing water pipes through structural beams.",
+    "Separate drinking water and recycled water lines."
+  ],
+
+  "water_storage":{
+    "overhead_tank":{
+      "minimum_capacity_liters":1000,
+      "location":"Terrace"
+    },
+    "underground_tank":{
+      "minimum_capacity_liters":3000,
+      "location":"Front Yard"
+    }
+  },
+
+  "rainwater_harvesting":{
+    "supported":true,
+    "roof_collection":true,
+    "filtration_required":true,
+    "recharge_pit_required":true
+  },
+
+  "greywater_reuse":{
+    "supported":true,
+    "reuse_for":[
+      "Garden Irrigation",
+      "Toilet Flushing",
+      "Landscape Watering"
+    ]
+  },
+
+  "fixture_spacing":{
+    "wash_basin_to_wc_mm":450,
+    "wc_side_clearance_mm":450,
+    "shower_minimum_size_mm":"900x900",
+    "kitchen_sink_clearance_mm":600
+  },
+
+  "smart_plumbing":{
+    "water_leak_sensor":true,
+    "smart_water_meter":true,
+    "automatic_valve":true,
+    "remote_monitoring":true,
+    "water_usage_analytics":true
+  },
+
+  "optimization":{
+    "cluster_wet_areas":true,
+    "reuse_vertical_shafts":true,
+    "minimize_pipe_length":true,
+    "gravity_flow_preferred":true,
+    "water_conservation_priority":true
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Every bathroom must have hot and cold water supply.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Kitchen requires dedicated water supply.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Water storage tank is mandatory.",
+      "severity":"high"
+    },
+    {
+      "rule":"Rainwater harvesting preferred for plots above 200 sq.m.",
+      "severity":"medium"
+    },
+    {
+      "rule":"Greywater and drinking water lines must remain separate.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Every fixture must have an isolation valve.",
+      "severity":"medium"
+    }
+  ],
+
+  "maintenance":{
+    "pipe_inspection_interval_months":12,
+    "tank_cleaning_interval_months":6,
+    "pump_service_interval_months":12,
+    "leak_detection_interval_months":6
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 1172",
+    "IS 2065",
+    "CPHEEO Manual",
+    "IS 1742",
+    "IS 4985"
+  ]
+}

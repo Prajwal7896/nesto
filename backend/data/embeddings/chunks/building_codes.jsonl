@@ -1,0 +1,10 @@
+{"id":"BC001","text":"Every residential building must comply with National Building Code (NBC) India structural safety guidelines.","source":"building_codes.json","metadata":{"category":"code","standard":"NBC"}}
+{"id":"BC002","text":"Minimum habitable room height should be 2.7 meters as per Indian building standards.","source":"building_codes.json","metadata":{"category":"height"}}
+{"id":"BC003","text":"Every habitable room must have natural light and ventilation through windows or openings.","source":"building_codes.json","metadata":{"category":"ventilation"}}
+{"id":"BC004","text":"Fire exits must be clearly accessible and unobstructed in all multi-storey buildings.","source":"building_codes.json","metadata":{"category":"fire_safety"}}
+{"id":"BC005","text":"Staircase minimum width in residential buildings should be 0.9 meters.","source":"building_codes.json","metadata":{"category":"circulation"}}
+{"id":"BC006","text":"Handrails are mandatory for staircases above three steps for safety compliance.","source":"building_codes.json","metadata":{"category":"staircase_safety"}}
+{"id":"BC007","text":"Electrical wiring must follow IS 732 safety standards for domestic installations.","source":"building_codes.json","metadata":{"category":"electrical"}}
+{"id":"BC008","text":"Bathrooms must have proper waterproofing and drainage slope to prevent water stagnation.","source":"building_codes.json","metadata":{"category":"plumbing"}}
+{"id":"BC009","text":"Building foundation depth must be based on soil type and load-bearing capacity.","source":"building_codes.json","metadata":{"category":"foundation"}}
+{"id":"BC010","text":"Fire-resistant materials must be used in high-rise structural elements as per NBC guidelines.","source":"building_codes.json","metadata":{"category":"fire_resistance"}}

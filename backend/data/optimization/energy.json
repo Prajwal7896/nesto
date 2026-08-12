@@ -1,0 +1,210 @@
+{
+  "category":"building_optimization",
+  "module":"energy",
+  "version":"2.0",
+  "description":"Comprehensive energy optimization database for AI-driven residential and commercial building planning. Used for passive design, HVAC optimization, renewable energy integration, energy-efficient materials, lighting optimization, appliance selection and sustainability analysis.",
+
+  "objectives":{
+    "minimize_energy_consumption":true,
+    "maximize_passive_design":true,
+    "maximize_renewable_energy":true,
+    "reduce_operational_cost":true,
+    "improve_thermal_comfort":true,
+    "reduce_carbon_emissions":true
+  },
+
+  "passive_design":{
+    "preferred_orientation":"North-South",
+    "cross_ventilation":true,
+    "natural_daylighting":true,
+    "roof_insulation_required":true,
+    "wall_insulation_recommended":true,
+    "thermal_mass_supported":true,
+    "external_shading_required":true
+  },
+
+  "solar_energy":{
+    "supported":true,
+    "recommended_roof_area_percent":60,
+    "minimum_capacity_kw":2,
+    "recommended_capacity_kw":5,
+    "battery_storage_supported":true,
+    "net_metering_supported":true,
+    "solar_water_heater_supported":true
+  },
+
+  "hvac":{
+    "high_efficiency_system_required":true,
+    "inverter_ac_recommended":true,
+    "zonal_cooling_supported":true,
+    "smart_thermostat_supported":true,
+    "minimum_cop":3.5,
+    "fresh_air_system":true
+  },
+
+  "lighting":{
+    "led_only":true,
+    "daylight_sensor_supported":true,
+    "occupancy_sensor_supported":true,
+    "smart_dimming_supported":true,
+    "maximum_lighting_power_density_w_m2":8
+  },
+
+  "building_envelope":{
+    "double_glazed_windows":true,
+    "low_e_glass_supported":true,
+    "airtight_construction":true,
+    "cool_roof_supported":true,
+    "high_reflectance_roof":true
+  },
+
+  "room_energy_targets":{
+    "living_room":{
+      "target_lighting_w_m2":6,
+      "preferred_daylight":true
+    },
+    "bedroom":{
+      "target_lighting_w_m2":5,
+      "natural_ventilation":true
+    },
+    "kitchen":{
+      "target_lighting_w_m2":8,
+      "chimney_required":true
+    },
+    "office":{
+      "target_lighting_w_m2":7,
+      "daylight_priority":true
+    },
+    "bathroom":{
+      "target_lighting_w_m2":6,
+      "exhaust_required":true
+    }
+  },
+
+  "efficient_appliances":{
+    "five_star_rating_recommended":true,
+    "inverter_refrigerator":true,
+    "inverter_air_conditioner":true,
+    "heat_pump_water_heater":true,
+    "induction_cooktop_supported":true,
+    "energy_monitoring_supported":true
+  },
+
+  "water_heating":{
+    "solar_water_heater_priority":1,
+    "heat_pump_priority":2,
+    "electric_geyser_priority":3
+  },
+
+  "renewable_energy":{
+    "solar_pv":true,
+    "solar_water_heater":true,
+    "battery_backup":true,
+    "ev_charging_supported":true,
+    "future_grid_integration":true
+  },
+
+  "energy_storage":{
+    "lithium_battery_supported":true,
+    "minimum_backup_hours":4,
+    "smart_inverter":true
+  },
+
+  "smart_home":{
+    "energy_monitoring":true,
+    "automatic_load_control":true,
+    "smart_switches":true,
+    "smart_meter":true,
+    "mobile_monitoring":true,
+    "ai_energy_optimization":true
+  },
+
+  "optimization_weights":{
+    "passive_design":0.30,
+    "renewable_energy":0.25,
+    "hvac_efficiency":0.20,
+    "lighting_efficiency":0.10,
+    "building_envelope":0.10,
+    "smart_controls":0.05
+  },
+
+  "design_patterns":[
+    {
+      "name":"Passive Solar Design",
+      "score":1.00
+    },
+    {
+      "name":"Cool Roof System",
+      "score":0.97
+    },
+    {
+      "name":"Net Zero Ready Building",
+      "score":0.99
+    },
+    {
+      "name":"Solar Roof Integration",
+      "score":0.98
+    },
+    {
+      "name":"Cross Ventilation Layout",
+      "score":0.96
+    }
+  ],
+
+  "estimated_energy_savings":{
+    "solar_panels_percent":45,
+    "led_lighting_percent":15,
+    "double_glazing_percent":12,
+    "roof_insulation_percent":10,
+    "smart_controls_percent":8,
+    "cross_ventilation_percent":10
+  },
+
+  "constraints":[
+    "Minimize west-facing glazing.",
+    "Maximize daylight before artificial lighting.",
+    "Avoid unnecessary HVAC loads.",
+    "Provide roof space for solar panels.",
+    "Use energy-efficient appliances.",
+    "Reduce thermal bridges."
+  ],
+
+  "validation_rules":[
+    {
+      "rule":"All lighting fixtures shall use LED technology.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Buildings should provide roof space for future solar installation.",
+      "severity":"high"
+    },
+    {
+      "rule":"Cross ventilation should be provided wherever possible.",
+      "severity":"high"
+    },
+    {
+      "rule":"Roof insulation is recommended for energy-efficient buildings.",
+      "severity":"medium"
+    },
+    {
+      "rule":"Minimum 5-star rated appliances are recommended.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_energy_use_intensity_kwh_m2_year":55,
+    "target_energy_saving_percent":35,
+    "target_solar_offset_percent":50,
+    "target_carbon_reduction_percent":40
+  },
+
+  "reference_codes":[
+    "Energy Conservation Building Code (ECBC India)",
+    "National Building Code of India (NBC)",
+    "ASHRAE 90.1",
+    "LEED v4",
+    "IGBC Green Homes",
+    "Bureau of Energy Efficiency (BEE)"
+  ]
+}

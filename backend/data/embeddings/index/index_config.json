@@ -1,0 +1,8 @@
+{
+  "index_type": "IndexFlatIP",
+  "dimension": 384,
+  "metric": "cosine",
+  "normalize_vectors": true,
+  "auto_save": true,
+  "rebuild_on_start": false
+}

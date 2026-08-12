@@ -1,0 +1,157 @@
+{
+  "category":"structural",
+  "module":"slab_rules",
+  "version":"2.0",
+  "description":"Comprehensive slab design and construction rules for AI-driven structural planning. Covers slab types, thickness, reinforcement, load distribution, deflection control, span limits, seismic safety, and optimization principles.",
+
+  "objectives":{
+    "safe_load_distribution":true,
+    "control_deflection":true,
+    "ensure_crack_control":true,
+    "provide_structural_continuity":true,
+    "optimize_material_usage":true
+  },
+
+  "slab_types":{
+    "one_way_slab":true,
+    "two_way_slab":true,
+    "flat_slab":true,
+    "waffle_slab":true,
+    "cantilever_slab":true
+  },
+
+  "material_options":{
+    "rcc":true,
+    "prestressed_concrete":true,
+    "composite_slab":true
+  },
+
+  "dimensions":{
+    "minimum_thickness_mm":100,
+    "recommended_thickness_mm":125,
+    "heavy_load_thickness_mm":200,
+    "residential_span_range_m":[2,5],
+    "commercial_span_range_m":[4,9]
+  },
+
+  "span_rules":{
+    "one_way_slab_span_ratio":20,
+    "two_way_slab_span_ratio":30,
+    "cantilever_span_ratio":7,
+    "maximum_unbraced_span_m":9
+  },
+
+  "load_distribution":{
+    "primary_load_path":"slab → beam → column → footing → soil",
+    "uniform_load_preferred":true,
+    "point_load_avoidance":true,
+    "load_spreading_required":true
+  },
+
+  "reinforcement_rules":{
+    "minimum_steel_percentage":0.12,
+    "maximum_steel_percentage":0.5,
+    "main_reinforcement_bottom":true,
+    "distribution_steel_top":true,
+    "spacing_mm":{
+      "minimum":100,
+      "maximum":200
+    },
+    "cover_requirement_mm":20
+  },
+
+  "deflection_control":{
+    "maximum_span_ratio":250,
+    "precamber_recommended":true,
+    "stiffness_priority":"High",
+    "crack_control_required":true
+  },
+
+  "structural_rules":{
+    "continuous_support_preferred":true,
+    "edge_support_required":true,
+    "column_alignment_required":true,
+    "avoid_large_openings_without_beams":true
+  },
+
+  "seismic_rules":{
+    "diaphragm_action_required":true,
+    "rigid_floor_diaphragm":true,
+    "load_transfer_during_shaking":true,
+    "ductility_consideration":true
+  },
+
+  "thermal_rules":{
+    "expansion_joint_required":true,
+    "temperature_stress_control":true,
+    "sun_exposure_consideration":true
+  },
+
+  "materials":{
+    "cement_grade":"M20 to M40",
+    "steel_grade":"Fe500",
+    "water_cement_ratio_max":0.45
+  },
+
+  "optimization":{
+    "material_efficiency":0.95,
+    "structural_safety":0.99,
+    "cost_efficiency":0.93,
+    "crack_control":0.96
+  },
+
+  "bonuses":{
+    "regular_grid_support":5,
+    "uniform_loading":5,
+    "short_span_design":4,
+    "continuous_support":5,
+    "proper_reinforcement":5
+  },
+
+  "penalties":{
+    "over_span":-10,
+    "excess_deflection":-9,
+    "insufficient_reinforcement":-10,
+    "point_load_concentration":-8,
+    "unsupported_edges":-9
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Slab thickness shall be adequate for span and load conditions.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Reinforcement shall be provided in both directions where required.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Deflection limits shall be strictly controlled.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper load transfer to beams and columns must be ensured.",
+      "severity":"high"
+    },
+    {
+      "rule":"Crack control measures shall be implemented.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_structural_safety":99,
+    "target_crack_control":96,
+    "target_material_efficiency":95,
+    "target_deflection_control":97
+  },
+
+  "reference_codes":[
+    "IS 456:2000",
+    "IS 875 (Loads)",
+    "IS 1893 (Seismic Design)",
+    "National Building Code of India (NBC)",
+    "CPWD Structural Guidelines",
+    "ACI 318"
+  ]
+}

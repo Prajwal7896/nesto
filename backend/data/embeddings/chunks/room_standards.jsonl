@@ -1,0 +1,15 @@
+{"id":"R001","text":"A standard bedroom should have minimum area of 120 to 150 square feet for comfortable living.","source":"room_standards.json","metadata":{"room":"bedroom"}}
+{"id":"R002","text":"Master bedroom is ideally placed in the southwest direction for stability and privacy.","source":"room_standards.json","metadata":{"room":"master_bedroom"}}
+{"id":"R003","text":"Living room should be placed near the main entrance for easy access and social interaction.","source":"room_standards.json","metadata":{"room":"living_room"}}
+{"id":"R004","text":"Kitchen should be placed in the southeast direction for better heat and fire energy balance.","source":"room_standards.json","metadata":{"room":"kitchen"}}
+{"id":"R005","text":"Bathroom should not be directly visible from the living room or dining area for privacy.","source":"room_standards.json","metadata":{"room":"bathroom"}}
+{"id":"R006","text":"Dining area should be placed close to the kitchen for efficient food serving and circulation.","source":"room_standards.json","metadata":{"room":"dining"}}
+{"id":"R007","text":"Office or study room should be placed in a quiet zone away from high traffic areas.","source":"room_standards.json","metadata":{"room":"office"}}
+{"id":"R008","text":"Staircase should be placed in a corner or side area to avoid blocking main circulation space.","source":"room_standards.json","metadata":{"room":"staircase"}}
+{"id":"R009","text":"Parking space should be located near the entrance for easy vehicle movement and access.","source":"room_standards.json","metadata":{"room":"parking"}}
+{"id":"R010","text":"Pooja room is ideally placed in the northeast direction for spiritual alignment and calmness.","source":"room_standards.json","metadata":{"room":"pooja"}}
+{"id":"R011","text":"Utility rooms should be placed near kitchen or service areas for easy access to washing and storage.","source":"room_standards.json","metadata":{"room":"utility"}}
+{"id":"R012","text":"Proper circulation space must be maintained between rooms to ensure smooth human movement.","source":"room_standards.json","metadata":{"type":"circulation"}}
+{"id":"R013","text":"Rooms should be designed with cross ventilation by placing openings on opposite walls when possible.","source":"room_standards.json","metadata":{"type":"ventilation"}}
+{"id":"R014","text":"Privacy-sensitive rooms like bedrooms should not open directly into public spaces like living rooms.","source":"room_standards.json","metadata":{"type":"privacy"}}
+{"id":"R015","text":"Bathrooms and kitchens should not share walls with bedrooms to reduce noise and odor transfer.","source":"room_standards.json","metadata":{"type":"zoning"}}

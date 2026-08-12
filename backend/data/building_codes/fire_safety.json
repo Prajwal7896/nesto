@@ -1,0 +1,118 @@
+{
+  "code": "fire_safety",
+
+  "authority": "general_architectural_fire_safety_rules",
+
+  "scope": "residential_buildings_india",
+
+  "core_principles": [
+    "Ensure safe evacuation paths in all building types",
+    "Maintain minimum exit access from every habitable room",
+    "Avoid dead-end corridors without secondary exit options",
+    "Separate fire-prone areas from sleeping zones",
+    "Ensure proper ventilation for smoke release",
+    "Provide clear access for emergency services"
+  ],
+
+  "exit_and_evacuation_rules": {
+    "minimum_exits": {
+      "floors_1_to_2": 1,
+      "floors_3_plus": 2
+    },
+
+    "staircase": {
+      "mandatory": true,
+      "fire_resistant": true,
+      "preferred_position": "central_or_side_core",
+      "width_ft": {
+        "minimum": 3.0,
+        "recommended": 5.0
+      }
+    },
+
+    "corridor": {
+      "minimum_width_ft": 3.0,
+      "dead_end_allowed": false
+    }
+  },
+
+  "room_safety_rules": {
+    "kitchen": {
+      "fire_risk_area": true,
+      "must_have_ventilation": true,
+      "distance_from_exit": "moderate",
+      "avoid_next_to": ["staircase_exit_path"]
+    },
+
+    "bedroom": {
+      "direct_exit_access": true,
+      "avoid_blocked_paths": true
+    },
+
+    "bathroom": {
+      "non_obstructive": true
+    }
+  },
+
+  "material_safety": {
+    "recommended": [
+      "fire_retardant_concrete",
+      "treated_wood",
+      "fire_resistant_glass",
+      "steel_frames"
+    ],
+
+    "avoid": [
+      "highly_flammable_finishes",
+      "unprotected_wood_panels"
+    ]
+  },
+
+  "ventilation_and_smoke_control": {
+    "cross_ventilation_required": true,
+    "smoke_escape_points": "every_floor_required",
+    "window_requirements": "openable_windows_in_all_rooms",
+    "skylight_optional_for_smoke_release": true
+  },
+
+  "distance_rules": {
+    "kitchen_to_staircase": "not_directly_adjacent",
+    "electrical_room_separation": true,
+    "gas_storage_separation": true
+  },
+
+  "structural_fire_safety": {
+    "fire_resistance_rating": "minimum_1_hour",
+    "compartmentalization_required": true,
+    "vertical_fire_spread_barriers": true
+  },
+
+  "emergency_access": {
+    "fire_truck_access_path": true,
+    "building_setback_required": true,
+    "entrance_width_ft": {
+      "minimum": 10
+    }
+  },
+
+  "planning_constraints": {
+    "no_blocked_escape_routes": true,
+    "no_single_exit_dependency": true,
+    "clear_line_of_sight_to_exits": true
+  },
+
+  "optimization_priority": {
+    "safety": 1.0,
+    "comfort": 0.7,
+    "aesthetics": 0.4,
+    "cost_efficiency": 0.3
+  },
+
+  "planning_tags": [
+    "life_safety",
+    "fire_compliance",
+    "evacuation_ready",
+    "residential_safety",
+    "code_compliant_design"
+  ]
+}

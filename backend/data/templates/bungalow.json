@@ -1,0 +1,198 @@
+{
+  "category":"building_typology",
+  "module":"bungalow_rules",
+  "version":"2.0",
+  "description":"Comprehensive bungalow design rules for AI-driven residential planning. Covers single/multi-floor layout, privacy zoning, structural systems, ventilation, daylight, landscaping, circulation, parking, and sustainability.",
+
+  "objectives":{
+    "maximize_independent_living_comfort":true,
+    "ensure_spatial_privacy":true,
+    "optimize_natural_light_and_ventilation":true,
+    "provide_flexible_layout":true,
+    "integrate_indoor_outdoor_spaces":true
+  },
+
+  "building_types":{
+    "single_storey_bungalow":true,
+    "duplex_bungalow":true,
+    "luxury_bungalow":true,
+    "courtyard_bungalow":true
+  },
+
+  "site_requirements":{
+    "minimum_plot_area_sqft":1200,
+    "recommended_plot_area_sqft":2500,
+    "luxury_plot_area_sqft":5000,
+    "preferred_orientation":[
+      "North",
+      "East",
+      "North-East"
+    ],
+    "setback_front_ft":10,
+    "setback_sides_ft":5,
+    "setback_rear_ft":8
+  },
+
+  "layout_zoning":{
+    "public_zone":[
+      "living_room",
+      "foyer",
+      "guest_room"
+    ],
+    "semi_private_zone":[
+      "dining_room",
+      "family_lounge"
+    ],
+    "private_zone":[
+      "bedrooms",
+      "study_room"
+    ],
+    "service_zone":[
+      "kitchen",
+      "utility",
+      "storage",
+      "garage"
+    ]
+  },
+
+  "spatial_planning":{
+    "open_plan_supported":true,
+    "courtyard_recommended":true,
+    "indoor_outdoor_flow_required":true,
+    "veranda_required":true,
+    "double_height_living_optional":true
+  },
+
+  "circulation":{
+    "corridor_min_width_ft":4,
+    "direct_room_access_preferred":true,
+    "circular_flow_supported":true,
+    "central_lobby_optional":true
+  },
+
+  "structural_system":{
+    "rcc_frame":true,
+    "load_bearing_optional":true,
+    "column_grid_spacing_m":[3,6],
+    "long_span_support_required":true
+  },
+
+  "ventilation":{
+    "cross_ventilation_required":true,
+    "stack_effect_supported":true,
+    "minimum_window_area_percent":20,
+    "courtyard_airflow_benefit":true
+  },
+
+  "daylight":{
+    "natural_light_priority":true,
+    "north_light_optimized_spaces":true,
+    "skylight_optional":true,
+    "glare_control_required":true
+  },
+
+  "roofing":{
+    "sloped_roof_supported":true,
+    "terrace_roof_supported":true,
+    "solar_roof_ready":true,
+    "rainwater_collection_required":true
+  },
+
+  "landscape":{
+    "garden_required":true,
+    "front_lawn":true,
+    "backyard":true,
+    "tree_shading_recommended":true,
+    "outdoor_seating_area":true
+  },
+
+  "parking":{
+    "minimum_cars":1,
+    "recommended_cars":2,
+    "covered_parking_supported":true,
+    "visitor_parking_optional":true
+  },
+
+  "materials":{
+    "rcc":true,
+    "brick_masonry":true,
+    "stone_cladding_optional":true,
+    "wood_accents_supported":true
+  },
+
+  "sustainability":{
+    "rainwater_harvesting":true,
+    "solar_panels_supported":true,
+    "passive_cooling_design":true,
+    "natural_ventilation_priority":true
+  },
+
+  "accessibility":{
+    "single_floor_preferred_for_elderly":true,
+    "wide_doors_required":true,
+    "step_free_entry_optional":true
+  },
+
+  "optimization":{
+    "privacy_score":0.97,
+    "comfort_score":0.98,
+    "ventilation_score":0.96,
+    "daylight_score":0.97,
+    "space_efficiency":0.95
+  },
+
+  "bonuses":{
+    "courtyard_design":5,
+    "garden_integration":5,
+    "cross_ventilation":5,
+    "veranda_spaces":4,
+    "open_plan":4
+  },
+
+  "penalties":{
+    "poor_orientation":-9,
+    "no_ventilation":-10,
+    "lack_of_privacy_zoning":-9,
+    "over_compacted_layout":-8,
+    "no_natural_light":-9
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Bungalow must ensure strong indoor-outdoor connection.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper ventilation and daylight must be provided in all rooms.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Private and public zones must be clearly separated.",
+      "severity":"high"
+    },
+    {
+      "rule":"Structural system must support open spans where required.",
+      "severity":"high"
+    },
+    {
+      "rule":"Landscape integration must be included in planning.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_privacy_score":97,
+    "target_comfort_score":98,
+    "target_ventilation_score":96,
+    "target_daylight_score":97,
+    "target_space_efficiency":95
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "IS 456:2000",
+    "Energy Conservation Building Code (ECBC)",
+    "Vastu Shastra Principles (optional)"
+  ]
+}

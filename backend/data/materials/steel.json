@@ -1,0 +1,239 @@
+{
+  "category":"building_materials",
+  "material":"steel",
+  "version":"2.0",
+  "description":"Comprehensive structural steel database for AI-driven building planning, RCC design, steel structures, reinforcement selection, seismic analysis, durability, cost estimation and construction optimization.",
+
+  "types":[
+    {
+      "id":"ST001",
+      "name":"Fe415 TMT Bar",
+      "category":"Reinforcement Steel",
+      "yield_strength_mpa":415,
+      "ultimate_strength_mpa":485,
+      "ductility":"High",
+      "corrosion_resistance":"Good",
+      "applications":[
+        "Residential Buildings",
+        "Footings",
+        "Slabs",
+        "Beams"
+      ]
+    },
+    {
+      "id":"ST002",
+      "name":"Fe500 TMT Bar",
+      "category":"Reinforcement Steel",
+      "yield_strength_mpa":500,
+      "ultimate_strength_mpa":545,
+      "ductility":"Very High",
+      "corrosion_resistance":"Excellent",
+      "applications":[
+        "Residential Buildings",
+        "Commercial Buildings",
+        "Columns",
+        "Beams",
+        "Slabs"
+      ]
+    },
+    {
+      "id":"ST003",
+      "name":"Fe550 TMT Bar",
+      "category":"High Strength Reinforcement",
+      "yield_strength_mpa":550,
+      "ultimate_strength_mpa":585,
+      "ductility":"Excellent",
+      "applications":[
+        "High-rise Buildings",
+        "Bridges",
+        "Industrial Structures"
+      ]
+    },
+    {
+      "id":"ST004",
+      "name":"Structural Steel IS2062 E250",
+      "category":"Structural Sections",
+      "yield_strength_mpa":250,
+      "applications":[
+        "Steel Frames",
+        "Industrial Buildings",
+        "Warehouses"
+      ]
+    },
+    {
+      "id":"ST005",
+      "name":"Structural Steel IS2062 E350",
+      "category":"Structural Sections",
+      "yield_strength_mpa":350,
+      "applications":[
+        "Commercial Buildings",
+        "Multi-storey Structures",
+        "Heavy Industrial Buildings"
+      ]
+    }
+  ],
+
+  "reinforcement_sizes_mm":[
+    6,
+    8,
+    10,
+    12,
+    16,
+    20,
+    25,
+    28,
+    32,
+    36,
+    40
+  ],
+
+  "structural_sections":{
+    "beam":[
+      "ISMB",
+      "ISHB",
+      "ISWB"
+    ],
+    "column":[
+      "ISHB",
+      "ISHB Wide Flange",
+      "Built-up Column"
+    ],
+    "angle":[
+      "ISA"
+    ],
+    "channel":[
+      "ISMC"
+    ],
+    "tube":[
+      "SHS",
+      "RHS",
+      "CHS"
+    ]
+  },
+
+  "physical_properties":{
+    "density_kg_m3":7850,
+    "elastic_modulus_gpa":200,
+    "poisson_ratio":0.30,
+    "thermal_expansion_per_c":0.000012,
+    "melting_point_c":1510
+  },
+
+  "durability":{
+    "expected_life_years":75,
+    "fire_resistance":"Moderate",
+    "corrosion_protection_required":true,
+    "galvanization_supported":true,
+    "epoxy_coating_supported":true
+  },
+
+  "recommended_usage":{
+    "foundation":"Fe500",
+    "footing":"Fe500",
+    "column":"Fe500/Fe550",
+    "beam":"Fe500",
+    "slab":"Fe500",
+    "staircase":"Fe500",
+    "lintel":"Fe500",
+    "retaining_wall":"Fe500",
+    "industrial_structure":"IS2062 E350"
+  },
+
+  "selection_rules":[
+    {
+      "condition":"floors<=2",
+      "recommended":"Fe500"
+    },
+    {
+      "condition":"floors>2",
+      "recommended":"Fe550"
+    },
+    {
+      "condition":"industrial_building=true",
+      "recommended":"IS2062 E350"
+    },
+    {
+      "condition":"coastal_area=true",
+      "recommended":"Epoxy Coated Fe500"
+    }
+  ],
+
+  "construction_guidelines":{
+    "minimum_cover_mm":{
+      "slab":20,
+      "beam":25,
+      "column":40,
+      "footing":50
+    },
+    "lap_splice":"50d",
+    "minimum_bend_diameter":"4d",
+    "minimum_development_length":"50d"
+  },
+
+  "quality_checks":[
+    "ISI Certification",
+    "Uniform Rib Pattern",
+    "No Visible Rust",
+    "Yield Strength Test",
+    "Bend Test",
+    "Chemical Composition Test"
+  ],
+
+  "optimization":{
+    "preferred_for_residential":"Fe500",
+    "preferred_for_high_rise":"Fe550",
+    "preferred_for_industrial":"IS2062 E350",
+    "preferred_for_coastal":"Epoxy Coated Fe500",
+    "preferred_for_cost":"Fe500"
+  },
+
+  "cost_index":{
+    "Fe415":0.90,
+    "Fe500":1.00,
+    "Fe550":1.15,
+    "IS2062 E250":1.20,
+    "IS2062 E350":1.35,
+    "Galvanized Steel":1.60,
+    "Epoxy Coated Steel":1.80
+  },
+
+  "sustainability":{
+    "recyclable":true,
+    "recycled_content_supported":true,
+    "low_carbon_steel_supported":true,
+    "green_building_certification_supported":true
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Minimum Fe500 reinforcement shall be used for RCC residential buildings.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Concrete cover shall comply with IS 456.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Rusted reinforcement shall not be used without cleaning.",
+      "severity":"high"
+    },
+    {
+      "rule":"Lap length shall comply with structural design.",
+      "severity":"high"
+    },
+    {
+      "rule":"Steel shall be ISI certified.",
+      "severity":"critical"
+    }
+  ],
+
+  "reference_codes":[
+    "IS 1786",
+    "IS 2062",
+    "IS 456",
+    "IS 875",
+    "IS 13920",
+    "National Building Code of India (NBC)",
+    "CPWD Specifications"
+  ]
+}

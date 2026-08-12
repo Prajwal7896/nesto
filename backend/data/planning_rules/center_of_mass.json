@@ -1,0 +1,156 @@
+{
+  "category":"planning_rules",
+  "module":"center_of_mass",
+  "version":"2.0",
+  "description":"Comprehensive center of mass and load balance rules for AI-driven floor planning. Used to optimize structural stability, load distribution, earthquake resistance, construction efficiency and building safety.",
+
+  "objectives":{
+    "balanced_mass_distribution":true,
+    "structural_stability":true,
+    "earthquake_resistance":true,
+    "uniform_load_distribution":true,
+    "minimum_torsion":true,
+    "construction_efficiency":true
+  },
+
+  "center_of_mass":{
+    "target_location":"Near Geometric Center",
+    "maximum_offset_percent":10,
+    "recommended_offset_percent":5,
+    "automatic_mass_balancing":true
+  },
+
+  "mass_distribution":{
+    "uniformity_required":true,
+    "symmetrical_layout_preferred":true,
+    "heavy_rooms_near_center":true,
+    "avoid_heavy_corner_loading":true
+  },
+
+  "room_weight_factor":{
+    "living_room":1.0,
+    "bedroom":1.1,
+    "master_bedroom":1.2,
+    "kitchen":1.4,
+    "bathroom":1.5,
+    "staircase":2.2,
+    "elevator":3.5,
+    "parking":1.8,
+    "water_tank":5.0,
+    "store_room":1.8,
+    "utility_room":1.7,
+    "office":1.0,
+    "balcony":0.8
+  },
+
+  "heavy_components":[
+    {
+      "component":"Water Tank",
+      "preferred_location":"Center of Roof",
+      "priority":"critical"
+    },
+    {
+      "component":"Staircase",
+      "preferred_location":"Near Structural Core",
+      "priority":"high"
+    },
+    {
+      "component":"Lift Core",
+      "preferred_location":"Building Center",
+      "priority":"critical"
+    },
+    {
+      "component":"Generator Room",
+      "preferred_location":"Ground Floor Center",
+      "priority":"high"
+    }
+  ],
+
+  "structural_core":{
+    "required":true,
+    "preferred_position":"Central",
+    "contains":[
+      "Staircase",
+      "Lift",
+      "Service Shaft",
+      "Utility Duct"
+    ]
+  },
+
+  "earthquake_rules":[
+    "Maintain symmetrical mass distribution.",
+    "Avoid heavy cantilever projections.",
+    "Reduce eccentricity between center of mass and center of rigidity.",
+    "Place shear walls symmetrically.",
+    "Distribute columns uniformly."
+  ],
+
+  "load_distribution":{
+    "uniform_column_spacing":true,
+    "balanced_beam_loading":true,
+    "avoid_concentrated_loads":true,
+    "maximum_floor_load_variation_percent":15
+  },
+
+  "optimization":{
+    "structural_score_weight":0.35,
+    "earthquake_score_weight":0.25,
+    "load_balance_weight":0.20,
+    "construction_cost_weight":0.10,
+    "future_expansion_weight":0.10
+  },
+
+  "bonuses":{
+    "central_core":5,
+    "symmetrical_layout":5,
+    "balanced_column_grid":4,
+    "uniform_room_distribution":3,
+    "central_water_tank":3
+  },
+
+  "penalties":{
+    "heavy_corner_room":-8,
+    "large_mass_eccentricity":-10,
+    "unsymmetrical_core":-8,
+    "uneven_column_loading":-6,
+    "large_cantilever":-5
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Center of mass shall remain within 10% of the building geometric center.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Heavy structural elements should be located near the structural core.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Water tanks shall be centrally supported wherever possible.",
+      "severity":"high"
+    },
+    {
+      "rule":"Mass distribution should remain approximately symmetrical.",
+      "severity":"high"
+    },
+    {
+      "rule":"Avoid excessive torsional irregularity.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_mass_balance_score":95,
+    "target_structural_stability_score":95,
+    "target_earthquake_resistance_score":90,
+    "maximum_mass_eccentricity_percent":10
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 1893 (Earthquake Resistant Design)",
+    "IS 456 (Plain and Reinforced Concrete)",
+    "IS 875 (Design Loads)",
+    "CPWD Building Guidelines"
+  ]
+}

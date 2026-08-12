@@ -1,0 +1,190 @@
+{
+  "category":"failed_floorplans",
+  "version":"1.0",
+  "description":"Collection of unsuccessful residential floor plan patterns, architectural mistakes, NBC violations, fire safety violations, structural issues, circulation problems and optimization failures used to prevent invalid layouts.",
+  "failure_patterns":[
+    {
+      "id":"FP001",
+      "title":"Kitchen Opens Directly Into Bathroom",
+      "severity":"critical",
+      "reason":"Poor hygiene and violates residential planning standards.",
+      "violations":[
+        "NBC",
+        "Sanitation"
+      ],
+      "affected_rooms":[
+        "Kitchen",
+        "Bathroom"
+      ],
+      "planner_action":"Reject Layout"
+    },
+    {
+      "id":"FP002",
+      "title":"Bedroom Without Window",
+      "severity":"critical",
+      "reason":"No natural ventilation or daylight.",
+      "violations":[
+        "Ventilation",
+        "Lighting"
+      ],
+      "planner_action":"Regenerate Room"
+    },
+    {
+      "id":"FP003",
+      "title":"Dead End Corridor",
+      "severity":"high",
+      "reason":"Poor circulation and unsafe evacuation.",
+      "violations":[
+        "Fire Safety",
+        "Circulation"
+      ],
+      "planner_action":"Replan Corridor"
+    },
+    {
+      "id":"FP004",
+      "title":"No Staircase In Multi Floor Building",
+      "severity":"critical",
+      "reason":"Upper floors inaccessible.",
+      "violations":[
+        "NBC",
+        "Fire Safety"
+      ],
+      "planner_action":"Insert Staircase"
+    },
+    {
+      "id":"FP005",
+      "title":"Kitchen Too Far From Dining",
+      "severity":"medium",
+      "reason":"Poor functional workflow.",
+      "planner_action":"Move Kitchen"
+    },
+    {
+      "id":"FP006",
+      "title":"Master Bedroom Adjacent To Main Entrance",
+      "severity":"medium",
+      "reason":"Poor privacy.",
+      "planner_action":"Rezone Private Area"
+    },
+    {
+      "id":"FP007",
+      "title":"Bathroom Opens Into Dining Room",
+      "severity":"high",
+      "reason":"Poor hygiene.",
+      "planner_action":"Move Bathroom"
+    },
+    {
+      "id":"FP008",
+      "title":"No Cross Ventilation",
+      "severity":"high",
+      "reason":"Poor airflow and thermal comfort.",
+      "planner_action":"Add Windows"
+    },
+    {
+      "id":"FP009",
+      "title":"Long Narrow Corridor",
+      "severity":"medium",
+      "reason":"Wasted circulation area.",
+      "planner_action":"Optimize Layout"
+    },
+    {
+      "id":"FP010",
+      "title":"Structural Columns Inside Door Opening",
+      "severity":"critical",
+      "reason":"Structural conflict.",
+      "planner_action":"Relocate Column"
+    },
+    {
+      "id":"FP011",
+      "title":"No Parking Access",
+      "severity":"medium",
+      "planner_action":"Generate Parking"
+    },
+    {
+      "id":"FP012",
+      "title":"Living Room Has No Natural Light",
+      "severity":"high",
+      "planner_action":"Increase Window Area"
+    },
+    {
+      "id":"FP013",
+      "title":"Bathroom Without Ventilation",
+      "severity":"high",
+      "planner_action":"Add Ventilation Shaft"
+    },
+    {
+      "id":"FP014",
+      "title":"Irregular Room Shape",
+      "severity":"medium",
+      "planner_action":"Normalize Geometry"
+    },
+    {
+      "id":"FP015",
+      "title":"Beam Passing Through Staircase",
+      "severity":"critical",
+      "planner_action":"Modify Structure"
+    },
+    {
+      "id":"FP016",
+      "title":"Kitchen Above Septic Tank",
+      "severity":"critical",
+      "planner_action":"Relocate Kitchen"
+    },
+    {
+      "id":"FP017",
+      "title":"Bedroom Below Water Tank",
+      "severity":"medium",
+      "planner_action":"Move Tank"
+    },
+    {
+      "id":"FP018",
+      "title":"No Utility Room",
+      "severity":"low",
+      "planner_action":"Create Utility"
+    },
+    {
+      "id":"FP019",
+      "title":"Dining Blocks Main Circulation",
+      "severity":"medium",
+      "planner_action":"Rearrange Furniture Zone"
+    },
+    {
+      "id":"FP020",
+      "title":"Insufficient Setbacks",
+      "severity":"critical",
+      "violations":[
+        "Local Building Rules"
+      ],
+      "planner_action":"Resize Building Footprint"
+    },
+    {
+      "id":"FP021",
+      "title":"Plot Coverage Exceeds Limit",
+      "severity":"critical",
+      "planner_action":"Reduce Built-up Area"
+    },
+    {
+      "id":"FP022",
+      "title":"Emergency Exit Blocked",
+      "severity":"critical",
+      "planner_action":"Clear Escape Route"
+    },
+    {
+      "id":"FP023",
+      "title":"Uneven Structural Grid",
+      "severity":"high",
+      "planner_action":"Recalculate Column Layout"
+    },
+    {
+      "id":"FP024",
+      "title":"Toilet Above Kitchen",
+      "severity":"high",
+      "planner_action":"Relocate Wet Area"
+    },
+    {
+      "id":"FP025",
+      "title":"Excessive Circulation Area",
+      "severity":"medium",
+      "planner_action":"Improve Space Efficiency"
+    }
+  ]
+}

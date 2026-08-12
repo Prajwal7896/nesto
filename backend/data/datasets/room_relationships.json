@@ -1,0 +1,297 @@
+{
+  "category":"room_relationships",
+  "version":"2.0",
+  "description":"Defines adjacency, separation, circulation, privacy, ventilation, structural and accessibility relationships between rooms for AI-based floor planning.",
+
+  "adjacency_rules":[
+
+    {
+      "source":"Entrance",
+      "target":"Living Room",
+      "priority":"mandatory",
+      "weight":1.0
+    },
+
+    {
+      "source":"Living Room",
+      "target":"Dining Room",
+      "priority":"high",
+      "weight":0.98
+    },
+
+    {
+      "source":"Dining Room",
+      "target":"Kitchen",
+      "priority":"mandatory",
+      "weight":1.0
+    },
+
+    {
+      "source":"Kitchen",
+      "target":"Utility Room",
+      "priority":"high",
+      "weight":0.95
+    },
+
+    {
+      "source":"Kitchen",
+      "target":"Store Room",
+      "priority":"medium",
+      "weight":0.82
+    },
+
+    {
+      "source":"Master Bedroom",
+      "target":"Attached Bathroom",
+      "priority":"mandatory",
+      "weight":1.0
+    },
+
+    {
+      "source":"Master Bedroom",
+      "target":"Walk In Closet",
+      "priority":"high",
+      "weight":0.92
+    },
+
+    {
+      "source":"Bedroom",
+      "target":"Common Bathroom",
+      "priority":"high",
+      "weight":0.90
+    },
+
+    {
+      "source":"Living Room",
+      "target":"Balcony",
+      "priority":"high",
+      "weight":0.94
+    },
+
+    {
+      "source":"Family Room",
+      "target":"Bedrooms",
+      "priority":"medium",
+      "weight":0.83
+    },
+
+    {
+      "source":"Parking",
+      "target":"Entrance",
+      "priority":"mandatory",
+      "weight":1.0
+    },
+
+    {
+      "source":"Terrace",
+      "target":"Staircase",
+      "priority":"mandatory",
+      "weight":1.0
+    }
+  ],
+
+  "separation_rules":[
+
+    {
+      "source":"Kitchen",
+      "target":"Bathroom",
+      "minimum_distance_ft":8,
+      "severity":"critical"
+    },
+
+    {
+      "source":"Dining Room",
+      "target":"Bathroom",
+      "minimum_distance_ft":8,
+      "severity":"high"
+    },
+
+    {
+      "source":"Master Bedroom",
+      "target":"Main Entrance",
+      "minimum_distance_ft":15,
+      "severity":"medium"
+    },
+
+    {
+      "source":"Pooja Room",
+      "target":"Bathroom",
+      "minimum_distance_ft":10,
+      "severity":"high"
+    },
+
+    {
+      "source":"Kitchen",
+      "target":"Septic Tank",
+      "minimum_distance_ft":12,
+      "severity":"critical"
+    }
+  ],
+
+  "circulation_rules":[
+
+    {
+      "from":"Entrance",
+      "to":"Living Room",
+      "maximum_steps":3
+    },
+
+    {
+      "from":"Living Room",
+      "to":"Kitchen",
+      "maximum_steps":8
+    },
+
+    {
+      "from":"Living Room",
+      "to":"Bedrooms",
+      "maximum_steps":12
+    },
+
+    {
+      "from":"Parking",
+      "to":"Kitchen",
+      "maximum_steps":10
+    }
+  ],
+
+  "privacy_rules":[
+
+    {
+      "room":"Master Bedroom",
+      "privacy":"very_high"
+    },
+
+    {
+      "room":"Bedroom",
+      "privacy":"high"
+    },
+
+    {
+      "room":"Guest Room",
+      "privacy":"medium"
+    },
+
+    {
+      "room":"Living Room",
+      "privacy":"low"
+    }
+  ],
+
+  "noise_rules":[
+
+    {
+      "quiet_rooms":[
+        "Bedroom",
+        "Study Room",
+        "Library"
+      ],
+
+      "avoid_near":[
+        "Home Theatre",
+        "Parking",
+        "Living Room"
+      ]
+    }
+  ],
+
+  "ventilation_rules":[
+
+    {
+      "room":"Kitchen",
+      "window_required":true,
+      "cross_ventilation":true
+    },
+
+    {
+      "room":"Bathroom",
+      "ventilation_required":true
+    },
+
+    {
+      "room":"Bedroom",
+      "cross_ventilation":true
+    },
+
+    {
+      "room":"Living Room",
+      "large_window_preferred":true
+    }
+  ],
+
+  "lighting_rules":[
+
+    {
+      "room":"Living Room",
+      "natural_light":"high"
+    },
+
+    {
+      "room":"Kitchen",
+      "natural_light":"medium"
+    },
+
+    {
+      "room":"Bedroom",
+      "natural_light":"high"
+    },
+
+    {
+      "room":"Study Room",
+      "natural_light":"very_high"
+    }
+  ],
+
+  "accessibility_rules":[
+
+    {
+      "room":"Elder Bedroom",
+      "ground_floor_preferred":true
+    },
+
+    {
+      "room":"Bathroom",
+      "wheelchair_accessible":true
+    },
+
+    {
+      "room":"Entrance",
+      "ramp_preferred":true
+    }
+  ],
+
+  "vastu_rules":[
+
+    {
+      "room":"Kitchen",
+      "preferred_direction":"South East"
+    },
+
+    {
+      "room":"Master Bedroom",
+      "preferred_direction":"South West"
+    },
+
+    {
+      "room":"Pooja Room",
+      "preferred_direction":"North East"
+    },
+
+    {
+      "room":"Living Room",
+      "preferred_direction":"North"
+    }
+  ],
+
+  "optimization_weights":{
+
+    "adjacency":1.0,
+    "privacy":0.95,
+    "circulation":0.92,
+    "ventilation":0.94,
+    "lighting":0.91,
+    "accessibility":0.88,
+    "vastu":0.75,
+    "cost":0.86
+  }
+}

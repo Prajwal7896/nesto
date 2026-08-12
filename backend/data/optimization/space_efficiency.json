@@ -1,0 +1,206 @@
+{
+  "category":"building_optimization",
+  "module":"space_efficiency",
+  "version":"2.0",
+  "description":"Comprehensive space efficiency optimization database for AI-driven residential and commercial building planning. Used for maximizing usable area, minimizing circulation loss, reducing dead spaces, improving room proportions and optimizing floor layouts.",
+
+  "objectives":{
+    "maximize_usable_space":true,
+    "minimize_dead_space":true,
+    "reduce_corridor_area":true,
+    "optimize_room_proportions":true,
+    "improve_circulation":true,
+    "increase_functionality":true
+  },
+
+  "target_metrics":{
+    "minimum_space_efficiency_percent":85,
+    "excellent_space_efficiency_percent":92,
+    "maximum_dead_space_percent":5,
+    "maximum_corridor_area_percent":10,
+    "target_carpet_area_ratio":0.82,
+    "target_builtup_efficiency":0.88
+  },
+
+  "room_proportions":{
+    "living_room":{
+      "ideal_ratio":"1:1.5",
+      "minimum_area_sqft":150,
+      "ideal_area_sqft":220
+    },
+    "bedroom":{
+      "ideal_ratio":"1:1.3",
+      "minimum_area_sqft":120,
+      "ideal_area_sqft":160
+    },
+    "master_bedroom":{
+      "ideal_ratio":"1:1.4",
+      "minimum_area_sqft":180,
+      "ideal_area_sqft":240
+    },
+    "kitchen":{
+      "ideal_ratio":"1:1.5",
+      "minimum_area_sqft":80,
+      "ideal_area_sqft":120
+    },
+    "bathroom":{
+      "ideal_ratio":"1:1.2",
+      "minimum_area_sqft":35,
+      "ideal_area_sqft":50
+    },
+    "office":{
+      "ideal_ratio":"1:1.4",
+      "minimum_area_sqft":100,
+      "ideal_area_sqft":140
+    },
+    "dining_room":{
+      "ideal_ratio":"1:1.4",
+      "minimum_area_sqft":90,
+      "ideal_area_sqft":130
+    }
+  },
+
+  "layout_rules":[
+    "Cluster wet areas together.",
+    "Reduce unnecessary corridors.",
+    "Avoid unusable corner spaces.",
+    "Merge living and dining where appropriate.",
+    "Place staircase centrally in duplex buildings.",
+    "Keep furniture circulation clear.",
+    "Minimize structural obstructions inside rooms."
+  ],
+
+  "space_utilization":{
+    "living_room":95,
+    "bedroom":92,
+    "kitchen":94,
+    "bathroom":88,
+    "office":90,
+    "dining_room":91,
+    "parking":93
+  },
+
+  "optimization_patterns":[
+    {
+      "name":"Open Living Concept",
+      "score":98
+    },
+    {
+      "name":"Kitchen Utility Connection",
+      "score":96
+    },
+    {
+      "name":"Central Staircase",
+      "score":94
+    },
+    {
+      "name":"Private Bedroom Cluster",
+      "score":95
+    },
+    {
+      "name":"Courtyard Planning",
+      "score":92
+    }
+  ],
+
+  "corridor_rules":{
+    "maximum_length_m":12,
+    "minimum_width_mm":1200,
+    "preferred_width_mm":1500,
+    "maximum_area_percent":10
+  },
+
+  "dead_space_rules":{
+    "maximum_dead_space_percent":5,
+    "under_stair_storage_supported":true,
+    "corner_storage_supported":true,
+    "multi_function_spaces_supported":true
+  },
+
+  "multi_function_spaces":{
+    "living_plus_dining":true,
+    "study_plus_guest_room":true,
+    "kitchen_plus_breakfast":true,
+    "office_plus_library":true,
+    "family_room_plus_home_theatre":true
+  },
+
+  "furniture_clearance_mm":{
+    "bed_side":750,
+    "dining_chair":900,
+    "kitchen_walkway":1200,
+    "living_room":900,
+    "office_desk":1000
+  },
+
+  "optimization_weights":{
+    "usable_area":0.30,
+    "circulation":0.20,
+    "room_proportion":0.15,
+    "dead_space":0.15,
+    "furniture_layout":0.10,
+    "future_flexibility":0.10
+  },
+
+  "scoring":{
+    "excellent":95,
+    "very_good":90,
+    "good":85,
+    "acceptable":75,
+    "poor":60
+  },
+
+  "penalties":{
+    "dead_space":-10,
+    "oversized_corridor":-8,
+    "awkward_room_shape":-6,
+    "poor_furniture_layout":-5,
+    "unused_corner":-4
+  },
+
+  "bonuses":{
+    "open_plan":5,
+    "shared_plumbing_wall":3,
+    "central_core":4,
+    "modular_design":3,
+    "future_expansion":4
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Overall space efficiency shall exceed 85%.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Dead space shall not exceed 5% of floor area.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Corridor area shall not exceed 10% of built-up area.",
+      "severity":"high"
+    },
+    {
+      "rule":"Every room shall satisfy minimum area requirements.",
+      "severity":"high"
+    },
+    {
+      "rule":"Furniture circulation clearance shall be maintained.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_space_efficiency_percent":90,
+    "target_dead_space_percent":3,
+    "target_corridor_area_percent":8,
+    "target_room_utilization_percent":95
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Specifications",
+    "Neufert Architects' Data",
+    "Time Saver Standards for Building Types",
+    "IS 4963"
+  ]
+}

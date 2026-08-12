@@ -1,0 +1,252 @@
+{
+  "category":"building_materials",
+  "material":"roofing",
+  "version":"2.0",
+  "description":"Comprehensive roofing material database for AI-driven structural planning, climate adaptation, durability analysis, thermal performance, waterproofing, cost estimation and sustainability.",
+
+  "types":[
+    {
+      "id":"RF001",
+      "name":"Reinforced Concrete Roof",
+      "category":"Flat Roof",
+      "lifespan_years":75,
+      "fire_resistance":"Excellent",
+      "wind_resistance":"Excellent",
+      "thermal_performance":"Good",
+      "maintenance":"Low",
+      "applications":["Residential","Commercial","High-rise"],
+      "recommended_climates":["All"]
+    },
+    {
+      "id":"RF002",
+      "name":"Clay Roof Tiles",
+      "category":"Pitched Roof",
+      "lifespan_years":80,
+      "fire_resistance":"Excellent",
+      "thermal_performance":"Excellent",
+      "maintenance":"Medium",
+      "applications":["Villa","Traditional House","Farmhouse"],
+      "recommended_climates":["Hot","Tropical","Temperate"]
+    },
+    {
+      "id":"RF003",
+      "name":"Concrete Roof Tiles",
+      "category":"Pitched Roof",
+      "lifespan_years":60,
+      "fire_resistance":"Excellent",
+      "thermal_performance":"Good",
+      "maintenance":"Low",
+      "applications":["Residential","Commercial"]
+    },
+    {
+      "id":"RF004",
+      "name":"Metal Roofing",
+      "category":"Sloped Roof",
+      "lifespan_years":50,
+      "materials":["Galvanized Steel","Aluminium","Zinc"],
+      "fire_resistance":"Excellent",
+      "thermal_performance":"Moderate",
+      "maintenance":"Low",
+      "applications":["Industrial","Warehouse","Modern Homes"]
+    },
+    {
+      "id":"RF005",
+      "name":"Standing Seam Metal Roof",
+      "category":"Premium",
+      "lifespan_years":70,
+      "solar_reflective":true,
+      "maintenance":"Very Low",
+      "applications":["Luxury Homes","Commercial Buildings"]
+    },
+    {
+      "id":"RF006",
+      "name":"Asphalt Shingles",
+      "category":"Sloped Roof",
+      "lifespan_years":25,
+      "fire_resistance":"Moderate",
+      "maintenance":"Medium",
+      "applications":["Residential"],
+      "recommended_climates":["Cold","Temperate"]
+    },
+    {
+      "id":"RF007",
+      "name":"Stone Coated Steel Roof",
+      "category":"Premium",
+      "lifespan_years":60,
+      "fire_resistance":"Excellent",
+      "wind_resistance":"Excellent",
+      "applications":["Luxury Villas","Resorts"]
+    },
+    {
+      "id":"RF008",
+      "name":"Green Roof",
+      "category":"Sustainable",
+      "lifespan_years":50,
+      "thermal_performance":"Excellent",
+      "noise_reduction":"Excellent",
+      "stormwater_management":true,
+      "applications":["Eco Buildings","Commercial","Luxury Homes"]
+    }
+  ],
+
+  "roof_shapes":[
+    {
+      "name":"Flat Roof",
+      "recommended_for":["Urban Houses","Apartments","Commercial"],
+      "supports_solar":true,
+      "supports_terrace":true
+    },
+    {
+      "name":"Gable Roof",
+      "recommended_for":["Residential","Villa"],
+      "excellent_drainage":true
+    },
+    {
+      "name":"Hip Roof",
+      "recommended_for":["Cyclone Areas","Luxury Homes"],
+      "high_wind_resistance":true
+    },
+    {
+      "name":"Butterfly Roof",
+      "recommended_for":["Modern Architecture"],
+      "rainwater_collection":true
+    },
+    {
+      "name":"Mansard Roof",
+      "recommended_for":["Luxury Villas"],
+      "future_expansion":true
+    }
+  ],
+
+  "thermal_insulation":{
+    "recommended_materials":[
+      "PUF Panels",
+      "XPS Board",
+      "Rock Wool",
+      "Glass Wool"
+    ],
+    "minimum_r_value":3.5,
+    "cool_roof_coating_supported":true
+  },
+
+  "waterproofing":{
+    "required":true,
+    "recommended_systems":[
+      "APP Membrane",
+      "SBS Membrane",
+      "Polyurethane Coating",
+      "Liquid Waterproofing"
+    ],
+    "minimum_slope_percent":2
+  },
+
+  "drainage":{
+    "minimum_outlets":2,
+    "overflow_required":true,
+    "rainwater_harvesting_supported":true,
+    "gutter_required_for_sloped_roof":true
+  },
+
+  "solar_support":{
+    "solar_panels_supported":true,
+    "solar_water_heater_supported":true,
+    "recommended_orientation":"South",
+    "minimum_clear_area_percent":60
+  },
+
+  "selection_rules":[
+    {
+      "condition":"modern_house=true",
+      "recommended":"Reinforced Concrete Roof"
+    },
+    {
+      "condition":"villa=true",
+      "recommended":"Clay Roof Tiles"
+    },
+    {
+      "condition":"industrial_building=true",
+      "recommended":"Metal Roofing"
+    },
+    {
+      "condition":"green_building=true",
+      "recommended":"Green Roof"
+    },
+    {
+      "condition":"cyclone_zone=true",
+      "recommended":"Hip Roof"
+    }
+  ],
+
+  "optimization":{
+    "best_for_hot_climate":"Clay Roof Tiles",
+    "best_for_energy":"Green Roof",
+    "best_for_cost":"Reinforced Concrete Roof",
+    "best_for_low_maintenance":"Standing Seam Metal Roof",
+    "best_for_rainfall":"Gable Roof",
+    "best_for_solar":"Flat Roof"
+  },
+
+  "cost_index":{
+    "Reinforced Concrete Roof":1.0,
+    "Concrete Roof Tiles":1.2,
+    "Clay Roof Tiles":1.4,
+    "Metal Roofing":1.3,
+    "Standing Seam Roof":2.0,
+    "Asphalt Shingles":0.9,
+    "Stone Coated Steel":1.8,
+    "Green Roof":2.5
+  },
+
+  "quality_checks":[
+    "Proper roof slope",
+    "Adequate waterproofing",
+    "Correct flashing installation",
+    "No water ponding",
+    "Expansion joints provided",
+    "Drainage outlets functional"
+  ],
+
+  "validation_rules":[
+    {
+      "rule":"Every roof shall include waterproofing.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Flat roofs shall have minimum 2% slope.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Roof drainage outlets shall not be blocked.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Solar-ready roofs should reserve sufficient installation area.",
+      "severity":"medium"
+    },
+    {
+      "rule":"Roof insulation is recommended for energy-efficient buildings.",
+      "severity":"medium"
+    }
+  ],
+
+  "sustainability":{
+    "solar_ready":true,
+    "rainwater_harvesting_ready":true,
+    "green_roof_supported":true,
+    "cool_roof_supported":true,
+    "recyclable_materials":[
+      "Metal Roofing",
+      "Clay Tiles",
+      "Concrete Tiles"
+    ]
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 875 Part 3",
+    "IS 456",
+    "IS 3370",
+    "CPWD Specifications",
+    "ASHRAE Roofing Guidelines"
+  ]
+}

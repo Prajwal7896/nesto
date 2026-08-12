@@ -1,0 +1,145 @@
+{
+  "category":"structural_system",
+  "module":"load_distribution_rules",
+  "version":"2.0",
+  "description":"Comprehensive load distribution rules for AI-driven structural design. Covers how loads travel through slabs, beams, columns, foundations and soil, including uniform, point, live, dead and lateral loads with safety, redundancy and optimization principles.",
+
+  "objectives":{
+    "ensure_safe_load_transfer":true,
+    "prevent_structural_overstress":true,
+    "maintain_continuous_load_path":true,
+    "balance_loads_across_structure":true,
+    "reduce_stress_concentration":true
+  },
+
+  "load_types":{
+    "dead_load":true,
+    "live_load":true,
+    "wind_load":true,
+    "seismic_load":true,
+    "point_load":true,
+    "uniform_load":true,
+    "thermal_load":true
+  },
+
+  "primary_load_path":{
+    "sequence":"slab → beam → column → footing → soil",
+    "continuity_required":true,
+    "no_break_in_path_allowed":true,
+    "redundant_paths_required":true
+  },
+
+  "slab_distribution":{
+    "two_way_slab":true,
+    "one_way_slab":true,
+    "load_transfer_to_nearest_beams":true,
+    "uniform_load_assumption":true
+  },
+
+  "beam_distribution":{
+    "line_load_conversion":true,
+    "moment_transfer_required":true,
+    "shear_distribution_control":true,
+    "continuous_beam_preferred":true
+  },
+
+  "column_distribution":{
+    "axial_load_dominant":true,
+    "eccentric_load_control":true,
+    "load_concentration_avoidance":true,
+    "grid_alignment_required":true
+  },
+
+  "foundation_distribution":{
+    "load_spreading_to_soil":true,
+    "uniform_soil_pressure_preferred":true,
+    "settlement_control_required":true,
+    "raft_distribution_supported":true
+  },
+
+  "soil_interaction":{
+    "bearing_capacity_limit":true,
+    "soil_pressure_uniformity":true,
+    "differential_settlement_minimization":true,
+    "liquefaction_check_required":true
+  },
+
+  "structural_principles":{
+    "strong_column_weak_beam":true,
+    "symmetry_preferred":true,
+    "regular_geometry_preferred":true,
+    "load_continuity_required":true
+  },
+
+  "irregularity_penalties":{
+    "soft_story":-10,
+    "eccentric_loading":-9,
+    "discontinuous_columns":-10,
+    "uneven_load_distribution":-9,
+    "large_overhangs":-8
+  },
+
+  "optimization":{
+    "load_efficiency":0.97,
+    "stress_distribution_uniformity":0.96,
+    "structural_redundancy":0.95,
+    "material_efficiency":0.94,
+    "safety_factor":0.99
+  },
+
+  "bonuses":{
+    "uniform_grid_layout":5,
+    "continuous_beam_system":5,
+    "central_column_alignment":5,
+    "symmetrical_design":4,
+    "redundant_load_paths":5
+  },
+
+  "penalties":{
+    "point_load_concentration":-10,
+    "misaligned_columns":-10,
+    "broken_load_path":-10,
+    "irregular_layout":-9,
+    "unsupported_spans":-9
+  },
+
+  "validation_rules":[
+    {
+      "rule":"All loads must follow a continuous load path to the soil.",
+      "severity":"critical"
+    },
+    {
+      "rule":"No structural element shall be left without proper load transfer.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Eccentric loads must be minimized or balanced.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Structural grid alignment must be maintained.",
+      "severity":"high"
+    },
+    {
+      "rule":"Differential settlement must be minimized through uniform load distribution.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_load_uniformity":97,
+    "target_structural_safety":99,
+    "target_material_efficiency":94,
+    "target_settlement_control":96,
+    "target_redundancy":95
+  },
+
+  "reference_codes":[
+    "IS 456:2000",
+    "IS 875 (Loadings)",
+    "IS 1893 (Seismic Design)",
+    "National Building Code of India (NBC)",
+    "CPWD Structural Guidelines",
+    "ACI 318"
+  ]
+}

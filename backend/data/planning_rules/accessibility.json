@@ -1,0 +1,216 @@
+{
+  "category":"planning_rules",
+  "module":"accessibility",
+  "version":"2.0",
+  "description":"Comprehensive accessibility standards for AI-driven residential and commercial building planning. Used for universal design, barrier-free movement, elderly-friendly planning, wheelchair accessibility, emergency evacuation and regulatory compliance.",
+
+  "objectives":{
+    "universal_design":true,
+    "barrier_free_access":true,
+    "elderly_friendly":true,
+    "wheelchair_accessible":true,
+    "safe_circulation":true,
+    "inclusive_design":true
+  },
+
+  "doorways":{
+    "minimum_clear_width_mm":900,
+    "recommended_width_mm":1000,
+    "minimum_height_mm":2100,
+    "threshold_height_mm":12,
+    "automatic_door_supported":true
+  },
+
+  "corridors":{
+    "minimum_width_mm":1200,
+    "recommended_width_mm":1500,
+    "wheelchair_turning_space_mm":1500,
+    "maximum_dead_end_length_m":6
+  },
+
+  "ramps":{
+    "required":true,
+    "maximum_slope_ratio":"1:12",
+    "minimum_width_mm":1200,
+    "landing_interval_m":9,
+    "minimum_landing_length_mm":1500,
+    "handrails_required":true,
+    "non_slip_surface":true
+  },
+
+  "staircases":{
+    "minimum_width_mm":1200,
+    "maximum_riser_mm":150,
+    "minimum_tread_mm":300,
+    "continuous_handrails":true,
+    "tactile_warning_tiles":true,
+    "anti_skid_finish":true
+  },
+
+  "elevators":{
+    "recommended_for_buildings_above_floors":2,
+    "minimum_cabin_size_mm":[1100,1400],
+    "minimum_door_width_mm":900,
+    "braille_buttons":true,
+    "voice_announcements":true,
+    "wheelchair_accessible":true
+  },
+
+  "wheelchair_requirements":{
+    "turning_radius_mm":1500,
+    "minimum_clear_space_mm":1500,
+    "maximum_reach_height_mm":1200,
+    "minimum_reach_height_mm":380
+  },
+
+  "bathrooms":{
+    "accessible_required":true,
+    "minimum_size_mm":[2200,2200],
+    "grab_bars":true,
+    "roll_in_shower":true,
+    "non_slip_floor":true,
+    "wheelchair_turning_space":true,
+    "lever_handle_fittings":true
+  },
+
+  "kitchen":{
+    "wheelchair_accessible":true,
+    "minimum_clearance_mm":1500,
+    "counter_height_mm":850,
+    "knee_clearance_supported":true,
+    "pull_out_storage":true
+  },
+
+  "bedroom":{
+    "minimum_clearance_bed_side_mm":900,
+    "wheelchair_accessible":true,
+    "accessible_switches":true
+  },
+
+  "parking":{
+    "accessible_parking_required":true,
+    "minimum_width_mm":3600,
+    "maximum_distance_to_entry_m":30,
+    "accessible_signage":true
+  },
+
+  "controls":{
+    "switch_height_mm":1000,
+    "socket_height_mm":450,
+    "smart_controls_supported":true,
+    "voice_control_supported":true
+  },
+
+  "lighting":{
+    "minimum_lux_corridor":100,
+    "minimum_lux_staircase":150,
+    "minimum_lux_entrance":200,
+    "emergency_lighting":true
+  },
+
+  "signage":{
+    "braille_signage":true,
+    "high_contrast_signs":true,
+    "directional_signage":true,
+    "emergency_signage":true
+  },
+
+  "elderly_features":{
+    "ground_floor_bedroom":true,
+    "anti_skid_flooring":true,
+    "grab_rails":true,
+    "motion_sensor_lighting":true,
+    "panic_button_supported":true
+  },
+
+  "child_safety":{
+    "stair_gates_supported":true,
+    "window_safety_locks":true,
+    "rounded_corners":true,
+    "electrical_socket_protection":true
+  },
+
+  "optimization_weights":{
+    "mobility":0.25,
+    "wheelchair_access":0.20,
+    "elderly_safety":0.15,
+    "circulation":0.15,
+    "emergency_access":0.15,
+    "user_comfort":0.10
+  },
+
+  "design_patterns":[
+    {
+      "name":"Universal Design",
+      "score":1.00
+    },
+    {
+      "name":"Barrier-Free Entrance",
+      "score":0.99
+    },
+    {
+      "name":"Accessible Bathroom",
+      "score":0.98
+    },
+    {
+      "name":"Central Elevator Core",
+      "score":0.96
+    },
+    {
+      "name":"Wide Circulation Layout",
+      "score":0.95
+    }
+  ],
+
+  "bonuses":{
+    "smart_home_accessibility":4,
+    "voice_control":3,
+    "automatic_doors":3,
+    "accessible_elevator":5,
+    "elderly_friendly_design":5
+  },
+
+  "penalties":{
+    "narrow_corridors":-10,
+    "missing_ramp":-10,
+    "inaccessible_bathroom":-8,
+    "no_handrails":-6,
+    "unsafe_staircase":-8
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Main entrance shall be wheelchair accessible.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Minimum door width shall be 900 mm.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Ramp slope shall not exceed 1:12.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Accessible bathroom shall be provided where required.",
+      "severity":"high"
+    },
+    {
+      "rule":"Corridor width shall be at least 1200 mm.",
+      "severity":"high"
+    },
+    {
+      "rule":"Handrails shall be installed on ramps and staircases.",
+      "severity":"medium"
+    }
+  ],
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "Harmonised Guidelines and Standards for Universal Accessibility India",
+    "Rights of Persons with Disabilities Act (RPwD)",
+    "ISO 21542",
+    "ADA Standards",
+    "CPWD Barrier Free Guidelines"
+  ]
+}

@@ -1,0 +1,208 @@
+{
+  "category":"room_standards",
+  "room":"living_room",
+  "version":"2.0",
+  "description":"Comprehensive living room planning standards for AI-driven residential and commercial floor planning. Covers dimensions, furniture layout, circulation, lighting, ventilation, acoustics, accessibility, electrical planning, entertainment setup, smart features and optimization.",
+
+  "dimensions":{
+    "minimum_area_sqft":140,
+    "recommended_area_sqft":220,
+    "luxury_area_sqft":400,
+    "minimum_width_ft":12,
+    "recommended_width_ft":16,
+    "minimum_length_ft":12,
+    "recommended_length_ft":18,
+    "minimum_height_ft":10
+  },
+
+  "types":{
+    "standard":{
+      "recommended_area_sqft":180,
+      "capacity":6
+    },
+    "family_lounge":{
+      "recommended_area_sqft":220,
+      "capacity":8
+    },
+    "formal_living":{
+      "recommended_area_sqft":260,
+      "capacity":10
+    },
+    "luxury_living":{
+      "recommended_area_sqft":400,
+      "capacity":16,
+      "double_height_optional":true
+    }
+  },
+
+  "location":{
+    "preferred_orientation":[
+      "North",
+      "North-East",
+      "East"
+    ],
+    "preferred_adjacent_rooms":[
+      "Entrance",
+      "Dining Room",
+      "Balcony",
+      "Family Lounge",
+      "Staircase"
+    ],
+    "avoid_adjacent_rooms":[
+      "Bathroom",
+      "Utility Room",
+      "Store Room"
+    ]
+  },
+
+  "furniture":{
+    "sofa_required":true,
+    "minimum_seating_capacity":5,
+    "coffee_table":true,
+    "tv_unit":true,
+    "accent_chairs_optional":true,
+    "bookshelf_optional":true,
+    "console_table_optional":true,
+    "indoor_plants_supported":true
+  },
+
+  "circulation":{
+    "minimum_walkway_mm":1000,
+    "recommended_walkway_mm":1200,
+    "minimum_clearance_around_furniture_mm":900,
+    "entry_clearance_mm":1500
+  },
+
+  "lighting":{
+    "recommended_lux":200,
+    "natural_daylight_required":true,
+    "ambient_led":true,
+    "accent_lighting":true,
+    "floor_lamps_optional":true,
+    "smart_dimming":true
+  },
+
+  "ventilation":{
+    "cross_ventilation":true,
+    "minimum_windows":2,
+    "minimum_openable_window_area_percent":20,
+    "air_changes_per_hour":6,
+    "balcony_connection_preferred":true
+  },
+
+  "acoustics":{
+    "minimum_wall_stc":45,
+    "acoustic_panels_optional":true,
+    "soft_furnishings_recommended":true,
+    "echo_reduction":true
+  },
+
+  "flooring":{
+    "recommended_materials":[
+      "Vitrified Tile",
+      "Marble",
+      "Granite",
+      "Engineered Wood",
+      "Wood Flooring"
+    ],
+    "anti_skid":true,
+    "easy_to_clean":true
+  },
+
+  "electrical":{
+    "power_outlets":8,
+    "tv_point":true,
+    "internet_point":true,
+    "speaker_points_optional":true,
+    "smart_switches_supported":true,
+    "usb_outlets_supported":true
+  },
+
+  "entertainment":{
+    "tv_wall":true,
+    "home_theater_optional":true,
+    "projector_supported":true,
+    "gaming_setup_optional":true
+  },
+
+  "accessibility":{
+    "wheelchair_accessible":true,
+    "minimum_door_width_mm":900,
+    "barrier_free":true
+  },
+
+  "smart_features":{
+    "voice_control":true,
+    "smart_lighting":true,
+    "motorized_curtains":true,
+    "occupancy_sensor":true,
+    "air_quality_monitor":true,
+    "smart_climate_control":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.97,
+    "comfort":0.98,
+    "daylighting":0.98,
+    "ventilation":0.98,
+    "social_interaction":0.99
+  },
+
+  "bonuses":{
+    "balcony_connection":5,
+    "cross_ventilation":5,
+    "natural_daylight":5,
+    "open_plan_layout":4,
+    "double_height_ceiling":3,
+    "smart_features":3
+  },
+
+  "penalties":{
+    "adjacent_to_bathroom":-10,
+    "poor_daylighting":-8,
+    "poor_ventilation":-8,
+    "insufficient_circulation":-6,
+    "blocked_entry":-6,
+    "oversized_furniture":-4
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Living room shall receive adequate natural daylight.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Cross ventilation shall be provided whenever possible.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Bathrooms shall not open directly into the living room.",
+      "severity":"high"
+    },
+    {
+      "rule":"Minimum circulation clearance shall be maintained.",
+      "severity":"high"
+    },
+    {
+      "rule":"Living room shall connect efficiently to dining and entrance.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_comfort_score":98,
+    "target_daylight_score":98,
+    "target_ventilation_score":98,
+    "target_social_space_score":99,
+    "target_space_efficiency":97
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "Time Saver Standards for Building Types",
+    "ASHRAE Standard 62.1",
+    "Energy Conservation Building Code (ECBC)"
+  ]
+}

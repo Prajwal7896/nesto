@@ -1,0 +1,190 @@
+{
+  "category":"room_relationship_patterns",
+  "room":"kitchen",
+  "version":"2.0",
+  "description":"AI planning patterns for kitchen placement, workflow, ventilation, plumbing, safety, accessibility, structural feasibility and optimization.",
+
+  "patterns":[
+    {
+      "id":"KT001",
+      "name":"Kitchen Near Dining",
+      "priority":"critical",
+      "description":"Kitchen should be directly connected to the dining area.",
+      "preferred_adjacent":["dining_room","utility_room"],
+      "avoid_adjacent":["master_bedroom","toilet"],
+      "optimization":{"circulation":0.98,"efficiency":0.97}
+    },
+    {
+      "id":"KT002",
+      "name":"Kitchen Work Triangle",
+      "priority":"critical",
+      "description":"Optimize movement between refrigerator, sink and stove.",
+      "triangle":["refrigerator","sink","stove"],
+      "minimum_triangle_ft":13,
+      "maximum_triangle_ft":26
+    },
+    {
+      "id":"KT003",
+      "name":"Utility Room Connection",
+      "priority":"high",
+      "description":"Utility room should connect directly behind the kitchen.",
+      "preferred_adjacent":["utility_room"],
+      "optimization":{"service_efficiency":0.96}
+    },
+    {
+      "id":"KT004",
+      "name":"Cross Ventilation",
+      "priority":"critical",
+      "description":"Kitchen must have natural ventilation.",
+      "required":true,
+      "optimization":{"airflow":1.0}
+    },
+    {
+      "id":"KT005",
+      "name":"Exhaust Ventilation",
+      "priority":"critical",
+      "description":"Kitchen requires chimney and exhaust fan.",
+      "chimney":true,
+      "exhaust_fan":true
+    },
+    {
+      "id":"KT006",
+      "name":"Natural Lighting",
+      "priority":"high",
+      "description":"Kitchen should receive adequate daylight.",
+      "minimum_window_area_percent":10,
+      "preferred_orientation":["East","North"]
+    },
+    {
+      "id":"KT007",
+      "name":"Wet Area Clustering",
+      "priority":"high",
+      "description":"Kitchen should share plumbing walls with bathrooms and utility where feasible.",
+      "preferred_adjacent":["utility_room","bathroom"]
+    },
+    {
+      "id":"KT008",
+      "name":"L-Shaped Kitchen",
+      "priority":"medium",
+      "description":"Suitable for compact homes.",
+      "recommended_area_sqm":8
+    },
+    {
+      "id":"KT009",
+      "name":"U-Shaped Kitchen",
+      "priority":"medium",
+      "description":"Provides maximum storage and work area.",
+      "recommended_area_sqm":12
+    },
+    {
+      "id":"KT010",
+      "name":"Parallel Kitchen",
+      "priority":"medium",
+      "description":"Efficient for narrow layouts.",
+      "minimum_width_m":2.4
+    },
+    {
+      "id":"KT011",
+      "name":"Island Kitchen",
+      "priority":"medium",
+      "description":"Recommended for luxury villas and large homes.",
+      "minimum_area_sqm":18,
+      "island_required":true
+    },
+    {
+      "id":"KT012",
+      "name":"Open Kitchen",
+      "priority":"medium",
+      "description":"Kitchen integrated with living and dining.",
+      "recommended_styles":["modern","minimalist","contemporary"]
+    },
+    {
+      "id":"KT013",
+      "name":"Closed Kitchen",
+      "priority":"medium",
+      "description":"Provides better privacy and odor isolation.",
+      "recommended_styles":["traditional"]
+    },
+    {
+      "id":"KT014",
+      "name":"Fire Safety",
+      "priority":"critical",
+      "description":"Maintain safe cooking environment.",
+      "fire_extinguisher":true,
+      "gas_leak_detector":true,
+      "smoke_detector":true
+    },
+    {
+      "id":"KT015",
+      "name":"Electrical Safety",
+      "priority":"critical",
+      "description":"Separate heavy appliance circuits.",
+      "dedicated_circuits":["oven","microwave","dishwasher","chimney"]
+    },
+    {
+      "id":"KT016",
+      "name":"Storage Optimization",
+      "priority":"high",
+      "description":"Maximize cabinet storage.",
+      "features":["overhead_cabinets","pantry","corner_units","pull_out_drawers"]
+    },
+    {
+      "id":"KT017",
+      "name":"Accessible Kitchen",
+      "priority":"medium",
+      "description":"Wheelchair-friendly kitchen layout.",
+      "features":["wide_aisles","lower_counter","accessible_sink"]
+    },
+    {
+      "id":"KT018",
+      "name":"Vastu Kitchen",
+      "priority":"optional",
+      "preferred_direction":["South-East"],
+      "acceptable_direction":["North-West"]
+    },
+    {
+      "id":"KT019",
+      "name":"Smart Kitchen",
+      "priority":"low",
+      "features":["smart_lighting","voice_assistant","smart_appliances","water_leak_sensor","gas_sensor"]
+    },
+    {
+      "id":"KT020",
+      "name":"Energy Efficient Kitchen",
+      "priority":"high",
+      "features":["led_lighting","energy_star_appliances","induction_cooktop","solar_hot_water"],
+      "optimization":{"energy":0.96}
+    }
+  ],
+
+  "global_constraints":{
+    "minimum_area_sqm":5.5,
+    "recommended_area_sqm":10,
+    "luxury_area_sqm":18,
+    "minimum_width_m":2.1,
+    "minimum_ceiling_height_m":2.75,
+    "minimum_window_area_percent":10,
+    "cross_ventilation_required":true,
+    "chimney_required":true,
+    "exhaust_required":true,
+    "hot_cold_water_required":true,
+    "drainage_required":true
+  },
+
+  "optimization_weights":{
+    "workflow":0.30,
+    "ventilation":0.20,
+    "storage":0.15,
+    "lighting":0.10,
+    "safety":0.10,
+    "energy":0.10,
+    "accessibility":0.05
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Residential Guidelines",
+    "IS 1172",
+    "Universal Design Standards"
+  ]
+}

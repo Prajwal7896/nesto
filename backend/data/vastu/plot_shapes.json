@@ -1,0 +1,154 @@
+{
+  "category":"site_planning",
+  "module":"plot_shape_rules",
+  "version":"2.0",
+  "description":"Comprehensive plot shape evaluation rules for AI-driven architectural planning. Covers geometry, efficiency, access, circulation, usability, drainage, sunlight exposure, zoning feasibility, and structural optimization for different plot shapes.",
+
+  "objectives":{
+    "maximize_buildable_efficiency":true,
+    "ensure_accessibility":true,
+    "optimize_orientation":true,
+    "reduce_wastage_of_space":true,
+    "improve_structural_feasibility":true
+  },
+
+  "plot_shapes":{
+    "rectangular":{
+      "efficiency":0.98,
+      "recommended":true,
+      "notes":"Most efficient and easy for planning grid-based layouts"
+    },
+    "square":{
+      "efficiency":0.97,
+      "recommended":true,
+      "notes":"Balanced proportions, excellent for symmetry and Vastu planning"
+    },
+    "L_shaped":{
+      "efficiency":0.85,
+      "recommended":true,
+      "notes":"Good for zoning separation but requires careful circulation planning"
+    },
+    "T_shaped":{
+      "efficiency":0.80,
+      "recommended":false,
+      "notes":"Complex circulation and structural load distribution"
+    },
+    "irregular":{
+      "efficiency":0.70,
+      "recommended":false,
+      "notes":"Requires advanced optimization and may increase construction cost"
+    },
+    "corner_plot":{
+      "efficiency":0.90,
+      "recommended":true,
+      "notes":"Excellent for dual access, commercial advantage, better ventilation"
+    },
+    "triangular":{
+      "efficiency":0.65,
+      "recommended":false,
+      "notes":"Difficult space utilization, best for landscape-heavy design"
+    }
+  },
+
+  "geometry_rules":{
+    "right_angles_preferred":true,
+    "regular_boundaries_preferred":true,
+    "avoid_sharp_irregular_angles":true,
+    "minimum_frontage_width_m":6,
+    "ideal_depth_to_width_ratio":"1:1 to 1:2"
+  },
+
+  "access_rules":{
+    "road_frontage_required":true,
+    "minimum_road_width_m":9,
+    "corner_plot_dual_access_advantage":true,
+    "clear_entry_zone_required":true
+  },
+
+  "circulation_rules":{
+    "straight_circulation_preferred":true,
+    "avoid_dead_ends":true,
+    "optimize_internal_path_flow":true,
+    "vehicle_turning_space_required":true
+  },
+
+  "zoning_feasibility":{
+    "rectangular_supports_all_zones":true,
+    "square_supports_balanced_zones":true,
+    "irregular_requires_custom_zoning":true,
+    "L_shape_good_for_public_private_separation":true
+  },
+
+  "structural_feasibility":{
+    "grid_system_best_for_rectangular":true,
+    "irregular_shapes_need_custom_beam_layout":true,
+    "corner_load_distribution_better_in_corner_plots":true
+  },
+
+  "sunlight_and_ventilation":{
+    "rectangular_optimal_orientation":true,
+    "corner_plots_better_airflow":true,
+    "narrow_plots_may_reduce_cross_ventilation":true
+  },
+
+  "drainage":{
+    "natural_slope_utilization_required":true,
+    "corner_plots_better_stormwater_outflow":true,
+    "low_point_identification_required":true
+  },
+
+  "optimization":{
+    "space_utilization_score":0.96,
+    "construction_efficiency":0.95,
+    "ventilation_score":0.93,
+    "structural_ease":0.97,
+    "design_flexibility":0.94
+  },
+
+  "bonuses":{
+    "rectangular_shape":5,
+    "square_shape":5,
+    "corner_plot_access":5,
+    "wide_frontage":4,
+    "regular_geometry":5
+  },
+
+  "penalties":{
+    "irregular_boundaries":-10,
+    "triangular_shape":-9,
+    "narrow_frontage":-8,
+    "no_road_access":-10,
+    "broken_geometry":-9
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Plot must allow efficient circulation and zoning.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Road access must be ensured for all habitable plots.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Structural layout must be feasible without excessive complexity.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Sunlight and ventilation must be achievable based on shape.",
+      "severity":"high"
+    },
+    {
+      "rule":"Drainage must follow natural slope and avoid water logging.",
+      "severity":"high"
+    }
+  ],
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Site Planning Guidelines",
+    "Urban Planning Standards India",
+    "IS 456:2000",
+    "Environmental Planning Handbook"
+  ]
+}

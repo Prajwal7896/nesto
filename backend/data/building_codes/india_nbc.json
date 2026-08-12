@@ -1,0 +1,126 @@
+{
+  "code": "NBC_India",
+
+  "authority": "National Building Code of India (Simplified RAG Version)",
+
+  "scope": "residential_buildings_general_guidelines",
+
+  "core_objectives": [
+    "Ensure structural safety",
+    "Ensure fire and life safety",
+    "Ensure ventilation and natural lighting",
+    "Ensure accessibility and usability",
+    "Ensure hygienic and livable design standards"
+  ],
+
+  "minimum_space_standards": {
+    "bedroom": {
+      "min_area_sqft": 100,
+      "recommended_area_sqft": 120
+    },
+    "living_room": {
+      "min_area_sqft": 120,
+      "recommended_area_sqft": 180
+    },
+    "kitchen": {
+      "min_area_sqft": 70,
+      "recommended_area_sqft": 100
+    },
+    "bathroom": {
+      "min_area_sqft": 35,
+      "recommended_area_sqft": 50
+    }
+  },
+
+  "ventilation_rules": {
+    "all_habitable_rooms": true,
+    "minimum_window_area_ratio": 0.1,
+    "cross_ventilation_recommended": true
+  },
+
+  "lighting_rules": {
+    "natural_light_required": true,
+    "minimum_window_opening": "10_percent_floor_area",
+    "skylight_optional": true
+  },
+
+  "circulation_rules": {
+    "corridor_min_width_ft": 3.0,
+    "staircase_min_width_ft": 3.0,
+    "clear_passage_required": true
+  },
+
+  "staircase_rules": {
+    "mandatory_for_2_plus_floors": true,
+    "preferred_location": "central_or_side_core",
+    "handrail_required": true,
+    "uniform_riser_tread": true
+  },
+
+  "room_relationship_rules": {
+    "kitchen": {
+      "should_be_near_dining": true,
+      "should_have_external_ventilation": true
+    },
+    "bathroom": {
+      "should_not_open_directly_to_kitchen": true
+    },
+    "bedroom": {
+      "should_have_privacy_zone": true
+    }
+  },
+
+  "structural_safety": {
+    "load_bearing_design_required": true,
+    "earthquake_resistance_recommended": true,
+    "minimum_material_quality": "standard_rcc_grade",
+    "column_grid_system_recommended": true
+  },
+
+  "fire_safety_basics": {
+    "multiple_exits_for_multi_storey": true,
+    "escape_route_clearance_required": true,
+    "no_obstruction_in_staircase_path": true
+  },
+
+  "sanitation_rules": {
+    "toilet_separation_from_kitchen": true,
+    "proper_drainage_required": true,
+    "minimum_ventilation_in_bathrooms": true
+  },
+
+  "accessibility_rules": {
+    "barrier_free_access_recommended": true,
+    "ramp_required_for_public_units": false,
+    "door_width_min_ft": 2.5
+  },
+
+  "plot_utilization_guidelines": {
+    "open_space_required_percentage": 15,
+    "setback_required": true,
+    "ground_coverage_limit": "varies_by_local_authority"
+  },
+
+  "planning_constraints": {
+    "no_dead_end_corridors": false,
+    "functional_space_priority": true,
+    "safety_over_aesthetics": true
+  },
+
+  "optimization_priority": {
+    "safety": 1.0,
+    "ventilation": 0.9,
+    "functionality": 0.9,
+    "aesthetics": 0.6,
+    "cost_efficiency": 0.7
+  },
+
+  "planning_tags": [
+    "building_code_india",
+    "residential_guidelines",
+    "structural_safety",
+    "fire_life_safety",
+    "ventilation_standards",
+    "habitability_rules"
+  ]
+}
