@@ -70,3 +70,9 @@ backend/data/embeddings/embeddings_cache/*.npy
 
 # Generated RAG embedding cache
 backend/data/embeddings/embeddings_cache/rag_builder/
+
+# Generated floor plans
+output/
+
+# User uploads
+static/uploads/
