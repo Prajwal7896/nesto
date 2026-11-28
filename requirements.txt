@@ -20,3 +20,5 @@ email-validator
 certifi
 itsdangerous
 psycopg[binary]
+
+psycopg[binary]
