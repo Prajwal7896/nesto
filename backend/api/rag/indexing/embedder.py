@@ -32,7 +32,12 @@ def _get_client():
             )
 
         try:
-            _client = genai.Client(api_key=api_key)
+            _client = genai.Client(
+                api_key=api_key,
+                http_options={
+                    "api_version": "v1beta"
+                }
+            )
         except Exception as error:
             raise RuntimeError(
                 "Unable to initialize the Gemini embedding client."
@@ -94,3 +99,4 @@ def _embed_text_cached(text: str) -> tuple[float, ...]:
         raise RuntimeError(f"Embedding model {MODEL} returned non-finite values.")
 
     return tuple(vector)
+

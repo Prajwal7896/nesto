@@ -25,7 +25,12 @@ API_KEY = os.getenv("GEMINI_API_KEY")
 if not API_KEY:
     raise RuntimeError("GEMINI_API_KEY is missing from environment variables.")
 
-client = genai.Client(api_key=API_KEY)
+client = genai.Client(
+    api_key=API_KEY,
+    http_options={
+        "api_version": "v1beta"
+    }
+)
 
 
 def extract_json(text: str) -> Dict[str, Any]:
@@ -129,3 +134,4 @@ def parse_with_llm(prompt: str) -> Dict[str, Any]:
     except Exception:
         logger.exception("Gemini extraction or JSON parsing failed.")
         raise
+
