@@ -1,0 +1,480 @@
+﻿:root {
+    --background: #080d17;
+    --panel: #101827;
+    --panel-light: #162235;
+    --border: #253349;
+    --text: #e8eef7;
+    --muted: #8291a7;
+    --primary: #10b981;
+    --primary-light: #34d399;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--background);
+    color: var(--text);
+    font-family: Inter, "Segoe UI", sans-serif;
+    overflow: hidden;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    color: var(--text);
+}
+
+.app-container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* TOP NAVIGATION */
+
+.topbar {
+    height: 68px;
+    min-height: 68px;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 22px;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.brand-icon {
+    height: 38px;
+    width: 38px;
+    background: var(--primary);
+    color: #04130d;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    font-size: 22px;
+    font-weight: 900;
+}
+
+.brand h2 {
+    font-size: 17px;
+    letter-spacing: 2px;
+}
+
+.brand span,
+.panel-heading span,
+.timeline-header span {
+    font-size: 9px;
+    letter-spacing: 1.4px;
+    color: var(--muted);
+}
+
+.project-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 13px;
+    color: #c4d0df;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    display: inline-block;
+}
+
+.top-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.top-button,
+.primary-button {
+    padding: 10px 15px;
+    border-radius: 7px;
+    background: var(--panel-light);
+    font-size: 12px;
+}
+
+.primary-button {
+    background: var(--primary);
+    color: #04130d;
+    font-weight: 700;
+}
+
+/* MAIN WORKSPACE */
+
+.workspace {
+    flex: 1;
+    min-height: 0;
+    display: grid;
+    grid-template-columns: 220px minmax(0, 1fr) 250px;
+}
+
+/* SIDE PANELS */
+
+.left-panel,
+.right-panel {
+    background: var(--panel);
+    padding: 20px 15px;
+    overflow-y: auto;
+}
+
+.left-panel {
+    border-right: 1px solid var(--border);
+}
+
+.right-panel {
+    border-left: 1px solid var(--border);
+}
+
+.panel-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+
+.panel-heading h3 {
+    font-size: 14px;
+}
+
+.layer-group,
+.property-section {
+    margin-bottom: 28px;
+}
+
+.layer-group h4,
+.property-section h4 {
+    color: var(--muted);
+    font-size: 10px;
+    letter-spacing: 1.4px;
+    margin-bottom: 14px;
+}
+
+.layer-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 5px;
+    color: #c4cfde;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.layer-item input {
+    accent-color: var(--primary);
+    cursor: pointer;
+}
+
+.layer-icon {
+    color: var(--primary-light);
+    width: 18px;
+    text-align: center;
+    font-size: 16px;
+}
+
+.panel-footer {
+    position: sticky;
+    bottom: 0;
+    padding: 14px 5px;
+    background: var(--panel);
+    color: var(--muted);
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+/* VIEWPORT */
+
+.viewport-container {
+    position: relative;
+    min-width: 0;
+    background: #0b1320;
+    display: flex;
+    flex-direction: column;
+}
+
+.viewport-toolbar {
+    height: 54px;
+    min-height: 54px;
+    padding: 0 16px;
+    background: #101a2a;
+    border-bottom: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.view-tabs,
+.viewport-tools {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.view-tab,
+.viewport-tools button {
+    background: transparent;
+    padding: 9px 12px;
+    border-radius: 6px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.view-tab.active {
+    background: #1d3440;
+    color: var(--primary-light);
+}
+
+.viewport-tools button {
+    background: var(--panel-light);
+    font-size: 17px;
+    min-width: 34px;
+}
+
+#three-viewport {
+    flex: 1;
+    position: relative;
+    min-height: 0;
+    overflow: hidden;
+}
+
+#three-viewport canvas {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.loading-screen {
+    position: absolute;
+    inset: 0;
+    z-index: 5;
+    background: #0b1320;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.loading-screen h3 {
+    font-size: 15px;
+}
+
+.loading-screen p {
+    font-size: 11px;
+    color: var(--muted);
+}
+
+.loader {
+    height: 34px;
+    width: 34px;
+    border: 3px solid var(--border);
+    border-top-color: var(--primary);
+    border-radius: 50%;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.scene-message {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--muted);
+    font-size: 13px;
+    pointer-events: none;
+    text-align: center;
+}
+
+.viewport-hint {
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 18px;
+    background: #101827dd;
+    border: 1px solid var(--border);
+    padding: 9px 14px;
+    border-radius: 8px;
+    font-size: 10px;
+    color: var(--muted);
+    white-space: nowrap;
+    pointer-events: none;
+}
+
+.coordinates {
+    position: absolute;
+    bottom: 8px;
+    left: 15px;
+    right: 15px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 9px;
+    letter-spacing: 1px;
+    color: var(--muted);
+    pointer-events: none;
+}
+
+/* PROPERTIES */
+
+.property-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 15px 0;
+    gap: 10px;
+    font-size: 11px;
+}
+
+.property-row span {
+    color: var(--muted);
+}
+
+.property-row strong {
+    color: #dce7f5;
+    font-weight: 500;
+}
+
+.empty-selection {
+    background: var(--panel-light);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 14px;
+    color: var(--muted);
+    font-size: 11px;
+    line-height: 1.6;
+}
+
+/* TIMELINE */
+
+.timeline-panel {
+    height: 155px;
+    min-height: 155px;
+    padding: 15px 24px;
+    background: var(--panel);
+    border-top: 1px solid var(--border);
+}
+
+.timeline-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.timeline-header h3 {
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.timeline-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.timeline-actions button {
+    background: var(--panel-light);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 8px 13px;
+    font-size: 11px;
+}
+
+.timeline-actions .play-button {
+    background: var(--primary);
+    color: #04130d;
+    font-weight: 700;
+}
+
+.timeline-track {
+    height: 4px;
+    background: var(--border);
+    margin-top: 20px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.timeline-progress {
+    height: 100%;
+    width: 0%;
+    background: var(--primary);
+    border-radius: 5px;
+    transition: width 0.3s;
+}
+
+.timeline-stages {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 10px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1000px) {
+    .workspace {
+        grid-template-columns: 180px minmax(0, 1fr);
+    }
+
+    .right-panel {
+        display: none;
+    }
+}
+
+@media (max-width: 650px) {
+    .topbar {
+        padding: 0 10px;
+    }
+
+    .project-info {
+        display: none;
+    }
+
+    .top-button {
+        display: none;
+    }
+
+    .workspace {
+        grid-template-columns: 1fr;
+    }
+
+    .left-panel {
+        display: none;
+    }
+
+    .timeline-panel {
+        padding: 12px;
+    }
+
+    .timeline-stages {
+        font-size: 8px;
+        gap: 8px;
+        overflow-x: auto;
+    }
+
+    .viewport-hint {
+        gap: 8px;
+        font-size: 8px;
+    }
+}

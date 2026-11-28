@@ -1,0 +1,200 @@
+{
+  "category":"building_typology",
+  "module":"commercial_building_rules",
+  "version":"2.0",
+  "description":"Comprehensive commercial building design rules for AI-driven architectural planning. Covers zoning, structural systems, circulation, fire safety, services, parking, accessibility, energy efficiency, and operational optimization for offices, retail, and mixed-use buildings.",
+
+  "objectives":{
+    "maximize_usable_floor_area":true,
+    "ensure_high_occupancy_efficiency":true,
+    "optimize_circulation_flow":true,
+    "ensure_fire_and_life_safety":true,
+    "support_multi_tenant_flexibility":true
+  },
+
+  "building_types":{
+    "office_building":true,
+    "retail_complex":true,
+    "shopping_mall":true,
+    "mixed_use_building":true,
+    "co_working_space":true
+  },
+
+  "site_requirements":{
+    "minimum_plot_area_sqft":5000,
+    "recommended_plot_area_sqft":15000,
+    "luxury_plot_area_sqft":50000,
+    "preferred_location":"urban_core_or_high_access_corridor",
+    "road_access_min_width_m":12,
+    "service_access_required":true
+  },
+
+  "zoning":{
+    "public_zone":[
+      "lobby",
+      "retail_spaces",
+      "reception",
+      "parking_entry"
+    ],
+    "semi_public_zone":[
+      "meeting_rooms",
+      "conference_halls",
+      "co_working_areas"
+    ],
+    "private_zone":[
+      "offices",
+      "server_rooms",
+      "restricted_admin_areas"
+    ],
+    "service_zone":[
+      "mechanical_rooms",
+      "electrical_rooms",
+      "storage",
+      "loading_dock"
+    ]
+  },
+
+  "structural_system":{
+    "rcc_frame":true,
+    "steel_frame_for_long_span":true,
+    "grid_system_required":true,
+    "column_spacing_m":[6,9],
+    "shear_walls_for_high_rise":true,
+    "long_span_beams_for_halls":true
+  },
+
+  "circulation":{
+    "main_corridor_width_m":2.4,
+    "secondary_corridor_width_m":1.8,
+    "staircase_required":true,
+    "fire_escape_stairs_required":true,
+    "elevator_count_per_core":2,
+    "separate_service_circulation_required":true
+  },
+
+  "vertical_transport":{
+    "elevators_required":true,
+    "escalators_optional_for_malls":true,
+    "freight_elevator_required":true,
+    "core_based_transport_system":true
+  },
+
+  "fire_safety":{
+    "sprinkler_system_required":true,
+    "fire_alarm_system_required":true,
+    "smoke_exhaust_system_required":true,
+    "refuge_area_required":true,
+    "fire_rated_cores_required":true
+  },
+
+  "ventilation":{
+    "mechanical_ventilation_required":true,
+    "hvac_system_required":true,
+    "fresh_air_intake_required":true,
+    "air_changes_per_hour_min":6,
+    "zonal_air_control":true
+  },
+
+  "lighting":{
+    "natural_light_priority":true,
+    "glass_facade_supported":true,
+    "led_lighting_required":true,
+    "emergency_lighting_required":true,
+    "energy_efficient_controls":true
+  },
+
+  "parking":{
+    "basement_parking_required":true,
+    "stilt_parking_optional":true,
+    "parking_ratio_per_1000sqm":8,
+    "ev_charging_supported":true,
+    "separate_service_parking_required":true
+  },
+
+  "accessibility":{
+    "wheelchair_access_required":true,
+    "minimum_door_width_mm":900,
+    "ramps_required":true,
+    "accessible_restrooms_required":true,
+    "lift_access_required":true
+  },
+
+  "materials":{
+    "rcc_frame":true,
+    "steel_structural_system":true,
+    "glass_facade_system":true,
+    "aluminum_cladding_optional":true
+  },
+
+  "sustainability":{
+    "rainwater_harvesting_required":true,
+    "solar_roof_supported":true,
+    "energy_management_system_required":true,
+    "waste_management_system_required":true,
+    "green_building_certification_ready":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.97,
+    "circulation_efficiency":0.96,
+    "energy_efficiency":0.95,
+    "fire_safety_score":0.99,
+    "operational_efficiency":0.96
+  },
+
+  "bonuses":{
+    "grid_based_design":5,
+    "mixed_use_flexibility":5,
+    "efficient_core_design":5,
+    "natural_light_integration":4,
+    "high_ceiling_spaces":4
+  },
+
+  "penalties":{
+    "poor_circulation":-10,
+    "fire_safety_non_compliance":-10,
+    "inefficient_core_layout":-9,
+    "low_ventilation":-8,
+    "irregular_grid_system":-9
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Commercial building must comply with fire safety and evacuation norms.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Structural grid must support high occupancy loads.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Adequate vertical transport must be provided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Mechanical ventilation and HVAC systems are mandatory.",
+      "severity":"high"
+    },
+    {
+      "rule":"Parking and service access must be clearly separated.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_occupancy_efficiency":97,
+    "target_fire_safety":99,
+    "target_energy_efficiency":95,
+    "target_circulation_score":96,
+    "target_operational_efficiency":96
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 456:2000",
+    "IS 1893 (Seismic Design)",
+    "Energy Conservation Building Code (ECBC)",
+    "Fire Safety Rules India",
+    "CPWD Building Guidelines"
+  ]
+}

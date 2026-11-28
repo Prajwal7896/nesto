@@ -1,0 +1,188 @@
+{
+  "category":"room_relationship_patterns",
+  "room":"bedroom",
+  "version":"2.0",
+  "description":"AI planning patterns for bedroom placement, adjacency, privacy, circulation, comfort, ventilation, accessibility, structural feasibility and optimization.",
+
+  "patterns":[
+    {
+      "id":"BR001",
+      "name":"Master Bedroom Placement",
+      "priority":"critical",
+      "description":"Locate the master bedroom in the most private zone.",
+      "preferred_adjacent":["attached_bathroom","walk_in_closet","balcony"],
+      "avoid_adjacent":["kitchen","garage","home_theatre","utility_room"],
+      "preferred_floor":["ground","first"],
+      "optimization":{"privacy":1.0,"noise":0.95}
+    },
+    {
+      "id":"BR002",
+      "name":"Children Bedroom",
+      "priority":"high",
+      "description":"Children's bedrooms should be close to parents.",
+      "preferred_adjacent":["master_bedroom","common_bathroom","study_room"],
+      "avoid_adjacent":["parking","generator_room"],
+      "optimization":{"safety":1.0,"convenience":0.95}
+    },
+    {
+      "id":"BR003",
+      "name":"Guest Bedroom",
+      "priority":"medium",
+      "description":"Guest bedroom should be near entrance without disturbing family areas.",
+      "preferred_adjacent":["guest_bathroom","foyer"],
+      "avoid_adjacent":["master_bedroom"],
+      "optimization":{"privacy":0.90}
+    },
+    {
+      "id":"BR004",
+      "name":"Senior Citizen Bedroom",
+      "priority":"critical",
+      "description":"Ground-floor bedroom for elderly occupants.",
+      "preferred_adjacent":["bathroom","living_room"],
+      "avoid_adjacent":["stairs"],
+      "features":["wheelchair_access","wide_doors","non_slip_flooring"]
+    },
+    {
+      "id":"BR005",
+      "name":"Cross Ventilation",
+      "priority":"critical",
+      "description":"Bedroom should have windows on opposite or adjacent walls.",
+      "required":true,
+      "optimization":{"airflow":1.0,"thermal_comfort":0.95}
+    },
+    {
+      "id":"BR006",
+      "name":"Natural Lighting",
+      "priority":"critical",
+      "description":"Provide sufficient daylight through large windows.",
+      "minimum_window_area_percent":10,
+      "preferred_orientation":["North","East"]
+    },
+    {
+      "id":"BR007",
+      "name":"Noise Isolation",
+      "priority":"high",
+      "description":"Separate bedrooms from noisy spaces.",
+      "avoid_adjacent":["living_room","kitchen","garage","music_room","home_theatre"],
+      "optimization":{"noise_reduction":0.98}
+    },
+    {
+      "id":"BR008",
+      "name":"Attached Bathroom",
+      "priority":"high",
+      "description":"Master bedroom should have attached bathroom.",
+      "preferred_adjacent":["attached_bathroom"]
+    },
+    {
+      "id":"BR009",
+      "name":"Walk-in Closet",
+      "priority":"medium",
+      "description":"Luxury bedrooms should include walk-in closet.",
+      "preferred_adjacent":["attached_bathroom"]
+    },
+    {
+      "id":"BR010",
+      "name":"Private Balcony",
+      "priority":"medium",
+      "description":"Provide balcony for luxury and ventilation.",
+      "preferred_adjacent":["balcony"]
+    },
+    {
+      "id":"BR011",
+      "name":"Bedroom Cluster",
+      "priority":"high",
+      "description":"Group bedrooms into one private zone.",
+      "optimization":{"privacy":0.98,"circulation":0.92}
+    },
+    {
+      "id":"BR012",
+      "name":"Study Corner",
+      "priority":"medium",
+      "description":"Provide dedicated study/work corner.",
+      "preferred_adjacent":["window"]
+    },
+    {
+      "id":"BR013",
+      "name":"Furniture Optimization",
+      "priority":"medium",
+      "description":"Arrange furniture for unobstructed movement.",
+      "minimum_clearance_mm":750
+    },
+    {
+      "id":"BR014",
+      "name":"Emergency Escape",
+      "priority":"critical",
+      "description":"Bedroom must have emergency escape window.",
+      "required":true
+    },
+    {
+      "id":"BR015",
+      "name":"Fire Safety",
+      "priority":"critical",
+      "description":"Maintain safe distance from electrical hazards.",
+      "fire_alarm":true,
+      "smoke_detector":true
+    },
+    {
+      "id":"BR016",
+      "name":"Smart Bedroom",
+      "priority":"low",
+      "features":["smart_lighting","occupancy_sensor","voice_control","smart_ac","motorized_curtains"]
+    },
+    {
+      "id":"BR017",
+      "name":"Vastu Placement",
+      "priority":"optional",
+      "preferred_direction":["South-West"],
+      "avoid":["North-East"]
+    },
+    {
+      "id":"BR018",
+      "name":"Future Expansion",
+      "priority":"medium",
+      "description":"Allow bedroom conversion into office or guest room.",
+      "flexible_layout":true
+    },
+    {
+      "id":"BR019",
+      "name":"Luxury Master Suite",
+      "priority":"medium",
+      "includes":["walk_in_closet","private_balcony","luxury_bathroom","lounge_area"]
+    },
+    {
+      "id":"BR020",
+      "name":"Energy Efficient Bedroom",
+      "priority":"high",
+      "features":["insulated_walls","double_glazed_windows","low_e_glass","solar_shading"],
+      "optimization":{"energy":0.96}
+    }
+  ],
+
+  "global_constraints":{
+    "minimum_area_sqm":9.5,
+    "recommended_area_sqm":14,
+    "minimum_width_m":2.7,
+    "minimum_ceiling_height_m":2.75,
+    "minimum_window_area_percent":10,
+    "cross_ventilation_required":true,
+    "natural_light_required":true,
+    "maximum_travel_distance_to_bathroom_m":6
+  },
+
+  "optimization_weights":{
+    "privacy":0.30,
+    "ventilation":0.20,
+    "lighting":0.15,
+    "circulation":0.10,
+    "noise":0.10,
+    "comfort":0.10,
+    "energy":0.05
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Residential Guidelines",
+    "ISO 21542",
+    "Universal Design Standards"
+  ]
+}

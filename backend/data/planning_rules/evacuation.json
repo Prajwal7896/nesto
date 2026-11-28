@@ -1,0 +1,194 @@
+{
+  "category":"planning_rules",
+  "module":"evacuation",
+  "version":"2.0",
+  "description":"Comprehensive emergency evacuation standards for AI-driven residential and commercial building planning. Used for life safety analysis, emergency escape routing, fire evacuation planning, disaster preparedness, accessibility and regulatory compliance.",
+
+  "objectives":{
+    "safe_emergency_exit":true,
+    "minimize_evacuation_time":true,
+    "multiple_escape_routes":true,
+    "fire_safety":true,
+    "accessible_evacuation":true,
+    "disaster_resilience":true
+  },
+
+  "exit_requirements":{
+    "minimum_number_of_exits":2,
+    "maximum_travel_distance_m":30,
+    "minimum_exit_width_mm":1000,
+    "recommended_exit_width_mm":1200,
+    "exit_doors_open_outward":true,
+    "panic_hardware_required":true
+  },
+
+  "escape_routes":{
+    "minimum_corridor_width_mm":1200,
+    "minimum_stair_width_mm":1200,
+    "dead_end_corridors_allowed":false,
+    "obstruction_free":true,
+    "maximum_dead_end_length_m":6
+  },
+
+  "staircases":{
+    "minimum_required":1,
+    "recommended_for_large_buildings":2,
+    "fire_resistant_enclosure":true,
+    "pressurized_staircase_supported":true,
+    "handrails_required":true,
+    "anti_skid_finish":true,
+    "emergency_lighting":true
+  },
+
+  "fire_escape":{
+    "external_fire_escape_supported":true,
+    "roof_access_supported":true,
+    "fire_escape_width_mm":1000,
+    "minimum_clear_height_mm":2100
+  },
+
+  "assembly_points":{
+    "required":true,
+    "minimum_distance_from_building_m":15,
+    "clearly_marked":true,
+    "accessible":true
+  },
+
+  "emergency_lighting":{
+    "required":true,
+    "battery_backup_hours":2,
+    "automatic_activation":true,
+    "exit_signs_illuminated":true
+  },
+
+  "signage":{
+    "exit_signs_required":true,
+    "photoluminescent_signage":true,
+    "directional_arrows":true,
+    "braille_signage_supported":true,
+    "emergency_maps":true
+  },
+
+  "fire_protection":{
+    "fire_alarm_system":true,
+    "smoke_detectors":true,
+    "heat_detectors":true,
+    "fire_extinguishers":true,
+    "sprinkler_system_supported":true,
+    "hydrant_system_supported":true
+  },
+
+  "accessibility":{
+    "wheelchair_refuge_area":true,
+    "evacuation_chair_supported":true,
+    "accessible_exit_routes":true,
+    "voice_alarm_system":true
+  },
+
+  "occupancy_limits":{
+    "residential_persons_per_exit":50,
+    "commercial_persons_per_exit":100,
+    "assembly_persons_per_exit":150
+  },
+
+  "emergency_response":{
+    "fire_control_room_supported":true,
+    "public_address_system":true,
+    "emergency_contact_display":true,
+    "cctv_monitoring":true,
+    "emergency_power_backup":true
+  },
+
+  "optimization_weights":{
+    "exit_accessibility":0.30,
+    "travel_distance":0.25,
+    "fire_safety":0.20,
+    "emergency_lighting":0.10,
+    "signage":0.10,
+    "accessibility":0.05
+  },
+
+  "design_patterns":[
+    {
+      "name":"Dual Exit Planning",
+      "score":1.00
+    },
+    {
+      "name":"Central Fire Staircase",
+      "score":0.98
+    },
+    {
+      "name":"Pressurized Escape Stair",
+      "score":0.96
+    },
+    {
+      "name":"Barrier-Free Evacuation",
+      "score":0.95
+    },
+    {
+      "name":"Emergency Refuge Area",
+      "score":0.94
+    }
+  ],
+
+  "bonuses":{
+    "dual_exit_system":5,
+    "fire_sprinklers":5,
+    "smoke_detection":4,
+    "pressurized_staircase":4,
+    "accessible_evacuation":4,
+    "emergency_generator":3
+  },
+
+  "penalties":{
+    "single_exit":-10,
+    "blocked_escape_route":-10,
+    "excessive_travel_distance":-8,
+    "missing_emergency_lighting":-8,
+    "missing_fire_alarm":-8,
+    "dead_end_corridor":-6
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Every occupied floor shall have at least two independent escape routes where applicable.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Emergency exits shall remain unobstructed at all times.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Maximum travel distance shall not exceed 30 meters.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Emergency lighting shall activate automatically during power failure.",
+      "severity":"high"
+    },
+    {
+      "rule":"Exit signage shall remain visible under emergency conditions.",
+      "severity":"high"
+    },
+    {
+      "rule":"Assembly point shall be provided outside the danger zone.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_evacuation_score":95,
+    "target_maximum_evacuation_time_minutes":3,
+    "minimum_exit_availability_percent":100,
+    "target_fire_safety_score":95
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC) Part 4 - Fire and Life Safety",
+    "IS 1641 Fire Safety of Buildings",
+    "IS 1642 Fire Safety for Buildings",
+    "NFPA 101 Life Safety Code",
+    "IBC International Building Code",
+    "CPWD Fire Safety Guidelines"
+  ]
+}

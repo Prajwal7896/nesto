@@ -1,0 +1,192 @@
+{
+  "category":"room_standards",
+  "room":"parking",
+  "version":"2.0",
+  "description":"Comprehensive parking planning standards for AI-driven residential and commercial building design. Covers vehicle dimensions, circulation, structural loading, ventilation, lighting, drainage, EV charging, safety, accessibility and optimization.",
+
+  "dimensions":{
+    "minimum_single_car_area_sqft":180,
+    "recommended_single_car_area_sqft":220,
+    "luxury_single_car_area_sqft":300,
+    "minimum_car_width_ft":9,
+    "recommended_car_width_ft":10,
+    "minimum_car_length_ft":18,
+    "recommended_car_length_ft":20,
+    "minimum_clear_height_ft":8
+  },
+
+  "capacity":{
+    "single_car":1,
+    "double_car":2,
+    "triple_car":3,
+    "visitor_parking_supported":true,
+    "two_wheeler_space_supported":true,
+    "bicycle_parking_supported":true
+  },
+
+  "location":{
+    "preferred_adjacent_rooms":[
+      "Entrance",
+      "Foyer",
+      "Staircase",
+      "Utility Room"
+    ],
+    "avoid_adjacent_rooms":[
+      "Bedroom",
+      "Dining Room",
+      "Pooja Room"
+    ],
+    "preferred_orientation":[
+      "North-West",
+      "West"
+    ]
+  },
+
+  "vehicle_space":{
+    "minimum_parking_bay_mm":{
+      "width":2700,
+      "length":5500
+    },
+    "recommended_parking_bay_mm":{
+      "width":3000,
+      "length":6000
+    },
+    "minimum_turning_radius_m":6,
+    "minimum_driveway_width_m":3.5,
+    "double_lane_driveway_width_m":6
+  },
+
+  "structural":{
+    "minimum_live_load_kn_m2":2.5,
+    "column_grid_optimized":true,
+    "minimum_column_clearance_mm":600,
+    "ramp_supported":true,
+    "maximum_ramp_slope_percent":12
+  },
+
+  "ventilation":{
+    "natural_ventilation_preferred":true,
+    "mechanical_ventilation_supported":true,
+    "minimum_air_changes_per_hour":8,
+    "co_sensor_supported":true
+  },
+
+  "lighting":{
+    "recommended_lux":75,
+    "led_lighting":true,
+    "motion_sensor":true,
+    "emergency_lighting":true,
+    "daylight_supported":true
+  },
+
+  "flooring":{
+    "anti_skid":true,
+    "oil_resistant":true,
+    "abrasion_resistant":true,
+    "minimum_slope_percent":1.5,
+    "drainage_required":true
+  },
+
+  "drainage":{
+    "floor_drain_required":true,
+    "oil_grease_trap_optional":true,
+    "rainwater_collection_supported":true
+  },
+
+  "electrical":{
+    "ev_charging_supported":true,
+    "minimum_power_outlets":2,
+    "lighting_circuit":true,
+    "backup_power_supported":true
+  },
+
+  "security":{
+    "cctv_supported":true,
+    "automatic_gate_supported":true,
+    "access_control":true,
+    "fire_extinguisher":true,
+    "smoke_detector":true
+  },
+
+  "accessibility":{
+    "accessible_parking_supported":true,
+    "minimum_accessible_bay_width_mm":3600,
+    "barrier_free_route":true,
+    "wheelchair_accessible":true
+  },
+
+  "smart_features":{
+    "automatic_gate":true,
+    "license_plate_recognition":true,
+    "parking_sensor":true,
+    "occupancy_monitoring":true,
+    "ev_charger_monitoring":true,
+    "mobile_access_control":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.97,
+    "vehicle_movement":0.98,
+    "safety":0.99,
+    "ventilation":0.96,
+    "future_readiness":0.97
+  },
+
+  "bonuses":{
+    "ev_charging":5,
+    "natural_ventilation":4,
+    "automatic_gate":3,
+    "visitor_parking":3,
+    "cctv":4,
+    "motion_sensor_lighting":2
+  },
+
+  "penalties":{
+    "insufficient_turning_radius":-10,
+    "poor_ventilation":-8,
+    "low_clear_height":-8,
+    "poor_drainage":-6,
+    "no_fire_extinguisher":-8,
+    "undersized_parking_bay":-10
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Parking bay dimensions shall meet minimum standards.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Adequate ventilation shall be provided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Emergency lighting and fire protection shall be installed.",
+      "severity":"high"
+    },
+    {
+      "rule":"Anti-skid flooring with proper drainage shall be provided.",
+      "severity":"high"
+    },
+    {
+      "rule":"EV charging infrastructure should be supported for future readiness.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_space_efficiency":97,
+    "target_vehicle_access_score":98,
+    "target_safety_score":99,
+    "target_ventilation_score":96,
+    "target_future_readiness":97
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 456",
+    "IS 875",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "Energy Conservation Building Code (ECBC)"
+  ]
+}

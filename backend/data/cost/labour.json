@@ -1,0 +1,152 @@
+{
+  "category": "labour",
+
+  "definition": "Defines labor categories, skill levels, productivity rates, and cost behavior for residential construction projects in India.",
+
+  "currency": "INR",
+
+  "labour_categories": {
+    "unskilled": {
+      "roles": ["helper", "material_handler", "cleaning_worker"],
+      "daily_wage_range": {
+        "min": 400,
+        "max": 700
+      },
+      "productivity_factor": 0.6
+    },
+
+    "semi_skilled": {
+      "roles": ["mason_helper", "carpenter_helper", "electric_assistant"],
+      "daily_wage_range": {
+        "min": 700,
+        "max": 1200
+      },
+      "productivity_factor": 0.8
+    },
+
+    "skilled": {
+      "roles": ["mason", "carpenter", "plumber", "electrician"],
+      "daily_wage_range": {
+        "min": 1200,
+        "max": 2500
+      },
+      "productivity_factor": 1.0
+    },
+
+    "highly_skilled": {
+      "roles": ["site_engineer", "foreman", "architect_supervisor", "specialized_technician"],
+      "daily_wage_range": {
+        "min": 2500,
+        "max": 6000
+      },
+      "productivity_factor": 1.5
+    }
+  },
+
+  "task_based_costing": {
+    "brickwork_per_sqft": {
+      "labour_cost": 45,
+      "skill_required": "skilled"
+    },
+
+    "plastering_per_sqft": {
+      "labour_cost": 35,
+      "skill_required": "semi_skilled"
+    },
+
+    "tile_installation_per_sqft": {
+      "labour_cost": 60,
+      "skill_required": "skilled"
+    },
+
+    "electrical_wiring_per_point": {
+      "labour_cost": 120,
+      "skill_required": "skilled"
+    },
+
+    "plumbing_per_bathroom": {
+      "labour_cost": 2500,
+      "skill_required": "skilled"
+    }
+  },
+
+  "productivity_factors": {
+    "weather_impact": {
+      "normal": 1.0,
+      "rainy_season": 0.7,
+      "extreme_heat": 0.8
+    },
+
+    "site_complexity": {
+      "simple_layout": 1.0,
+      "moderate_layout": 0.85,
+      "complex_layout": 0.7
+    },
+
+    "material_availability": {
+      "readily_available": 1.0,
+      "delayed_supply": 0.6
+    }
+  },
+
+  "regional_variation": {
+    "tier_1_cities": {
+      "wage_multiplier": 1.4,
+      "cities": ["Mumbai", "Delhi", "Bangalore", "Chennai"]
+    },
+    "tier_2_cities": {
+      "wage_multiplier": 1.1,
+      "cities": ["Pune", "Ahmedabad", "Jaipur", "Surat"]
+    },
+    "tier_3_cities": {
+      "wage_multiplier": 0.9,
+      "cities": ["Nagpur", "Indore", "Coimbatore", "Bhopal"]
+    }
+  },
+
+  "labor_efficiency_rules": {
+    "team_synergy_bonus": 0.1,
+    "overcrowding_penalty": 0.15,
+    "proper_supervision_bonus": 0.2
+  },
+
+  "construction_phases": {
+    "foundation": {
+      "labor_intensity": "high",
+      "skill_mix": ["skilled", "semi_skilled"]
+    },
+    "structural": {
+      "labor_intensity": "very_high",
+      "skill_mix": ["skilled", "highly_skilled"]
+    },
+    "finishing": {
+      "labor_intensity": "medium",
+      "skill_mix": ["skilled"]
+    },
+    "electrical_plumbing": {
+      "labor_intensity": "high",
+      "skill_mix": ["skilled", "highly_skilled"]
+    }
+  },
+
+  "risk_factors": {
+    "labor_shortage": 0.7,
+    "delayed_work": 0.6,
+    "quality_variation": 0.5
+  },
+
+  "optimization_rules": {
+    "prefer_local_workers": true,
+    "optimize_team_size": true,
+    "reduce_idle_time": true,
+    "skill_matching_priority": true
+  },
+
+  "planning_tags": [
+    "construction_labor_model",
+    "cost_engine_input",
+    "workforce_management",
+    "project_planning_ai",
+    "labor_productivity_analysis"
+  ]
+}

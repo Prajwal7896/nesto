@@ -1,0 +1,216 @@
+{
+  "category":"planning_rules",
+  "module":"privacy",
+  "version":"2.0",
+  "description":"Comprehensive privacy planning standards for AI-driven residential and commercial building design. Used for zoning, visual privacy, acoustic privacy, room placement, visitor separation, family comfort and intelligent floor plan optimization.",
+
+  "objectives":{
+    "maximize_family_privacy":true,
+    "separate_public_private_spaces":true,
+    "reduce_noise_transfer":true,
+    "prevent_direct_room_visibility":true,
+    "optimize_guest_movement":true,
+    "improve_security":true
+  },
+
+  "privacy_zones":{
+    "public":[
+      "Entrance",
+      "Foyer",
+      "Living Room",
+      "Guest Sitting",
+      "Dining Room",
+      "Parking"
+    ],
+    "semi_private":[
+      "Kitchen",
+      "Family Lounge",
+      "Study Room",
+      "Office",
+      "Balcony"
+    ],
+    "private":[
+      "Master Bedroom",
+      "Bedroom",
+      "Children Bedroom",
+      "Walk-in Closet",
+      "Attached Bathroom"
+    ],
+    "service":[
+      "Utility Room",
+      "Laundry",
+      "Store Room",
+      "Electrical Room",
+      "Pump Room"
+    ]
+  },
+
+  "room_relationships":{
+    "master_bedroom":{
+      "avoid_visibility_from":[
+        "Entrance",
+        "Living Room",
+        "Dining Room"
+      ],
+      "preferred_location":"Rear Corner",
+      "privacy_score":10
+    },
+    "bedroom":{
+      "avoid_visibility_from":[
+        "Entrance",
+        "Living Room"
+      ],
+      "privacy_score":9
+    },
+    "bathroom":{
+      "avoid_visibility_from":[
+        "Dining Room",
+        "Kitchen",
+        "Living Room"
+      ],
+      "privacy_score":10
+    },
+    "office":{
+      "recommended_separation_from":[
+        "Living Room",
+        "Children Room"
+      ],
+      "privacy_score":8
+    },
+    "guest_room":{
+      "preferred_near":[
+        "Entrance",
+        "Common Bathroom"
+      ],
+      "privacy_score":7
+    }
+  },
+
+  "visual_privacy":{
+    "bedroom_window_facing_neighbor":false,
+    "bathroom_window_direct_view":false,
+    "entry_direct_view_to_bedroom":false,
+    "privacy_screen_supported":true,
+    "landscape_buffer_supported":true,
+    "frosted_glass_for_bathroom":true
+  },
+
+  "acoustic_privacy":{
+    "minimum_wall_stc":50,
+    "recommended_wall_stc":55,
+    "double_wall_supported":true,
+    "acoustic_insulation_supported":true,
+    "solid_core_doors":true
+  },
+
+  "buffer_spaces":[
+    "Lobby",
+    "Passage",
+    "Walk-in Closet",
+    "Store Room",
+    "Library",
+    "Wardrobe"
+  ],
+
+  "privacy_patterns":[
+    {
+      "name":"Private Bedroom Cluster",
+      "score":1.00
+    },
+    {
+      "name":"Split Public Private Layout",
+      "score":0.99
+    },
+    {
+      "name":"Central Lobby Buffer",
+      "score":0.97
+    },
+    {
+      "name":"Separate Guest Zone",
+      "score":0.96
+    },
+    {
+      "name":"Rear Bedroom Planning",
+      "score":0.95
+    }
+  ],
+
+  "noise_control":{
+    "bedroom_next_to_living":false,
+    "bedroom_next_to_kitchen":false,
+    "office_next_to_tv_room":false,
+    "utility_next_to_bedroom":false,
+    "sound_absorbing_materials":true
+  },
+
+  "security":{
+    "private_zone_access_control":true,
+    "smart_door_lock_supported":true,
+    "video_door_phone_supported":true,
+    "cctv_supported":true
+  },
+
+  "optimization_weights":{
+    "visual_privacy":0.30,
+    "acoustic_privacy":0.25,
+    "functional_zoning":0.20,
+    "security":0.15,
+    "visitor_separation":0.10
+  },
+
+  "bonuses":{
+    "bedroom_cluster":5,
+    "guest_zone_separation":5,
+    "buffer_space":4,
+    "sound_insulation":4,
+    "private_balcony":3,
+    "smart_security":3
+  },
+
+  "penalties":{
+    "bedroom_visible_from_entrance":-10,
+    "bathroom_visible_from_dining":-10,
+    "kitchen_next_to_master_bedroom":-8,
+    "poor_noise_isolation":-7,
+    "shared_private_public_corridor":-5
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Private rooms shall not be directly visible from the main entrance.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Bathrooms shall not open directly into dining or kitchen areas.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Bedrooms shall be separated from high-noise spaces.",
+      "severity":"high"
+    },
+    {
+      "rule":"Public and private zones shall be clearly separated.",
+      "severity":"high"
+    },
+    {
+      "rule":"Acoustic insulation should be provided for bedrooms.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_privacy_score":95,
+    "target_noise_reduction_db":50,
+    "target_visual_privacy_score":95,
+    "target_security_score":90
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "ASHRAE Handbook",
+    "ISO 3382 Acoustics",
+    "Time Saver Standards for Building Types"
+  ]
+}

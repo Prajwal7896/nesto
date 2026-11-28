@@ -1,0 +1,27 @@
+{
+  "provider": "google-genai",
+  "model_name": "gemini-embedding-001",
+  
+  "embedding": {
+    "dimension": 3072,
+    "normalize_embeddings": true
+  },
+
+  "device": {
+    "type": "cpu",
+    "use_mps_or_cuda_if_available": true
+  },
+
+  "performance": {
+    "batch_size": 32,
+    "max_seq_length": 256,
+    "show_progress_bar": true
+  },
+
+  "cache": {
+    "enable_cache": true,
+    "cache_dir": "data/embeddings/embeddings_cache"
+  },
+
+  "fallback_models": []
+}

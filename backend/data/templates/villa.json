@@ -1,0 +1,222 @@
+{
+  "category":"building_typology",
+  "module":"villa_rules",
+  "version":"2.0",
+  "description":"Comprehensive villa design rules for AI-driven architectural planning. Covers luxury residential layouts, privacy zoning, spatial planning, landscape integration, structural systems, ventilation, daylight, amenities, sustainability, and circulation optimization.",
+
+  "objectives":{
+    "maximize_luxury_living_experience":true,
+    "ensure_high_privacy":true,
+    "optimize_indoor_outdoor_integration":true,
+    "enhance_comfort_and_aesthetics":true,
+    "support_modern_lifestyle_functions":true
+  },
+
+  "building_types":{
+    "compact_villa":true,
+    "luxury_villa":true,
+    "ultra_luxury_villa":true,
+    "courtyard_villa":true,
+    "resort_style_villa":true
+  },
+
+  "site_requirements":{
+    "minimum_plot_area_sqft":2000,
+    "recommended_plot_area_sqft":5000,
+    "luxury_plot_area_sqft":20000,
+    "preferred_orientation":[
+      "North",
+      "East",
+      "North-East"
+    ],
+    "setback_front_ft":12,
+    "setback_sides_ft":8,
+    "setback_rear_ft":10,
+    "open_space_ratio_min":0.4
+  },
+
+  "zoning":{
+    "public_zone":[
+      "living_room",
+      "lobby",
+      "guest_room",
+      "foyer"
+    ],
+    "semi_private_zone":[
+      "dining_area",
+      "family_lounge",
+      "entertainment_room"
+    ],
+    "private_zone":[
+      "bedrooms",
+      "master_suite",
+      "study_room"
+    ],
+    "service_zone":[
+      "kitchen",
+      "utility",
+      "staff_room",
+      "storage"
+    ],
+    "recreational_zone":[
+      "pool",
+      "gym",
+      "terrace_garden",
+      "home_theatre"
+    ]
+  },
+
+  "spatial_planning":{
+    "open_plan_living_supported":true,
+    "double_height_spaces_recommended":true,
+    "courtyard_optional":true,
+    "indoor_outdoor_flow_required":true,
+    "large_glazing_supported":true,
+    "private_balconies_required":true
+  },
+
+  "circulation":{
+    "wide_corridors_required":true,
+    "minimum_corridor_width_ft":5,
+    "central_or_split_staircase_supported":true,
+    "elevator_optional_for_luxury_villas":true,
+    "loop_circulation_preferred":true
+  },
+
+  "structural_system":{
+    "rcc_frame":true,
+    "steel_hybrid_optional":true,
+    "column_grid_spacing_m":[4,7],
+    "long_span_beams_for_open_spaces":true,
+    "continuous_load_path":"slab → beam → column → footing → soil"
+  },
+
+  "ventilation":{
+    "cross_ventilation_required":true,
+    "stack_effect_supported":true,
+    "large_openings_required":true,
+    "minimum_window_area_percent":25,
+    "courtyard_airflow_benefit":true
+  },
+
+  "daylight":{
+    "natural_light_priority":true,
+    "floor_to_ceiling_windows_supported":true,
+    "skylights_supported":true,
+    "glare_control_required":true,
+    "sun_path_design_consideration":true
+  },
+
+  "landscape":{
+    "garden_required":true,
+    "lawn_required":true,
+    "private_garden_spaces":true,
+    "water_body_optional":true,
+    "terrace_green_spaces_supported":true,
+    "landscape_buffer_zones_required":true
+  },
+
+  "amenities":{
+    "swimming_pool_optional":true,
+    "home_gym_optional":true,
+    "home_theatre_optional":true,
+    "spa_room_optional":true,
+    "bar_lounge_optional":true
+  },
+
+  "parking":{
+    "minimum_cars":2,
+    "recommended_cars":3,
+    "covered_parking_required":true,
+    "visitor_parking_supported":true,
+    "ev_charging_supported":true
+  },
+
+  "materials":{
+    "rcc":true,
+    "natural_stone_cladding":true,
+    "glass_facades_supported":true,
+    "wood_finishes_supported":true,
+    "premium_material_finish_required":true
+  },
+
+  "sustainability":{
+    "rainwater_harvesting_required":true,
+    "solar_roof_supported":true,
+    "energy_efficient_design":true,
+    "greywater_reuse_supported":true,
+    "smart_home_system_supported":true
+  },
+
+  "privacy":{
+    "high_privacy_design_required":true,
+    "landscape_screening_required":true,
+    "zoning_separation_strict":true,
+    "visual_barrier_design":true
+  },
+
+  "optimization":{
+    "luxury_score":0.99,
+    "comfort_score":0.98,
+    "privacy_score":0.99,
+    "ventilation_score":0.97,
+    "daylight_score":0.98,
+    "space_efficiency":0.96
+  },
+
+  "bonuses":{
+    "courtyard_design":5,
+    "double_height_living":5,
+    "landscape_integration":5,
+    "pool_integration":4,
+    "open_plan_layout":4
+  },
+
+  "penalties":{
+    "poor_privacy":-10,
+    "weak_landscape_integration":-9,
+    "no_ventilation":-9,
+    "dark_interiors":-9,
+    "inefficient_layout":-8
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Villa must ensure high privacy separation between zones.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Natural ventilation and daylight must be maximized.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Structural system must support large open spans safely.",
+      "severity":"high"
+    },
+    {
+      "rule":"Landscape integration must be core to design.",
+      "severity":"high"
+    },
+    {
+      "rule":"Luxury amenities must not compromise structural efficiency.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_privacy":99,
+    "target_luxury_experience":99,
+    "target_comfort":98,
+    "target_daylight":98,
+    "target_ventilation":97
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 456:2000",
+    "IS 1893 (Seismic Design)",
+    "CPWD Building Guidelines",
+    "Energy Conservation Building Code (ECBC)",
+    "Luxury Residential Design Standards"
+  ]
+}

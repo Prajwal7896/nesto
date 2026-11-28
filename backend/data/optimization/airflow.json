@@ -1,0 +1,200 @@
+{
+  "category":"building_optimization",
+  "module":"airflow",
+  "version":"2.0",
+  "description":"Comprehensive airflow optimization rules for AI-driven residential and commercial floor planning. Used for natural ventilation, HVAC optimization, thermal comfort, indoor air quality, energy efficiency and occupant health.",
+
+  "objectives":{
+    "maximize_cross_ventilation":true,
+    "reduce_heat_gain":true,
+    "maintain_indoor_air_quality":true,
+    "minimize_hvac_energy":true,
+    "improve_thermal_comfort":true,
+    "prevent_dead_air_zones":true
+  },
+
+  "cross_ventilation":{
+    "required":true,
+    "minimum_opposite_openings":2,
+    "preferred_window_alignment":"Opposite Walls",
+    "minimum_airflow_path_m":2.5,
+    "maximum_airflow_obstruction_percent":30
+  },
+
+  "window_rules":{
+    "minimum_window_area_percent":15,
+    "recommended_window_area_percent":20,
+    "maximum_window_area_percent":35,
+    "preferred_orientations":[
+      "North",
+      "East"
+    ],
+    "avoid_large_glazing":[
+      "West"
+    ]
+  },
+
+  "room_requirements":{
+    "living_room":{
+      "air_changes_per_hour":6,
+      "cross_ventilation":true,
+      "recommended_windows":2
+    },
+    "bedroom":{
+      "air_changes_per_hour":5,
+      "cross_ventilation":true,
+      "recommended_windows":2
+    },
+    "kitchen":{
+      "air_changes_per_hour":15,
+      "chimney_required":true,
+      "exhaust_required":true
+    },
+    "bathroom":{
+      "air_changes_per_hour":10,
+      "exhaust_required":true,
+      "natural_ventilation_preferred":true
+    },
+    "office":{
+      "air_changes_per_hour":6,
+      "fresh_air_required":true
+    },
+    "gym":{
+      "air_changes_per_hour":10
+    },
+    "home_theatre":{
+      "air_changes_per_hour":8,
+      "mechanical_ventilation_required":true
+    }
+  },
+
+  "hvac_guidelines":{
+    "fresh_air_intake_required":true,
+    "return_air_required":true,
+    "duct_insulation":true,
+    "smart_thermostat_supported":true,
+    "zonal_cooling_supported":true
+  },
+
+  "passive_cooling":{
+    "stack_ventilation":true,
+    "courtyard_supported":true,
+    "ventilated_roof":true,
+    "high_ceiling_recommended":true,
+    "roof_insulation_required":true,
+    "shading_devices_supported":true
+  },
+
+  "climate_recommendations":{
+    "hot_dry":{
+      "courtyard":true,
+      "small_west_windows":true,
+      "thermal_mass":true
+    },
+    "hot_humid":{
+      "large_openings":true,
+      "cross_ventilation":true,
+      "raised_floor_optional":true
+    },
+    "cold":{
+      "controlled_ventilation":true,
+      "airtight_envelope":true,
+      "heat_recovery_supported":true
+    },
+    "composite":{
+      "adaptive_shading":true,
+      "seasonal_ventilation":true
+    }
+  },
+
+  "air_quality":{
+    "co2_limit_ppm":1000,
+    "pm25_filter_supported":true,
+    "hepa_filter_supported":true,
+    "air_purifier_supported":true,
+    "humidity_range_percent":[40,60]
+  },
+
+  "optimization_weights":{
+    "cross_ventilation":0.30,
+    "thermal_comfort":0.20,
+    "energy_efficiency":0.20,
+    "daylight":0.10,
+    "indoor_air_quality":0.10,
+    "occupant_health":0.10
+  },
+
+  "design_patterns":[
+    {
+      "name":"Opposite Window Strategy",
+      "score":1.0
+    },
+    {
+      "name":"Central Courtyard Ventilation",
+      "score":0.98
+    },
+    {
+      "name":"Ventilated Staircase Core",
+      "score":0.95
+    },
+    {
+      "name":"Open Living Layout",
+      "score":0.94
+    },
+    {
+      "name":"Double Height Ventilation",
+      "score":0.96
+    }
+  ],
+
+  "constraints":[
+    "Avoid long enclosed corridors without ventilation.",
+    "Do not block airflow with fixed partitions.",
+    "Wet areas should have dedicated exhaust.",
+    "Kitchen exhaust shall not discharge into living spaces.",
+    "Cross ventilation is mandatory for habitable rooms."
+  ],
+
+  "validation_rules":[
+    {
+      "rule":"Every habitable room shall have natural ventilation.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Kitchen shall provide exhaust ventilation.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Bathrooms shall have exhaust or external ventilation.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Window area shall be at least 15% of floor area.",
+      "severity":"high"
+    },
+    {
+      "rule":"Cross ventilation is recommended for bedrooms and living rooms.",
+      "severity":"high"
+    },
+    {
+      "rule":"Indoor humidity should remain between 40% and 60%.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_air_changes_per_hour":6,
+    "target_energy_saving_percent":25,
+    "target_indoor_temperature_c":[22,27],
+    "target_relative_humidity_percent":[40,60]
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "ASHRAE 62.1",
+    "ASHRAE 55",
+    "IS 3362",
+    "ECBC India",
+    "CPWD Specifications"
+  ]
+}

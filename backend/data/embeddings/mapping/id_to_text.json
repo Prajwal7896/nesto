@@ -1,0 +1,32 @@
+{
+  "BC001": "Every residential building must comply with National Building Code (NBC) India structural safety guidelines.",
+  "BC002": "Minimum habitable room height should be 2.7 meters as per Indian building standards.",
+  "BC003": "Every habitable room must have proper natural light and ventilation through windows or openings.",
+  "BC004": "Fire exits must always remain accessible and unobstructed in all multi-storey buildings.",
+  "BC005": "Staircase minimum width in residential buildings should be at least 0.9 meters.",
+  
+  "C001": "Basic residential construction cost in India ranges from 1200 to 1800 rupees per square foot.",
+  "C002": "Standard construction cost in India ranges from 1800 to 2500 rupees per square foot including basic finishing.",
+  "C003": "Premium construction cost ranges from 2500 to 4000 rupees per square foot depending on materials and design quality.",
+  
+  "E001": "Load-bearing walls transfer structural loads from slabs and beams to the foundation safely.",
+  "E002": "Columns must be vertically aligned across floors to ensure proper load transfer.",
+  "E003": "Beams resist bending moments and shear forces in RCC structures.",
+  
+  "S001": "Slabs distribute loads to beams and columns in reinforced concrete structures.",
+  "S002": "Columns carry axial loads from upper floors down to foundations.",
+  "S003": "Footings spread structural loads into soil to prevent settlement failure.",
+  
+  "R001": "A standard bedroom should be 120 to 150 square feet for comfortable living.",
+  "R002": "Living room should be placed near the main entrance for easy access and social use.",
+  "R003": "Kitchen should ideally be placed in the southeast direction for fire element balance.",
+  
+  "P001": "Public spaces like living rooms should be placed near the entrance of the house.",
+  "P002": "Private spaces like bedrooms should be placed deeper inside the house for privacy.",
+  "P003": "Kitchen and bathroom should be grouped as wet areas to reduce plumbing cost.",
+  
+  "V001": "Main entrance in north or east direction is considered most auspicious in vastu.",
+  "V002": "Kitchen should ideally be placed in the southeast direction according to vastu principles.",
+  "V003": "Master bedroom is best located in the southwest direction for stability.",
+  "V004": "Pooja room should be placed in the northeast direction for spiritual balance."
+}

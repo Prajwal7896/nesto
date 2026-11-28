@@ -1,0 +1,154 @@
+{
+  "category":"structural_hazard_rules",
+  "module":"earthquake_seismic_design",
+  "version":"2.0",
+  "description":"Comprehensive earthquake (seismic) design rules for AI-driven building planning. Covers structural configuration, load paths, ductility, foundation behavior, material selection, irregularity control, detailing, and life-safety optimization.",
+
+  "objectives":{
+    "life_safety_priority":true,
+    "prevent_collapse":true,
+    "ensure_ductility":true,
+    "maintain_structural_integrity_during_shaking":true,
+    "reduce_damage":true
+  },
+
+  "seismic_zones_supported":[2,3,4,5],
+
+  "fundamental_principles":{
+    "ductility":true,
+    "redundancy":true,
+    "regularity":true,
+    "symmetry_preferred":true,
+    "energy_dissipation":true,
+    "strong_column_weak_beam":true
+  },
+
+  "building_configuration_rules":{
+    "simple_regular_shape_preferred":true,
+    "avoid_soft_story":true,
+    "avoid_torsional_irregularity":true,
+    "avoid_mass_irregularity":true,
+    "avoid_stiffness_irregularity":true,
+    "vertical_continuity_required":true
+  },
+
+  "structural_systems":{
+    "moment_resisting_frame":true,
+    "shear_walls_required_for_high_rise":true,
+    "braced_frames_supported":true,
+    "dual_system_preferred_for_high_risk_zones":true
+  },
+
+  "load_path":{
+    "continuous_load_path_required":true,
+    "path":"roof/slab → beams → columns/shear walls → foundation → soil",
+    "redundant_paths_required":true,
+    "no_discontinuity_allowed":true
+  },
+
+  "materials":{
+    "rcc":true,
+    "steel":true,
+    "composite":true,
+    "brittle_materials_limit_use":true
+  },
+
+  "ductile_design_rules":{
+    "confined_end_zones_required":true,
+    "proper_reinforcement_anchorage":true,
+    "stirrup_spacing_reduction_at_joints":true,
+    "avoid_brittle_failure_modes":true,
+    "plastic_hinge_control":true
+  },
+
+  "foundation_rules":{
+    "uniform_settlement_control":true,
+    "raft_foundation_preferred_for_soft_soil":true,
+    "deep_foundation_for_high_rise":true,
+    "soil_liquefaction_check_required":true,
+    "base_isolation_optional":true
+  },
+
+  "irregularity_penalties":{
+    "soft_story":-10,
+    "setback_irregularity":-9,
+    "torsional_irregularity":-10,
+    "vertical_discontinuity":-10,
+    "heavy_overhangs":-8
+  },
+
+  "detailing_rules":{
+    "beam_column_joint_strengthening":true,
+    "proper_cover_maintenance":true,
+    "lap_splice_control":true,
+    "reinforcement_continuity_required":true
+  },
+
+  "non_structural_safety":{
+    "falling_hazard_control":true,
+    "ceiling_partition_bracing":true,
+    "equipment_anchoring_required":true,
+    "glass_safety_required":true
+  },
+
+  "optimization":{
+    "seismic_safety_score":0.99,
+    "energy_dissipation_efficiency":0.96,
+    "structural_redundancy":0.97,
+    "damage_control":0.95
+  },
+
+  "bonuses":{
+    "regular_plan_shape":5,
+    "symmetrical_layout":5,
+    "shear_walls_provided":5,
+    "ductile_detailing":5,
+    "continuous_load_path":5
+  },
+
+  "penalties":{
+    "soft_story":-10,
+    "irregular_plan":-9,
+    "weak_joints":-10,
+    "discontinuous_load_path":-10,
+    "heavy_overhangs":-8
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Structural system shall provide a continuous load path.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Soft story configurations shall be avoided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Ductile detailing shall be ensured in all structural members.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Shear walls or bracing shall be provided in high seismic zones.",
+      "severity":"high"
+    },
+    {
+      "rule":"Irregular building geometry shall be minimized.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_seismic_safety":99,
+    "target_structural_integrity":98,
+    "target_damage_reduction":95,
+    "target_redundancy":97
+  },
+
+  "reference_codes":[
+    "IS 1893 (Criteria for Earthquake Resistant Design)",
+    "IS 13920 (Ductile Detailing of Reinforced Concrete Structures)",
+    "National Building Code of India (NBC)",
+    "CPWD Structural Guidelines",
+    "ACI 318 Seismic Provisions"
+  ]
+}

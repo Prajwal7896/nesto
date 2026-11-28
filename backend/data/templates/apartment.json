@@ -1,0 +1,189 @@
+{
+  "category":"building_typology",
+  "module":"apartment_rules",
+  "version":"2.0",
+  "description":"Comprehensive apartment building design rules for AI-driven architectural planning. Covers unit planning, vertical stacking, circulation, structural grid, services, safety, ventilation, zoning, parking, and optimization principles.",
+
+  "objectives":{
+    "maximize_space_efficiency":true,
+    "ensure_structural_stability":true,
+    "optimize_vertical_circulation":true,
+    "provide_fire_safety_compliance":true,
+    "ensure_comfort_and_privacy":true
+  },
+
+  "building_types":{
+    "low_rise_apartment":{
+      "floors":1,
+      "elevator_required":false
+    },
+    "mid_rise_apartment":{
+      "floors":5,
+      "elevator_required":true
+    },
+    "high_rise_apartment":{
+      "floors":13,
+      "elevator_required":true,
+      "fire_core_required":true
+    }
+  },
+
+  "unit_planning":{
+    "minimum_unit_area_sqft":350,
+    "recommended_unit_area_sqft":800,
+    "luxury_unit_area_sqft":2000,
+    "minimum_bedrooms":1,
+    "maximum_bedrooms":5,
+    "balcony_required":true
+  },
+
+  "structural_grid":{
+    "grid_preferred":true,
+    "column_spacing_m":[3,6],
+    "shear_walls_required_for_high_rise":true,
+    "load_path":"slab → beam → column → foundation → soil"
+  },
+
+  "circulation":{
+    "corridor_width_m":1.5,
+    "staircase_required":true,
+    "staircase_fire_safe":true,
+    "elevator_count_per_core":1,
+    "separate_service_corridors_optional":true
+  },
+
+  "vertical_services":{
+    "plumbing_shafts_required":true,
+    "electrical_shafts_required":true,
+    "hvac_duct_shafts_optional":true,
+    "wet_zone_alignment_required":true
+  },
+
+  "ventilation":{
+    "cross_ventilation_required":true,
+    "minimum_window_area_percent":20,
+    "natural_airflow_priority":true,
+    "stack_ventilation_supported":true
+  },
+
+  "fire_safety":{
+    "fire_stairs_required":true,
+    "fire_lift_required_for_high_rise":true,
+    "refuge_area_required":true,
+    "fire_alarm_system_required":true,
+    "sprinkler_system_required_for_high_rise":true
+  },
+
+  "parking":{
+    "basement_parking_supported":true,
+    "stilt_parking_supported":true,
+    "visitor_parking_required":true,
+    "ev_charging_supported":true
+  },
+
+  "zoning":{
+    "public_zone":[
+      "lobby",
+      "corridor",
+      "parking"
+    ],
+    "semi_private_zone":[
+      "living_room",
+      "balcony"
+    ],
+    "private_zone":[
+      "bedrooms",
+      "bathrooms"
+    ],
+    "service_zone":[
+      "kitchen",
+      "utility",
+      "shafts"
+    ]
+  },
+
+  "materials":{
+    "rcc_frame":true,
+    "masonry_infill":true,
+    "precast_optional":true,
+    "steel_structural_system_optional":true
+  },
+
+  "accessibility":{
+    "wheelchair_access_required":true,
+    "minimum_door_width_mm":900,
+    "ramps_required":true,
+    "lift_access_required":true
+  },
+
+  "sustainability":{
+    "rainwater_harvesting_required":true,
+    "solar_roof_supported":true,
+    "waste_management_system_required":true,
+    "energy_efficient_design":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.96,
+    "circulation_efficiency":0.95,
+    "structural_efficiency":0.97,
+    "energy_efficiency":0.94,
+    "comfort_score":0.95
+  },
+
+  "bonuses":{
+    "stacked_wet_zones":5,
+    "central_core_design":5,
+    "cross_ventilation":5,
+    "shear_walls_provided":5,
+    "efficient_circulation":4
+  },
+
+  "penalties":{
+    "poor_ventilation":-9,
+    "irregular_grid":-10,
+    "weak_fire_safety":-10,
+    "poor_vertical_alignment":-9,
+    "inefficient_circulation":-8
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Apartments must ensure proper fire safety and evacuation routes.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Structural grid must support vertical load continuity.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Wet zones must be vertically aligned for plumbing efficiency.",
+      "severity":"high"
+    },
+    {
+      "rule":"Adequate ventilation and daylight must be ensured.",
+      "severity":"high"
+    },
+    {
+      "rule":"Accessibility standards must be followed.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_space_efficiency":96,
+    "target_fire_safety_score":99,
+    "target_structural_efficiency":97,
+    "target_energy_efficiency":94,
+    "target_circulation_score":95
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 456:2000",
+    "IS 1893 (Seismic Design)",
+    "CPWD Building Guidelines",
+    "Energy Conservation Building Code (ECBC)",
+    "Fire Safety Rules India"
+  ]
+}

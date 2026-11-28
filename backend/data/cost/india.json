@@ -1,0 +1,111 @@
+{
+  "country": "India",
+
+  "category": "baseline_construction_cost_model",
+
+  "definition": "This file defines baseline construction cost ranges, material pricing trends, and general building economics for residential construction in India.",
+
+  "currency": "INR",
+
+  "cost_per_sqft": {
+    "basic": {
+      "min": 1200,
+      "max": 1800
+    },
+    "standard": {
+      "min": 1800,
+      "max": 2600
+    },
+    "premium": {
+      "min": 2600,
+      "max": 4000
+    },
+    "luxury": {
+      "min": 4000,
+      "max": 8000
+    }
+  },
+
+  "material_cost_distribution": {
+    "structure": 0.40,
+    "finishing": 0.25,
+    "electrical": 0.10,
+    "plumbing": 0.10,
+    "labor": 0.15
+  },
+
+  "labor_cost_factors": {
+    "basic_skill": 1.0,
+    "skilled": 1.5,
+    "highly_skilled": 2.0
+  },
+
+  "construction_factors": {
+    "plot_shape_efficiency": {
+      "regular": 1.0,
+      "irregular": 1.2
+    },
+    "soil_condition": {
+      "normal": 1.0,
+      "weak_soil": 1.3,
+      "rocky": 1.2
+    },
+    "floors_multiplier": {
+      "1": 1.0,
+      "2": 1.1,
+      "3_to_5": 1.25,
+      "5_plus": 1.5
+    }
+  },
+
+  "regional_cost_variation": {
+    "tier_1_cities": {
+      "multiplier": 1.3,
+      "cities": ["Mumbai", "Delhi", "Bangalore", "Hyderabad", "Chennai"]
+    },
+    "tier_2_cities": {
+      "multiplier": 1.1,
+      "cities": ["Pune", "Ahmedabad", "Jaipur", "Surat", "Lucknow"]
+    },
+    "tier_3_cities": {
+      "multiplier": 0.9,
+      "cities": ["Nashik", "Indore", "Nagpur", "Coimbatore"]
+    }
+  },
+
+  "material_price_trends": {
+    "cement": "stable",
+    "steel": "volatile",
+    "wood": "increasing",
+    "glass": "moderate",
+    "bricks": "stable"
+  },
+
+  "inflation_adjustment": {
+    "annual_increase_percent": 6.0,
+    "volatility_factor": 0.2
+  },
+
+  "construction_time_estimates": {
+    "basic": "6_to_8_months",
+    "standard": "8_to_12_months",
+    "premium": "12_to_18_months",
+    "luxury": "18_plus_months"
+  },
+
+  "optimization_rules": {
+    "prefer_local_materials": true,
+    "reduce_import_dependency": true,
+    "optimize_labor_efficiency": true,
+    "cost_vs_quality_balance": true
+  },
+
+  "planning_tags": [
+    "india_construction_cost",
+    "budget_estimation",
+    "material_cost_model",
+    "real_estate_ai",
+    "architecture_cost_engine",
+    "construction_economics"
+  ]
+}

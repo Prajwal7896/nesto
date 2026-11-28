@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register | Secure Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #10b981;
+            --primary-hover: #059669;
+            --bg-gradient: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --text-main: #000000;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-gradient);
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 480px;
+            padding: 40px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.15);
+        }
+
+        h1 { font-size: 1.75rem; color: var(--text-main); margin-bottom: 8px; text-align: center; font-weight: 700; }
+        p { color: var(--text-main); margin-bottom: 32px; text-align: center; font-size: 0.95rem; }
+
+        input, select {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border: 1.5px solid #a7f3d0;
+            border-radius: 14px;
+            font-size: 1rem;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255,255,255,0.5);
+            color: var(--text-main);
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        .password-field { position: relative; }
+        .password-field span {
+            position: absolute; right: 18px; top: 16px; 
+            cursor: pointer; opacity: 0.7; font-size: 1.1rem; color: var(--text-main);
+        }
+
+        button#btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: var(--primary);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button#btn:hover { background: var(--primary-hover); transform: translateY(-1px); }
+
+        .signin { margin-top: 24px; text-align: center; font-size: 0.9rem; color: var(--text-main); }
+        .signin a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        .spinner { display: none; width: 24px; height: 24px; border: 3px solid #10b981; border-top: 3px solid transparent; border-radius: 50%; margin: 10px auto; animation: spin 1s linear infinite; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .error { background: #fee2e2; color: #b91c1c; padding: 12px; border-radius: 12px; margin-bottom: 20px; font-size: 0.85rem; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Create Account</h1>
+        <p>Join the secure construction management platform</p>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form action="/register" method="POST" onsubmit="loading()">
+            <input type="text" name="name" placeholder="Full Name" required>
+            <input type="email" name="email" placeholder="Email Address" required>
+            <select name="role" required>
+                <option value="" disabled selected>Select Professional Role</option>
+                <option value="engineer">Engineer</option>
+                <option value="contractor">Contractor</option>
+                <option value="architect">Architect</option>
+                <option value="manager">Project Manager</option>
+                <option value="supervisor">Supervisor</option>
+                <option value="client">Client</option>
+            </select>
+            <div class="password-field">
+                <input id="password" type="password" name="password" placeholder="Password" required>
+                <span onclick="togglePassword('password')">👁</span>
+            </div>
+            <div class="password-field">
+                <input id="confirm_password" type="password" name="confirm_password" placeholder="Confirm Password" required>
+                <span onclick="togglePassword('confirm_password')">👁</span>
+            </div>
+            
+            <label style="font-size: 0.85rem; display: flex; align-items: center; margin-bottom: 20px; color: var(--text-main);">
+                <input type="checkbox" name="terms" style="width: auto; margin-right: 8px;" required> 
+                I agree to the Terms & Conditions
+            </label>
+
+            <button id="btn" type="submit">Create Account</button>
+            <div class="spinner" id="spinner"></div>
+        </form>
+
+        <div class="signin">
+            Already have an account? <a href="/login">Sign In</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(id){
+            let p = document.getElementById(id);
+            p.type = p.type === "password" ? "text" : "password";
+        }
+        function loading(){
+            document.getElementById("btn").style.display = "none";
+            document.getElementById("spinner").style.display = "block";
+        }
+    </script>
+</body>
+</html>

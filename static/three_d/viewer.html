@@ -1,0 +1,281 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesto | 3D House Designer</title>
+
+    <link rel="stylesheet" href="/static/three_d/css/viewer.css">
+
+    <script type="importmap">
+    {
+        "imports": {
+            "three": "https://cdn.jsdelivr.net/npm/three@0.170.0/build/three.module.js",
+            "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.170.0/examples/jsm/"
+        }
+    }
+    </script>
+</head>
+
+<body>
+
+<div class="app-container">
+
+    <header class="topbar">
+        <div class="brand">
+            <div class="brand-icon">N</div>
+            <div>
+                <h2>NESTO</h2>
+                <span>3D HOUSE DESIGNER</span>
+            </div>
+        </div>
+
+        <div class="project-info">
+            <span class="status-dot"></span>
+            <span id="project-name">Untitled House Project</span>
+        </div>
+
+        <div class="top-actions">
+            <button id="reset-view" class="top-button">Reset View</button>
+            <button id="fullscreen" class="top-button">Fullscreen</button>
+            <button id="export-scene" class="primary-button">Export 3D</button>
+        </div>
+    </header>
+
+    <main class="workspace">
+
+        <aside class="left-panel">
+            <div class="panel-heading">
+                <h3>Scene Layers</h3>
+                <span>VISIBILITY</span>
+            </div>
+
+            <div class="layer-group">
+                <h4>ARCHITECTURE</h4>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="floors" checked>
+                    <span class="layer-icon">▰</span> Floors
+                </label>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="walls" checked>
+                    <span class="layer-icon">▥</span> Walls
+                </label>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="doors" checked>
+                    <span class="layer-icon">▣</span> Doors
+                </label>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="windows" checked>
+                    <span class="layer-icon">▤</span> Windows
+                </label>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="roof" checked>
+                    <span class="layer-icon">⌂</span> Roof
+                </label>
+            </div>
+
+            <div class="layer-group">
+                <h4>INTERIOR</h4>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="furniture" checked>
+                    <span class="layer-icon">▦</span> Furniture
+                </label>
+            </div>
+
+            <div class="layer-group">
+                <h4>ENGINEERING</h4>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="water">
+                    <span class="layer-icon">≈</span> Water Supply
+                </label>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="drainage">
+                    <span class="layer-icon">⌁</span> Drainage
+                </label>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="electrical">
+                    <span class="layer-icon">ϟ</span> Electrical
+                </label>
+
+                <label class="layer-item">
+                    <input type="checkbox" data-layer="hvac">
+                    <span class="layer-icon">❋</span> HVAC
+                </label>
+            </div>
+
+            <div class="panel-footer">
+                <span class="status-dot"></span>
+                <span>3D Workspace Ready</span>
+            </div>
+        </aside>
+
+        <section class="viewport-container">
+
+            <div class="viewport-toolbar">
+                <div class="view-tabs">
+                    <button class="view-tab active" data-view="3d">3D View</button>
+                    <button class="view-tab" data-view="top">Top View</button>
+                    <button class="view-tab" data-view="front">Front View</button>
+                    <button class="view-tab" data-view="side">Side View</button>
+                </div>
+
+                <div class="viewport-tools">
+                    <button id="zoom-in" title="Zoom in">+</button>
+                    <button id="zoom-out" title="Zoom out">−</button>
+                    <button id="focus-house" title="Focus house">◎</button>
+                </div>
+            </div>
+
+            <div id="three-viewport">
+                <div class="loading-screen" id="loading-screen">
+                    <div class="loader"></div>
+                    <h3>Preparing your 3D workspace</h3>
+                    <p>Initializing Nesto 3D Engine...</p>
+                </div>
+
+                <div id="scene-message" class="scene-message">
+                    Generate a house plan and load its 3D scene.
+                </div>
+            </div>
+
+            <div class="viewport-hint">
+                <span>🖱 Drag: Rotate</span>
+                <span>Scroll: Zoom</span>
+                <span>Right Click: Pan</span>
+            </div>
+
+            <div class="coordinates">
+                <span id="scene-status">INITIALIZING</span>
+                <span id="scene-units">Units: Metres</span>
+            </div>
+
+        </section>
+
+        <aside class="right-panel">
+            <div class="panel-heading">
+                <h3>Properties</h3>
+                <span>SCENE INFO</span>
+            </div>
+
+            <div class="property-section">
+                <h4>PROJECT</h4>
+
+                <div class="property-row">
+                    <span>Project ID</span>
+                    <strong id="scene-id">Not loaded</strong>
+                </div>
+
+                <div class="property-row">
+                    <span>Floors</span>
+                    <strong id="floor-count">0</strong>
+                </div>
+
+                <div class="property-row">
+                    <span>Rooms</span>
+                    <strong id="room-count">0</strong>
+                </div>
+            </div>
+
+            <div class="property-section">
+                <h4>SELECTED OBJECT</h4>
+                <div id="selected-object" class="empty-selection">
+                    Select an object in the 3D scene to inspect it.
+                </div>
+            </div>
+
+            <div class="property-section">
+                <h4>DIMENSIONS</h4>
+
+                <div class="property-row">
+                    <span>Width</span>
+                    <strong id="object-width">—</strong>
+                </div>
+
+                <div class="property-row">
+                    <span>Height</span>
+                    <strong id="object-height">—</strong>
+                </div>
+
+                <div class="property-row">
+                    <span>Depth</span>
+                    <strong id="object-depth">—</strong>
+                </div>
+            </div>
+        </aside>
+
+    </main>
+
+    <footer class="timeline-panel">
+
+        <div class="timeline-header">
+            <div>
+                <h3>Construction Timeline</h3>
+                <span>BUILD YOUR HOUSE STEP BY STEP</span>
+            </div>
+
+            <div class="timeline-actions">
+                <button id="previous-stage">◀</button>
+                <button id="play-animation" class="play-button">▶ Play</button>
+                <button id="next-stage">▶</button>
+            </div>
+        </div>
+
+        <div class="timeline-track">
+            <div class="timeline-progress" id="timeline-progress"></div>
+        </div>
+
+        <div class="timeline-stages" id="timeline-stages">
+            <span data-stage="0">Foundation</span>
+            <span data-stage="1">Structure</span>
+            <span data-stage="2">Walls</span>
+            <span data-stage="3">Openings</span>
+            <span data-stage="4">Roof</span>
+            <span data-stage="5">Engineering</span>
+            <span data-stage="6">Furniture</span>
+            <span data-stage="7">Finishing</span>
+        </div>
+
+    </footer>
+
+</div>
+
+<script type="module" src="/static/three_d/js/main.js"></script>
+<script>
+    (() => {
+        const report = (message, level = "info") => {
+            console[level === "error" ? "error" : "info"]("[NESTO viewer document]", message);
+            if (window.parent !== window) {
+                window.parent.postMessage({ type: "nesto-3d-status", message, level }, window.location.origin);
+            }
+        };
+        console.info("[NESTO viewer document] HTML loaded", {
+            url: location.href,
+            userAgent: navigator.userAgent,
+            viewport: { width: innerWidth, height: innerHeight }
+        });
+        window.addEventListener("load", () => report("Viewer page loaded; initializing Three.js…"), { once: true });
+        window.addEventListener("error", event => {
+            const resource = event.target && (event.target.src || event.target.href);
+            const message = resource
+                ? `Viewer resource failed to load: ${resource}`
+                : `Viewer script error: ${event.message || "unknown JavaScript error"}`;
+            report(message, "error");
+        }, true);
+        window.addEventListener("unhandledrejection", event => {
+            const reason = event.reason?.message || String(event.reason || "unknown error");
+            report(`Viewer module or async operation failed: ${reason}`, "error");
+        });
+    })();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,150 @@
+{
+  "category":"structural",
+  "module":"footing_rules",
+  "version":"2.0",
+  "description":"Comprehensive footing (foundation) design rules for AI-driven structural planning. Covers load transfer, soil interaction, types of footings, reinforcement, settlement control, seismic behavior, drainage, and optimization rules.",
+
+  "objectives":{
+    "safe_load_transfer_to_soil":true,
+    "prevent_differential_settlement":true,
+    "ensure_structural_stability":true,
+    "distribute_column_loads":true,
+    "improve_soil_contact_efficiency":true
+  },
+
+  "soil_considerations":{
+    "soil_bearing_capacity_required_kN_m2":150,
+    "soft_soil_special_design_required":true,
+    "expansive_soil_handling_required":true,
+    "water_table_consideration":true,
+    "soil_investigation_mandatory":true
+  },
+
+  "footing_types":{
+    "isolated_footing":true,
+    "combined_footing":true,
+    "strip_footing":true,
+    "raft_foundation":true,
+    "pile_foundation":true
+  },
+
+  "dimensions":{
+    "minimum_depth_ft":3,
+    "recommended_depth_ft":5,
+    "minimum_thickness_mm":300,
+    "recommended_thickness_mm":600,
+    "minimum_projection_beyond_column_mm":150,
+    "recommended_projection_mm":300
+  },
+
+  "load_transfer":{
+    "path":"column → footing → soil",
+    "uniform_load_distribution":true,
+    "eccentric_load_control":true,
+    "moment_resistance_required":true
+  },
+
+  "reinforcement_rules":{
+    "minimum_steel_percentage":0.5,
+    "maximum_steel_percentage":2.0,
+    "mesh_required":true,
+    "bottom_reinforcement_primary":true,
+    "top_reinforcement_for_combined_footing":true,
+    "cover_requirement_mm":50,
+    "anchorage_required":true
+  },
+
+  "settlement_control":{
+    "maximum_allowable_settlement_mm":25,
+    "differential_settlement_limit_mm":15,
+    "uniform_settlement_preferred":true,
+    "soil_compaction_required":true
+  },
+
+  "structural_rules":{
+    "rigid_base_required":true,
+    "avoid_overloading_edges":true,
+    "symmetrical_load_distribution":true,
+    "column_grid_alignment_required":true
+  },
+
+  "drainage":{
+    "subsoil_drainage_required":true,
+    "water_accumulation_prevention":true,
+    "perimeter_drain_optional":true
+  },
+
+  "seismic_considerations":{
+    "soil_liquefaction_check_required":true,
+    "ductile_foundation_behavior":true,
+    "base_isolation_optional":true
+  },
+
+  "materials":{
+    "rcc":true,
+    "pcc_levelling_layer_required":true,
+    "waterproofing_coating_optional":true
+  },
+
+  "optimization":{
+    "cost_efficiency":0.92,
+    "load_distribution_efficiency":0.97,
+    "durability":0.98,
+    "soil_utilization":0.96
+  },
+
+  "bonuses":{
+    "uniform_soil":5,
+    "proper_compaction":5,
+    "centered_column_load":5,
+    "good_water_table_depth":4,
+    "raft_foundation_use":4
+  },
+
+  "penalties":{
+    "poor_soil":-10,
+    "eccentric_loading":-9,
+    "insufficient_depth":-8,
+    "no_drainage":-7,
+    "uneven_settlement":-10
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Footing must safely transfer column loads to soil.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Differential settlement must be minimized.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Soil bearing capacity must be verified before design.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper reinforcement mesh must be provided.",
+      "severity":"high"
+    },
+    {
+      "rule":"Water drainage and waterproofing must be ensured.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_structural_safety":99,
+    "target_settlement_control":97,
+    "target_cost_efficiency":92,
+    "target_durability":98
+  },
+
+  "reference_codes":[
+    "IS 456:2000",
+    "IS 6403 (Bearing Capacity of Soil)",
+    "IS 1904 (Foundation Design)",
+    "IS 2950 (Raft Foundations)",
+    "National Building Code of India (NBC)",
+    "CPWD Foundation Guidelines"
+  ]
+}

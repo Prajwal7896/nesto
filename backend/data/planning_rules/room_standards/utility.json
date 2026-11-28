@@ -1,0 +1,172 @@
+{
+  "category":"room_standards",
+  "room":"utility_room",
+  "version":"2.0",
+  "description":"Comprehensive utility room planning standards for AI-driven residential floor planning. Covers laundry, cleaning, service storage, plumbing, ventilation, safety, workflow optimization and integration with kitchen and bathroom systems.",
+
+  "dimensions":{
+    "minimum_area_sqft":30,
+    "recommended_area_sqft":60,
+    "luxury_area_sqft":120,
+    "minimum_width_ft":5,
+    "recommended_width_ft":7,
+    "minimum_length_ft":6,
+    "recommended_length_ft":9,
+    "minimum_height_ft":9
+  },
+
+  "types":{
+    "laundry_room":{
+      "washing_machine_required":true,
+      "dryer_optional":true
+    },
+    "service_utility":{
+      "storage_heavy":true,
+      "maintenance_tools":true
+    },
+    "combined_utility":{
+      "laundry":true,
+      "storage":true,
+      "cleaning_zone":true
+    }
+  },
+
+  "location":{
+    "preferred_adjacent_rooms":[
+      "Kitchen",
+      "Bathroom",
+      "Backyard",
+      "Service Entrance"
+    ],
+    "avoid_adjacent_rooms":[
+      "Bedroom",
+      "Dining Room",
+      "Pooja Room"
+    ],
+    "preferred_position":"Rear or side of building"
+  },
+
+  "plumbing":{
+    "washing_machine_point":true,
+    "floor_drain_required":true,
+    "hot_water_connection_optional":true,
+    "tap_required":true,
+    "minimum_pipe_size_mm":20
+  },
+
+  "ventilation":{
+    "natural_ventilation":true,
+    "exhaust_fan_required":true,
+    "minimum_air_changes_per_hour":10,
+    "odor_control_required":true
+  },
+
+  "electrical":{
+    "power_outlets":4,
+    "dedicated_washing_machine_point":true,
+    "iron_point":true,
+    "water_heater_point_optional":true,
+    "backup_power_supported":true
+  },
+
+  "storage":{
+    "cleaning_supplies_storage":true,
+    "detergent_storage":true,
+    "utility_shelves":true,
+    "hidden_cabinets_optional":true
+  },
+
+  "flooring":{
+    "anti_skid":true,
+    "water_resistant":true,
+    "easy_to_clean":true,
+    "minimum_slope_percent":1.5,
+    "drainage_required":true
+  },
+
+  "lighting":{
+    "recommended_lux":150,
+    "natural_light_preferred":true,
+    "led_lighting":true,
+    "motion_sensor_supported":true
+  },
+
+  "workflow":{
+    "washing_zone":true,
+    "drying_zone_optional":true,
+    "folding_zone_optional":true,
+    "ironing_zone_optional":true,
+    "dirty_clean_separation":true
+  },
+
+  "smart_features":{
+    "smart_washing_machine":true,
+    "leak_detection":true,
+    "water_usage_monitoring":true,
+    "auto_shutdown":true,
+    "humidity_sensor":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.94,
+    "workflow_efficiency":0.96,
+    "water_management":0.95,
+    "ventilation":0.95,
+    "maintenance_access":0.96
+  },
+
+  "bonuses":{
+    "kitchen_adjacent":5,
+    "bathroom_adjacent":4,
+    "floor_drain":5,
+    "natural_ventilation":4,
+    "storage_space":3,
+    "service_access":4
+  },
+
+  "penalties":{
+    "no_drainage":-10,
+    "poor_ventilation":-8,
+    "no_washing_point":-10,
+    "water_leak_risk":-7,
+    "inaccessible_storage":-6
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Utility room shall have proper drainage.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Adequate ventilation shall be provided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Washing machine plumbing point shall be provided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Utility room shall not be adjacent to bedrooms.",
+      "severity":"high"
+    },
+    {
+      "rule":"Anti-skid waterproof flooring shall be used.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_workflow_score":96,
+    "target_water_efficiency":95,
+    "target_ventilation_score":95,
+    "target_maintenance_score":96
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "IS Plumbing Standards",
+    "Energy Conservation Building Code (ECBC)",
+    "Neufert Architects' Data"
+  ]
+}

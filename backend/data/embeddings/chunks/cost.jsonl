@@ -1,0 +1,15 @@
+{"id":"C001","text":"Basic residential construction cost in India ranges from 1200 to 1800 rupees per square foot for low budget housing in tier 2 and tier 3 cities.","source":"cost.json","metadata":{"type":"basic_construction"}}
+{"id":"C002","text":"Standard residential construction cost in India ranges from 1800 to 2500 rupees per square foot including basic flooring, plumbing, and electrical work.","source":"cost.json","metadata":{"type":"standard_construction"}}
+{"id":"C003","text":"Premium residential construction cost in India ranges from 2500 to 4000 rupees per square foot depending on materials like vitrified tiles and branded fittings.","source":"cost.json","metadata":{"type":"premium_construction"}}
+{"id":"C004","text":"Luxury construction cost in metro cities like Mumbai and Bangalore can exceed 5000 to 9000 rupees per square foot with imported marble and smart home systems.","source":"cost.json","metadata":{"type":"luxury_construction"}}
+{"id":"C005","text":"Cement cost in India typically ranges between 370 to 430 rupees per bag depending on brand and location.","source":"cost.json","metadata":{"material":"cement"}}
+{"id":"C006","text":"TMT steel reinforcement cost in India ranges from 58 to 68 rupees per kilogram for Fe500D grade steel used in RCC structures.","source":"cost.json","metadata":{"material":"steel"}}
+{"id":"C007","text":"Bricks in India cost between 7 to 12 rupees per piece depending on quality and region.","source":"cost.json","metadata":{"material":"bricks"}}
+{"id":"C008","text":"River sand for construction costs between 55 to 85 rupees per cubic foot depending on availability and transportation distance.","source":"cost.json","metadata":{"material":"sand"}}
+{"id":"C009","text":"Vitrified tiles cost between 60 to 150 rupees per square foot depending on design and brand quality.","source":"cost.json","metadata":{"material":"finishing"}}
+{"id":"C010","text":"Average labour cost in India for construction ranges from 500 to 1000 rupees per day depending on skill level and region.","source":"cost.json","metadata":{"labour":"daily_wage"}}
+{"id":"C011","text":"Electrical wiring installation cost typically adds 120 to 250 rupees per square foot in residential construction projects.","source":"cost.json","metadata":{"system":"electrical"}}
+{"id":"C012","text":"Plumbing cost for residential buildings in India ranges from 150 to 300 rupees per square foot depending on pipe quality and fittings.","source":"cost.json","metadata":{"system":"plumbing"}}
+{"id":"C013","text":"Painting and finishing work costs approximately 150 to 400 rupees per square foot depending on interior or exterior quality.","source":"cost.json","metadata":{"finishing":"painting"}}
+{"id":"C014","text":"Total construction cost increases by 5 to 10 percent due to wastage, transportation, and site handling losses.","source":"cost.json","metadata":{"hidden_costs":"wastage"}}
+{"id":"C015","text":"RCC structural frame construction cost forms nearly 35 to 45 percent of total building cost in residential projects.","source":"cost.json","metadata":{"structure":"rcc"}}

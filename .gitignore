@@ -1,0 +1,72 @@
+# Node.js
+node_modules/
+.env
+dist/
+
+# Logs
+*.log
+
+# macOS
+.DS_Store
+
+# VS Code
+.vscode/
+
+# Python
+__pycache__/
+*.pyc
+venv/
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Python environments and cache
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Backup files
+*.bak
+*.backup
+*.bak_*
+*.tmp
+
+# Generated floor plans and 3D outputs
+output/
+
+# User uploads
+static/uploads/
+
+# Debug artifacts
+debug_bundle.txt
+
+# IDE and OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# Local databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Private keys and certificates
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local environment files
+.env
+.env.*
+!.env.example
+
+# Generated embedding cache
+backend/data/embeddings/embeddings_cache/*.npy
+
+# Generated RAG embedding cache
+backend/data/embeddings/embeddings_cache/rag_builder/

@@ -1,0 +1,256 @@
+{
+  "category":"architectural_design_patterns",
+  "version":"2.0",
+  "description":"Comprehensive architectural design pattern library for AI-driven residential floor planning, space optimization, room relationships, circulation planning, structural feasibility, climate adaptation, cost optimization, accessibility, and future expansion.",
+  "patterns":[
+    {
+      "id":"DP001",
+      "name":"Open Living Concept",
+      "category":"Space Planning",
+      "priority":"high",
+      "applicable_styles":["modern","minimalist","contemporary","luxury"],
+      "recommended_buildings":["villa","apartment","duplex","bungalow"],
+      "recommended_plot_sizes":["small","medium","large"],
+      "description":"Integrates living, dining and kitchen into one visually continuous space.",
+      "advantages":["Improves natural lighting","Enhances cross ventilation","Creates spacious appearance","Encourages family interaction","Reduces corridor area","Improves furniture flexibility"],
+      "limitations":["Lower acoustic privacy","Cooking odors may spread","Requires efficient ventilation"],
+      "adjacency":{
+        "living_room":["dining_room","kitchen","balcony"],
+        "dining_room":["living_room","kitchen"],
+        "kitchen":["dining_room","utility_room"]
+      },
+      "constraints":{
+        "minimum_plot_width_ft":28,
+        "minimum_area_sqft":900
+      },
+      "optimization":{
+        "space_efficiency":0.95,
+        "ventilation":0.98,
+        "daylight":0.97,
+        "privacy":0.60
+      }
+    },
+    {
+      "id":"DP002",
+      "name":"Private Bedroom Cluster",
+      "category":"Privacy",
+      "priority":"high",
+      "description":"Groups bedrooms together away from public spaces.",
+      "adjacency":{
+        "master_bedroom":["attached_bathroom","walk_in_closet"],
+        "children_room":["common_bathroom"],
+        "guest_room":["lobby"]
+      },
+      "optimization":{
+        "privacy":0.99,
+        "noise_reduction":0.95
+      }
+    },
+    {
+      "id":"DP003",
+      "name":"Central Courtyard",
+      "category":"Climate",
+      "priority":"high",
+      "description":"Internal courtyard providing ventilation, daylight and thermal comfort.",
+      "recommended_climates":["hot","dry","tropical"],
+      "optimization":{
+        "ventilation":1.0,
+        "daylight":1.0,
+        "energy":0.90
+      }
+    },
+    {
+      "id":"DP004",
+      "name":"Split Public Private Layout",
+      "category":"Zoning",
+      "priority":"high",
+      "description":"Separates guest areas from family zones.",
+      "public_zone":["living_room","guest_room","foyer"],
+      "private_zone":["bedrooms","study","family_room"],
+      "service_zone":["kitchen","utility","laundry"]
+    },
+    {
+      "id":"DP005",
+      "name":"Kitchen Utility Connection",
+      "category":"Kitchen",
+      "priority":"high",
+      "description":"Utility room directly connected behind kitchen.",
+      "adjacency":{
+        "kitchen":["utility_room","dining_room"]
+      }
+    },
+    {
+      "id":"DP006",
+      "name":"Kitchen Work Triangle",
+      "category":"Kitchen",
+      "priority":"high",
+      "description":"Optimizes movement between refrigerator, sink and stove.",
+      "triangle":["refrigerator","sink","stove"],
+      "maximum_triangle_length_ft":26
+    },
+    {
+      "id":"DP007",
+      "name":"Cross Ventilation",
+      "category":"Environment",
+      "priority":"critical",
+      "description":"Windows placed on opposite walls for airflow.",
+      "optimization":{
+        "airflow":1.0,
+        "thermal_comfort":0.95
+      }
+    },
+    {
+      "id":"DP008",
+      "name":"Double Height Living",
+      "category":"Luxury",
+      "priority":"medium",
+      "recommended_styles":["luxury","villa"],
+      "minimum_ceiling_height_ft":18
+    },
+    {
+      "id":"DP009",
+      "name":"Future Expansion Ready",
+      "category":"Structural",
+      "priority":"medium",
+      "description":"Structural provisions for additional floors.",
+      "requirements":["strong_foundation","future_column_alignment","roof_access"]
+    },
+    {
+      "id":"DP010",
+      "name":"Central Staircase",
+      "category":"Circulation",
+      "priority":"high",
+      "description":"Central staircase minimizing travel distance."
+    },
+    {
+      "id":"DP011",
+      "name":"Side Staircase",
+      "category":"Circulation",
+      "priority":"medium",
+      "description":"Side staircase maximizing usable interior space."
+    },
+    {
+      "id":"DP012",
+      "name":"North East Entrance",
+      "category":"Vastu",
+      "priority":"optional",
+      "description":"Preferred entrance direction for Vastu."
+    },
+    {
+      "id":"DP013",
+      "name":"South East Kitchen",
+      "category":"Vastu",
+      "priority":"optional"
+    },
+    {
+      "id":"DP014",
+      "name":"South West Master Bedroom",
+      "category":"Vastu",
+      "priority":"optional"
+    },
+    {
+      "id":"DP015",
+      "name":"Parking Under Stilt",
+      "category":"Parking",
+      "priority":"medium",
+      "minimum_clear_height_ft":8
+    },
+    {
+      "id":"DP016",
+      "name":"Corner Plot Planning",
+      "category":"Urban",
+      "priority":"medium",
+      "description":"Uses dual road access for better circulation."
+    },
+    {
+      "id":"DP017",
+      "name":"Terrace Garden",
+      "category":"Outdoor",
+      "priority":"medium",
+      "description":"Converts terrace into green recreational area."
+    },
+    {
+      "id":"DP018",
+      "name":"Home Office Isolation",
+      "category":"Work From Home",
+      "priority":"medium",
+      "description":"Places office away from noisy family areas."
+    },
+    {
+      "id":"DP019",
+      "name":"Elder Friendly Planning",
+      "category":"Accessibility",
+      "priority":"high",
+      "features":["Ground floor bedroom","Wide doors","Ramp","Non-slip flooring"]
+    },
+    {
+      "id":"DP020",
+      "name":"Energy Efficient Orientation",
+      "category":"Sustainability",
+      "priority":"high",
+      "features":["Solar panels","Roof insulation","Low heat gain","Daylight optimization"]
+    },
+    {
+      "id":"DP021",
+      "name":"Rainwater Harvesting",
+      "category":"Sustainability",
+      "priority":"high"
+    },
+    {
+      "id":"DP022",
+      "name":"Solar Ready Roof",
+      "category":"Energy",
+      "priority":"medium"
+    },
+    {
+      "id":"DP023",
+      "name":"Luxury Master Suite",
+      "category":"Luxury",
+      "priority":"medium",
+      "includes":["Walk-in closet","Private balcony","Luxury bathroom"]
+    },
+    {
+      "id":"DP024",
+      "name":"Family Lounge",
+      "category":"Lifestyle",
+      "priority":"medium"
+    },
+    {
+      "id":"DP025",
+      "name":"Independent Guest Suite",
+      "category":"Privacy",
+      "priority":"medium"
+    },
+    {
+      "id":"DP026",
+      "name":"Linear Corridor",
+      "category":"Circulation",
+      "priority":"medium"
+    },
+    {
+      "id":"DP027",
+      "name":"L-Shaped Layout",
+      "category":"Geometry",
+      "priority":"medium"
+    },
+    {
+      "id":"DP028",
+      "name":"U-Shaped Layout",
+      "category":"Geometry",
+      "priority":"medium"
+    },
+    {
+      "id":"DP029",
+      "name":"Courtyard Villa",
+      "category":"Luxury",
+      "priority":"high"
+    },
+    {
+      "id":"DP030",
+      "name":"Smart Home Ready",
+      "category":"Technology",
+      "priority":"medium",
+      "features":["IoT","Smart lighting","Security","Automation","Voice assistant integration"]
+    }
+  ]
+}

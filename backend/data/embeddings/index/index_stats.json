@@ -1,0 +1,20 @@
+{
+  "total_vectors": 0,
+  "total_chunks": 0,
+  "last_updated": "2026-07-04",
+
+  "data_sources": [
+    "building_codes",
+    "cost",
+    "engineering",
+    "structural",
+    "room_standards",
+    "planning_rules",
+    "vastu"
+  ],
+
+  "performance": {
+    "avg_search_time_ms": 0,
+    "index_size_mb": 0
+  }
+}

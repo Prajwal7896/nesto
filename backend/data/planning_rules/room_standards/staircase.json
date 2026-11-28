@@ -1,0 +1,173 @@
+{
+  "category":"room_standards",
+  "room":"staircase",
+  "version":"2.0",
+  "description":"Comprehensive staircase design standards for AI-driven residential and commercial building planning. Covers geometry, safety, dimensions, structural requirements, ventilation, lighting, accessibility, ergonomics and circulation efficiency.",
+
+  "dimensions":{
+    "minimum_width_ft":3,
+    "recommended_width_ft":3.5,
+    "luxury_width_ft":5,
+    "minimum_riser_height_mm":150,
+    "maximum_riser_height_mm":190,
+    "recommended_riser_height_mm":170,
+    "minimum_tread_depth_mm":250,
+    "recommended_tread_depth_mm":300,
+    "minimum_headroom_ft":7,
+    "recommended_headroom_ft":8
+  },
+
+  "types":{
+    "straight":true,
+    "l_shaped":true,
+    "u_shaped":true,
+    "spiral":true,
+    "open_riser_optional":true
+  },
+
+  "location":{
+    "preferred_adjacent_rooms":[
+      "Living Room",
+      "Foyer",
+      "Corridor"
+    ],
+    "avoid_adjacent_rooms":[
+      "Kitchen",
+      "Bathroom",
+      "Pooja Room"
+    ],
+    "preferred_position":"Central or corner near entrance"
+  },
+
+  "geometry":{
+    "step_formula":"2R + T = 600-650 mm",
+    "recommended_slope_degrees":30,
+    "maximum_slope_degrees":37,
+    "landing_required_every_steps":12
+  },
+
+  "landing":{
+    "minimum_length_ft":3,
+    "recommended_length_ft":4,
+    "required_at_direction_change":true,
+    "resting_platform_required":true
+  },
+
+  "structure":{
+    "minimum_live_load_kn_m2":3.0,
+    "reinforced_concrete_supported":true,
+    "steel_structure_supported":true,
+    "wood_structure_supported":true,
+    "anti_vibration_required":true
+  },
+
+  "safety":{
+    "handrail_required":true,
+    "handrail_height_mm":900,
+    "balustrade_spacing_max_mm":100,
+    "anti_skid_treads":true,
+    "child_safety_required":true
+  },
+
+  "lighting":{
+    "natural_light_preferred":true,
+    "minimum_lux":150,
+    "step_lighting_supported":true,
+    "motion_sensor_lighting":true,
+    "emergency_lighting_required":true
+  },
+
+  "ventilation":{
+    "natural_stack_ventilation":true,
+    "open_stairwell_supported":true,
+    "air_flow_priority":"High"
+  },
+
+  "circulation":{
+    "flow_efficiency":0.95,
+    "minimum_clear_width_mm":900,
+    "turning_clearance_mm":1000
+  },
+
+  "accessibility":{
+    "wheelchair_alternative_required":true,
+    "elder_safe_design":true,
+    "grip_support_required":true
+  },
+
+  "materials":{
+    "steps":[
+      "Granite",
+      "Marble",
+      "Wood",
+      "Anti-Skid Tile"
+    ],
+    "handrails":[
+      "Stainless Steel",
+      "Wood",
+      "Aluminium"
+    ]
+  },
+
+  "optimization":{
+    "space_efficiency":0.92,
+    "safety_score":0.98,
+    "comfort_score":0.95,
+    "circulation_efficiency":0.96
+  },
+
+  "bonuses":{
+    "natural_light":4,
+    "open_staircase":3,
+    "central_location":4,
+    "anti_skid_material":5,
+    "proper_landing":4
+  },
+
+  "penalties":{
+    "steep_stairs":-10,
+    "narrow_width":-8,
+    "no_handrail":-10,
+    "poor_lighting":-7,
+    "no_landing":-6
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Stair riser and tread shall follow ergonomic proportion 2R + T = 600–650 mm.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Handrail shall be provided on at least one side.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Anti-skid material shall be used on treads.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper lighting shall be ensured on all steps.",
+      "severity":"high"
+    },
+    {
+      "rule":"Landing shall be provided after every 12 steps.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_safety_score":98,
+    "target_circulation_score":96,
+    "target_comfort_score":95,
+    "target_accessibility_score":90
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 456 (RCC Design)",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "IS 875 (Loads)",
+    "Handbook of Building Construction"
+  ]
+}

@@ -1,0 +1,200 @@
+{
+  "category":"building_materials",
+  "material":"bricks",
+  "version":"2.0",
+  "description":"Comprehensive brick material database for AI-driven structural planning, cost estimation, thermal analysis, durability evaluation and construction optimization.",
+
+  "types":[
+    {
+      "id":"BRK001",
+      "name":"First Class Burnt Clay Brick",
+      "grade":"Premium",
+      "compressive_strength_mpa":10.5,
+      "water_absorption_percent_max":15,
+      "density_kg_m3":1850,
+      "thermal_conductivity_wmk":0.72,
+      "fire_resistance":"Excellent",
+      "sound_insulation":"Good",
+      "durability":"Excellent",
+      "recommended_for":[
+        "Load Bearing Walls",
+        "Exterior Walls",
+        "Interior Walls"
+      ]
+    },
+    {
+      "id":"BRK002",
+      "name":"Second Class Brick",
+      "grade":"Standard",
+      "compressive_strength_mpa":7.5,
+      "water_absorption_percent_max":20,
+      "density_kg_m3":1800,
+      "recommended_for":[
+        "Interior Walls",
+        "Partition Walls"
+      ]
+    },
+    {
+      "id":"BRK003",
+      "name":"Fly Ash Brick",
+      "grade":"Premium",
+      "compressive_strength_mpa":12,
+      "water_absorption_percent_max":12,
+      "density_kg_m3":1700,
+      "thermal_conductivity_wmk":0.65,
+      "eco_friendly":true,
+      "recommended_for":[
+        "Residential Buildings",
+        "Commercial Buildings",
+        "Green Buildings"
+      ]
+    },
+    {
+      "id":"BRK004",
+      "name":"AAC Block",
+      "grade":"Lightweight",
+      "compressive_strength_mpa":4,
+      "density_kg_m3":650,
+      "thermal_conductivity_wmk":0.18,
+      "fire_resistance":"Excellent",
+      "sound_insulation":"Excellent",
+      "recommended_for":[
+        "High Rise Buildings",
+        "Energy Efficient Homes"
+      ]
+    },
+    {
+      "id":"BRK005",
+      "name":"Concrete Block",
+      "grade":"Heavy Duty",
+      "compressive_strength_mpa":15,
+      "density_kg_m3":2100,
+      "recommended_for":[
+        "Boundary Walls",
+        "Industrial Buildings",
+        "Basements"
+      ]
+    }
+  ],
+
+  "standard_dimensions":{
+    "clay_brick_mm":[230,110,75],
+    "fly_ash_brick_mm":[230,110,75],
+    "aac_block_mm":[600,200,200],
+    "concrete_block_mm":[400,200,200]
+  },
+
+  "applications":{
+    "load_bearing":true,
+    "partition_wall":true,
+    "boundary_wall":true,
+    "compound_wall":true,
+    "retaining_wall":false
+  },
+
+  "selection_rules":[
+    {
+      "condition":"budget='low'",
+      "recommended":"Second Class Brick"
+    },
+    {
+      "condition":"energy_efficient=true",
+      "recommended":"AAC Block"
+    },
+    {
+      "condition":"eco_friendly=true",
+      "recommended":"Fly Ash Brick"
+    },
+    {
+      "condition":"heavy_load=true",
+      "recommended":"Concrete Block"
+    }
+  ],
+
+  "construction_guidelines":{
+    "minimum_wall_thickness_mm":115,
+    "recommended_external_wall_mm":230,
+    "recommended_internal_wall_mm":115,
+    "mortar_ratio_standard":"1:6",
+    "curing_days":7,
+    "verticality_tolerance_mm":5,
+    "joint_thickness_mm":10
+  },
+
+  "thermal_performance":{
+    "best_material":"AAC Block",
+    "highest_heat_resistance":"AAC Block",
+    "highest_thermal_mass":"Clay Brick"
+  },
+
+  "acoustic_performance":{
+    "best_sound_insulation":"AAC Block",
+    "average_sound_reduction_db":45
+  },
+
+  "fire_performance":{
+    "minimum_fire_rating_hours":2,
+    "best_material":"AAC Block"
+  },
+
+  "sustainability":{
+    "recyclable":true,
+    "low_carbon_options":[
+      "Fly Ash Brick",
+      "AAC Block"
+    ],
+    "green_building_certification_supported":true
+  },
+
+  "cost_index":{
+    "Second Class Brick":1.0,
+    "First Class Burnt Clay Brick":1.25,
+    "Fly Ash Brick":1.15,
+    "AAC Block":1.40,
+    "Concrete Block":1.30
+  },
+
+  "quality_checks":[
+    "Uniform dimensions",
+    "Sharp edges",
+    "No visible cracks",
+    "Clear ringing sound when struck",
+    "Water absorption within limits",
+    "Compressive strength test passed"
+  ],
+
+  "optimization":{
+    "preferred_for_fast_construction":"AAC Block",
+    "preferred_for_low_cost":"Second Class Brick",
+    "preferred_for_strength":"Concrete Block",
+    "preferred_for_energy_efficiency":"AAC Block",
+    "preferred_for_sustainability":"Fly Ash Brick"
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Exterior load-bearing walls shall use minimum 230 mm thickness.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Water absorption shall comply with IS standards.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Damaged bricks shall not be used.",
+      "severity":"high"
+    },
+    {
+      "rule":"Mortar joints should not exceed 10 mm.",
+      "severity":"medium"
+    }
+  ],
+
+  "reference_codes":[
+    "IS 1077",
+    "IS 3495",
+    "IS 2185",
+    "National Building Code of India (NBC)",
+    "CPWD Specifications"
+  ]
+}

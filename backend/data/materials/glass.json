@@ -1,0 +1,231 @@
+{
+  "category":"building_materials",
+  "material":"glass",
+  "version":"2.0",
+  "description":"Comprehensive glass material database for AI-driven architectural planning, facade optimization, daylight analysis, thermal performance, acoustics, safety, energy efficiency and cost estimation.",
+
+  "types":[
+    {
+      "id":"GLS001",
+      "name":"Clear Float Glass",
+      "grade":"Standard",
+      "thickness_mm":[4,5,6,8,10,12],
+      "visible_light_transmittance_percent":90,
+      "solar_heat_gain_coefficient":0.86,
+      "u_value_w_m2k":5.8,
+      "applications":[
+        "Windows",
+        "Doors",
+        "Partitions"
+      ]
+    },
+    {
+      "id":"GLS002",
+      "name":"Tempered Toughened Glass",
+      "grade":"Safety",
+      "strength_multiplier":5,
+      "fire_resistance":"High",
+      "impact_resistance":"Excellent",
+      "applications":[
+        "Balcony Railings",
+        "Shower Enclosures",
+        "Glass Doors",
+        "Facades"
+      ]
+    },
+    {
+      "id":"GLS003",
+      "name":"Laminated Glass",
+      "grade":"Security",
+      "sound_insulation_db":40,
+      "uv_block_percent":99,
+      "shatter_resistant":true,
+      "applications":[
+        "Skylights",
+        "Security Windows",
+        "Glass Roofs"
+      ]
+    },
+    {
+      "id":"GLS004",
+      "name":"Double Glazed Unit (DGU)",
+      "grade":"Energy Efficient",
+      "u_value_w_m2k":2.6,
+      "sound_insulation_db":35,
+      "thermal_performance":"Excellent",
+      "applications":[
+        "Luxury Homes",
+        "Commercial Buildings",
+        "Energy Efficient Buildings"
+      ]
+    },
+    {
+      "id":"GLS005",
+      "name":"Low-E Glass",
+      "grade":"Premium",
+      "visible_light_transmittance_percent":78,
+      "solar_heat_gain_coefficient":0.35,
+      "u_value_w_m2k":1.8,
+      "energy_saving":true,
+      "applications":[
+        "Green Buildings",
+        "High Performance Homes"
+      ]
+    },
+    {
+      "id":"GLS006",
+      "name":"Tinted Glass",
+      "grade":"Solar Control",
+      "available_colors":[
+        "Grey",
+        "Blue",
+        "Green",
+        "Bronze"
+      ],
+      "reduces_heat_gain":true,
+      "applications":[
+        "Facades",
+        "South Facing Windows"
+      ]
+    },
+    {
+      "id":"GLS007",
+      "name":"Reflective Glass",
+      "grade":"Commercial",
+      "solar_reflectance_percent":45,
+      "privacy":"Daytime",
+      "applications":[
+        "Commercial Buildings",
+        "Curtain Walls"
+      ]
+    },
+    {
+      "id":"GLS008",
+      "name":"Frosted Glass",
+      "grade":"Privacy",
+      "light_transmission_percent":75,
+      "applications":[
+        "Bathrooms",
+        "Office Partitions",
+        "Doors"
+      ]
+    }
+  ],
+
+  "recommended_usage":{
+    "bedroom":"Double Glazed Glass",
+    "living_room":"Low-E Glass",
+    "kitchen":"Tempered Glass",
+    "bathroom":"Frosted Tempered Glass",
+    "balcony":"Laminated Toughened Glass",
+    "office":"Double Glazed Low-E Glass",
+    "staircase":"Laminated Toughened Glass",
+    "facade":"Reflective or Low-E Glass"
+  },
+
+  "performance":{
+    "thermal_insulation":"Excellent",
+    "natural_daylighting":"Excellent",
+    "sound_insulation":"High",
+    "fire_resistance":"High",
+    "weather_resistance":"Excellent",
+    "uv_protection":"Up to 99%"
+  },
+
+  "construction_guidelines":{
+    "minimum_window_thickness_mm":6,
+    "minimum_balcony_glass_mm":12,
+    "minimum_staircase_glass_mm":12,
+    "minimum_partition_glass_mm":10,
+    "edge_polishing_required":true,
+    "tempered_required_for_human_impact":true
+  },
+
+  "selection_rules":[
+    {
+      "condition":"luxury_home=true",
+      "recommended":"Low-E Glass"
+    },
+    {
+      "condition":"high_noise_area=true",
+      "recommended":"Double Glazed Unit"
+    },
+    {
+      "condition":"bathroom=true",
+      "recommended":"Frosted Glass"
+    },
+    {
+      "condition":"balcony=true",
+      "recommended":"Laminated Toughened Glass"
+    },
+    {
+      "condition":"energy_efficient=true",
+      "recommended":"Low-E Double Glazed Glass"
+    }
+  ],
+
+  "cost_index":{
+    "Clear Float Glass":1.0,
+    "Tempered Glass":1.5,
+    "Laminated Glass":1.8,
+    "Double Glazed Unit":2.2,
+    "Low-E Glass":2.6,
+    "Tinted Glass":1.4,
+    "Reflective Glass":1.7,
+    "Frosted Glass":1.3
+  },
+
+  "optimization":{
+    "best_for_daylight":"Clear Float Glass",
+    "best_for_energy":"Low-E Glass",
+    "best_for_noise":"Double Glazed Unit",
+    "best_for_security":"Laminated Glass",
+    "best_for_safety":"Tempered Glass",
+    "best_for_privacy":"Frosted Glass"
+  },
+
+  "quality_checks":[
+    "No visible scratches",
+    "Uniform thickness",
+    "No edge damage",
+    "Correct tempering certification",
+    "Optical distortion within standards",
+    "Proper sealing for insulated units"
+  ],
+
+  "validation_rules":[
+    {
+      "rule":"Balcony railings shall use laminated toughened safety glass.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Human impact areas shall use tempered safety glass.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Bathroom partitions shall use frosted tempered glass.",
+      "severity":"high"
+    },
+    {
+      "rule":"Energy-efficient buildings should use Low-E or DGU glass.",
+      "severity":"medium"
+    }
+  ],
+
+  "sustainability":{
+    "recyclable":true,
+    "solar_control_supported":true,
+    "daylight_optimization":true,
+    "reduces_hvac_load":true,
+    "green_building_certification_supported":true
+  },
+
+  "reference_codes":[
+    "IS 2553",
+    "IS 14900",
+    "National Building Code of India (NBC)",
+    "ASTM C1036",
+    "ASTM C1048",
+    "CPWD Specifications"
+  ]
+}

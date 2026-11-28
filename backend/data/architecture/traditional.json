@@ -1,0 +1,125 @@
+{
+  "style": "traditional",
+
+  "definition": "Traditional architecture focuses on culturally rooted design, vastu compliance, compartmentalized rooms, natural materials, and courtyard-based layouts often seen in Indian homes.",
+
+  "core_principles": [
+    "Strong compartmentalization of rooms",
+    "Central courtyard or open internal space",
+    "High vastu compliance",
+    "Natural ventilation through openings and courtyards",
+    "Hierarchical room importance (puja > living > service)",
+    "Use of local and natural materials",
+    "Privacy through separation of spaces"
+  ],
+
+  "spatial_design_rules": {
+    "living_room": {
+      "preferred_position": "front_area",
+      "min_area_sqft": 150,
+      "closed_layout": true,
+      "separation_from_kitchen": true
+    },
+
+    "kitchen": {
+      "type": "closed_kitchen",
+      "preferred_position": "southeast",
+      "min_area_sqft": 100,
+      "ventilation_required": true
+    },
+
+    "bedroom": {
+      "min_area_sqft": 120,
+      "placement": "quiet_rear_zones",
+      "attached_bathroom_optional": true
+    },
+
+    "pooja_room": {
+      "required": true,
+      "preferred_position": "north_east",
+      "min_area_sqft": 40,
+      "elevated_purity": true
+    },
+
+    "courtyard": {
+      "required": true,
+      "position": "center",
+      "function": ["light", "ventilation", "social_space"],
+      "min_area_sqft": 100
+    }
+  },
+
+  "zoning_rules": {
+    "public_zone": ["living_room", "veranda", "courtyard"],
+    "private_zone": ["bedrooms"],
+    "service_zone": ["kitchen", "store_room", "utility"],
+    "sacred_zone": ["pooja_room"]
+  },
+
+  "circulation_rules": {
+    "corridors": "mandatory",
+    "flow": "room_to_room_with_central_courtyard",
+    "staircase": "side_or_back_position",
+    "entry": "direct_to_veranda_or_living"
+  },
+
+  "geometry_rules": {
+    "preferred_shapes": ["rectangular", "courtyard_based"],
+    "avoid": ["open_plan_designs"],
+    "modular_grid": false
+  },
+
+  "material_palette": [
+    "brick",
+    "natural stone",
+    "wood",
+    "clay tiles",
+    "lime plaster",
+    "terracotta"
+  ],
+
+  "structural_preferences": {
+    "frame": "load_bearing_wall_or_rcc",
+    "roof": "sloped_or_tile_roof",
+    "wall_thickness": "thick_9_to_12_inches",
+    "design_complexity": "medium"
+  },
+
+  "lighting_and_ventilation": {
+    "natural_light_priority": "medium",
+    "courtyard_dependency": true,
+    "window_size": "medium",
+    "cross_ventilation_required": true
+  },
+
+  "vastu_rules": {
+    "strictness": "very_high",
+    "entrance_preferred": ["east", "north"],
+    "kitchen_direction": "southeast_mandatory",
+    "pooja_direction": "northeast_mandatory",
+    "bedroom_restrictions": "south_west_preferred"
+  },
+
+  "energy_and_sustainability": {
+    "rainwater_harvesting_support": true,
+    "solar_support": "medium",
+    "thermal_mass": "high"
+  },
+
+  "optimization_hints": {
+    "space_efficiency": "medium",
+    "privacy_priority": "very_high",
+    "center_of_mass_balance": true,
+    "cost_efficiency": "medium",
+    "cultural_priority": "very_high"
+  },
+
+  "planning_tags": [
+    "courtyard_home",
+    "indian_traditional_design",
+    "vastu_focused",
+    "compartmental_layout",
+    "joint_family_home",
+    "heritage_architecture"
+  ]
+}

@@ -1,0 +1,228 @@
+{
+  "category":"building_materials",
+  "material":"concrete",
+  "version":"2.0",
+  "description":"Comprehensive concrete material database for AI-driven structural design, foundation planning, slab design, durability analysis, cost estimation and construction optimization.",
+
+  "types":[
+    {
+      "id":"CON001",
+      "name":"M10 Plain Cement Concrete",
+      "grade":"M10",
+      "compressive_strength_mpa":10,
+      "mix_ratio":"1:3:6",
+      "applications":[
+        "Levelling Course",
+        "Floor Base",
+        "Footing Bed"
+      ],
+      "load_bearing":false
+    },
+    {
+      "id":"CON002",
+      "name":"M15 Concrete",
+      "grade":"M15",
+      "compressive_strength_mpa":15,
+      "mix_ratio":"1:2:4",
+      "applications":[
+        "PCC",
+        "Walkways",
+        "Small Foundations"
+      ]
+    },
+    {
+      "id":"CON003",
+      "name":"M20 Reinforced Concrete",
+      "grade":"M20",
+      "compressive_strength_mpa":20,
+      "mix_ratio":"1:1.5:3",
+      "applications":[
+        "Slabs",
+        "Beams",
+        "Columns",
+        "Footings"
+      ],
+      "recommended_for":"Residential Buildings"
+    },
+    {
+      "id":"CON004",
+      "name":"M25 Reinforced Concrete",
+      "grade":"M25",
+      "compressive_strength_mpa":25,
+      "design_mix":true,
+      "applications":[
+        "Multi-storey Buildings",
+        "Columns",
+        "Shear Walls"
+      ]
+    },
+    {
+      "id":"CON005",
+      "name":"M30 High Strength Concrete",
+      "grade":"M30",
+      "compressive_strength_mpa":30,
+      "design_mix":true,
+      "applications":[
+        "Commercial Buildings",
+        "High-rise Structures"
+      ]
+    },
+    {
+      "id":"CON006",
+      "name":"Self Compacting Concrete",
+      "grade":"SCC",
+      "compressive_strength_mpa":40,
+      "applications":[
+        "Dense Reinforcement",
+        "Complex Formwork"
+      ]
+    },
+    {
+      "id":"CON007",
+      "name":"High Performance Concrete",
+      "grade":"HPC",
+      "compressive_strength_mpa":50,
+      "applications":[
+        "Bridges",
+        "Premium Buildings",
+        "Industrial Structures"
+      ]
+    }
+  ],
+
+  "physical_properties":{
+    "density_kg_m3":2400,
+    "elastic_modulus_gpa":30,
+    "thermal_conductivity_wmk":1.7,
+    "specific_heat_kjkgk":0.88,
+    "poisson_ratio":0.20
+  },
+
+  "durability":{
+    "fire_resistance":"Excellent",
+    "weather_resistance":"Excellent",
+    "water_resistance":"High",
+    "expected_life_years":75,
+    "freeze_thaw_resistance":"High"
+  },
+
+  "recommended_grades":{
+    "foundation":"M20",
+    "footing":"M20",
+    "slab":"M20",
+    "beam":"M20",
+    "column":"M25",
+    "staircase":"M20",
+    "retaining_wall":"M25",
+    "water_tank":"M30"
+  },
+
+  "construction_guidelines":{
+    "minimum_cover_mm":{
+      "slab":20,
+      "beam":25,
+      "column":40,
+      "footing":50
+    },
+    "curing_days_minimum":7,
+    "recommended_curing_days":14,
+    "maximum_water_cement_ratio":0.50,
+    "slump_mm":{
+      "minimum":75,
+      "recommended":100,
+      "maximum":150
+    }
+  },
+
+  "mixing_requirements":{
+    "cement":"OPC 43/53 Grade",
+    "fine_aggregate":"River Sand or M-Sand",
+    "coarse_aggregate":"20 mm",
+    "water_quality":"Potable Water"
+  },
+
+  "quality_tests":[
+    "Slump Test",
+    "Cube Compression Test",
+    "Rebound Hammer Test",
+    "Ultrasonic Pulse Velocity Test",
+    "Core Test"
+  ],
+
+  "selection_rules":[
+    {
+      "condition":"floors<=2",
+      "recommended_grade":"M20"
+    },
+    {
+      "condition":"floors>2",
+      "recommended_grade":"M25"
+    },
+    {
+      "condition":"water_tank=true",
+      "recommended_grade":"M30"
+    },
+    {
+      "condition":"industrial_building=true",
+      "recommended_grade":"M30"
+    }
+  ],
+
+  "optimization":{
+    "preferred_for_cost":"M20",
+    "preferred_for_strength":"M30",
+    "preferred_for_durability":"HPC",
+    "preferred_for_fast_construction":"Self Compacting Concrete",
+    "preferred_for_residential":"M20"
+  },
+
+  "cost_index":{
+    "M10":0.75,
+    "M15":0.90,
+    "M20":1.00,
+    "M25":1.20,
+    "M30":1.40,
+    "SCC":1.80,
+    "HPC":2.20
+  },
+
+  "sustainability":{
+    "green_concrete_supported":true,
+    "fly_ash_blended_cement":true,
+    "ggbs_supported":true,
+    "recycled_aggregate_supported":true,
+    "low_carbon_mix_available":true
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Residential RCC members shall use minimum M20 concrete.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Minimum curing period shall be 7 days.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Maximum water-cement ratio shall not exceed 0.50.",
+      "severity":"high"
+    },
+    {
+      "rule":"Concrete cover shall comply with IS 456.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Cube strength shall meet specified grade.",
+      "severity":"critical"
+    }
+  ],
+
+  "reference_codes":[
+    "IS 456:2000",
+    "IS 10262",
+    "IS 383",
+    "IS 516",
+    "National Building Code of India (NBC)",
+    "CPWD Specifications"
+  ]
+}

@@ -1,0 +1,259 @@
+{
+  "category":"planning_rules",
+  "module":"adjacency",
+  "version":"2.0",
+  "description":"Comprehensive room adjacency knowledge base for AI-driven residential and commercial floor planning. Defines preferred, acceptable and prohibited room relationships to optimize functionality, privacy, circulation, safety, ventilation and construction efficiency.",
+
+  "objectives":{
+    "minimize_travel_distance":true,
+    "maximize_functionality":true,
+    "improve_privacy":true,
+    "optimize_service_layout":true,
+    "reduce_construction_cost":true,
+    "improve_user_experience":true
+  },
+
+  "preferred_adjacency":[
+    {
+      "room":"Living Room",
+      "adjacent_to":["Entrance","Dining Room","Balcony","Staircase"],
+      "priority":"critical",
+      "score":10
+    },
+    {
+      "room":"Dining Room",
+      "adjacent_to":["Living Room","Kitchen"],
+      "priority":"critical",
+      "score":10
+    },
+    {
+      "room":"Kitchen",
+      "adjacent_to":["Dining Room","Utility Room","Store Room"],
+      "priority":"critical",
+      "score":10
+    },
+    {
+      "room":"Utility Room",
+      "adjacent_to":["Kitchen","Service Balcony"],
+      "priority":"high",
+      "score":9
+    },
+    {
+      "room":"Master Bedroom",
+      "adjacent_to":["Attached Bathroom","Walk-in Closet","Private Balcony"],
+      "priority":"critical",
+      "score":10
+    },
+    {
+      "room":"Bedroom",
+      "adjacent_to":["Bathroom","Wardrobe"],
+      "priority":"high",
+      "score":9
+    },
+    {
+      "room":"Guest Bedroom",
+      "adjacent_to":["Common Bathroom"],
+      "priority":"high",
+      "score":8
+    },
+    {
+      "room":"Study Room",
+      "adjacent_to":["Office","Library"],
+      "priority":"medium",
+      "score":7
+    },
+    {
+      "room":"Office",
+      "adjacent_to":["Entrance","Meeting Room"],
+      "priority":"medium",
+      "score":7
+    },
+    {
+      "room":"Parking",
+      "adjacent_to":["Entrance","Staircase"],
+      "priority":"high",
+      "score":9
+    },
+    {
+      "room":"Pooja Room",
+      "adjacent_to":["Living Room"],
+      "priority":"medium",
+      "score":7
+    },
+    {
+      "room":"Balcony",
+      "adjacent_to":["Living Room","Bedroom"],
+      "priority":"high",
+      "score":8
+    },
+    {
+      "room":"Laundry",
+      "adjacent_to":["Utility Room"],
+      "priority":"medium",
+      "score":7
+    },
+    {
+      "room":"Staircase",
+      "adjacent_to":["Entrance","Living Room"],
+      "priority":"high",
+      "score":8
+    }
+  ],
+
+  "acceptable_adjacency":[
+    {
+      "room":"Living Room",
+      "adjacent_to":["Kitchen"]
+    },
+    {
+      "room":"Dining Room",
+      "adjacent_to":["Balcony"]
+    },
+    {
+      "room":"Bedroom",
+      "adjacent_to":["Study Room"]
+    },
+    {
+      "room":"Kitchen",
+      "adjacent_to":["Service Balcony"]
+    },
+    {
+      "room":"Office",
+      "adjacent_to":["Living Room"]
+    }
+  ],
+
+  "avoid_adjacency":[
+    {
+      "room":"Kitchen",
+      "avoid":["Master Bedroom","Prayer Room"],
+      "penalty":-8
+    },
+    {
+      "room":"Bathroom",
+      "avoid":["Dining Room","Kitchen"],
+      "penalty":-10
+    },
+    {
+      "room":"Parking",
+      "avoid":["Bedroom"],
+      "penalty":-8
+    },
+    {
+      "room":"Utility Room",
+      "avoid":["Living Room"],
+      "penalty":-6
+    },
+    {
+      "room":"Staircase",
+      "avoid":["Kitchen"],
+      "penalty":-5
+    }
+  ],
+
+  "privacy_zones":{
+    "public":[
+      "Entrance",
+      "Living Room",
+      "Dining Room",
+      "Guest Room",
+      "Parking"
+    ],
+    "semi_private":[
+      "Kitchen",
+      "Study Room",
+      "Family Lounge",
+      "Office"
+    ],
+    "private":[
+      "Bedrooms",
+      "Bathrooms",
+      "Walk-in Closet",
+      "Private Balcony"
+    ],
+    "service":[
+      "Utility Room",
+      "Laundry",
+      "Store Room",
+      "Electrical Room"
+    ]
+  },
+
+  "service_clustering":{
+    "wet_areas":[
+      "Kitchen",
+      "Bathroom",
+      "Utility Room",
+      "Laundry"
+    ],
+    "recommended":true,
+    "maximum_distance_m":4,
+    "shared_plumbing_wall":true
+  },
+
+  "circulation_rules":[
+    "Living Room should connect directly to Entrance.",
+    "Dining Room should connect directly to Kitchen.",
+    "Bedrooms should not require crossing public spaces.",
+    "Bathrooms should be easily accessible from bedrooms.",
+    "Utility Room should connect to Kitchen.",
+    "Parking should provide direct access to Entrance."
+  ],
+
+  "optimization_weights":{
+    "functional_relationship":0.30,
+    "privacy":0.20,
+    "circulation":0.20,
+    "construction_cost":0.10,
+    "ventilation":0.10,
+    "future_expansion":0.10
+  },
+
+  "bonuses":{
+    "living_dining_connection":5,
+    "kitchen_utility_connection":5,
+    "bedroom_attached_bath":5,
+    "shared_plumbing_wall":4,
+    "central_staircase":3,
+    "living_balcony_connection":4
+  },
+
+  "penalties":{
+    "bathroom_next_to_dining":-10,
+    "kitchen_next_to_master_bedroom":-8,
+    "parking_next_to_bedroom":-8,
+    "isolated_kitchen":-6,
+    "long_room_travel_distance":-5
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Kitchen shall be adjacent to Dining Room.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Every Bedroom shall have access to a Bathroom.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Wet areas should share plumbing walls whenever possible.",
+      "severity":"high"
+    },
+    {
+      "rule":"Private rooms shall not open directly into public areas.",
+      "severity":"high"
+    },
+    {
+      "rule":"Parking shall have direct access to Entrance.",
+      "severity":"medium"
+    }
+  ],
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "Neufert Architects' Data",
+    "Time Saver Standards for Building Types",
+    "CPWD Building Guidelines",
+    "IS 4963"
+  ]
+}

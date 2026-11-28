@@ -1,0 +1,212 @@
+{
+  "category":"room_standards",
+  "room":"office",
+  "version":"2.0",
+  "description":"Comprehensive home office and professional workspace planning standards for AI-driven residential and commercial floor planning. Covers dimensions, ergonomics, furniture layout, lighting, ventilation, acoustics, networking, accessibility, productivity optimization and smart office features.",
+
+  "dimensions":{
+    "minimum_area_sqft":80,
+    "recommended_area_sqft":140,
+    "luxury_area_sqft":250,
+    "minimum_width_ft":8,
+    "recommended_width_ft":10,
+    "minimum_length_ft":10,
+    "recommended_length_ft":14,
+    "minimum_height_ft":10
+  },
+
+  "types":{
+    "home_office":{
+      "recommended_area_sqft":120,
+      "occupancy":1
+    },
+    "executive_office":{
+      "recommended_area_sqft":200,
+      "occupancy":2
+    },
+    "shared_office":{
+      "recommended_area_sqft":220,
+      "occupancy":4
+    },
+    "study_office":{
+      "recommended_area_sqft":100,
+      "occupancy":1
+    }
+  },
+
+  "location":{
+    "preferred_orientation":[
+      "North",
+      "North-East",
+      "East"
+    ],
+    "preferred_adjacent_rooms":[
+      "Study Room",
+      "Library",
+      "Living Room"
+    ],
+    "avoid_adjacent_rooms":[
+      "Kitchen",
+      "Bathroom",
+      "Utility Room",
+      "Parking",
+      "Children Bedroom"
+    ],
+    "privacy_priority":"High"
+  },
+
+  "furniture":{
+    "work_desk":{
+      "required":true,
+      "minimum_length_mm":1500,
+      "minimum_depth_mm":750,
+      "height_mm":750
+    },
+    "ergonomic_chair":{
+      "required":true,
+      "adjustable":true
+    },
+    "storage_cabinet":true,
+    "bookshelf":true,
+    "visitor_chairs_optional":true,
+    "meeting_table_optional":true
+  },
+
+  "workspace":{
+    "minimum_clearance_mm":1200,
+    "chair_movement_mm":1000,
+    "monitor_distance_mm":650,
+    "multiple_monitor_supported":true
+  },
+
+  "lighting":{
+    "recommended_lux":500,
+    "natural_daylight_required":true,
+    "task_lighting":true,
+    "ambient_led":true,
+    "glare_control":true,
+    "dimmable_supported":true
+  },
+
+  "ventilation":{
+    "cross_ventilation":true,
+    "minimum_windows":2,
+    "air_changes_per_hour":6,
+    "fresh_air_priority":"High"
+  },
+
+  "acoustics":{
+    "minimum_wall_stc":50,
+    "soundproofing_supported":true,
+    "echo_reduction":true,
+    "noise_level_db_max":40
+  },
+
+  "electrical":{
+    "power_outlets":10,
+    "dedicated_computer_point":true,
+    "ups_supported":true,
+    "ethernet_port":true,
+    "usb_outlets_supported":true,
+    "surge_protection":true
+  },
+
+  "networking":{
+    "high_speed_internet":true,
+    "wifi6_supported":true,
+    "ethernet_connection":true,
+    "video_conference_ready":true
+  },
+
+  "flooring":{
+    "recommended_materials":[
+      "Engineered Wood",
+      "Laminate",
+      "Carpet Tile",
+      "Vitrified Tile"
+    ],
+    "anti_static_supported":true,
+    "noise_absorbing":true
+  },
+
+  "accessibility":{
+    "wheelchair_accessible":true,
+    "minimum_door_width_mm":900,
+    "barrier_free":true
+  },
+
+  "smart_features":{
+    "smart_lighting":true,
+    "occupancy_sensor":true,
+    "voice_control":true,
+    "smart_blinds":true,
+    "air_quality_monitor":true,
+    "climate_control":true
+  },
+
+  "optimization":{
+    "productivity":0.99,
+    "comfort":0.98,
+    "lighting":0.98,
+    "ventilation":0.97,
+    "noise_control":0.98
+  },
+
+  "bonuses":{
+    "natural_daylight":5,
+    "cross_ventilation":5,
+    "soundproofing":4,
+    "ergonomic_furniture":5,
+    "high_speed_network":4,
+    "smart_office":3
+  },
+
+  "penalties":{
+    "adjacent_to_kitchen":-10,
+    "poor_lighting":-8,
+    "poor_ventilation":-8,
+    "high_noise":-10,
+    "insufficient_power_outlets":-5,
+    "poor_ergonomics":-6
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Office shall receive adequate natural daylight.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Workspace illumination shall be at least 500 lux.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Office shall provide cross ventilation whenever possible.",
+      "severity":"high"
+    },
+    {
+      "rule":"High-speed internet connectivity shall be available.",
+      "severity":"high"
+    },
+    {
+      "rule":"Noise levels should remain below 40 dB.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_productivity_score":99,
+    "target_lighting_score":98,
+    "target_comfort_score":98,
+    "target_noise_control_score":98,
+    "target_network_reliability":99
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "ASHRAE Standard 62.1",
+    "ISO 9241 Ergonomics",
+    "Energy Conservation Building Code (ECBC)"
+  ]
+}

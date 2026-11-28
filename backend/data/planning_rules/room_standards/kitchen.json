@@ -1,0 +1,240 @@
+{
+  "category":"room_standards",
+  "room":"kitchen",
+  "version":"2.0",
+  "description":"Comprehensive kitchen planning standards for AI-driven residential and commercial floor planning. Covers dimensions, work triangle optimization, storage, plumbing, ventilation, lighting, electrical layout, ergonomics, safety, accessibility and smart kitchen features.",
+
+  "dimensions":{
+    "minimum_area_sqft":70,
+    "recommended_area_sqft":110,
+    "luxury_area_sqft":180,
+    "minimum_width_ft":8,
+    "recommended_width_ft":10,
+    "minimum_length_ft":8,
+    "recommended_length_ft":12,
+    "minimum_height_ft":10
+  },
+
+  "types":{
+    "closed_kitchen":{
+      "recommended_area_sqft":100,
+      "privacy":"High"
+    },
+    "open_kitchen":{
+      "recommended_area_sqft":120,
+      "connected_to":"Dining Room"
+    },
+    "island_kitchen":{
+      "recommended_area_sqft":160,
+      "minimum_clearance_mm":1200
+    },
+    "parallel_kitchen":{
+      "recommended_area_sqft":100
+    },
+    "l_shaped_kitchen":{
+      "recommended_area_sqft":110
+    },
+    "u_shaped_kitchen":{
+      "recommended_area_sqft":140
+    }
+  },
+
+  "location":{
+    "preferred_orientation":[
+      "South-East",
+      "East"
+    ],
+    "preferred_adjacent_rooms":[
+      "Dining Room",
+      "Utility Room",
+      "Store Room"
+    ],
+    "avoid_adjacent_rooms":[
+      "Bathroom",
+      "Master Bedroom",
+      "Pooja Room"
+    ]
+  },
+
+  "work_triangle":{
+    "supported":true,
+    "components":[
+      "Refrigerator",
+      "Sink",
+      "Cooktop"
+    ],
+    "minimum_total_length_ft":13,
+    "maximum_total_length_ft":26,
+    "ideal_total_length_ft":20
+  },
+
+  "countertop":{
+    "recommended_height_mm":850,
+    "recommended_depth_mm":600,
+    "minimum_clearance_mm":1200,
+    "materials":[
+      "Granite",
+      "Quartz",
+      "Solid Surface",
+      "Marble"
+    ]
+  },
+
+  "storage":{
+    "base_cabinets":true,
+    "wall_cabinets":true,
+    "pantry":true,
+    "corner_storage":true,
+    "pull_out_units":true,
+    "tall_unit_optional":true
+  },
+
+  "appliances":{
+    "cooktop":true,
+    "chimney":true,
+    "refrigerator":true,
+    "microwave_optional":true,
+    "oven_optional":true,
+    "dishwasher_optional":true,
+    "water_purifier":true
+  },
+
+  "plumbing":{
+    "hot_water":true,
+    "cold_water":true,
+    "sink_required":true,
+    "minimum_sink_width_mm":600,
+    "water_filter_connection":true,
+    "floor_drain_optional":true
+  },
+
+  "ventilation":{
+    "window_required":true,
+    "minimum_window_area_sqft":6,
+    "chimney_required":true,
+    "exhaust_fan_required":true,
+    "air_changes_per_hour":15,
+    "cross_ventilation":true
+  },
+
+  "lighting":{
+    "recommended_lux":350,
+    "natural_daylight_required":true,
+    "under_cabinet_lighting":true,
+    "ambient_led":true,
+    "task_lighting":true,
+    "dimmable_supported":true
+  },
+
+  "electrical":{
+    "power_outlets":8,
+    "dedicated_refrigerator_point":true,
+    "microwave_point":true,
+    "chimney_point":true,
+    "dishwasher_point_optional":true,
+    "smart_switches_supported":true
+  },
+
+  "flooring":{
+    "recommended_materials":[
+      "Vitrified Tile",
+      "Porcelain Tile",
+      "Anti-Skid Ceramic Tile"
+    ],
+    "anti_skid":true,
+    "easy_to_clean":true
+  },
+
+  "safety":{
+    "fire_extinguisher":true,
+    "gas_leak_detector":true,
+    "smoke_detector":true,
+    "heat_resistant_finish":true,
+    "child_safe_locks_optional":true
+  },
+
+  "accessibility":{
+    "minimum_walkway_mm":1200,
+    "wheelchair_accessible_optional":true,
+    "barrier_free_design_supported":true
+  },
+
+  "smart_features":{
+    "smart_appliances":true,
+    "motion_sensor_lighting":true,
+    "voice_control_supported":true,
+    "water_leak_sensor":true,
+    "energy_monitoring":true,
+    "smart_chimney":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.97,
+    "workflow":0.99,
+    "storage":0.96,
+    "ventilation":0.98,
+    "lighting":0.97
+  },
+
+  "bonuses":{
+    "utility_room_connection":5,
+    "work_triangle":5,
+    "cross_ventilation":5,
+    "natural_daylight":5,
+    "smart_appliances":3,
+    "island_layout":2
+  },
+
+  "penalties":{
+    "adjacent_to_bathroom":-10,
+    "poor_ventilation":-10,
+    "no_chimney":-8,
+    "insufficient_storage":-6,
+    "poor_work_triangle":-8,
+    "slippery_floor":-5
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Kitchen shall be adjacent to the dining room.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Kitchen shall include a chimney or exhaust system.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Natural ventilation shall be provided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Kitchen work triangle shall be optimized.",
+      "severity":"high"
+    },
+    {
+      "rule":"Anti-skid flooring shall be used.",
+      "severity":"high"
+    },
+    {
+      "rule":"Kitchen shall not share a wall with bathrooms where possible.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_workflow_score":99,
+    "target_storage_score":95,
+    "target_ventilation_score":98,
+    "target_safety_score":98,
+    "target_energy_efficiency":95
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "IS 1172",
+    "ASHRAE Standard 62.1",
+    "Energy Conservation Building Code (ECBC)"
+  ]
+}

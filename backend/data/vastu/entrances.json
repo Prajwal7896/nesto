@@ -1,0 +1,165 @@
+{
+  "category":"architectural_planning_system",
+  "module":"entrance_design_rules",
+  "version":"2.0",
+  "description":"Comprehensive entrance design rules for AI-driven architectural planning. Covers main entry placement, secondary/service entrances, security, accessibility, orientation, circulation integration, aesthetics, and functional zoning for residential and commercial buildings.",
+
+  "objectives":{
+    "ensure_safe_access":true,
+    "improve_flow_of_movement":true,
+    "enhance_security_control":true,
+    "optimize_orientation_and_energy":true,
+    "support_clear_zone_separation":true
+  },
+
+  "entrance_types":{
+    "main_entrance":true,
+    "service_entrance":true,
+    "garage_entry":true,
+    "emergency_exit":true,
+    "secondary_family_entrance":true
+  },
+
+  "main_entrance_rules":{
+    "preferred_directions":[
+      "North",
+      "East",
+      "North-East"
+    ],
+    "avoid_directions":[
+      "South-West (for main entry)",
+      "direct_west_heat_exposure"
+    ],
+    "design_requirements":{
+      "visible_from_approach_road":true,
+      "well_lit":true,
+      "covered_porch_required":true,
+      "security_gate_required":true,
+      "step_free_entry_preferred":true
+    },
+    "aesthetic_rules":{
+      "symmetry_preferred":true,
+      "landscape_framing_required":true,
+      "strong_visual_identity":true
+    }
+  },
+
+  "service_entrance_rules":{
+    "location_preference":[
+      "South",
+      "West",
+      "South-West"
+    ],
+    "usage":{
+      "kitchen_supply_access":true,
+      "staff_entry":true,
+      "waste_disposal_route":true
+    },
+    "separation_required":true,
+    "hidden_from_main_view":true
+  },
+
+  "garage_entry_rules":{
+    "separate_driveway_required":true,
+    "minimum_driveway_width_m":3,
+    "turning_radius_required":true,
+    "direct_access_to_service_zone_preferred":true
+  },
+
+  "security_rules":{
+    "controlled_access_required":true,
+    "cctv_coverage_required":true,
+    "visitor_screening_zone_required":true,
+    "boundary_wall_required":true,
+    "lighting_required_at_night":true
+  },
+
+  "circulation_integration":{
+    "direct_connection_to_lobby":true,
+    "clear_wayfinding_required":true,
+    "avoid_crossing_service_and_public_flows":true,
+    "buffer_zone_required_at_entry":true
+  },
+
+  "accessibility":{
+    "wheelchair_access_required":true,
+    "ramp_instead_of_steps_preferred":true,
+    "minimum_door_width_mm":900,
+    "non_slip_entry_surface_required":true
+  },
+
+  "environmental_rules":{
+    "sun_shading_required_on_west_entries":true,
+    "rain_protection_canopy_required":true,
+    "wind_barrier_required_in_open_sites":true,
+    "natural_light_at_entry_preferred":true
+  },
+
+  "zoning_integration":{
+    "public_zone_connection":["main_entrance","lobby"],
+    "service_zone_connection":["service_entrance","kitchen","utility"],
+    "private_zone_protection_from_direct_entry":true
+  },
+
+  "spatial_planning":{
+    "entry_courtyard_optional":true,
+    "double_height_foyer_optional":true,
+    "waiting_area_required_for_commercial":true,
+    "transition_space_required":true
+  },
+
+  "optimization":{
+    "security_score":0.98,
+    "flow_efficiency":0.96,
+    "orientation_efficiency":0.95,
+    "user_experience":0.97,
+    "privacy_control":0.96
+  },
+
+  "bonuses":{
+    "north_east_main_entrance":5,
+    "covered_porch_design":5,
+    "clear_zone_separation":5,
+    "landscape_framed_entry":4,
+    "secure_buffer_zone":5
+  },
+
+  "penalties":{
+    "south_west_main_entrance":-9,
+    "direct_service_public_conflict":-10,
+    "no_security_buffer":-9,
+    "poor_visibility_entry":-8,
+    "no_weather_protection":-8
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Main entrance must be clearly visible and accessible.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Service and public entrances must be separated.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper security and lighting must be provided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Accessibility standards must be followed at all entrances.",
+      "severity":"high"
+    },
+    {
+      "rule":"Environmental protection (rain/sun/wind) must be ensured.",
+      "severity":"high"
+    }
+  ],
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 456:2000",
+    "Fire Safety Regulations India",
+    "Universal Accessibility Guidelines",
+    "Urban Design Standards"
+  ]
+}

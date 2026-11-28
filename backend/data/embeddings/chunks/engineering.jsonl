@@ -1,0 +1,15 @@
+{"id":"E001","text":"Load-bearing walls transfer structural load from slab and beams down to the foundation and must not be removed without structural redesign.","source":"engineering.json","metadata":{"type":"load_bearing"}}
+{"id":"E002","text":"Columns must be aligned vertically across all floors to ensure proper load transfer and structural stability.","source":"engineering.json","metadata":{"type":"column_alignment"}}
+{"id":"E003","text":"Beam depth increases with span length to reduce deflection and improve structural strength.","source":"engineering.json","metadata":{"type":"beam_design"}}
+{"id":"E004","text":"RCC (Reinforced Cement Concrete) combines steel reinforcement with concrete to resist both compression and tension forces.","source":"engineering.json","metadata":{"type":"rcc"}}
+{"id":"E005","text":"Slab thickness for residential buildings typically ranges from 100mm to 150mm depending on load and span.","source":"engineering.json","metadata":{"type":"slab_design"}}
+{"id":"E006","text":"Footings must be placed below the soil’s bearing capacity depth to prevent settlement and structural failure.","source":"engineering.json","metadata":{"type":"foundation"}}
+{"id":"E007","text":"Earthquake-resistant buildings use shear walls, base isolation, and ductile reinforcement design to absorb seismic energy.","source":"engineering.json","metadata":{"type":"seismic"}}
+{"id":"E008","text":"Shear walls are vertical structural elements that resist lateral forces caused by wind and earthquakes.","source":"engineering.json","metadata":{"type":"shear_wall"}}
+{"id":"E009","text":"Plumbing systems should maintain proper slope in drainage pipes to ensure gravity-based flow without blockage.","source":"engineering.json","metadata":{"type":"plumbing"}}
+{"id":"E010","text":"HVAC systems require proper duct sizing and airflow balance to maintain indoor thermal comfort efficiently.","source":"engineering.json","metadata":{"type":"hvac"}}
+{"id":"E011","text":"Electrical load distribution must be balanced across phases to avoid overheating and system failure.","source":"engineering.json","metadata":{"type":"electrical"}}
+{"id":"E012","text":"Concrete curing must be maintained for at least 7 to 14 days to achieve optimal strength development.","source":"engineering.json","metadata":{"type":"curing"}}
+{"id":"E013","text":"Waterproofing is essential in bathrooms, terraces, and basements to prevent long-term structural damage.","source":"engineering.json","metadata":{"type":"waterproofing"}}
+{"id":"E014","text":"Expansion joints are required in long concrete structures to handle thermal expansion and prevent cracking.","source":"engineering.json","metadata":{"type":"expansion_joint"}}
+{"id":"E015","text":"Soil testing is mandatory before foundation design to determine bearing capacity and soil type classification.","source":"engineering.json","metadata":{"type":"soil_testing"}}

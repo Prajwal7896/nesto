@@ -1,0 +1,194 @@
+{
+  "category":"architectural_planning_system",
+  "module":"site_orientation_directions",
+  "version":"2.0",
+  "description":"Comprehensive directional (cardinal orientation) rules for AI-driven building planning. Covers North/South/East/West placement logic, Vastu-inspired zoning, sunlight optimization, wind direction use, privacy control, and functional room orientation.",
+
+  "objectives":{
+    "optimize_natural_light":true,
+    "optimize_cross_ventilation":true,
+    "improve_energy_efficiency":true,
+    "enhance_functional_room_orientation":true,
+    "maintain_privacy_and_comfort":true
+  },
+
+  "cardinal_directions":{
+    "north":{
+      "character":"stable_cool_light",
+      "best_for":[
+        "study_room",
+        "office",
+        "living_room",
+        "water_features"
+      ],
+      "notes":"Soft indirect light, ideal for workspaces and calm areas"
+    },
+    "south":{
+      "character":"strong_sun_heat",
+      "best_for":[
+        "storage",
+        "staircase",
+        "service_areas",
+        "external_walls"
+      ],
+      "notes":"High heat gain, needs shading and insulation"
+    },
+    "east":{
+      "character":"morning_sun_light",
+      "best_for":[
+        "main_entrance",
+        "bedrooms",
+        "puja_room",
+        "balcony"
+      ],
+      "notes":"Healthy morning sunlight, highly preferred for living spaces"
+    },
+    "west":{
+      "character":"afternoon_heat",
+      "best_for":[
+        "living_room_buffer",
+        "toilets",
+        "parking",
+        "utility_spaces"
+      ],
+      "notes":"Strong afternoon heat, requires shading or secondary use spaces"
+    }
+  },
+
+  "intercardinal_directions":{
+    "north_east":{
+      "priority":"very_high",
+      "best_for":[
+        "puja_room",
+        "water_source",
+        "open_courtyard"
+      ],
+      "notes":"Most auspicious + best natural light and energy flow"
+    },
+    "north_west":{
+      "priority":"medium",
+      "best_for":[
+        "guest_room",
+        "storage",
+        "ventilation_spaces"
+      ],
+      "notes":"Good for temporary and flexible spaces"
+    },
+    "south_east":{
+      "priority":"functional",
+      "best_for":[
+        "kitchen",
+        "electrical_room",
+        "fire_related_zones"
+      ],
+      "notes":"Hot zone, good for fire and heat-based activities"
+    },
+    "south_west":{
+      "priority":"high_stability",
+      "best_for":[
+        "master_bedroom",
+        "heavy_storage",
+        "structural_mass"
+      ],
+      "notes":"Most stable zone, ideal for heavy and private spaces"
+    }
+  },
+
+  "sunlight_rules":{
+    "maximize_east_light":true,
+    "control_west_heat":true,
+    "north_light_for_workspaces":true,
+    "south_shading_required":true
+  },
+
+  "wind_and_ventilation":{
+    "preferred_wind_flow":"east_to_west_or_north_east_to_south_west",
+    "cross_ventilation_required":true,
+    "window_alignment_opposite_sides":true,
+    "courtyard_enhances_airflow":true
+  },
+
+  "zoning_by_direction":{
+    "public_zone_preference":[
+      "north",
+      "east"
+    ],
+    "private_zone_preference":[
+      "south_west",
+      "west"
+    ],
+    "service_zone_preference":[
+      "south",
+      "south_east",
+      "west"
+    ]
+  },
+
+  "energy_efficiency":{
+    "reduce_heat_gain_west_south":true,
+    "maximize_daylight_north_east":true,
+    "use_shading_devices_south_west":true,
+    "solar_panels_best_orientation":"south_facing_roof"
+  },
+
+  "privacy_rules":{
+    "buffer_zones_on_west_south":true,
+    "use_landscape_screening":true,
+    "avoid_large_windows_on_west_side":true
+  },
+
+  "optimization":{
+    "orientation_efficiency":0.98,
+    "thermal_comfort":0.96,
+    "daylight_utilization":0.97,
+    "ventilation_efficiency":0.95,
+    "privacy_score":0.96
+  },
+
+  "bonuses":{
+    "north_east_open_space":5,
+    "east_facing_entrance":5,
+    "south_west_master_bedroom":5,
+    "north_facing_workspaces":4,
+    "cross_ventilation_alignment":5
+  },
+
+  "penalties":{
+    "south_east_bedroom":-8,
+    "west_facing_large_windows":-9,
+    "north_east_blocked":-10,
+    "poor_ventilation_alignment":-8,
+    "no_shading_in_hot_zones":-9
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Orientation must maximize light and ventilation efficiency.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Heat-prone directions must be properly shaded or buffered.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Functional zoning must align with directional suitability.",
+      "severity":"high"
+    },
+    {
+      "rule":"Cross ventilation must align with wind direction flow.",
+      "severity":"high"
+    },
+    {
+      "rule":"Private zones must be placed in stable directional areas.",
+      "severity":"high"
+    }
+  ],
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "Energy Conservation Building Code (ECBC)",
+    "IS 456:2000",
+    "Vastu Shastra Principles (optional)",
+    "Passive Solar Design Standards"
+  ]
+}

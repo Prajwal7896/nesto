@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login | Secure Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #10b981;
+            --primary-hover: #059669;
+            --bg-gradient: linear-gradient(135deg, #f0fdf4 0%, #d1fae5 100%);
+            --glass-bg: rgba(255, 255, 255, 0.7);
+            --text-main: #000000;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--bg-gradient);
+            padding: 20px;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 420px;
+            padding: 40px;
+            background: var(--glass-bg);
+            backdrop-filter: blur(15px);
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.5);
+            box-shadow: 0 25px 50px -12px rgba(16, 185, 129, 0.15);
+        }
+
+        h1 { font-size: 1.75rem; color: var(--text-main); margin-bottom: 8px; text-align: center; font-weight: 700; }
+        p { color: var(--text-main); margin-bottom: 32px; text-align: center; font-size: 0.95rem; }
+
+        input {
+            width: 100%;
+            padding: 14px 18px;
+            margin-bottom: 16px;
+            border: 1.5px solid #a7f3d0;
+            border-radius: 14px;
+            font-size: 1rem;
+            transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            background: rgba(255,255,255,0.5);
+            color: var(--text-main);
+        }
+
+        input:focus {
+            outline: none;
+            border-color: var(--primary);
+            box-shadow: 0 0 0 4px rgba(16, 185, 129, 0.1);
+        }
+
+        .password { position: relative; }
+        .password span {
+            position: absolute; right: 18px; top: 16px; 
+            cursor: pointer; opacity: 0.7; font-size: 1.1rem; color: var(--text-main);
+        }
+
+        .options { display: flex; justify-content: space-between; font-size: 0.85rem; margin-bottom: 24px; color: var(--text-main); }
+        .options a { color: var(--primary); text-decoration: none; font-weight: 500; }
+
+        button#btn {
+            width: 100%;
+            padding: 14px;
+            border: none;
+            border-radius: 14px;
+            font-size: 1rem;
+            font-weight: 600;
+            background: var(--primary);
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button#btn:hover { background: var(--primary-hover); transform: translateY(-1px); }
+
+        .divider { margin: 24px 0; text-align: center; position: relative; color: var(--text-main); font-size: 0.8rem; }
+        .divider::before, .divider::after { content: ""; position: absolute; top: 50%; width: 40%; height: 1px; background: #a7f3d0; }
+        .divider::before { left: 0; }
+        .divider::after { right: 0; }
+
+        .social { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .social button {
+            padding: 12px; border: 1px solid #a7f3d0; border-radius: 12px;
+            background: white; cursor: pointer; font-size: 0.9rem; font-weight: 500; color: var(--text-main);
+            transition: 0.2s;
+        }
+        .social button:hover { background: #f0fdf4; }
+
+        .signup { margin-top: 24px; text-align: center; font-size: 0.9rem; color: var(--text-main); }
+        .signup a { color: var(--primary); text-decoration: none; font-weight: 600; }
+
+        .spinner { display: none; width: 24px; height: 24px; border: 3px solid #10b981; border-top: 3px solid transparent; border-radius: 50%; margin: 10px auto; animation: spin 1s linear infinite; }
+        @keyframes spin { 100% { transform: rotate(360deg); } }
+
+        .error { background: #fee2e2; color: #b91c1c; padding: 12px; border-radius: 12px; margin-bottom: 20px; font-size: 0.85rem; text-align: center; }
+    </style>
+</head>
+<body>
+
+    <div class="card">
+        <h1>Welcome Back</h1>
+        <p>Sign in to access your account</p>
+
+        {% if error %}
+        <div class="error">{{ error }}</div>
+        {% endif %}
+
+        <form action="/login" method="POST" onsubmit="loading()">
+            <input type="email" name="email" placeholder="Email Address" required>
+            <div class="password">
+                <input id="password" type="password" name="password" placeholder="Password" required>
+                <span onclick="togglePassword()">👁</span>
+            </div>
+
+            <div class="options">
+                <label><input type="checkbox" name="remember" style="width: auto; margin-right: 5px;"> Remember Me</label>
+                <a href="/forgot-password">Forgot password?</a>
+            </div>
+
+            <button id="btn" type="submit">Sign In</button>
+            <div class="spinner" id="spinner"></div>
+        </form>
+
+        <div class="divider">OR CONTINUE WITH</div>
+        <div class="social">
+            <button type="button" onclick="window.location='/auth/google'">Google</button>
+            <button type="button" onclick="window.location='/auth/github'">GitHub</button>
+        </div>
+
+        <div class="signup">
+            Don't have an account? <a href="/register">Sign up</a>
+        </div>
+    </div>
+
+    <script>
+        function togglePassword(){
+            let p = document.getElementById("password");
+            p.type = p.type === "password" ? "text" : "password";
+        }
+        function loading(){
+            document.getElementById("btn").style.display = "none";
+            document.getElementById("spinner").style.display = "block";
+        }
+    </script>
+</body>
+</html>

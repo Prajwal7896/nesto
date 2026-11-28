@@ -1,0 +1,242 @@
+{
+  "category":"building_materials",
+  "material":"wood",
+  "version":"2.0",
+  "description":"Comprehensive wood material database for AI-driven residential and commercial building planning, furniture selection, doors, windows, flooring, roofing, structural timber applications, durability analysis, sustainability and cost optimization.",
+
+  "types":[
+    {
+      "id":"WD001",
+      "name":"Teak Wood",
+      "category":"Hardwood",
+      "density_kg_m3":670,
+      "hardness":"Excellent",
+      "durability":"Excellent",
+      "termite_resistance":"Excellent",
+      "water_resistance":"Excellent",
+      "lifespan_years":80,
+      "applications":[
+        "Main Doors",
+        "Luxury Furniture",
+        "Windows",
+        "Cabinets",
+        "Flooring"
+      ]
+    },
+    {
+      "id":"WD002",
+      "name":"Sal Wood",
+      "category":"Hardwood",
+      "density_kg_m3":850,
+      "hardness":"Excellent",
+      "durability":"Very High",
+      "termite_resistance":"High",
+      "lifespan_years":70,
+      "applications":[
+        "Structural Members",
+        "Door Frames",
+        "Columns",
+        "Beams"
+      ]
+    },
+    {
+      "id":"WD003",
+      "name":"Oak Wood",
+      "category":"Hardwood",
+      "density_kg_m3":720,
+      "hardness":"High",
+      "durability":"High",
+      "applications":[
+        "Furniture",
+        "Flooring",
+        "Interior Panels"
+      ]
+    },
+    {
+      "id":"WD004",
+      "name":"Pine Wood",
+      "category":"Softwood",
+      "density_kg_m3":510,
+      "hardness":"Medium",
+      "durability":"Moderate",
+      "applications":[
+        "Furniture",
+        "Interior Decoration",
+        "Wall Panels"
+      ]
+    },
+    {
+      "id":"WD005",
+      "name":"Engineered Wood",
+      "category":"Composite",
+      "density_kg_m3":700,
+      "stability":"Excellent",
+      "warping":"Low",
+      "applications":[
+        "Wardrobes",
+        "Kitchen Cabinets",
+        "Office Furniture"
+      ]
+    },
+    {
+      "id":"WD006",
+      "name":"Plywood",
+      "category":"Engineered Panel",
+      "density_kg_m3":650,
+      "waterproof_grade_available":true,
+      "applications":[
+        "Furniture",
+        "Partitions",
+        "Cabinets",
+        "False Ceiling"
+      ]
+    },
+    {
+      "id":"WD007",
+      "name":"MDF",
+      "category":"Engineered Panel",
+      "density_kg_m3":750,
+      "smooth_finish":"Excellent",
+      "applications":[
+        "Interior Furniture",
+        "Decorative Panels"
+      ]
+    },
+    {
+      "id":"WD008",
+      "name":"Bamboo Engineered Wood",
+      "category":"Sustainable",
+      "density_kg_m3":720,
+      "eco_friendly":true,
+      "applications":[
+        "Flooring",
+        "Furniture",
+        "Wall Panels"
+      ]
+    }
+  ],
+
+  "recommended_usage":{
+    "main_door":"Teak Wood",
+    "bedroom_door":"Teak Wood",
+    "windows":"Teak Wood",
+    "kitchen_cabinets":"Marine Plywood",
+    "wardrobes":"Engineered Wood",
+    "flooring":"Oak Wood",
+    "roof_truss":"Sal Wood",
+    "stairs":"Teak Wood",
+    "office_furniture":"Engineered Wood",
+    "decorative_panels":"MDF"
+  },
+
+  "physical_properties":{
+    "thermal_conductivity_wmk":0.16,
+    "fire_resistance":"Moderate",
+    "sound_absorption":"Good",
+    "renewable_material":true
+  },
+
+  "construction_guidelines":{
+    "recommended_moisture_content_percent":12,
+    "seasoned_wood_required":true,
+    "termite_treatment_required":true,
+    "fire_retardant_coating_recommended":true
+  },
+
+  "selection_rules":[
+    {
+      "condition":"luxury_home=true",
+      "recommended":"Teak Wood"
+    },
+    {
+      "condition":"budget_home=true",
+      "recommended":"Engineered Wood"
+    },
+    {
+      "condition":"high_humidity=true",
+      "recommended":"Marine Plywood"
+    },
+    {
+      "condition":"green_building=true",
+      "recommended":"Bamboo Engineered Wood"
+    }
+  ],
+
+  "quality_checks":[
+    "Seasoned timber",
+    "No visible cracks",
+    "Straight grain",
+    "No fungal attack",
+    "No termite damage",
+    "Uniform moisture content",
+    "ISI certified plywood"
+  ],
+
+  "optimization":{
+    "best_for_strength":"Sal Wood",
+    "best_for_luxury":"Teak Wood",
+    "best_for_furniture":"Engineered Wood",
+    "best_for_flooring":"Oak Wood",
+    "best_for_sustainability":"Bamboo Engineered Wood",
+    "best_for_budget":"Plywood"
+  },
+
+  "cost_index":{
+    "Pine Wood":0.70,
+    "Plywood":0.90,
+    "Engineered Wood":1.00,
+    "MDF":0.80,
+    "Oak Wood":1.40,
+    "Sal Wood":1.60,
+    "Teak Wood":2.40,
+    "Bamboo Engineered Wood":1.20
+  },
+
+  "maintenance":{
+    "polishing_interval_years":5,
+    "termite_inspection_interval_years":2,
+    "protective_coating_interval_years":4,
+    "cleaning":"Dry or slightly damp cloth"
+  },
+
+  "sustainability":{
+    "renewable":true,
+    "fsc_certified_supported":true,
+    "recyclable":true,
+    "low_carbon_material":true,
+    "green_building_certification_supported":true
+  },
+
+  "validation_rules":[
+    {
+      "rule":"All structural timber shall be seasoned before installation.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Wood exposed to moisture shall receive waterproof treatment.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Anti-termite treatment is mandatory for wooden components.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Main entrance doors should use hardwood.",
+      "severity":"high"
+    },
+    {
+      "rule":"Only ISI-certified plywood shall be used for cabinetry.",
+      "severity":"medium"
+    }
+  ],
+
+  "reference_codes":[
+    "IS 303",
+    "IS 710",
+    "IS 883",
+    "IS 401",
+    "National Building Code of India (NBC)",
+    "CPWD Specifications",
+    "Forest Stewardship Council (FSC)"
+  ]
+}

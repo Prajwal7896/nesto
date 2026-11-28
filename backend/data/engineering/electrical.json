@@ -1,0 +1,221 @@
+{
+  "category":"electrical_engineering",
+  "version":"2.0",
+  "description":"Residential electrical planning standards used by the AI planner for safe, efficient and code-compliant electrical layouts.",
+
+  "service_connection":{
+    "supply_voltage":"230V Single Phase / 415V Three Phase",
+    "frequency":"50 Hz",
+    "main_breaker_required":true,
+    "earthing_required":true,
+    "lightning_protection_recommended":true
+  },
+
+  "distribution_board":{
+    "location":"Near Main Entrance",
+    "minimum_height_m":1.5,
+    "rcbo_required":true,
+    "mcb_required":true,
+    "surge_protection_required":true
+  },
+
+  "room_requirements":[
+    {
+      "room":"Living Room",
+      "light_points":2,
+      "fan_points":1,
+      "socket_6A":6,
+      "socket_16A":1,
+      "tv_point":1,
+      "internet_point":1,
+      "ac_point":1
+    },
+    {
+      "room":"Master Bedroom",
+      "light_points":2,
+      "fan_points":1,
+      "socket_6A":5,
+      "socket_16A":1,
+      "ac_point":1,
+      "tv_point":1
+    },
+    {
+      "room":"Bedroom",
+      "light_points":2,
+      "fan_points":1,
+      "socket_6A":4,
+      "socket_16A":1,
+      "ac_point":1
+    },
+    {
+      "room":"Kitchen",
+      "light_points":2,
+      "socket_6A":4,
+      "socket_16A":4,
+      "chimney_point":1,
+      "refrigerator_point":1,
+      "microwave_point":1,
+      "dishwasher_point":1,
+      "water_purifier_point":1
+    },
+    {
+      "room":"Bathroom",
+      "light_points":2,
+      "geyser_point":1,
+      "exhaust_fan":1,
+      "socket_6A":1
+    },
+    {
+      "room":"Dining Room",
+      "light_points":2,
+      "fan_points":1,
+      "socket_6A":2
+    },
+    {
+      "room":"Study Room",
+      "light_points":2,
+      "fan_points":1,
+      "socket_6A":6,
+      "internet_point":2
+    },
+    {
+      "room":"Home Office",
+      "light_points":2,
+      "socket_6A":8,
+      "internet_point":2,
+      "ups_point":1
+    },
+    {
+      "room":"Balcony",
+      "light_points":1,
+      "weatherproof_socket":1
+    },
+    {
+      "room":"Parking",
+      "light_points":2,
+      "ev_charger_point":1,
+      "socket_16A":1
+    }
+  ],
+
+  "wire_sizes":{
+    "lighting":"1.5 sqmm",
+    "general_socket":"2.5 sqmm",
+    "air_conditioner":"4 sqmm",
+    "geyser":"4 sqmm",
+    "kitchen_heavy_load":"6 sqmm",
+    "main_supply":"10 sqmm"
+  },
+
+  "circuit_rules":[
+    "Lighting and power circuits shall be separated.",
+    "Kitchen appliances shall have dedicated circuits.",
+    "Air conditioners shall have dedicated MCBs.",
+    "Geysers shall have dedicated circuits.",
+    "EV chargers shall have dedicated protection.",
+    "Heavy loads shall not share lighting circuits."
+  ],
+
+  "switchboard_height":{
+    "switches_m":1.2,
+    "sockets_m":0.3,
+    "kitchen_counter_sockets_m":1.1
+  },
+
+  "safety_rules":[
+    "Earth leakage protection mandatory.",
+    "All metal appliances must be earthed.",
+    "Bathrooms must use waterproof fittings.",
+    "No socket within 600 mm of shower.",
+    "Use fire-resistant wires.",
+    "Provide child-safe sockets where applicable."
+  ],
+
+  "lighting_guidelines":[
+    {
+      "room":"Living Room",
+      "lux":200
+    },
+    {
+      "room":"Kitchen",
+      "lux":500
+    },
+    {
+      "room":"Bedroom",
+      "lux":150
+    },
+    {
+      "room":"Study Room",
+      "lux":500
+    },
+    {
+      "room":"Bathroom",
+      "lux":250
+    },
+    {
+      "room":"Parking",
+      "lux":100
+    }
+  ],
+
+  "smart_home":{
+    "smart_switches":true,
+    "motion_sensors":true,
+    "smart_lighting":true,
+    "video_doorbell":true,
+    "cctv_support":true,
+    "wifi_access_points":true,
+    "voice_assistant_ready":true
+  },
+
+  "backup_power":{
+    "ups_room":"Utility Room",
+    "generator_optional":true,
+    "solar_inverter_supported":true,
+    "battery_backup_supported":true
+  },
+
+  "renewable_energy":{
+    "solar_ready":true,
+    "roof_conduit_required":true,
+    "net_metering_supported":true
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Every room must have lighting.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Kitchen requires dedicated appliance circuits.",
+      "severity":"high"
+    },
+    {
+      "rule":"Bathrooms require earth leakage protection.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Distribution board must be accessible.",
+      "severity":"high"
+    },
+    {
+      "rule":"Heavy appliances require dedicated MCB.",
+      "severity":"high"
+    }
+  ],
+
+  "optimization":{
+    "minimize_wire_length":true,
+    "balance_load":true,
+    "reduce_voltage_drop":true,
+    "energy_efficient_lighting":true,
+    "future_expansion_supported":true
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 732:2019",
+    "IS 3043",
+    "Central Electricity Authority Regulations"
+  ]
+}

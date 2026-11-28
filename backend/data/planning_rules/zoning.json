@@ -1,0 +1,280 @@
+{
+  "category":"planning_rules",
+  "module":"zoning",
+  "version":"2.0",
+  "description":"Comprehensive functional zoning standards for AI-driven residential and commercial building planning. Used for intelligent room grouping, circulation optimization, privacy management, service planning, structural efficiency, environmental performance and future expansion.",
+
+  "objectives":{
+    "functional_separation":true,
+    "maximize_privacy":true,
+    "optimize_circulation":true,
+    "cluster_services":true,
+    "improve_daylighting":true,
+    "improve_ventilation":true,
+    "support_future_expansion":true
+  },
+
+  "zones":{
+    "public":{
+      "rooms":[
+        "Entrance",
+        "Foyer",
+        "Living Room",
+        "Dining Room",
+        "Guest Lounge",
+        "Parking"
+      ],
+      "access":"Direct",
+      "privacy_level":"Low"
+    },
+
+    "semi_private":{
+      "rooms":[
+        "Kitchen",
+        "Family Lounge",
+        "Study Room",
+        "Office",
+        "Balcony",
+        "Pooja Room"
+      ],
+      "access":"Controlled",
+      "privacy_level":"Medium"
+    },
+
+    "private":{
+      "rooms":[
+        "Master Bedroom",
+        "Bedroom",
+        "Children Bedroom",
+        "Guest Bedroom",
+        "Walk-in Closet",
+        "Attached Bathroom"
+      ],
+      "access":"Restricted",
+      "privacy_level":"High"
+    },
+
+    "service":{
+      "rooms":[
+        "Utility Room",
+        "Laundry",
+        "Store Room",
+        "Electrical Room",
+        "Pump Room",
+        "Mechanical Room",
+        "Water Tank"
+      ],
+      "access":"Service Only",
+      "privacy_level":"Restricted"
+    }
+  },
+
+  "adjacency_rules":[
+    {
+      "from":"Living Room",
+      "to":"Dining Room",
+      "priority":"Critical"
+    },
+    {
+      "from":"Dining Room",
+      "to":"Kitchen",
+      "priority":"Critical"
+    },
+    {
+      "from":"Kitchen",
+      "to":"Utility Room",
+      "priority":"High"
+    },
+    {
+      "from":"Master Bedroom",
+      "to":"Attached Bathroom",
+      "priority":"Critical"
+    },
+    {
+      "from":"Parking",
+      "to":"Entrance",
+      "priority":"High"
+    },
+    {
+      "from":"Study Room",
+      "to":"Office",
+      "priority":"Medium"
+    }
+  ],
+
+  "separation_rules":[
+    {
+      "avoid":[
+        "Kitchen",
+        "Master Bedroom"
+      ],
+      "penalty":10
+    },
+    {
+      "avoid":[
+        "Bathroom",
+        "Dining Room"
+      ],
+      "penalty":10
+    },
+    {
+      "avoid":[
+        "Utility Room",
+        "Living Room"
+      ],
+      "penalty":8
+    },
+    {
+      "avoid":[
+        "Parking",
+        "Bedroom"
+      ],
+      "penalty":8
+    }
+  ],
+
+  "orientation_rules":{
+    "living_room":"North or North-East",
+    "master_bedroom":"South-West",
+    "bedroom":"East or South",
+    "kitchen":"South-East",
+    "study_room":"North",
+    "office":"North-East",
+    "pooja_room":"North-East",
+    "bathroom":"West or North-West",
+    "utility_room":"West",
+    "parking":"North-West"
+  },
+
+  "service_clustering":{
+    "cluster_required":true,
+    "wet_areas":[
+      "Kitchen",
+      "Bathroom",
+      "Utility Room",
+      "Laundry"
+    ],
+    "shared_plumbing_wall":true,
+    "maximum_distance_between_services_m":4
+  },
+
+  "vertical_zoning":{
+    "ground_floor":[
+      "Entrance",
+      "Living Room",
+      "Dining Room",
+      "Kitchen",
+      "Guest Bedroom",
+      "Parking"
+    ],
+    "upper_floor":[
+      "Master Bedroom",
+      "Children Bedroom",
+      "Family Lounge",
+      "Study Room",
+      "Balcony"
+    ],
+    "terrace":[
+      "Water Tank",
+      "Solar Panels",
+      "Utility Area",
+      "Terrace Garden"
+    ]
+  },
+
+  "future_expansion":{
+    "supported":true,
+    "reserve_structural_grid":true,
+    "roof_extension_ready":true,
+    "service_shafts_extendable":true
+  },
+
+  "optimization_weights":{
+    "functional_zoning":0.30,
+    "privacy":0.20,
+    "circulation":0.20,
+    "service_efficiency":0.15,
+    "environmental_performance":0.10,
+    "future_expansion":0.05
+  },
+
+  "design_patterns":[
+    {
+      "name":"Split Public Private Layout",
+      "score":1.00
+    },
+    {
+      "name":"Private Bedroom Cluster",
+      "score":0.99
+    },
+    {
+      "name":"Central Service Core",
+      "score":0.98
+    },
+    {
+      "name":"Open Public Zone",
+      "score":0.96
+    },
+    {
+      "name":"Future Expansion Ready",
+      "score":0.95
+    }
+  ],
+
+  "bonuses":{
+    "clear_zone_separation":5,
+    "service_clustering":5,
+    "central_circulation":4,
+    "future_expansion":3,
+    "optimal_orientation":4,
+    "shared_plumbing":4
+  },
+
+  "penalties":{
+    "mixed_public_private":-10,
+    "isolated_kitchen":-8,
+    "poor_service_layout":-8,
+    "long_internal_travel":-6,
+    "incorrect_room_orientation":-5
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Public and private zones shall remain clearly separated.",
+      "severity":"Critical"
+    },
+    {
+      "rule":"Wet areas shall be clustered whenever possible.",
+      "severity":"Critical"
+    },
+    {
+      "rule":"Kitchen shall be adjacent to Dining Room.",
+      "severity":"High"
+    },
+    {
+      "rule":"Master Bedroom shall remain inside the private zone.",
+      "severity":"High"
+    },
+    {
+      "rule":"Service rooms shall not interfere with public circulation.",
+      "severity":"Medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_zoning_score":95,
+    "target_service_efficiency":95,
+    "target_privacy_score":95,
+    "target_circulation_score":90,
+    "target_future_expansion_score":85
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "Time Saver Standards for Building Types",
+    "IS 4963",
+    "Energy Conservation Building Code (ECBC)"
+  ]
+}

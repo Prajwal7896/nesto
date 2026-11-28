@@ -1,0 +1,15 @@
+{"id":"V001","text":"Main entrance in the north or east direction is considered most auspicious for positive energy flow.","source":"vastu.json","metadata":{"type":"entrance_direction"}}
+{"id":"V002","text":"Kitchen should ideally be placed in the southeast direction as it is associated with fire element.","source":"vastu.json","metadata":{"type":"kitchen_direction"}}
+{"id":"V003","text":"Master bedroom is best located in the southwest direction for stability and grounding energy.","source":"vastu.json","metadata":{"type":"bedroom_direction"}}
+{"id":"V004","text":"Pooja room should be placed in the northeast direction for spiritual alignment and calmness.","source":"vastu.json","metadata":{"type":"pooja_direction"}}
+{"id":"V005","text":"Bathrooms should ideally be placed in the northwest or west direction to avoid energy imbalance.","source":"vastu.json","metadata":{"type":"bathroom_direction"}}
+{"id":"V006","text":"Staircases should be placed in south, west, or southwest directions for structural balance.","source":"vastu.json","metadata":{"type":"staircase_direction"}}
+{"id":"V007","text":"Living room should ideally be placed in the north or east side for natural light and positivity.","source":"vastu.json","metadata":{"type":"living_room_direction"}}
+{"id":"V008","text":"Avoid placing kitchen and bathroom adjacent to each other as it creates energy imbalance in vastu principles.","source":"vastu.json","metadata":{"type":"zoning_conflict"}}
+{"id":"V009","text":"Center of the house (Brahmasthan) should remain open and free from heavy structures.","source":"vastu.json","metadata":{"type":"center_open_space"}}
+{"id":"V010","text":"Heavy furniture and storage should be placed in south or west direction for stability.","source":"vastu.json","metadata":{"type":"furniture_direction"}}
+{"id":"V011","text":"Windows in the east direction allow morning sunlight and improve positive energy flow.","source":"vastu.json","metadata":{"type":"lighting_direction"}}
+{"id":"V012","text":"Water elements like tanks or borewells should be placed in north or northeast direction.","source":"vastu.json","metadata":{"type":"water_direction"}}
+{"id":"V013","text":"Study or office room should ideally face east or north for better concentration and productivity.","source":"vastu.json","metadata":{"type":"office_direction"}}
+{"id":"V014","text":"Avoid sleeping with head towards north direction according to vastu principles.","source":"vastu.json","metadata":{"type":"sleep_direction"}}
+{"id":"V015","text":"Proper balance of five elements (earth, water, fire, air, space) is important in vastu-aligned design.","source":"vastu.json","metadata":{"type":"element_balance"}}

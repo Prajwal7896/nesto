@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nesto | AI House Designer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --primary: #10b981;
+            --surface: rgba(255,255,255,.85);
+        }
+
+        body {
+            background: #f3f4f6;
+        }
+
+        .glass-sidebar {
+            background: var(--surface);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(209,213,219,.5);
+        }
+
+        .chat-input {
+            border: 1px solid #d1d5db;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,.05);
+        }
+
+        .message-bubble {
+            background: white;
+            border: 1px solid #e5e7eb;
+        }
+
+        .nesto-3d-frame-wrap {
+            width: 100%;
+            height: min(75vh, 820px);
+            min-height: 560px;
+            background: #080d17;
+            border: 1px solid #253349;
+            border-radius: 16px;
+            overflow: hidden;
+        }
+
+        .nesto-3d-frame {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border: none;
+            background: #080d17;
+        }
+
+        .customizer {
+            background: #fafafa;
+            border: 1px solid #e5e7eb;
+        }
+
+        .customizer input[type="color"] {
+            width: 45px;
+            height: 40px;
+            border: none;
+            background: transparent;
+            cursor: pointer;
+        }
+
+        button:disabled {
+            opacity: .5;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .nesto-3d-frame-wrap {
+                height: 65vh;
+                min-height: 420px;
+            }
+        }
+    </style>
+</head>
+
+<body class="text-gray-800 h-screen flex">
+
+    <!-- Sidebar -->
+    <aside class="w-64 glass-sidebar p-4 hidden md:flex flex-col">
+
+        <div class="flex items-center gap-2 mb-8 px-2">
+            <div class="w-8 h-8 bg-emerald-500 rounded-lg flex items-center justify-center font-bold text-white">
+                N
+            </div>
+            <span class="text-xl font-bold text-gray-900">Nesto</span>
+        </div>
+
+        <button onclick="resetChat()"
+            class="w-full border border-gray-300 rounded-xl py-3 px-4 text-left hover:bg-emerald-50">
+            + New Project Chat
+        </button>
+
+        <div class="mt-6 flex-1 overflow-y-auto">
+            <p class="text-xs text-gray-500 font-bold px-2 mb-2 uppercase">
+                Recent
+            </p>
+            <div class="text-sm p-3 hover:bg-gray-100 rounded-lg">
+                Modern House Design
+            </div>
+        </div>
+
+        <div class="border-t border-gray-200 pt-4">
+
+            <a href="/profile" class="flex items-center gap-3 p-2 rounded-lg hover:bg-emerald-50">
+
+                {% if user.image_url %}
+                    <img src="{{ user.image_url }}"
+                         class="w-10 h-10 rounded-full object-cover">
+                {% else %}
+                    <div class="w-10 h-10 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-600 font-bold">
+                        {{ user.name[0].upper() }}
+                    </div>
+                {% endif %}
+
+                <div>
+                    <p class="font-semibold">{{ user.name }}</p>
+                    <p class="text-xs text-gray-500">Profile</p>
+                </div>
+            </a>
+
+            <form action="/logout" method="post" class="mt-3">
+                <button type="submit"
+                    class="w-full bg-red-500 hover:bg-red-600 text-white rounded-xl py-2">
+                    Logout
+                </button>
+            </form>
+        </div>
+    </aside>
+
+    <!-- Main Workspace -->
+    <main class="flex-1 flex flex-col relative bg-white/50 min-w-0">
+
+        <header class="h-16 flex items-center justify-between px-6 border-b bg-white/80">
+            <span class="font-semibold text-gray-700">
+                Project Workspace
+            </span>
+            <span class="text-sm text-emerald-600 font-medium">
+                AI House Designer
+            </span>
+        </header>
+
+        <!-- Chat Area -->
+        <div class="flex-1 overflow-y-auto p-6 space-y-6" id="chat-container">
+
+            <div class="flex gap-4">
+                <div class="w-8 h-8 rounded-full bg-emerald-100 flex items-center justify-center text-emerald-600 font-bold">
+                    N
+                </div>
+
+                <div class="max-w-2xl p-4 rounded-2xl message-bubble shadow-sm">
+                    Hello {% if user %}<strong>{{ user.name }}</strong>{% endif %},
+                    I'm Nesto. Describe your dream house and I'll generate an
+                    architectural floor plan and interactive 3D model.
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Prompt Area -->
+        <div class="p-6 bg-white/80 border-t">
+            <div class="max-w-3xl mx-auto">
+
+                <div class="mb-4 grid grid-cols-1 md:grid-cols-2 gap-3">
+
+                    <div>
+                        <label for="design-mode"
+                            class="block text-sm font-semibold mb-1">
+                            Design Mode
+                        </label>
+
+                        <select id="design-mode"
+                            class="w-full p-3 rounded-xl border bg-white">
+                            <option value="new">New Design</option>
+                            <option value="modify">Modify Existing Design</option>
+                        </select>
+                    </div>
+
+                    <div id="existing-project-container" class="hidden">
+                        <label for="existing-project"
+                            class="block text-sm font-semibold mb-1">
+                            Select Existing Project
+                        </label>
+
+                        <select id="existing-project"
+                            class="w-full p-3 rounded-xl border bg-white">
+                            <option value="">Loading projects...</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <form id="chat-form" class="relative">
+
+                    <input
+                        type="text"
+                        id="user-input"
+                        name="prompt"
+                        placeholder="Example: Design a modern 3BHK house on a 40x30 ft plot..."
+                        class="w-full bg-white border chat-input rounded-2xl p-4 pr-16 focus:outline-none focus:ring-2 focus:ring-emerald-500"
+                        required>
+
+                    <button type="submit"
+                        class="absolute right-3 top-3 bg-emerald-500 text-white p-2 rounded-xl hover:bg-emerald-600">
+                        ➤
+                    </button>
+
+                </form>
+
+                <p class="text-center text-xs text-gray-400 mt-3">
+                    Nesto provides AI-powered architectural insights.
+                </p>
+
+            </div>
+        </div>
+    </main>
+
+<script>
+const form = document.getElementById("chat-form");
+const input = document.getElementById("user-input");
+const container = document.getElementById("chat-container");
+
+const modeSelect = document.getElementById("design-mode");
+const projectSelect = document.getElementById("existing-project");
+const projectContainer = document.getElementById("existing-project-container");
+
+let currentProjectId = null;
+
+let originalSceneId = null;
+let customizedSceneId = null;
+let currentSceneId = null;
+
+let currentGeneratedLayout = null;
+let currentCustomization = {};
+let lastPrompt = "";
+
+let showingOriginal = false;
+let generationInProgress = false;
+
+
+// --------------------------------------------------
+// PROJECT MANAGEMENT
+// --------------------------------------------------
+
+async function loadProjects() {
+    try {
+        const response = await fetch("/projects", {
+            credentials: "same-origin"
+        });
+
+        if (!response.ok) {
+            throw new Error("Could not load projects.");
+        }
+
+        const data = await response.json();
+        const projects = data.projects || [];
+
+        projectSelect.innerHTML = "";
+
+        if (projects.length === 0) {
+            projectSelect.innerHTML =
+                '<option value="">No saved projects available</option>';
+            return;
+        }
+
+        projects.forEach(project => {
+            const option = document.createElement("option");
+
+            option.value = project.project_id;
+            option.textContent = project.title;
+
+            projectSelect.appendChild(option);
+        });
+
+        if (currentProjectId) {
+            projectSelect.value = currentProjectId;
+        }
+
+    } catch (error) {
+        console.error("Project loading error:", error);
+
+        projectSelect.innerHTML =
+            '<option value="">Unable to load projects</option>';
+    }
+}
+
+
+function updateDesignMode() {
+    const isModify = modeSelect.value === "modify";
+
+    projectContainer.classList.toggle("hidden", !isModify);
+
+    if (isModify) {
+        loadProjects();
+    }
+}
+
+
+modeSelect.addEventListener("change", updateDesignMode);
+
+projectSelect.addEventListener("change", () => {
+    currentProjectId = projectSelect.value || null;
+});
+
+loadProjects();
+
+
+// --------------------------------------------------
+// UTILITIES
+// --------------------------------------------------
+
+function escapeHtml(value) {
+    return String(value ?? "").replace(/[&<>"']/g, char => ({
+        "&": "&amp;",
+        "<": "&lt;",
+        ">": "&gt;",
+        '"': "&quot;",
+        "'": "&#39;"
+    })[char]);
+}
+
+
+async function extractLayout(data) {
+    let layout =
+        data.layout ??
+        data.result?.layout ??
+        data.data?.layout ??
+        null;
+
+    if (!layout && data.files?.json) {
+        try {
+            const path = String(data.files.json);
+            const url = path.startsWith("/") ? path : `/${path}`;
+
+            const response = await fetch(url, {
+                credentials: "same-origin"
+            });
+
+            if (response.ok) {
+                const json = await response.json();
+                layout = json.layout ?? json;
+            }
+
+        } catch (error) {
+            console.warn("Could not load layout JSON:", error);
+        }
+    }
+
+    return layout && typeof layout === "object" ? layout : null;
+}
+
+
+// --------------------------------------------------
+// 3D SCENE GENERATION
+// --------------------------------------------------
+
+async function generate3DScene(layout, prompt, customization = {}) {
+
+    if (!layout) {
+        throw new Error("Generated house layout is missing.");
+    }
+
+    const response = await fetch("/api/3d/generate", {
+        method: "POST",
+        credentials: "same-origin",
+        headers: {
+            "Content-Type": "application/json",
+            "Accept": "application/json"
+        },
+        body: JSON.stringify({
+            layout: layout,
+            metadata: {
+                source: "Nesto AI Designer",
+                prompt: prompt,
+                customization: customization
+            }
+        })
+    });
+
+    const data = await response.json().catch(() => ({}));
+
+    if (!response.ok) {
+        throw new Error(
+            data.detail || data.message || "3D generation failed."
+        );
+    }
+
+    if (!data.scene_id) {
+        throw new Error("3D API did not return a scene ID.");
+    }
+
+    return data.scene_id;
+}
+
+
+function getViewerUrl(sceneId) {
+    return `/static/three_d/viewer.html?scene_id=${encodeURIComponent(sceneId)}&t=${Date.now()}`;
+}
+
+
+// --------------------------------------------------
+// RESET CHAT
+// --------------------------------------------------
+
+function resetChat() {
+
+    container.innerHTML = `
+        <div class="p-4 bg-white rounded-xl">
+            Hello! Describe your dream house to begin.
+        </div>
+    `;
+
+    originalSceneId = null;
+    customizedSceneId = null;
+    currentSceneId = null;
+
+    currentGeneratedLayout = null;
+    currentCustomization = {};
+    lastPrompt = "";
+
+    showingOriginal = false;
+    currentProjectId = null;
+
+    modeSelect.value = "new";
+    projectSelect.value = "";
+
+    updateDesignMode();
+}
+
+
+// --------------------------------------------------
+// MAIN GENERATION
+// --------------------------------------------------
+
+form.addEventListener("submit", async (event) => {
+
+    event.preventDefault();
+
+    if (generationInProgress) return;
+
+    const prompt = input.value.trim();
+
+    if (!prompt) return;
+
+    const mode = modeSelect.value;
+
+    if (mode === "modify" && !projectSelect.value) {
+        alert("Please select an existing project to modify.");
+        return;
+    }
+
+    const selectedProjectId =
+        mode === "modify" ? projectSelect.value : null;
+
+    generationInProgress = true;
+
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    if (submitButton) {
+        submitButton.disabled = true;
+    }
+
+    lastPrompt = prompt;
+
+    container.insertAdjacentHTML("beforeend", `
+        <div class="flex justify-end mb-4">
+            <div class="bg-emerald-500 text-white rounded-2xl p-4 max-w-xl">
+                ${escapeHtml(prompt)}
+            </div>
+        </div>
+    `);
+
+    input.value = "";
+
+    const loading = document.createElement("p");
+    loading.className = "p-4 text-emerald-600";
+    loading.textContent = "Nesto is generating your house plan...";
+
+    container.appendChild(loading);
+
+    try {
+
+        const response = await fetch("/generate", {
+            method: "POST",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                prompt: prompt,
+                customization: {},
+                mode: mode,
+                project_id: selectedProjectId
+            })
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+            throw new Error(
+                data.detail || data.message ||
+                `Generation failed (HTTP ${response.status})`
+            );
+        }
+
+        if (data.status !== "success") {
+            throw new Error(
+                data.message || "Floor plan generation failed."
+            );
+        }
+
+        currentProjectId = data.project_id;
+
+        if (!currentProjectId) {
+            throw new Error("The API did not return a project ID.");
+        }
+
+        await loadProjects();
+
+        if (mode === "new") {
+            projectSelect.value = currentProjectId;
+        }
+
+        if (!data.summary) {
+            throw new Error("Invalid generation response.");
+        }
+
+        currentGeneratedLayout = await extractLayout(data);
+
+        if (!currentGeneratedLayout) {
+            throw new Error("Could not extract the generated house layout.");
+        }
+
+        loading.textContent = "Creating your interactive 3D house...";
+
+        currentSceneId = await generate3DScene(
+            currentGeneratedLayout,
+            prompt,
+            {}
+        );
+
+        originalSceneId = currentSceneId;
+        customizedSceneId = null;
+        showingOriginal = false;
+
+        currentCustomization = {};
+
+        const viewerUrl = getViewerUrl(currentSceneId);
+
+        const card = document.createElement("div");
+
+        card.className =
+            "bg-white border rounded-2xl p-5 max-w-4xl w-full shadow-sm";
+
+        card.innerHTML = `
+
+            <h3 class="font-bold text-lg mb-3">
+                AI Generated Plan
+            </h3>
+
+            <p class="text-sm text-gray-600 mb-1">
+                Rooms: ${escapeHtml(data.summary.rooms)}
+            </p>
+
+            <p class="text-sm text-gray-600 mb-3">
+                Valid: ${escapeHtml(data.summary.valid)}
+            </p>
+
+            <div class="nesto-3d-frame-wrap">
+
+                <iframe
+                    id="nesto-3d-frame"
+                    class="nesto-3d-frame"
+                    src="${escapeHtml(viewerUrl)}"
+                    title="Nesto Interactive 3D House"
+                    allowfullscreen>
+                </iframe>
+
+            </div>
+
+            <p id="viewer-status"
+                class="text-xs text-gray-500 mt-2"
+                role="status"
+                aria-live="polite">
+                Loading interactive 3D viewer...
+            </p>
+
+            <div class="mt-4 grid grid-cols-1 sm:grid-cols-2 gap-2">
+
+                <button type="button"
+                    onclick="downloadCustomized()"
+                    class="border border-gray-300 hover:bg-gray-50 py-2 rounded-xl text-sm">
+                    Download 3D Snapshot
+                </button>
+
+                <button type="button"
+                    onclick="downloadLayoutJSON()"
+                    class="border border-gray-300 hover:bg-gray-50 py-2 rounded-xl text-sm">
+                    Download Layout JSON
+                </button>
+
+            </div>
+
+            <button type="button"
+                onclick="showCustomizer()"
+                class="mt-5 w-full bg-emerald-500 hover:bg-emerald-600 text-white py-3 rounded-xl font-semibold">
+                🎨 Customize Your Plan
+            </button>
+
+            <!-- CUSTOMIZATION PANEL -->
+
+            <div id="customization-panel"
+                class="hidden mt-5 customizer rounded-2xl p-5">
+
+                <h3 class="text-xl font-bold mb-1">
+                    Customize Your House
+                </h3>
+
+                <p class="text-sm text-gray-500 mb-5">
+                    Choose your preferred colors and materials.
+                </p>
+
+                <div class="space-y-5">
+
+                    <!-- EXTERIOR -->
+
+                    <div>
+                        <h4 class="font-semibold mb-3">
+                            Exterior Colors
+                        </h4>
+
+                        <div class="space-y-3">
+
+                            <div class="flex justify-between items-center">
+                                <label>Main Wall Color</label>
+                                <input type="color" id="wallColor" value="#F5E6CA">
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <label>Accent Color</label>
+                                <input type="color" id="accentColor" value="#B08D57">
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <label>Door Color</label>
+                                <input type="color" id="doorColor" value="#654321">
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <label>Window Color</label>
+                                <input type="color" id="windowColor" value="#333333">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- INTERIOR -->
+
+                    <div>
+                        <h4 class="font-semibold mb-3">
+                            Interior Colors
+                        </h4>
+
+                        <div class="space-y-3">
+
+                            <div class="flex justify-between items-center">
+                                <label>Living Room</label>
+                                <input type="color" id="livingColor" value="#E8DDC8">
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <label>Bedroom</label>
+                                <input type="color" id="bedroomColor" value="#DCE6F1">
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <label>Kitchen</label>
+                                <input type="color" id="kitchenColor" value="#FFFFFF">
+                            </div>
+
+                            <div class="flex justify-between items-center">
+                                <label>Flooring</label>
+                                <input type="color" id="floorColor" value="#C5A880">
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <!-- MATERIAL -->
+
+                    <div>
+                        <h4 class="font-semibold mb-3">
+                            Material Selection
+                        </h4>
+
+                        <select id="material"
+                            class="w-full p-3 rounded-xl border bg-white">
+
+                            <option value="Marble">Marble</option>
+                            <option value="Granite">Granite</option>
+                            <option value="Wooden Flooring">Wooden Flooring</option>
+                            <option value="Ceramic Tiles">Ceramic Tiles</option>
+                            <option value="Natural Stone">Natural Stone</option>
+
+                        </select>
+                    </div>
+
+                    <hr>
+
+                    <!-- THEMES -->
+
+                    <div>
+                        <h4 class="font-semibold mb-3">
+                            Quick Color Themes
+                        </h4>
+
+                        <div class="grid grid-cols-2 gap-2">
+
+                            <button type="button"
+                                onclick="setTheme('beige')"
+                                class="p-3 border rounded-xl hover:border-emerald-500">
+                                Modern Beige
+                            </button>
+
+                            <button type="button"
+                                onclick="setTheme('grey')"
+                                class="p-3 border rounded-xl hover:border-emerald-500">
+                                Minimalist Grey
+                            </button>
+
+                            <button type="button"
+                                onclick="setTheme('earthy')"
+                                class="p-3 border rounded-xl hover:border-emerald-500">
+                                Earthy Natural
+                            </button>
+
+                            <button type="button"
+                                onclick="setTheme('dark')"
+                                class="p-3 border rounded-xl hover:border-emerald-500">
+                                Luxury Dark
+                            </button>
+
+                        </div>
+                    </div>
+
+                    <!-- ACTIONS -->
+
+                    <div class="flex flex-col sm:flex-row gap-3">
+
+                        <button type="button"
+                            onclick="applyCustomization()"
+                            class="flex-1 bg-emerald-500 hover:bg-emerald-600 text-white py-3 rounded-xl font-semibold">
+                            Apply Changes
+                        </button>
+
+                        <button type="button"
+                            onclick="resetCustomization()"
+                            class="flex-1 border border-gray-300 py-3 rounded-xl">
+                            Reset
+                        </button>
+
+                    </div>
+
+                    <div class="flex gap-3">
+
+                        <button
+                            id="compare-plan-button"
+                            type="button"
+                            onclick="comparePlan()"
+                            disabled
+                            class="flex-1 border border-gray-300 py-2 rounded-xl">
+                            Show Original
+                        </button>
+
+                        <button type="button"
+                            onclick="downloadCustomized()"
+                            class="flex-1 border border-gray-300 py-2 rounded-xl">
+                            Download Snapshot
+                        </button>
+
+                    </div>
+
+                    <p id="custom-status"
+                        class="text-xs text-gray-500"
+                        role="status"
+                        aria-live="polite">
+                        Select your preferred colors.
+                    </p>
+
+                </div>
+            </div>
+        `;
+
+        loading.remove();
+        container.appendChild(card);
+
+        const viewerFrame = card.querySelector("#nesto-3d-frame");
+        const viewerStatus = card.querySelector("#viewer-status");
+
+        viewerFrame.addEventListener("load", () => {
+            viewerStatus.textContent =
+                "3D viewer loaded. Connecting to the scene...";
+        });
+
+        window.addEventListener("message", event => {
+
+            if (event.origin !== window.location.origin) return;
+
+            if (event.source !== viewerFrame.contentWindow) return;
+
+            if (event.data?.type !== "nesto-3d-status") return;
+
+            viewerStatus.textContent = event.data.message;
+
+            viewerStatus.classList.toggle(
+                "text-red-600",
+                event.data.level === "error"
+            );
+
+            viewerStatus.classList.toggle(
+                "text-emerald-700",
+                event.data.level === "success"
+            );
+        });
+
+        setTimeout(() => {
+
+            if (viewerStatus.textContent.startsWith("Loading")) {
+                viewerStatus.textContent =
+                    "The 3D viewer did not load. Check the browser console and viewer URL.";
+
+                viewerStatus.classList.add("text-red-600");
+            }
+
+        }, 15000);
+
+        container.scrollTop = container.scrollHeight;
+
+    } catch (error) {
+
+        console.error("Generation error:", error);
+
+        loading.textContent =
+            "Generation failed: " + error.message;
+
+    } finally {
+
+        generationInProgress = false;
+
+        if (submitButton) {
+            submitButton.disabled = false;
+        }
+    }
+});
+
+
+// --------------------------------------------------
+// CUSTOMIZATION UI
+// --------------------------------------------------
+
+function showCustomizer() {
+    document
+        .getElementById("customization-panel")
+        .classList.toggle("hidden");
+}
+
+
+// --------------------------------------------------
+// QUICK THEMES
+// --------------------------------------------------
+
+function setTheme(theme) {
+
+    const themes = {
+
+        beige: {
+            wallColor: "#F5E6CA",
+            accentColor: "#B08D57",
+            doorColor: "#654321",
+            windowColor: "#333333",
+            livingColor: "#E8DDC8",
+            bedroomColor: "#E6DCCB",
+            kitchenColor: "#FFFFFF",
+            floorColor: "#C5A880"
+        },
+
+        grey: {
+            wallColor: "#E5E7EB",
+            accentColor: "#6B7280",
+            doorColor: "#374151",
+            windowColor: "#252525",
+            livingColor: "#D1D5DB",
+            bedroomColor: "#E5E7EB",
+            kitchenColor: "#F9FAFB",
+            floorColor: "#9CA3AF"
+        },
+
+        earthy: {
+            wallColor: "#D6C3A5",
+            accentColor: "#A66D4F",
+            doorColor: "#654B3C",
+            windowColor: "#45483D",
+            livingColor: "#C8B69A",
+            bedroomColor: "#B6B99A",
+            kitchenColor: "#E5D8C5",
+            floorColor: "#987B5D"
+        },
+
+        dark: {
+            wallColor: "#777777",
+            accentColor: "#292929",
+            doorColor: "#51463D",
+            windowColor: "#202020",
+            livingColor: "#4B4B4B",
+            bedroomColor: "#383838",
+            kitchenColor: "#D4C6B4",
+            floorColor: "#654B3C"
+        }
+    };
+
+    const selectedTheme = themes[theme];
+
+    if (!selectedTheme) return;
+
+    Object.entries(selectedTheme).forEach(([id, value]) => {
+
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.value = value;
+        }
+    });
+}
+
+
+// --------------------------------------------------
+// GET CUSTOMIZATION DATA
+// --------------------------------------------------
+
+function getCustomization() {
+
+    const ids = [
+        "wallColor",
+        "accentColor",
+        "doorColor",
+        "windowColor",
+        "livingColor",
+        "bedroomColor",
+        "kitchenColor",
+        "floorColor"
+    ];
+
+    const result = {};
+
+    ids.forEach(id => {
+
+        const element = document.getElementById(id);
+
+        if (element) {
+            result[id] = element.value;
+        }
+    });
+
+    result.material =
+        document.getElementById("material").value;
+
+    return result;
+}
+
+
+// --------------------------------------------------
+// APPLY CUSTOMIZATION
+// --------------------------------------------------
+
+async function applyCustomization() {
+
+    if (!lastPrompt || !currentGeneratedLayout) {
+        alert("Generate a house plan first.");
+        return;
+    }
+
+    const status = document.getElementById("custom-status");
+
+    const applyButton = document.querySelector(
+        '#customization-panel button[onclick="applyCustomization()"]'
+    );
+
+    currentCustomization = getCustomization();
+
+    status.textContent = "Applying your design preferences...";
+    status.className = "text-xs text-emerald-600";
+
+    if (applyButton) {
+        applyButton.disabled = true;
+    }
+
+    try {
+
+        const response = await fetch("/generate", {
+            method: "POST",
+            credentials: "same-origin",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify({
+                prompt: lastPrompt,
+                customization: currentCustomization,
+                mode: "modify",
+                project_id: currentProjectId
+            })
+        });
+
+        const data = await response.json().catch(() => ({}));
+
+        if (!response.ok) {
+            throw new Error(
+                data.detail ||
+                data.reason ||
+                data.message ||
+                "Customization failed."
+            );
+        }
+
+        if (data.status !== "success") {
+            throw new Error(
+                data.message ||
+                "Could not regenerate the floor plan."
+            );
+        }
+
+        const updatedLayout = await extractLayout(data);
+
+        if (!updatedLayout) {
+            throw new Error("Updated layout is missing.");
+        }
+
+        status.textContent = "Generating customized 3D house...";
+
+        const newSceneId = await generate3DScene(
+            updatedLayout,
+            lastPrompt,
+            currentCustomization
+        );
+
+        currentGeneratedLayout = updatedLayout;
+
+        customizedSceneId = newSceneId;
+        currentSceneId = newSceneId;
+
+        showingOriginal = false;
+
+        const viewer = document.getElementById("nesto-3d-frame");
+
+        if (viewer) {
+            viewer.src = getViewerUrl(newSceneId);
+        }
+
+        const compareButton = document.getElementById(
+            "compare-plan-button"
+        );
+
+        if (compareButton) {
+            compareButton.disabled =
+                !originalSceneId || !customizedSceneId;
+
+            compareButton.textContent = "Show Original";
+        }
+
+        status.textContent =
+            "Your customized 3D house has been generated successfully!";
+
+        status.className = "text-xs text-emerald-600";
+
+        localStorage.setItem(
+            "nesto_customization",
+            JSON.stringify(currentCustomization)
+        );
+
+    } catch (error) {
+
+        console.error("Customization error:", error);
+
+        status.textContent = error.message;
+        status.className = "text-xs text-red-600";
+
+    } finally {
+
+        if (applyButton) {
+            applyButton.disabled = false;
+        }
+    }
+}
+
+
+// --------------------------------------------------
+// RESET CUSTOMIZATION
+// --------------------------------------------------
+
+function resetCustomization() {
+
+    const defaults = {
+        wallColor: "#F5E6CA",
+        accentColor: "#B08D57",
+        doorColor: "#654321",
+        windowColor: "#333333",
+        livingColor: "#E8DDC8",
+        bedroomColor: "#DCE6F1",
+        kitchenColor: "#FFFFFF",
+        floorColor: "#C5A880"
+    };
+
+    Object.entries(defaults).forEach(([id, value]) => {
+
+        const element = document.getElementById(id);
+
+        if (element) {
+            element.value = value;
+        }
+    });
+
+    document.getElementById("material").value = "Marble";
+
+    currentCustomization = {};
+    customizedSceneId = null;
+    showingOriginal = false;
+
+    localStorage.removeItem("nesto_customization");
+
+    const viewer = document.getElementById("nesto-3d-frame");
+
+    if (viewer && originalSceneId) {
+
+        currentSceneId = originalSceneId;
+
+        viewer.src = getViewerUrl(originalSceneId);
+    }
+
+    const compareButton = document.getElementById(
+        "compare-plan-button"
+    );
+
+    if (compareButton) {
+        compareButton.disabled = true;
+        compareButton.textContent = "Show Original";
+    }
+
+    const status = document.getElementById("custom-status");
+
+    if (status) {
+        status.textContent =
+            "Default preferences restored. Original 3D design is displayed.";
+
+        status.className = "text-xs text-gray-500";
+    }
+}
+
+
+// --------------------------------------------------
+// COMPARE ORIGINAL AND CUSTOMIZED 3D
+// --------------------------------------------------
+
+function comparePlan() {
+
+    const viewer = document.getElementById("nesto-3d-frame");
+
+    if (!viewer || !originalSceneId || !customizedSceneId) {
+
+        const status = document.getElementById("custom-status");
+
+        if (status) {
+            status.textContent =
+                "Apply customization first to compare both 3D designs.";
+        }
+
+        return;
+    }
+
+    showingOriginal = !showingOriginal;
+
+    currentSceneId = showingOriginal
+        ? originalSceneId
+        : customizedSceneId;
+
+    viewer.src = getViewerUrl(currentSceneId);
+
+    const button = document.getElementById(
+        "compare-plan-button"
+    );
+
+    if (button) {
+        button.textContent = showingOriginal
+            ? "Show Customized"
+            : "Show Original";
+    }
+}
+
+
+// --------------------------------------------------
+// DOWNLOAD 3D SNAPSHOT
+// --------------------------------------------------
+
+function downloadCustomized() {
+
+    const viewer = document.getElementById("nesto-3d-frame");
+
+    const status = document.getElementById("custom-status");
+
+    try {
+
+        const canvas = viewer?.contentDocument?.querySelector(
+            "#three-viewport canvas, canvas"
+        );
+
+        if (!canvas) {
+            throw new Error(
+                "The 3D canvas is not ready. Wait for the viewer to finish loading."
+            );
+        }
+
+        const imageURL = canvas.toDataURL("image/png");
+
+        const link = document.createElement("a");
+
+        link.href = imageURL;
+        link.download = "nesto-house-3d.png";
+
+        link.click();
+
+        if (status) {
+            status.textContent = "3D snapshot downloaded.";
+        }
+
+    } catch (error) {
+
+        console.error("3D snapshot download failed:", error);
+
+        if (status) {
+            status.textContent =
+                error.message || "Could not export the 3D snapshot.";
+        }
+    }
+}
+
+
+// --------------------------------------------------
+// DOWNLOAD LAYOUT JSON
+// --------------------------------------------------
+
+function downloadLayoutJSON() {
+
+    if (!currentGeneratedLayout) {
+        alert("Generate a house plan first.");
+        return;
+    }
+
+    const blob = new Blob(
+        [JSON.stringify(currentGeneratedLayout, null, 2)],
+        { type: "application/json" }
+    );
+
+    const url = URL.createObjectURL(blob);
+
+    const link = document.createElement("a");
+
+    link.href = url;
+    link.download = "nesto-house-layout.json";
+
+    link.click();
+
+    URL.revokeObjectURL(url);
+}
+
+</script>
+
+</body>
+</html>

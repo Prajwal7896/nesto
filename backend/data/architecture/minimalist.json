@@ -1,0 +1,110 @@
+{
+  "style": "minimalist",
+
+  "definition": "Minimalist architecture focuses on simplicity, functional spaces, clean geometry, reduced material usage, and elimination of unnecessary design elements.",
+
+  "core_principles": [
+    "Less is more design philosophy",
+    "Highly functional spaces with zero wasted area",
+    "Simple rectangular or modular geometry",
+    "Neutral color palette with minimal contrast",
+    "Open but compact layouts",
+    "No decorative or unnecessary structural elements"
+  ],
+
+  "spatial_design_rules": {
+    "living_room": {
+      "preferred_position": "front_or_center",
+      "min_area_sqft": 120,
+      "max_area_sqft": 180,
+      "connections": ["dining_room"],
+      "furniture_limit": "minimal"
+    },
+
+    "kitchen": {
+      "type": "compact_open_kitchen",
+      "min_area_sqft": 80,
+      "max_area_sqft": 120,
+      "layout": "straight_or_l_shape",
+      "efficiency_priority": "high"
+    },
+
+    "bedroom": {
+      "min_area_sqft": 100,
+      "max_area_sqft": 140,
+      "furniture": "essential_only",
+      "storage_integration": "built_in_wardrobe"
+    },
+
+    "bathroom": {
+      "min_area_sqft": 40,
+      "design": "compact_functional",
+      "wet_dry_separation": true
+    }
+  },
+
+  "circulation_rules": {
+    "corridors": "eliminate_if_possible",
+    "flow": "direct_short_paths",
+    "staircase": "compact_edge_position",
+    "entry": "simple_functional_entrance"
+  },
+
+  "geometry_rules": {
+    "preferred_shapes": ["rectangle", "square"],
+    "avoid": ["irregular_shapes", "wasted_corner_spaces"],
+    "modular_grid": true
+  },
+
+  "material_palette": [
+    "concrete",
+    "white plaster",
+    "light wood",
+    "glass",
+    "matte steel"
+  ],
+
+  "structural_preferences": {
+    "frame": "simple_RCC_grid",
+    "roof": "flat slab",
+    "wall_thickness": "standard_minimum",
+    "design_complexity": "low"
+  },
+
+  "lighting_and_ventilation": {
+    "natural_light_priority": "high",
+    "window_size": "medium_to_large",
+    "cross_ventilation_required": true,
+    "artificial_lighting": "basic_functional"
+  },
+
+  "cost_profile": {
+    "budget_efficiency": "very_high",
+    "material_cost": "low_to_medium",
+    "construction_speed": "fast"
+  },
+
+  "vastu_flexibility": {
+    "compatible": true,
+    "strictness": "low",
+    "preferred_entrance": ["north", "east"],
+    "kitchen_direction": "flexible"
+  },
+
+  "optimization_hints": {
+    "space_efficiency": "very_high",
+    "center_of_mass_balance": true,
+    "cost_efficiency": "very_high",
+    "aesthetic_priority": "low_to_medium",
+    "maintenance_ease": "high"
+  },
+
+  "planning_tags": [
+    "compact_design",
+    "low_cost_build",
+    "functional_layout",
+    "efficient_space_usage",
+    "modern_minimal",
+    "fast_construction"
+  ]
+}

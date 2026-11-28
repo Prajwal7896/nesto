@@ -1,0 +1,184 @@
+{
+  "category":"drainage_engineering",
+  "version":"2.0",
+  "description":"Drainage engineering standards for residential buildings used by the AI planner.",
+
+  "pipe_sizes":{
+
+    "wash_basin":"32 mm",
+    "kitchen_sink":"50 mm",
+    "floor_trap":"75 mm",
+    "bathroom":"75 mm",
+    "washing_machine":"50 mm",
+    "shower":"75 mm",
+    "toilet":"110 mm",
+    "soil_pipe":"110 mm",
+    "main_drain":"160 mm",
+    "rainwater_pipe":"110 mm"
+
+  },
+
+  "minimum_pipe_slope":{
+
+    "32 mm":"1:30",
+    "50 mm":"1:40",
+    "75 mm":"1:60",
+    "110 mm":"1:80",
+    "160 mm":"1:120"
+
+  },
+
+  "fixture_connections":[
+
+    {
+      "fixture":"Kitchen Sink",
+      "connect_to":"Waste Pipe",
+      "requires_grease_trap":true
+    },
+
+    {
+      "fixture":"Wash Basin",
+      "connect_to":"Waste Pipe"
+    },
+
+    {
+      "fixture":"Toilet",
+      "connect_to":"Soil Pipe"
+    },
+
+    {
+      "fixture":"Floor Trap",
+      "connect_to":"Waste Pipe"
+    },
+
+    {
+      "fixture":"Rainwater Pipe",
+      "connect_to":"Storm Water Drain"
+    }
+
+  ],
+
+  "inspection_chambers":{
+
+    "maximum_spacing_m":6,
+
+    "required_at":[
+      "Every change of direction",
+      "Pipe junction",
+      "Before municipal connection",
+      "Property boundary"
+    ]
+
+  },
+
+  "stormwater":{
+
+    "roof_drain_required":true,
+
+    "rainwater_harvesting_preferred":true,
+
+    "surface_slope_percent":2,
+
+    "minimum_downpipes":2
+
+  },
+
+  "septic_tank":{
+
+    "minimum_distance_from_building_m":1.5,
+
+    "minimum_distance_from_water_source_m":15,
+
+    "minimum_distance_from_kitchen_m":6,
+
+    "minimum_distance_from_bedroom_m":3
+
+  },
+
+  "manholes":{
+
+    "maximum_spacing_m":30,
+
+    "minimum_diameter_mm":900
+
+  },
+
+  "layout_rules":[
+
+    "Wet areas should be vertically aligned in multi-storey buildings.",
+    "Bathrooms should share plumbing walls whenever possible.",
+    "Avoid long horizontal waste pipes.",
+    "Kitchen should not drain directly into stormwater.",
+    "Provide floor traps in all wet rooms.",
+    "Avoid sharp 90 degree bends.",
+    "Use inspection chambers at junctions.",
+    "Keep drainage outside habitable rooms."
+
+  ],
+
+  "optimization":{
+
+    "cluster_wet_areas":true,
+
+    "minimize_pipe_length":true,
+
+    "reuse_vertical_shafts":true,
+
+    "gravity_flow_preferred":true
+
+  },
+
+  "validation_rules":[
+
+    {
+      "rule":"All toilets must connect to soil pipe.",
+      "severity":"critical"
+    },
+
+    {
+      "rule":"Drainage slope cannot be zero.",
+      "severity":"critical"
+    },
+
+    {
+      "rule":"Kitchen wastewater requires grease trap.",
+      "severity":"high"
+    },
+
+    {
+      "rule":"Rainwater cannot mix with sewage.",
+      "severity":"critical"
+    },
+
+    {
+      "rule":"Inspection chamber required every 6 meters.",
+      "severity":"medium"
+    }
+
+  ],
+
+  "building_types":{
+
+    "villa":{
+      "preferred_system":"Gravity Drainage"
+    },
+
+    "apartment":{
+      "preferred_system":"Vertical Drainage Stack"
+    },
+
+    "commercial":{
+      "preferred_system":"Separate Waste And Storm Lines"
+    }
+
+  },
+
+  "reference_codes":[
+
+    "National Building Code of India (NBC)",
+    "IS 1742",
+    "IS 2065",
+    "CPHEEO Manual on Sewerage"
+
+  ]
+}

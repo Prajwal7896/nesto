@@ -1,0 +1,15 @@
+{"id":"P001","text":"Public spaces like living room and dining area should be placed near the entrance of the house for easy access.","source":"planning_rules.json","metadata":{"type":"zoning_public"}}
+{"id":"P002","text":"Private spaces like bedrooms should be placed deeper inside the house away from main entrance.","source":"planning_rules.json","metadata":{"type":"zoning_private"}}
+{"id":"P003","text":"Wet areas like kitchen, bathroom, and utility should be grouped together to reduce plumbing cost and complexity.","source":"planning_rules.json","metadata":{"type":"wet_area_clustering"}}
+{"id":"P004","text":"Circulation paths should be direct and avoid unnecessary turns to improve movement efficiency inside the building.","source":"planning_rules.json","metadata":{"type":"circulation"}}
+{"id":"P005","text":"Main hallway should connect entrance to major functional zones like living, kitchen, and bedrooms.","source":"planning_rules.json","metadata":{"type":"flow"}}
+{"id":"P006","text":"Bathroom should not open directly into living room or dining area to maintain hygiene and privacy.","source":"planning_rules.json","metadata":{"type":"privacy"}}
+{"id":"P007","text":"Bedroom placement should ensure minimum noise interference from kitchen, road, or living spaces.","source":"planning_rules.json","metadata":{"type":"noise_control"}}
+{"id":"P008","text":"Cross ventilation improves airflow by placing openings on opposite walls or adjacent directions.","source":"planning_rules.json","metadata":{"type":"ventilation"}}
+{"id":"P009","text":"Emergency evacuation paths should always remain clear and lead directly to safe exits.","source":"planning_rules.json","metadata":{"type":"evacuation"}}
+{"id":"P010","text":"Staircases should be placed in accessible but non-blocking zones to avoid disturbing main functional areas.","source":"planning_rules.json","metadata":{"type":"staircase"}}
+{"id":"P011","text":"Kitchen should be adjacent to dining area for efficient food service and reduced movement distance.","source":"planning_rules.json","metadata":{"type":"adjacency_kitchen_dining"}}
+{"id":"P012","text":"Bathrooms should be grouped vertically in multi-storey buildings to optimize plumbing alignment.","source":"planning_rules.json","metadata":{"type":"vertical_alignment"}}
+{"id":"P013","text":"Circulation space should be at least 5 to 10 percent of total built-up area for comfortable movement.","source":"planning_rules.json","metadata":{"type":"space_efficiency"}}
+{"id":"P014","text":"Entry foyer should act as buffer space between exterior environment and private interior zones.","source":"planning_rules.json","metadata":{"type":"transition_zone"}}
+{"id":"P015","text":"Windows should be placed to maximize daylight while avoiding direct harsh glare into living spaces.","source":"planning_rules.json","metadata":{"type":"lighting"}}

@@ -1,0 +1,249 @@
+{
+  "category": "construction_materials",
+
+  "definition": "Master database of construction materials used for residential buildings. Used for cost estimation, material selection, sustainability analysis, and construction planning.",
+
+  "currency": "INR",
+
+  "material_categories": {
+    "foundation": [
+      "cement",
+      "concrete",
+      "steel",
+      "sand",
+      "aggregate"
+    ],
+
+    "structure": [
+      "brick",
+      "aac_block",
+      "concrete_block",
+      "steel",
+      "rcc"
+    ],
+
+    "roofing": [
+      "rcc_slab",
+      "clay_tile",
+      "metal_sheet",
+      "waterproof_membrane"
+    ],
+
+    "flooring": [
+      "ceramic_tile",
+      "vitrified_tile",
+      "granite",
+      "marble",
+      "wooden_flooring"
+    ],
+
+    "doors_windows": [
+      "wood",
+      "upvc",
+      "aluminium",
+      "glass"
+    ],
+
+    "painting": [
+      "cement_paint",
+      "emulsion",
+      "texture_paint",
+      "weatherproof_paint"
+    ]
+  },
+
+  "materials": {
+
+    "cement": {
+      "unit": "bag",
+      "average_cost": 420,
+      "durability": "high",
+      "maintenance": "low",
+      "fire_resistance": "excellent",
+      "water_resistance": "high",
+      "eco_score": 0.5,
+      "recommended_for": [
+        "foundation",
+        "columns",
+        "beams",
+        "slabs"
+      ]
+    },
+
+    "steel": {
+      "unit": "kg",
+      "average_cost": 72,
+      "durability": "very_high",
+      "maintenance": "medium",
+      "fire_resistance": "good",
+      "earthquake_performance": "excellent",
+      "eco_score": 0.6,
+      "recommended_for": [
+        "reinforcement",
+        "columns",
+        "beams"
+      ]
+    },
+
+    "brick": {
+      "unit": "piece",
+      "average_cost": 9,
+      "durability": "high",
+      "thermal_insulation": "medium",
+      "fire_resistance": "excellent",
+      "eco_score": 0.7
+    },
+
+    "aac_block": {
+      "unit": "block",
+      "average_cost": 75,
+      "durability": "high",
+      "thermal_insulation": "excellent",
+      "lightweight": true,
+      "eco_score": 0.9
+    },
+
+    "concrete_block": {
+      "unit": "block",
+      "average_cost": 55,
+      "durability": "high",
+      "thermal_insulation": "medium",
+      "eco_score": 0.8
+    },
+
+    "ceramic_tile": {
+      "unit": "sqft",
+      "average_cost": 65,
+      "maintenance": "low",
+      "durability": "medium",
+      "water_resistance": "excellent"
+    },
+
+    "vitrified_tile": {
+      "unit": "sqft",
+      "average_cost": 120,
+      "maintenance": "very_low",
+      "durability": "high",
+      "water_resistance": "excellent"
+    },
+
+    "granite": {
+      "unit": "sqft",
+      "average_cost": 250,
+      "durability": "excellent",
+      "maintenance": "low",
+      "luxury_score": 0.8
+    },
+
+    "marble": {
+      "unit": "sqft",
+      "average_cost": 450,
+      "durability": "excellent",
+      "maintenance": "medium",
+      "luxury_score": 1.0
+    },
+
+    "wood": {
+      "unit": "sqft",
+      "average_cost": 350,
+      "maintenance": "high",
+      "thermal_insulation": "good",
+      "luxury_score": 0.9
+    },
+
+    "glass": {
+      "unit": "sqft",
+      "average_cost": 300,
+      "maintenance": "medium",
+      "natural_light": "excellent",
+      "thermal_performance": "medium"
+    },
+
+    "upvc": {
+      "unit": "sqft",
+      "average_cost": 550,
+      "maintenance": "very_low",
+      "durability": "excellent",
+      "weather_resistance": "excellent"
+    },
+
+    "aluminium": {
+      "unit": "sqft",
+      "average_cost": 480,
+      "maintenance": "low",
+      "durability": "high"
+    }
+  },
+
+  "budget_recommendations": {
+
+    "low_budget": {
+      "preferred_materials": [
+        "brick",
+        "cement",
+        "ceramic_tile",
+        "aluminium"
+      ]
+    },
+
+    "medium_budget": {
+      "preferred_materials": [
+        "aac_block",
+        "vitrified_tile",
+        "upvc"
+      ]
+    },
+
+    "high_budget": {
+      "preferred_materials": [
+        "granite",
+        "marble",
+        "glass",
+        "wood"
+      ]
+    }
+  },
+
+  "climate_recommendations": {
+
+    "hot": [
+      "aac_block",
+      "light_color_paint",
+      "roof_insulation"
+    ],
+
+    "cold": [
+      "brick",
+      "wood",
+      "double_glazed_glass"
+    ],
+
+    "humid": [
+      "upvc",
+      "weatherproof_paint",
+      "ceramic_tile"
+    ],
+
+    "heavy_rainfall": [
+      "waterproof_membrane",
+      "weatherproof_paint",
+      "rcc_slab"
+    ]
+  },
+
+  "optimization_rules": {
+    "prefer_local_materials": true,
+    "reduce_transport_cost": true,
+    "maximize_durability": true,
+    "balance_cost_and_quality": true
+  },
+
+  "planning_tags": [
+    "construction_materials",
+    "material_selection",
+    "budget_optimization",
+    "cost_estimation",
+    "architecture_ai",
+    "sustainability"
+  ]
+}

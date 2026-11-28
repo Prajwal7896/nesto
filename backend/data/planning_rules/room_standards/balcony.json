@@ -1,0 +1,190 @@
+{
+  "category":"room_standards",
+  "room":"balcony",
+  "version":"2.0",
+  "description":"Comprehensive balcony planning standards for AI-driven residential and commercial floor planning. Covers dimensional requirements, safety, ventilation, daylight, accessibility, furniture planning, drainage, structural loading and optimization.",
+
+  "dimensions":{
+    "minimum_area_sqft":30,
+    "recommended_area_sqft":60,
+    "luxury_area_sqft":120,
+    "minimum_width_ft":4,
+    "recommended_width_ft":6,
+    "minimum_depth_ft":5,
+    "recommended_depth_ft":8,
+    "minimum_height_ft":10
+  },
+
+  "occupancy":{
+    "minimum_persons":2,
+    "recommended_persons":4,
+    "luxury_persons":8
+  },
+
+  "location":{
+    "preferred_adjacent_rooms":[
+      "Living Room",
+      "Master Bedroom",
+      "Bedroom",
+      "Dining Room",
+      "Family Lounge"
+    ],
+    "avoid_adjacent_rooms":[
+      "Bathroom",
+      "Store Room",
+      "Utility Room"
+    ],
+    "preferred_orientation":[
+      "North",
+      "North-East",
+      "East"
+    ]
+  },
+
+  "ventilation":{
+    "cross_ventilation":true,
+    "minimum_open_side_percent":50,
+    "recommended_open_side_percent":70,
+    "natural_airflow_priority":"High"
+  },
+
+  "daylighting":{
+    "required":true,
+    "minimum_window_connection_percent":40,
+    "recommended_daylight_score":95
+  },
+
+  "privacy":{
+    "privacy_screen_supported":true,
+    "green_buffer_supported":true,
+    "glass_railing_supported":true,
+    "frosted_partition_optional":true
+  },
+
+  "railing":{
+    "minimum_height_mm":1070,
+    "recommended_height_mm":1200,
+    "child_safe":true,
+    "maximum_gap_mm":100,
+    "tempered_glass_supported":true,
+    "steel_railing_supported":true
+  },
+
+  "flooring":{
+    "anti_skid":true,
+    "weather_resistant":true,
+    "slope_percent":1.5,
+    "drain_required":true
+  },
+
+  "structural":{
+    "minimum_live_load_kn_m2":3.0,
+    "cantilever_supported":true,
+    "waterproofing_required":true,
+    "expansion_joint_supported":true
+  },
+
+  "furniture":{
+    "small":[
+      "2 Chairs",
+      "Coffee Table",
+      "Planters"
+    ],
+    "medium":[
+      "Outdoor Sofa",
+      "Dining Table",
+      "Swing"
+    ],
+    "luxury":[
+      "Outdoor Lounge",
+      "Bar Counter",
+      "Jacuzzi",
+      "Pergola"
+    ]
+  },
+
+  "lighting":{
+    "ambient_led":true,
+    "wall_lights":true,
+    "floor_lights":true,
+    "motion_sensor_supported":true,
+    "smart_control_supported":true
+  },
+
+  "landscaping":{
+    "vertical_garden":true,
+    "planters":true,
+    "green_wall_supported":true,
+    "drip_irrigation_supported":true
+  },
+
+  "utilities":{
+    "electrical_socket":true,
+    "water_tap_optional":true,
+    "drainage_required":true,
+    "internet_point_optional":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.95,
+    "ventilation":1.00,
+    "daylighting":0.98,
+    "comfort":0.95,
+    "privacy":0.90
+  },
+
+  "bonuses":{
+    "living_room_connection":5,
+    "bedroom_connection":4,
+    "north_orientation":4,
+    "green_wall":3,
+    "smart_lighting":2,
+    "cross_ventilation":5
+  },
+
+  "penalties":{
+    "no_drainage":-10,
+    "low_railing":-10,
+    "poor_ventilation":-8,
+    "unsafe_flooring":-8,
+    "west_exposure_without_shading":-5
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Balcony railing height shall not be less than 1070 mm.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Anti-skid flooring shall be provided.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper drainage slope shall be maintained.",
+      "severity":"high"
+    },
+    {
+      "rule":"Balcony shall receive natural daylight and ventilation.",
+      "severity":"high"
+    },
+    {
+      "rule":"Waterproofing shall be provided for all exposed slabs.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_comfort_score":95,
+    "target_daylight_score":95,
+    "target_ventilation_score":100,
+    "target_safety_score":98
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 875 (Design Loads)",
+    "IS 456 (RCC Design)",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data"
+  ]
+}

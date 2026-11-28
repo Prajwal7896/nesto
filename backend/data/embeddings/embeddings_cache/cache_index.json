@@ -1,0 +1,22 @@
+{
+  "model": "all-MiniLM-L6-v2",
+  "dimension": 384,
+
+  "cached_files": {
+    "building_codes.jsonl": "processed",
+    "cost.jsonl": "processed",
+    "engineering.jsonl": "processed",
+    "structural.jsonl": "processed",
+    "room_standards.jsonl": "processed",
+    "planning_rules.jsonl": "processed",
+    "vastu.jsonl": "processed"
+  },
+
+  "cache_strategy": {
+    "enabled": true,
+    "reuse_embeddings": true,
+    "auto_update": true
+  },
+
+  "last_updated": "2026-07-04"
+}

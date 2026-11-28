@@ -1,0 +1,167 @@
+{
+  "category":"room_standards",
+  "room":"pooja_room",
+  "version":"2.0",
+  "description":"Comprehensive pooja room (prayer room) planning standards for AI-driven residential floor planning. Covers orientation, dimensions, ventilation, sanctity rules, storage, lighting, materials, placement constraints and Vastu-aligned design principles.",
+
+  "dimensions":{
+    "minimum_area_sqft":20,
+    "recommended_area_sqft":40,
+    "luxury_area_sqft":80,
+    "minimum_width_ft":4,
+    "recommended_width_ft":6,
+    "minimum_length_ft":5,
+    "recommended_length_ft":8,
+    "minimum_height_ft":9
+  },
+
+  "location":{
+    "preferred_orientation":[
+      "North-East",
+      "East"
+    ],
+    "preferred_adjacent_rooms":[
+      "Living Room",
+      "Dining Room",
+      "Family Lounge"
+    ],
+    "avoid_adjacent_rooms":[
+      "Bathroom",
+      "Kitchen",
+      "Toilet",
+      "Parking",
+      "Utility Room"
+    ],
+    "placement_rules":[
+      "Do not place above or below bathrooms",
+      "Prefer clean and quiet corner of house",
+      "Avoid direct entrance visibility"
+    ]
+  },
+
+  "layout":{
+    "idol_wall_facing":"West or East (user facing North/East during prayer)",
+    "idol_height_from_floor_ft":2.5,
+    "storage_below_allowed":true,
+    "platform_required":true
+  },
+
+  "ventilation":{
+    "natural_ventilation_required":true,
+    "minimum_window_area_sqft":2,
+    "cross_ventilation_preferred":true,
+    "air_changes_per_hour":4
+  },
+
+  "lighting":{
+    "recommended_lux":150,
+    "natural_daylight_required":true,
+    "warm_white_led":true,
+    "diya_space_required":true,
+    "accent_lighting":true
+  },
+
+  "materials":{
+    "preferred":[
+      "Wood (Teak)",
+      "Marble",
+      "Natural Stone",
+      "Brass Elements"
+    ],
+    "avoid":[
+      "Plastic",
+      "Synthetic Laminates (for sacred area)"
+    ]
+  },
+
+  "storage":{
+    "pooja_items_storage":true,
+    "hidden_storage_optional":true,
+    "drawer_system":true,
+    "incense_storage":true
+  },
+
+  "electrical":{
+    "diya_safe_socket_distance_mm":600,
+    "lighting_points":2,
+    "fan_optional":true,
+    "sound_system_optional":true
+  },
+
+  "safety":{
+    "fire_resistant_materials_preferred":true,
+    "diya_safety_zone_required":true,
+    "smoke_ventilation_required":true,
+    "child_safe_design":true
+  },
+
+  "aesthetics":{
+    "carved_doors_optional":true,
+    "bells_supported":true,
+    "traditional_design_preferred":true,
+    "minimalist_design_supported":true
+  },
+
+  "optimization":{
+    "peace_score":0.99,
+    "sanctity_score":1.0,
+    "ventilation":0.95,
+    "light_harmony":0.96,
+    "space_efficiency":0.90
+  },
+
+  "bonuses":{
+    "north_east_location":5,
+    "natural_light":5,
+    "wood_marble_material":4,
+    "quiet_zone":5,
+    "ventilation":4,
+    "dedicated_space":5
+  },
+
+  "penalties":{
+    "near_bathroom":-10,
+    "near_kitchen":-8,
+    "under_staircase":-7,
+    "poor_ventilation":-8,
+    "direct_entrance_view":-6
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Pooja room shall preferably be located in North-East direction.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Pooja room shall not be placed near bathroom or toilet.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Adequate ventilation and light shall be provided.",
+      "severity":"high"
+    },
+    {
+      "rule":"Sacred items storage shall be kept clean and organized.",
+      "severity":"high"
+    },
+    {
+      "rule":"Fire safety precautions shall be ensured for diya use.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "sanctity_score_target":99,
+    "comfort_score_target":95,
+    "ventilation_score_target":95,
+    "lighting_score_target":96
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "Vastu Shastra Principles",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "Hindu Temple Architecture Guidelines"
+  ]
+}

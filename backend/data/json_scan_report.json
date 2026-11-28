@@ -1,0 +1,550 @@
+{
+  "total_scanned": 90,
+  "knowledge_files": 78,
+  "system_files": 12,
+  "ready_for_processing": 78,
+  "invalid": 0,
+  "empty": 0,
+  "results": [
+    {
+      "source": "architecture/contemporary.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3216
+    },
+    {
+      "source": "architecture/luxury.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4673
+    },
+    {
+      "source": "architecture/minimalist.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3230
+    },
+    {
+      "source": "architecture/modern.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3697
+    },
+    {
+      "source": "architecture/traditional.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3944
+    },
+    {
+      "source": "architecture/villa.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5542
+    },
+    {
+      "source": "building_codes/fire_safety.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 2976
+    },
+    {
+      "source": "building_codes/india_nbc.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3222
+    },
+    {
+      "source": "building_codes/state_rules/gujarat.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3624
+    },
+    {
+      "source": "building_codes/state_rules/karnataka.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3747
+    },
+    {
+      "source": "building_codes/state_rules/maharashtra.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3071
+    },
+    {
+      "source": "cost/finishing.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4272
+    },
+    {
+      "source": "cost/india.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3130
+    },
+    {
+      "source": "cost/labour.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4714
+    },
+    {
+      "source": "cost/materials.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 6067
+    },
+    {
+      "source": "datasets/design_patterns.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 8810
+    },
+    {
+      "source": "datasets/failed_floorplans.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5793
+    },
+    {
+      "source": "datasets/planning_examples.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4606
+    },
+    {
+      "source": "datasets/room_relationships.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5226
+    },
+    {
+      "source": "datasets/successful_floorplans.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4593
+    },
+    {
+      "source": "embeddings/config/chunking_strategy.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 717
+    },
+    {
+      "source": "embeddings/config/embedding_model.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 347
+    },
+    {
+      "source": "embeddings/config/retrieval_config.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 569
+    },
+    {
+      "source": "embeddings/config/vector_config.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 538
+    },
+    {
+      "source": "embeddings/embeddings_cache/cache_index.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 452
+    },
+    {
+      "source": "embeddings/index/index_config.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 165
+    },
+    {
+      "source": "embeddings/index/index_stats.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 318
+    },
+    {
+      "source": "embeddings/mapping/id_to_category.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 121
+    },
+    {
+      "source": "embeddings/mapping/id_to_metadata.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 150
+    },
+    {
+      "source": "embeddings/mapping/id_to_source.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 421
+    },
+    {
+      "source": "embeddings/mapping/id_to_text.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 2196
+    },
+    {
+      "source": "embeddings/mapping/mapping_index.json",
+      "status": "SYSTEM_FILE",
+      "type": "SYSTEM",
+      "characters": 76
+    },
+    {
+      "source": "engineering/drainage.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 3293
+    },
+    {
+      "source": "engineering/electrical.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5559
+    },
+    {
+      "source": "engineering/hvac.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5281
+    },
+    {
+      "source": "engineering/plumbing.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4656
+    },
+    {
+      "source": "engineering/water_supply.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5477
+    },
+    {
+      "source": "furniture/bedroom.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 6772
+    },
+    {
+      "source": "furniture/kitchen.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 6399
+    },
+    {
+      "source": "furniture/living_room.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 6812
+    },
+    {
+      "source": "furniture/office.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 6542
+    },
+    {
+      "source": "materials/bricks.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5297
+    },
+    {
+      "source": "materials/concrete.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5323
+    },
+    {
+      "source": "materials/glass.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5978
+    },
+    {
+      "source": "materials/roofing.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 7155
+    },
+    {
+      "source": "materials/steel.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5748
+    },
+    {
+      "source": "materials/wood.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5956
+    },
+    {
+      "source": "optimization/airflow.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5518
+    },
+    {
+      "source": "optimization/daylight.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 6104
+    },
+    {
+      "source": "optimization/energy.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5685
+    },
+    {
+      "source": "optimization/room_scoring.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5303
+    },
+    {
+      "source": "optimization/space_efficiency.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5358
+    },
+    {
+      "source": "optimization/sustainability.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5526
+    },
+    {
+      "source": "planning_rules/accessibility.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5170
+    },
+    {
+      "source": "planning_rules/adjacency.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 7471
+    },
+    {
+      "source": "planning_rules/center_of_mass.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4273
+    },
+    {
+      "source": "planning_rules/circulation.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5085
+    },
+    {
+      "source": "planning_rules/evacuation.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5155
+    },
+    {
+      "source": "planning_rules/lighting.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5436
+    },
+    {
+      "source": "planning_rules/privacy.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5594
+    },
+    {
+      "source": "planning_rules/room_standards/balcony.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4310
+    },
+    {
+      "source": "planning_rules/room_standards/bathroom.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4711
+    },
+    {
+      "source": "planning_rules/room_standards/bedroom.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4788
+    },
+    {
+      "source": "planning_rules/room_standards/dining.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4498
+    },
+    {
+      "source": "planning_rules/room_standards/kitchen.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5563
+    },
+    {
+      "source": "planning_rules/room_standards/living_room.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5145
+    },
+    {
+      "source": "planning_rules/room_standards/office.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5025
+    },
+    {
+      "source": "planning_rules/room_standards/parking.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4758
+    },
+    {
+      "source": "planning_rules/room_standards/pooja.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4084
+    },
+    {
+      "source": "planning_rules/room_standards/staircase.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4037
+    },
+    {
+      "source": "planning_rules/room_standards/utility.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4065
+    },
+    {
+      "source": "planning_rules/ventilation.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5685
+    },
+    {
+      "source": "planning_rules/zoning.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 6555
+    },
+    {
+      "source": "structural/beam_rules.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4134
+    },
+    {
+      "source": "structural/column_rules.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4019
+    },
+    {
+      "source": "structural/earthquake.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4574
+    },
+    {
+      "source": "structural/footing.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4065
+    },
+    {
+      "source": "structural/foundation.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4564
+    },
+    {
+      "source": "structural/load_distribution.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4050
+    },
+    {
+      "source": "structural/slab_rules.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4049
+    },
+    {
+      "source": "templates/apartment.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4809
+    },
+    {
+      "source": "templates/bungalow.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4951
+    },
+    {
+      "source": "templates/commercial.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5504
+    },
+    {
+      "source": "templates/duplex.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5170
+    },
+    {
+      "source": "templates/farmhouse.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5006
+    },
+    {
+      "source": "templates/villa.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5900
+    },
+    {
+      "source": "vastu/directions.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5884
+    },
+    {
+      "source": "vastu/entrances.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 5067
+    },
+    {
+      "source": "vastu/plot_shapes.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4476
+    },
+    {
+      "source": "vastu/rooms.json",
+      "status": "READY_FOR_PROCESSING",
+      "type": "KNOWLEDGE",
+      "characters": 4404
+    }
+  ]
+}

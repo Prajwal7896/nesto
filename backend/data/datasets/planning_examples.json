@@ -1,0 +1,155 @@
+{
+  "category":"planning_examples",
+  "version":"1.0",
+  "description":"Reference planning examples used by the AI planner to learn room arrangement, circulation, zoning, structural planning, cost optimization and regulatory compliance.",
+  "examples":[
+    {
+      "id":"PE001",
+      "title":"Compact 2BHK Urban House",
+      "input":{
+        "plot":{"length":40,"width":30,"unit":"ft"},
+        "budget":3500000,
+        "floors":1,
+        "style":"modern",
+        "bedrooms":2,
+        "bathrooms":2,
+        "parking":1
+      },
+      "layout":{
+        "public_zone":["Entrance","Living Room","Dining","Kitchen"],
+        "private_zone":["Master Bedroom","Bedroom 2"],
+        "service_zone":["Utility","Bathrooms"]
+      },
+      "planning_patterns":[
+        "Open Living Concept",
+        "Kitchen Triangle",
+        "Cross Ventilation"
+      ],
+      "performance":{
+        "space_efficiency":0.93,
+        "privacy":0.88,
+        "ventilation":0.97,
+        "cost_efficiency":0.91
+      }
+    },
+    {
+      "id":"PE002",
+      "title":"Modern Duplex Villa",
+      "input":{
+        "plot":{"length":60,"width":45,"unit":"ft"},
+        "budget":12000000,
+        "floors":2,
+        "style":"villa",
+        "bedrooms":4,
+        "bathrooms":5,
+        "parking":2
+      },
+      "layout":{
+        "ground_floor":["Living","Dining","Kitchen","Guest Bedroom","Parking"],
+        "first_floor":["Master Bedroom","2 Bedrooms","Family Lounge","Balcony"]
+      },
+      "planning_patterns":[
+        "Private Bedroom Cluster",
+        "Central Staircase",
+        "Future Expansion"
+      ],
+      "performance":{
+        "space_efficiency":0.95,
+        "privacy":0.97,
+        "luxury":0.96
+      }
+    },
+    {
+      "id":"PE003",
+      "title":"Small Budget House",
+      "input":{
+        "plot":{"length":30,"width":25,"unit":"ft"},
+        "budget":1800000,
+        "floors":1,
+        "style":"minimalist",
+        "bedrooms":1,
+        "bathrooms":1
+      },
+      "planning_patterns":[
+        "Compact Planning",
+        "Minimum Corridor",
+        "Shared Dining"
+      ],
+      "performance":{
+        "space_efficiency":0.98
+      }
+    },
+    {
+      "id":"PE004",
+      "title":"Luxury Courtyard Villa",
+      "input":{
+        "plot":{"length":90,"width":70,"unit":"ft"},
+        "budget":35000000,
+        "floors":2,
+        "style":"luxury"
+      },
+      "planning_patterns":[
+        "Central Courtyard",
+        "Double Height Living",
+        "Luxury Master Suite"
+      ]
+    },
+    {
+      "id":"PE005",
+      "title":"Vastu Compliant Home",
+      "planning_patterns":[
+        "North East Entrance",
+        "South East Kitchen",
+        "South West Master Bedroom"
+      ]
+    },
+    {
+      "id":"PE006",
+      "title":"Corner Plot House",
+      "planning_patterns":[
+        "Corner Plot Planning",
+        "Dual Entry",
+        "Cross Ventilation"
+      ]
+    },
+    {
+      "id":"PE007",
+      "title":"Home Office Residence",
+      "planning_patterns":[
+        "Home Office Isolation",
+        "Noise Separation"
+      ]
+    },
+    {
+      "id":"PE008",
+      "title":"Family Villa",
+      "planning_patterns":[
+        "Family Lounge",
+        "Independent Guest Suite",
+        "Private Bedroom Cluster"
+      ]
+    },
+    {
+      "id":"PE009",
+      "title":"Stilt Parking Residence",
+      "planning_patterns":[
+        "Parking Under Stilt",
+        "Central Staircase"
+      ]
+    },
+    {
+      "id":"PE010",
+      "title":"Eco Friendly House",
+      "planning_patterns":[
+        "Rainwater Harvesting",
+        "Solar Ready Roof",
+        "Energy Efficient Orientation",
+        "Cross Ventilation"
+      ],
+      "performance":{
+        "energy_efficiency":0.97,
+        "sustainability":0.98
+      }
+    }
+  ]
+}

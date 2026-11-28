@@ -1,0 +1,9 @@
+{
+  "BC001": "building_codes",
+  "C001": "cost",
+  "E001": "engineering",
+  "S001": "structural",
+  "R001": "room_standards",
+  "P001": "planning_rules",
+  "V001": "vastu"
+}

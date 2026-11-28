@@ -1,0 +1,41 @@
+{
+  "top_k": 5,
+
+  "similarity": {
+    "metric": "cosine",
+    "use_normalized_vectors": true
+  },
+
+  "thresholds": {
+    "min_score": 0.65,
+    "hard_filter_enabled": true
+  },
+
+  "reranking": {
+    "enabled": false,
+    "method": "none",
+    "rerank_top_n": 10
+  },
+
+  "diversity": {
+    "enabled": false,
+    "max_similar_results": 2
+  },
+
+  "query_processing": {
+    "clean_query": true,
+    "lowercase": true,
+    "expand_synonyms": false
+  },
+
+  "response_building": {
+    "include_metadata": true,
+    "include_source": true,
+    "max_chunks_returned": 5
+  },
+
+  "performance": {
+    "fast_mode": true,
+    "cache_query_embeddings": true
+  }
+}

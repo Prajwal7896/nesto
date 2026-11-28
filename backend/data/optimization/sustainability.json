@@ -1,0 +1,206 @@
+{
+  "category":"building_optimization",
+  "module":"sustainability",
+  "version":"2.0",
+  "description":"Comprehensive sustainability optimization database for AI-driven residential and commercial building planning. Used for green building design, resource efficiency, renewable energy integration, water conservation, carbon reduction and environmental performance evaluation.",
+
+  "objectives":{
+    "minimize_carbon_emissions":true,
+    "maximize_energy_efficiency":true,
+    "reduce_water_consumption":true,
+    "maximize_natural_resources":true,
+    "increase_recyclability":true,
+    "support_net_zero_design":true
+  },
+
+  "green_building":{
+    "leed_supported":true,
+    "igbc_supported":true,
+    "griha_supported":true,
+    "ecbc_compliant":true,
+    "net_zero_ready":true
+  },
+
+  "site_planning":{
+    "preserve_existing_trees":true,
+    "minimum_green_cover_percent":30,
+    "permeable_paving_required":true,
+    "heat_island_reduction":true,
+    "native_landscaping_preferred":true
+  },
+
+  "energy":{
+    "solar_panels_supported":true,
+    "solar_water_heater_supported":true,
+    "battery_storage_supported":true,
+    "high_efficiency_hvac":true,
+    "led_lighting_only":true,
+    "smart_energy_management":true
+  },
+
+  "water":{
+    "rainwater_harvesting_required":true,
+    "greywater_recycling_supported":true,
+    "low_flow_fixtures_required":true,
+    "dual_flush_wc_required":true,
+    "smart_water_meter":true
+  },
+
+  "materials":{
+    "recycled_materials_supported":true,
+    "locally_sourced_materials":true,
+    "low_voc_materials":true,
+    "fsc_certified_wood":true,
+    "flyash_bricks_supported":true,
+    "aac_blocks_supported":true,
+    "recycled_steel_supported":true
+  },
+
+  "indoor_environment":{
+    "cross_ventilation":true,
+    "natural_daylighting":true,
+    "low_voc_paints":true,
+    "hepa_filtration_supported":true,
+    "humidity_control_percent":[40,60],
+    "fresh_air_supply":true
+  },
+
+  "waste_management":{
+    "construction_waste_recycling":true,
+    "organic_waste_composting":true,
+    "segregated_waste_bins":true,
+    "recyclable_storage_area":true
+  },
+
+  "landscape":{
+    "native_plants":true,
+    "drip_irrigation":true,
+    "green_roof_supported":true,
+    "vertical_garden_supported":true,
+    "tree_shading_required":true
+  },
+
+  "carbon_reduction":{
+    "embodied_carbon_analysis":true,
+    "operational_carbon_monitoring":true,
+    "carbon_offset_supported":true,
+    "electric_vehicle_charging":true
+  },
+
+  "smart_building":{
+    "smart_lighting":true,
+    "smart_hvac":true,
+    "occupancy_sensors":true,
+    "energy_monitoring":true,
+    "water_monitoring":true,
+    "ai_optimization":true
+  },
+
+  "optimization_weights":{
+    "energy_efficiency":0.25,
+    "water_efficiency":0.20,
+    "material_sustainability":0.15,
+    "indoor_environment":0.15,
+    "renewable_energy":0.15,
+    "waste_management":0.10
+  },
+
+  "design_patterns":[
+    {
+      "name":"Net Zero Energy Building",
+      "score":1.00
+    },
+    {
+      "name":"Passive Solar Design",
+      "score":0.98
+    },
+    {
+      "name":"Rainwater Harvesting",
+      "score":0.97
+    },
+    {
+      "name":"Green Roof",
+      "score":0.96
+    },
+    {
+      "name":"Courtyard Ventilation",
+      "score":0.95
+    },
+    {
+      "name":"Solar Ready Roof",
+      "score":0.97
+    }
+  ],
+
+  "performance_targets":{
+    "energy_saving_percent":40,
+    "water_saving_percent":35,
+    "renewable_energy_percent":50,
+    "construction_waste_recycling_percent":80,
+    "carbon_emission_reduction_percent":45
+  },
+
+  "bonuses":{
+    "solar_installation":5,
+    "green_roof":4,
+    "rainwater_harvesting":4,
+    "greywater_recycling":4,
+    "ev_charging":3,
+    "native_landscaping":2,
+    "smart_building":3
+  },
+
+  "penalties":{
+    "poor_daylighting":-5,
+    "high_energy_consumption":-10,
+    "no_rainwater_harvesting":-8,
+    "high_water_usage":-6,
+    "non_recyclable_materials":-5
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Rainwater harvesting shall be provided for applicable buildings.",
+      "severity":"critical"
+    },
+    {
+      "rule":"LED lighting shall be used throughout the building.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Low-flow plumbing fixtures shall be installed.",
+      "severity":"high"
+    },
+    {
+      "rule":"Cross ventilation shall be provided in habitable rooms.",
+      "severity":"high"
+    },
+    {
+      "rule":"Minimum 30% site area shall remain green where feasible.",
+      "severity":"medium"
+    },
+    {
+      "rule":"Renewable energy systems should be considered during design.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_green_building_score":90,
+    "target_energy_use_intensity_kwh_m2_year":50,
+    "target_water_consumption_liters_person_day":100,
+    "target_carbon_reduction_percent":45,
+    "target_recycled_material_percent":25
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "Energy Conservation Building Code (ECBC)",
+    "IGBC Green Homes",
+    "GRIHA Rating System",
+    "LEED v4",
+    "ASHRAE 90.1",
+    "Bureau of Energy Efficiency (BEE)",
+    "CPWD Specifications"
+  ]
+}

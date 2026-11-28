@@ -1,0 +1,199 @@
+{
+  "category":"building_typology",
+  "module":"farmhouse_rules",
+  "version":"2.0",
+  "description":"Comprehensive farmhouse design rules for AI-driven architectural planning. Covers rural residential planning, land use, landscape integration, sustainability, water systems, ventilation, privacy, leisure spaces, and low-density structural planning.",
+
+  "objectives":{
+    "maximize_nature_integration":true,
+    "ensure_low_density_spatial_design":true,
+    "optimize_relaxation_and_leisure":true,
+    "enhance_self_sufficiency":true,
+    "promote_sustainable_living":true
+  },
+
+  "building_types":{
+    "single_storey_farmhouse":true,
+    "duplex_farmhouse":true,
+    "luxury_farmhouse":true,
+    "eco_farmhouse":true
+  },
+
+  "site_requirements":{
+    "minimum_plot_area_sqft":5000,
+    "recommended_plot_area_sqft":10000,
+    "luxury_plot_area_sqft":50000,
+    "preferred_location":"rural_or_semi_rural",
+    "setback_front_ft":15,
+    "setback_sides_ft":10,
+    "setback_rear_ft":15,
+    "open_land_percentage_min":60
+  },
+
+  "zoning":{
+    "residential_zone":[
+      "living_room",
+      "bedrooms",
+      "kitchen"
+    ],
+    "leisure_zone":[
+      "veranda",
+      "terrace",
+      "lounge",
+      "home_theatre_optional"
+    ],
+    "service_zone":[
+      "utility",
+      "store",
+      "staff_room"
+    ],
+    "outdoor_zone":[
+      "garden",
+      "farm_area",
+      "orchard",
+      "swimming_pool_optional"
+    ]
+  },
+
+  "spatial_planning":{
+    "open_layout_preferred":true,
+    "indoor_outdoor_flow_required":true,
+    "large_windows_required":true,
+    "veranda_mandatory":true,
+    "courtyard_optional":true,
+    "low_rise_structure_preferred":true
+  },
+
+  "circulation":{
+    "wide_corridors_required":true,
+    "minimum_path_width_ft":4,
+    "vehicle_access_inside_plot_required":true,
+    "circular_movement_supported":true
+  },
+
+  "structural_system":{
+    "rcc_frame":true,
+    "load_bearing_optional":true,
+    "low_height_building_preferred":true,
+    "long_spans_for_open_spaces":true
+  },
+
+  "ventilation":{
+    "cross_ventilation_required":true,
+    "natural_airflow_priority":true,
+    "stack_ventilation_supported":true,
+    "minimum_window_area_percent":25
+  },
+
+  "daylight":{
+    "natural_light_maximization":true,
+    "skylights_supported":true,
+    "large_openings_required":true,
+    "sun_path_consideration_required":true
+  },
+
+  "landscape":{
+    "garden_required":true,
+    "lawns_required":true,
+    "trees_recommended":true,
+    "water_body_optional":true,
+    "orchard_supported":true,
+    "agriculture_zone_optional":true
+  },
+
+  "water_systems":{
+    "borewell_supported":true,
+    "rainwater_harvesting_mandatory":true,
+    "underground_tank_required":true,
+    "greywater_reuse_supported":true
+  },
+
+  "energy":{
+    "solar_panels_supported":true,
+    "off_grid_system_optional":true,
+    "energy_efficient_design":true
+  },
+
+  "materials":{
+    "rcc":true,
+    "brick_masonry":true,
+    "natural_stone_preferred":true,
+    "wood_finishes_supported":true
+  },
+
+  "sustainability":{
+    "eco_friendly_design_priority":true,
+    "water_recycling_required":true,
+    "waste_management_required":true,
+    "natural_cooling_design":true
+  },
+
+  "privacy":{
+    "high_privacy_required":true,
+    "large_setbacks":true,
+    "visual_barriers_required":true
+  },
+
+  "optimization":{
+    "nature_integration_score":0.99,
+    "comfort_score":0.98,
+    "sustainability_score":0.97,
+    "privacy_score":0.98,
+    "space_efficiency":0.94
+  },
+
+  "bonuses":{
+    "large_plot":5,
+    "water_body":4,
+    "dense_vegetation":5,
+    "open_layout":4,
+    "solar_integration":4
+  },
+
+  "penalties":{
+    "over_dense_construction":-10,
+    "poor_natural_integration":-9,
+    "insufficient_setbacks":-8,
+    "lack_of_green_space":-10,
+    "poor_water_management":-9
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Farmhouse must maintain high open green area ratio.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Natural ventilation and daylight must be maximized.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Water management systems must be included.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Low-rise and low-density construction is preferred.",
+      "severity":"high"
+    },
+    {
+      "rule":"Landscape integration is mandatory.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_nature_integration":99,
+    "target_sustainability":97,
+    "target_comfort":98,
+    "target_privacy":98,
+    "target_energy_efficiency":95
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Rural Building Guidelines",
+    "IS 456:2000",
+    "Energy Conservation Building Code (ECBC)",
+    "Environmental Planning Standards"
+  ]
+}

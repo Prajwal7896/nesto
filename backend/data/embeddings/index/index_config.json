@@ -1,0 +1,11 @@
+{
+  "index_type": "IndexFlatIP",
+  "metric": "cosine",
+  "embedding_provider": "google-genai",
+  "model_name": "gemini-embedding-001",
+  "dimension": 3072,
+  "normalize_embeddings": true,
+  "total_vectors": 313,
+  "unique_sources": 73,
+  "cached_embeddings": true
+}

@@ -1,0 +1,203 @@
+{
+  "category":"room_standards",
+  "room":"bathroom",
+  "version":"2.0",
+  "description":"Comprehensive bathroom planning standards for AI-driven residential and commercial floor planning. Covers dimensions, plumbing, ventilation, lighting, accessibility, ergonomics, fixtures, waterproofing, safety and optimization.",
+
+  "dimensions":{
+    "minimum_area_sqft":35,
+    "recommended_area_sqft":55,
+    "luxury_area_sqft":100,
+    "minimum_width_ft":5,
+    "recommended_width_ft":7,
+    "minimum_length_ft":7,
+    "recommended_length_ft":9,
+    "minimum_height_ft":9
+  },
+
+  "types":{
+    "common_bathroom":{
+      "recommended_area_sqft":40,
+      "occupancy":4
+    },
+    "attached_bathroom":{
+      "recommended_area_sqft":55,
+      "occupancy":2
+    },
+    "luxury_bathroom":{
+      "recommended_area_sqft":100,
+      "occupancy":2
+    },
+    "accessible_bathroom":{
+      "recommended_area_sqft":70,
+      "wheelchair_turning_radius_mm":1500
+    }
+  },
+
+  "location":{
+    "preferred_adjacent_rooms":[
+      "Bedroom",
+      "Master Bedroom",
+      "Guest Bedroom",
+      "Walk-in Closet"
+    ],
+    "avoid_adjacent_rooms":[
+      "Kitchen",
+      "Dining Room",
+      "Pooja Room"
+    ],
+    "shared_plumbing_wall_preferred":true
+  },
+
+  "fixtures":{
+    "wash_basin":{
+      "required":true,
+      "minimum_width_mm":550
+    },
+    "water_closet":{
+      "required":true,
+      "minimum_clearance_mm":750
+    },
+    "shower":{
+      "required":true,
+      "minimum_size_mm":"900x900"
+    },
+    "geyser_supported":true,
+    "bathtub_optional":true,
+    "double_wash_basin_optional":true
+  },
+
+  "plumbing":{
+    "hot_water":true,
+    "cold_water":true,
+    "floor_trap_required":true,
+    "separate_waste_line":true,
+    "minimum_pipe_size_mm":20,
+    "concealed_plumbing_supported":true
+  },
+
+  "ventilation":{
+    "window_required":true,
+    "minimum_window_area_sqft":4,
+    "exhaust_fan_required":true,
+    "minimum_air_changes_per_hour":10
+  },
+
+  "lighting":{
+    "recommended_lux":250,
+    "mirror_lighting":true,
+    "ambient_led":true,
+    "night_light_supported":true,
+    "ip65_fixtures_required":true
+  },
+
+  "flooring":{
+    "anti_skid":true,
+    "minimum_slope_percent":1.5,
+    "maximum_slope_percent":2.0,
+    "waterproofing_required":true,
+    "floor_drain_required":true
+  },
+
+  "wall_finish":{
+    "tile_height_ft":7,
+    "recommended_materials":[
+      "Ceramic Tile",
+      "Vitrified Tile",
+      "Porcelain Tile"
+    ],
+    "water_resistant":true
+  },
+
+  "door":{
+    "minimum_width_mm":750,
+    "recommended_width_mm":900,
+    "opens_outward":true,
+    "water_resistant_material":true
+  },
+
+  "accessibility":{
+    "grab_bars_supported":true,
+    "wheelchair_accessible_optional":true,
+    "barrier_free_shower":true,
+    "anti_skid_floor":true
+  },
+
+  "smart_features":{
+    "motion_sensor_light":true,
+    "humidity_sensor":true,
+    "smart_mirror":true,
+    "automatic_exhaust":true,
+    "water_leak_sensor":true,
+    "touchless_faucet_supported":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.94,
+    "water_efficiency":0.95,
+    "ventilation":0.98,
+    "comfort":0.94,
+    "maintenance":0.96
+  },
+
+  "bonuses":{
+    "shared_plumbing_wall":5,
+    "natural_ventilation":5,
+    "anti_skid_flooring":5,
+    "smart_fixtures":3,
+    "double_basin":2,
+    "concealed_plumbing":3
+  },
+
+  "penalties":{
+    "no_exhaust":-10,
+    "no_waterproofing":-10,
+    "slippery_floor":-8,
+    "poor_drainage":-8,
+    "bathroom_next_to_kitchen":-8,
+    "door_opens_inward":-4
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Every bathroom shall have proper ventilation.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Floor waterproofing shall be mandatory.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Anti-skid flooring shall be used.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Floor drain shall be provided.",
+      "severity":"high"
+    },
+    {
+      "rule":"Bathrooms shall not open directly into kitchens or dining rooms.",
+      "severity":"high"
+    },
+    {
+      "rule":"Exhaust fan shall be installed where natural ventilation is insufficient.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_hygiene_score":98,
+    "target_ventilation_score":95,
+    "target_safety_score":98,
+    "target_water_efficiency":95
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 1172",
+    "IS 2065",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "BIS Plumbing Standards"
+  ]
+}

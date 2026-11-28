@@ -1,0 +1,142 @@
+{
+  "category": "finishing",
+
+  "definition": "Finishing refers to the final stage of construction that includes surface treatments, aesthetics, fixtures, and decorative elements that define the visual and functional quality of a building.",
+
+  "finish_levels": {
+    "basic": {
+      "description": "Low-cost functional finish suitable for budget homes",
+      "cost_multiplier": 0.8,
+      "materials": [
+        "cement plaster",
+        "basic paint",
+        "standard ceramic tiles",
+        "aluminum fittings"
+      ],
+      "aesthetic_score": 0.4
+    },
+
+    "standard": {
+      "description": "Balanced finish for middle-class residential homes",
+      "cost_multiplier": 1.0,
+      "materials": [
+        "smooth plaster",
+        "emulsion paint",
+        "vitrified tiles",
+        "basic wood finishes"
+      ],
+      "aesthetic_score": 0.6
+    },
+
+    "premium": {
+      "description": "High-quality modern finish for villas and upscale homes",
+      "cost_multiplier": 1.5,
+      "materials": [
+        "designer tiles",
+        "texture paint",
+        "laminate wood panels",
+        "stainless steel fittings",
+        "glass railings"
+      ],
+      "aesthetic_score": 0.8
+    },
+
+    "luxury": {
+      "description": "Ultra high-end finish with luxury materials and custom design",
+      "cost_multiplier": 2.5,
+      "materials": [
+        "Italian marble",
+        "veneer wood",
+        "brass fittings",
+        "custom lighting systems",
+        "designer ceilings",
+        "smart glass systems"
+      ],
+      "aesthetic_score": 1.0
+    }
+  },
+
+  "interior_finishing": {
+    "walls": {
+      "basic": "cement plaster + paint",
+      "standard": "smooth plaster + emulsion paint",
+      "premium": "texture + accent walls",
+      "luxury": "stone cladding + designer panels"
+    },
+
+    "floors": {
+      "basic": "cement tiles",
+      "standard": "ceramic/vitrified tiles",
+      "premium": "large format vitrified / wood laminate",
+      "luxury": "marble / imported stone / hardwood"
+    },
+
+    "ceilings": {
+      "basic": "simple plaster",
+      "standard": "POP ceiling",
+      "premium": "false ceiling with lighting",
+      "luxury": "multi-layer designer ceiling with cove lighting"
+    },
+
+    "doors_windows": {
+      "basic": "standard wood / aluminum",
+      "standard": "engineered wood + sliding windows",
+      "premium": "UPVC + laminated doors",
+      "luxury": "solid wood + floor-to-ceiling glass"
+    }
+  },
+
+  "exterior_finishing": {
+    "facade": {
+      "basic": "cement paint",
+      "standard": "weatherproof paint",
+      "premium": "texture + cladding mix",
+      "luxury": "glass + stone + composite panels"
+    },
+
+    "roof": {
+      "basic": "cement finish",
+      "standard": "waterproof coating",
+      "premium": "insulated roof tiles",
+      "luxury": "terrace garden + solar integration"
+    }
+  },
+
+  "cost_drivers": {
+    "material_quality": 0.4,
+    "labor_skill": 0.3,
+    "design_complexity": 0.2,
+    "imported_materials": 0.5,
+    "custom_work": 0.6
+  },
+
+  "budget_mapping": {
+    "low_budget": "basic",
+    "medium_budget": "standard",
+    "high_budget": "premium",
+    "ultra_budget": "luxury"
+  },
+
+  "optimization_rules": {
+    "cost_control_priority": true,
+    "material_reuse_preferred": true,
+    "local_material_preference": true,
+    "maintenance_cost_awareness": true
+  },
+
+  "aesthetic_impact_weights": {
+    "walls": 0.3,
+    "floors": 0.3,
+    "ceiling": 0.2,
+    "facade": 0.2
+  },
+
+  "planning_tags": [
+    "interior_design",
+    "cost_estimation",
+    "material_selection",
+    "aesthetic_engine",
+    "construction_finishing",
+    "budget_control"
+  ]
+}

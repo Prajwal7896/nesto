@@ -1,0 +1,205 @@
+{
+  "category":"building_typology",
+  "module":"duplex_rules",
+  "version":"2.0",
+  "description":"Comprehensive duplex house design rules for AI-driven architectural planning. Covers two-level residential layout, vertical circulation, zoning separation, structural system, ventilation, daylight, privacy, parking, and optimization principles.",
+
+  "objectives":{
+    "maximize_family_living_efficiency":true,
+    "ensure_privacy_separation":true,
+    "optimize_vertical_space_usage":true,
+    "improve_natural_light_and_ventilation":true,
+    "balance_cost_and_comfort":true
+  },
+
+  "building_types":{
+    "side_by_side_duplex":true,
+    "stacked_duplex":true,
+    "luxury_duplex":true,
+    "compact_duplex":true
+  },
+
+  "site_requirements":{
+    "minimum_plot_area_sqft":800,
+    "recommended_plot_area_sqft":1500,
+    "luxury_plot_area_sqft":3000,
+    "preferred_orientation":[
+      "North",
+      "East",
+      "North-East"
+    ],
+    "setback_front_ft":8,
+    "setback_sides_ft":5,
+    "setback_rear_ft":6
+  },
+
+  "floor_distribution":{
+    "ground_floor":{
+      "public_zone":[
+        "living_room",
+        "dining_room",
+        "guest_room"
+      ],
+      "service_zone":[
+        "kitchen",
+        "utility",
+        "store_room"
+      ],
+      "parking":true
+    },
+    "first_floor":{
+      "private_zone":[
+        "master_bedroom",
+        "children_rooms",
+        "study_room"
+      ]
+    }
+  },
+
+  "zoning":{
+    "public_zone":[
+      "living_room",
+      "dining_room",
+      "guest_room",
+      "foyer"
+    ],
+    "private_zone":[
+      "bedrooms",
+      "study",
+      "family_lounge"
+    ],
+    "service_zone":[
+      "kitchen",
+      "utility",
+      "bathrooms"
+    ]
+  },
+
+  "circulation":{
+    "staircase_required":true,
+    "staircase_position":"central_or_side_aligned",
+    "minimum_stair_width_ft":3,
+    "direct_access_between_floors":true,
+    "efficient_vertical_flow":true
+  },
+
+  "structural_system":{
+    "rcc_frame":true,
+    "load_bearing_optional":true,
+    "column_grid_spacing_m":[3,6],
+    "continuous_load_path":"slab → beam → column → footing → soil"
+  },
+
+  "ventilation":{
+    "cross_ventilation_required":true,
+    "stack_effect_supported":true,
+    "minimum_window_area_percent":20,
+    "stairwell_airflow_assist":true
+  },
+
+  "daylight":{
+    "natural_light_priority":true,
+    "dual_aspect_rooms_recommended":true,
+    "skylight_optional":true,
+    "glare_control_required":true
+  },
+
+  "privacy":{
+    "floor_based_separation":true,
+    "public_private_vertical_separation":true,
+    "bedroom_privacy_high":true,
+    "sound_insulation_required":true
+  },
+
+  "parking":{
+    "minimum_cars":1,
+    "recommended_cars":2,
+    "covered_parking_supported":true,
+    "stilt_parking_optional":true
+  },
+
+  "materials":{
+    "rcc":true,
+    "brick_masonry":true,
+    "glass_for_balconies":true,
+    "wood_accents_optional":true
+  },
+
+  "stairs":{
+    "minimum_width_ft":3,
+    "recommended_riser_mm":170,
+    "tread_depth_mm":280,
+    "handrail_required":true
+  },
+
+  "sustainability":{
+    "rainwater_harvesting":true,
+    "solar_roof_supported":true,
+    "passive_cooling_design":true,
+    "energy_efficient_layout":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.95,
+    "privacy_score":0.96,
+    "ventilation_score":0.95,
+    "daylight_score":0.96,
+    "structural_efficiency":0.97
+  },
+
+  "bonuses":{
+    "double_height_living":4,
+    "central_staircase":5,
+    "cross_ventilation":5,
+    "stacked_wet_zones":4,
+    "balcony_integration":4
+  },
+
+  "penalties":{
+    "poor_zoning":-10,
+    "no_privacy_separation":-9,
+    "inadequate_ventilation":-8,
+    "inefficient_stair_position":-8,
+    "dark_rooms":-9
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Duplex must ensure clear separation of public and private zones.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Proper staircase design and placement must be ensured.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Adequate ventilation and daylight must be provided on both floors.",
+      "severity":"high"
+    },
+    {
+      "rule":"Structural load path must be continuous and aligned.",
+      "severity":"high"
+    },
+    {
+      "rule":"Sound insulation between floors must be considered.",
+      "severity":"high"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_privacy_score":96,
+    "target_comfort_score":97,
+    "target_ventilation_score":95,
+    "target_daylight_score":96,
+    "target_structural_efficiency":97
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "IS 456:2000",
+    "IS 1893 (Seismic Design)",
+    "CPWD Building Guidelines",
+    "Energy Conservation Building Code (ECBC)",
+    "Vastu Shastra Principles (optional)"
+  ]
+}

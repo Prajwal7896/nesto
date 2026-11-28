@@ -1,0 +1,107 @@
+{
+  "state": "Maharashtra",
+
+  "authority": "Maharashtra Building Regulations (Simplified RAG Version)",
+
+  "scope": "residential_and_low_rise_buildings",
+
+  "core_objectives": [
+    "Ensure compliance with Maharashtra urban planning norms",
+    "Adapt NBC rules to local municipal regulations",
+    "Ensure earthquake and coastal safety considerations where applicable",
+    "Optimize density for urban and semi-urban regions"
+  ],
+
+  "plot_regulations": {
+    "minimum_open_space_percentage": 15,
+    "maximum_ground_coverage": 65,
+    "setback_rules": {
+      "front": 3.0,
+      "side": 1.5,
+      "rear": 2.0
+    },
+    "corner_plot_benefit": true
+  },
+
+  "floor_rules": {
+    "maximum_floors_without_special_permission": 4,
+    "stilt_parking_allowed": true,
+    "basement_usage_allowed": true,
+    "terrace_usage_allowed": true
+  },
+
+  "staircase_rules": {
+    "mandatory_for_2_plus_floors": true,
+    "minimum_width_ft": 3.0,
+    "preferred_position": "side_or_central_core",
+    "fire_staircase_required_above": 3
+  },
+
+  "parking_rules": {
+    "car_parking_per_unit": 1,
+    "bike_parking_required": true,
+    "stilt_parking_preferred": true,
+    "basement_parking_allowed": true
+  },
+
+  "room_constraints": {
+    "natural_light_required": true,
+    "ventilation_required": true,
+    "minimum_room_height_ft": 9.0
+  },
+
+  "kitchen_rules": {
+    "preferred_direction": "south_east",
+    "ventilation_mandatory": true,
+    "gas_safety_separation_required": true
+  },
+
+  "sanitation_rules": {
+    "toilet_separation_from_kitchen": true,
+    "sewer_connection_required": true,
+    "rainwater_harvesting_required": true
+  },
+
+  "fire_safety_additions": {
+    "emergency_exit_required": true,
+    "fire_extinguisher_recommended": true,
+    "no_blocked_exit_paths": true
+  },
+
+  "structural_rules": {
+    "earthquake_zone_consideration": true,
+    "rcc_frame_required": true,
+    "load_distribution_standard": "IS_code_based",
+    "soil_testing_recommended": true
+  },
+
+  "climate_considerations": {
+    "monsoon_heavy_rainfall": true,
+    "water_drainage_priority": "high",
+    "roof_slope_recommended": true,
+    "humidity_control_required": true
+  },
+
+  "urban_planning_rules": {
+    "floor_space_index_applicable": true,
+    "fsi_flexible_by_location": true,
+    "high_density_zones": ["mumbai", "pune", "thane"],
+    "low_density_zones": ["nashik", "nagpur", "kolhapur"]
+  },
+
+  "optimization_priority": {
+    "space_efficiency": 0.9,
+    "cost_efficiency": 0.8,
+    "regulatory_compliance": 1.0,
+    "ventilation": 0.9,
+    "aesthetics": 0.6
+  },
+
+  "planning_tags": [
+    "maharashtra_building_code",
+    "urban_india_planning",
+    "fsi_based_design",
+    "monsoon_ready_architecture",
+    "regulatory_compliant_design"
+  ]
+}

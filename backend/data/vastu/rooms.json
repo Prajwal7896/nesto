@@ -1,0 +1,173 @@
+{
+  "category":"architectural_planning_system",
+  "module":"room_design_rules",
+  "version":"2.0",
+  "description":"Comprehensive room-level design rules for AI-driven architectural planning. Covers functional requirements, adjacency, dimensions, ventilation, lighting, privacy, furniture layout, and optimization for residential and commercial spaces.",
+
+  "objectives":{
+    "optimize_functional_usability":true,
+    "ensure_comfort_and_efficiency":true,
+    "maximize_natural_light_and_ventilation":true,
+    "maintain_privacy_zoning":true,
+    "ensure_flexible_furniture_layout":true
+  },
+
+  "room_types":{
+    "bedroom":true,
+    "living_room":true,
+    "kitchen":true,
+    "bathroom":true,
+    "dining_room":true,
+    "office_room":true,
+    "study_room":true,
+    "utility_room":true,
+    "store_room":true,
+    "balcony":true,
+    "corridor":true
+  },
+
+  "general_dimensions":{
+    "minimum_bedroom_sqft":100,
+    "recommended_bedroom_sqft":150,
+    "minimum_living_room_sqft":180,
+    "recommended_living_room_sqft":300,
+    "minimum_kitchen_sqft":80,
+    "recommended_kitchen_sqft":120,
+    "minimum_bathroom_sqft":30,
+    "recommended_bathroom_sqft":60
+  },
+
+  "zoning_rules":{
+    "public_zone":[
+      "living_room",
+      "dining_room",
+      "balcony"
+    ],
+    "private_zone":[
+      "bedrooms",
+      "study_room",
+      "office_room"
+    ],
+    "service_zone":[
+      "kitchen",
+      "bathroom",
+      "utility_room",
+      "store_room"
+    ]
+  },
+
+  "adjacency_rules":{
+    "bedroom":[
+      "bathroom",
+      "balcony",
+      "study_room"
+    ],
+    "kitchen":[
+      "dining_room",
+      "utility_room"
+    ],
+    "living_room":[
+      "dining_room",
+      "balcony",
+      "foyer"
+    ],
+    "bathroom":[
+      "bedroom",
+      "corridor"
+    ],
+    "office_room":[
+      "study_room",
+      "balcony"
+    ]
+  },
+
+  "ventilation_rules":{
+    "cross_ventilation_required":true,
+    "minimum_window_area_percent":20,
+    "opposite_wall_openings_preferred":true,
+    "natural_airflow_priority":true
+  },
+
+  "lighting_rules":{
+    "natural_light_priority":true,
+    "minimum_daylight_factor":2,
+    "north_east_light_preferred":true,
+    "avoid_deep_dark_rooms":true
+  },
+
+  "privacy_rules":{
+    "bedrooms_high_privacy":true,
+    "bathrooms_hidden_from_living":true,
+    "sound_insulation_required":true,
+    "separation_between_public_private_zones":true
+  },
+
+  "circulation_rules":{
+    "minimum_corridor_width_m":1.2,
+    "avoid_dead_ends":true,
+    "direct_room_access_preferred":true,
+    "efficient_flow_required":true
+  },
+
+  "furniture_rules":{
+    "minimum_clear_movement_space_m":0.9,
+    "fixed_furniture_zones_defined":true,
+    "modular_layout_supported":true,
+    "avoid_overcrowding":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.96,
+    "comfort_score":0.97,
+    "ventilation_score":0.95,
+    "privacy_score":0.96,
+    "lighting_score":0.96
+  },
+
+  "bonuses":{
+    "cross_ventilation":5,
+    "north_east_windows":5,
+    "balanced_adjacency":5,
+    "efficient_circulation":4,
+    "modular_furniture":4
+  },
+
+  "penalties":{
+    "poor_ventilation":-10,
+    "dark_rooms":-9,
+    "privacy_conflict":-9,
+    "poor_circulation":-8,
+    "bad_adjacency":-9
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Each room must have functional ventilation and lighting.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Privacy separation between public and private zones must be maintained.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Circulation paths must be clear and efficient.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Room adjacency must follow functional logic.",
+      "severity":"high"
+    },
+    {
+      "rule":"Minimum usable area must be respected for each room type.",
+      "severity":"high"
+    }
+  ],
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Architectural Guidelines",
+    "IS 456:2000",
+    "Energy Conservation Building Code (ECBC)",
+    "Universal Design Standards"
+  ]
+}

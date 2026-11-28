@@ -1,0 +1,202 @@
+{
+  "category":"room_standards",
+  "room":"bedroom",
+  "version":"2.0",
+  "description":"Comprehensive bedroom planning standards for AI-driven residential and commercial floor planning. Covers dimensions, furniture layout, circulation, lighting, ventilation, privacy, acoustics, electrical planning, storage, safety and optimization.",
+
+  "dimensions":{
+    "minimum_area_sqft":100,
+    "recommended_area_sqft":140,
+    "luxury_area_sqft":250,
+    "minimum_width_ft":10,
+    "recommended_width_ft":12,
+    "minimum_length_ft":10,
+    "recommended_length_ft":14,
+    "minimum_height_ft":10
+  },
+
+  "types":{
+    "master_bedroom":{
+      "recommended_area_sqft":180,
+      "attached_bathroom":true,
+      "walk_in_closet":true,
+      "private_balcony_optional":true
+    },
+    "standard_bedroom":{
+      "recommended_area_sqft":130,
+      "attached_bathroom_optional":true
+    },
+    "children_bedroom":{
+      "recommended_area_sqft":120,
+      "study_area":true,
+      "storage":true
+    },
+    "guest_bedroom":{
+      "recommended_area_sqft":120,
+      "common_bathroom_access":true
+    }
+  },
+
+  "location":{
+    "preferred_orientation":[
+      "East",
+      "South",
+      "South-West"
+    ],
+    "preferred_adjacent_rooms":[
+      "Bathroom",
+      "Walk-in Closet",
+      "Balcony"
+    ],
+    "avoid_adjacent_rooms":[
+      "Kitchen",
+      "Dining Room",
+      "Parking",
+      "Utility Room"
+    ],
+    "privacy_priority":"High"
+  },
+
+  "furniture":{
+    "bed":{
+      "required":true,
+      "queen_size_supported":true,
+      "king_size_supported":true,
+      "minimum_clearance_mm":750
+    },
+    "wardrobe":{
+      "required":true,
+      "minimum_depth_mm":600
+    },
+    "study_table_optional":true,
+    "side_tables":2,
+    "dresser_optional":true,
+    "tv_unit_optional":true
+  },
+
+  "circulation":{
+    "minimum_walkway_mm":900,
+    "recommended_walkway_mm":1000,
+    "door_clearance_mm":900
+  },
+
+  "ventilation":{
+    "cross_ventilation":true,
+    "minimum_windows":2,
+    "minimum_openable_window_area_percent":15,
+    "air_changes_per_hour":6
+  },
+
+  "lighting":{
+    "recommended_lux":150,
+    "natural_daylight_required":true,
+    "ambient_led":true,
+    "reading_light":true,
+    "night_light_supported":true,
+    "dimmable_lighting":true
+  },
+
+  "privacy":{
+    "sound_insulation_supported":true,
+    "minimum_wall_stc":50,
+    "window_privacy":true,
+    "entry_not_visible_from_living":true
+  },
+
+  "electrical":{
+    "power_outlets":6,
+    "usb_outlets_supported":true,
+    "tv_point_optional":true,
+    "internet_point":true,
+    "ac_point":true
+  },
+
+  "storage":{
+    "wardrobe_required":true,
+    "under_bed_storage_optional":true,
+    "overhead_storage_supported":true
+  },
+
+  "flooring":{
+    "recommended_materials":[
+      "Wood",
+      "Laminate",
+      "Vitrified Tile",
+      "Engineered Wood"
+    ],
+    "anti_skid":true
+  },
+
+  "smart_features":{
+    "smart_lighting":true,
+    "smart_curtains":true,
+    "occupancy_sensor":true,
+    "smart_ac":true,
+    "voice_control_supported":true,
+    "air_quality_sensor":true
+  },
+
+  "optimization":{
+    "space_efficiency":0.95,
+    "privacy":0.99,
+    "comfort":0.98,
+    "ventilation":0.97,
+    "daylighting":0.95
+  },
+
+  "bonuses":{
+    "attached_bathroom":5,
+    "walk_in_closet":4,
+    "private_balcony":4,
+    "cross_ventilation":5,
+    "natural_daylight":5,
+    "sound_insulation":3
+  },
+
+  "penalties":{
+    "bedroom_next_to_kitchen":-10,
+    "poor_ventilation":-8,
+    "insufficient_daylight":-8,
+    "low_privacy":-10,
+    "insufficient_circulation":-6
+  },
+
+  "validation_rules":[
+    {
+      "rule":"Every bedroom shall receive natural daylight.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Cross ventilation shall be provided whenever possible.",
+      "severity":"critical"
+    },
+    {
+      "rule":"Bedroom shall not be directly adjacent to kitchen.",
+      "severity":"high"
+    },
+    {
+      "rule":"Minimum circulation clearance shall be maintained around the bed.",
+      "severity":"high"
+    },
+    {
+      "rule":"Adequate electrical outlets shall be provided.",
+      "severity":"medium"
+    }
+  ],
+
+  "performance_metrics":{
+    "target_comfort_score":98,
+    "target_privacy_score":99,
+    "target_daylight_score":95,
+    "target_ventilation_score":95
+  },
+
+  "reference_codes":[
+    "National Building Code of India (NBC)",
+    "CPWD Building Guidelines",
+    "Neufert Architects' Data",
+    "IS 1172",
+    "ASHRAE Standard 62.1",
+    "Energy Conservation Building Code (ECBC)"
+  ]
+}

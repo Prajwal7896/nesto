@@ -1,0 +1,141 @@
+{
+  "style": "villa",
+
+  "definition": "Villa architecture focuses on independent luxury homes with spacious layouts, private gardens, multi-zone planning, strong indoor-outdoor integration, and premium lifestyle design.",
+
+  "core_principles": [
+    "Independent standalone structure with surrounding open space",
+    "Strong indoor-outdoor integration (garden, terrace, patio)",
+    "Multi-zone luxury planning (public, private, service, leisure)",
+    "High privacy with secure boundary planning",
+    "Spacious rooms with premium comfort focus",
+    "Balanced aesthetics and functionality"
+  ],
+
+  "spatial_design_rules": {
+    "living_room": {
+      "preferred_position": "front_central_or_double_height",
+      "min_area_sqft": 300,
+      "features": ["double_height", "garden_view", "luxury_seating"],
+      "connections": ["dining_room", "patio", "balcony"]
+    },
+
+    "kitchen": {
+      "type": "semi_open_or_closed_luxury_kitchen",
+      "min_area_sqft": 150,
+      "features": ["island_counter", "pantry", "service_entry"],
+      "preferred_position": "near_dining_and_service_zone"
+    },
+
+    "bedroom": {
+      "min_area_sqft": 180,
+      "features": ["attached_bathroom", "balcony_access"],
+      "privacy_level": "high"
+    },
+
+    "master_bedroom": {
+      "min_area_sqft": 250,
+      "features": ["walk_in_closet", "luxury_bathroom", "private_terrace"],
+      "preferred_position": "top_floor_or_private_corner"
+    },
+
+    "guest_room": {
+      "min_area_sqft": 140,
+      "placement": "near_entrance_but_separate_from_family_zone"
+    },
+
+    "garden": {
+      "required": true,
+      "position": "surrounding_or_front_back",
+      "features": ["landscaping", "sitting_area", "walkways"]
+    },
+
+    "terrace": {
+      "required": true,
+      "features": ["lounge_zone", "solar_ready", "party_space_optional"]
+    }
+  },
+
+  "zoning_rules": {
+    "public_zone": ["living_room", "lobby", "guest_room"],
+    "semi_private_zone": ["dining_room", "kitchen", "family_lounge"],
+    "private_zone": ["bedrooms", "master_bedroom", "study"],
+    "service_zone": ["kitchen_service", "utility", "parking"],
+    "leisure_zone": ["garden", "terrace", "patio", "balcony"]
+  },
+
+  "circulation_rules": {
+    "flow": "luxury_axis_with_clear_visual_connections",
+    "staircase": "statement_feature_central_or_side",
+    "corridor_usage": "minimal_but_wide",
+    "entry_experience": "grand_foyer_with_garden_view"
+  },
+
+  "geometry_rules": {
+    "preferred_shapes": ["large_rectangles", "modular_blocks"],
+    "avoid": ["tight_spaces", "narrow_passages"],
+    "plot_utilization": "balanced_building_to_open_space_ratio"
+  },
+
+  "material_palette": [
+    "natural stone",
+    "marble",
+    "glass walls",
+    "wood accents",
+    "premium concrete",
+    "metal detailing",
+    "textured plaster"
+  ],
+
+  "structural_preferences": {
+    "frame": "RCC heavy-duty frame",
+    "roof": "flat slab with terrace usability",
+    "wall_thickness": "standard premium",
+    "column_grid": "wide span luxury grid system"
+  },
+
+  "lighting_and_ventilation": {
+    "natural_light_priority": "very_high",
+    "cross_ventilation_required": true,
+    "window_style": "large_floor_to_ceiling_glass",
+    "skylights": true
+  },
+
+  "outdoor_integration": {
+    "garden_required": true,
+    "terrace_required": true,
+    "balcony_required": true,
+    "courtyard_optional": true,
+    "swimming_pool_optional": true
+  },
+
+  "security_and_privacy": {
+    "boundary_wall_required": true,
+    "privacy_level": "very_high",
+    "guest_family_separation": true
+  },
+
+  "vastu_flexibility": {
+    "compatible": true,
+    "entrance_preferred": ["north", "east"],
+    "kitchen_direction": "southeast",
+    "master_bedroom_direction": "southwest_preferred"
+  },
+
+  "optimization_hints": {
+    "space_efficiency": "medium",
+    "aesthetic_priority": "very_high",
+    "comfort_priority": "very_high",
+    "cost_efficiency": "low",
+    "center_of_mass_balance": true
+  },
+
+  "planning_tags": [
+    "luxury_villa",
+    "independent_house",
+    "premium_living",
+    "garden_integration",
+    "multi_zone_design",
+    "high_privacy_architecture"
+  ]
+}
