@@ -22,3 +22,5 @@ itsdangerous
 psycopg[binary]
 
 psycopg[binary]
+
+matplotlib
